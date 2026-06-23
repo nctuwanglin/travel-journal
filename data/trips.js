@@ -18,8 +18,8 @@ window.TRIPS = [
     recommended: true,
     tagline: "新幹線 E5+E6 連結奇景・田澤湖深藍・角館武家屋敷",
     themes: ["新幹線", "祕境峽谷", "親子", "美食"],
-    // 最推薦/最新網誌參考(待替換為實際連結)
-    blogRef: { title: "日本東北自由行攻略(待補)", url: "" },
+    // 最推薦/最新網誌參考
+    blogRef: { title: "2026 日本東北自由行:景點地圖・交通攻略・六天行程", url: "https://twoslowbyron.com/tohoku_travel/" },
     mapCenter: [39.2, 140.85],
     mapZoom: 7,
 
