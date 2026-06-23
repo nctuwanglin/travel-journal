@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行程集錦 — 旅遊回憶 & 攻略</title>
+<meta name="description" content="收藏走過的旅程,也能分享給朋友的攻略牆。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+  :root{
+    --paper:#ece7dc;        /* 和紙底 — 刻意偏冷,避開通用米色 */
+    --paper-2:#f6f2e9;      /* 卡片表面 */
+    --ink:#16191d;
+    --ink-soft:#454b54;
+    --muted:#857d6d;
+    --faint:#a59c89;
+    --line:#dcd5c5;
+    --line-soft:#e6e0d2;
+    --hayabusa:#0e7c5a;     /* E5 はやぶさ 常磐綠 */
+    --hayabusa-soft:#e1efe7;
+    --komachi:#c8344a;      /* E6 こまち 茜紅 */
+    --komachi-soft:#f6e2e4;
+    --tazawa:#163e73;       /* 田澤湖深藍 */
+    --peach:#dd8a45;        /* 福島水蜜桃 暖金 */
+    --peach-soft:#f6e9d6;
+    --shadow:0 1px 2px rgba(22,25,29,.04),0 14px 40px -22px rgba(22,25,29,.45);
+    --shadow-lg:0 2px 4px rgba(22,25,29,.05),0 28px 70px -30px rgba(22,25,29,.5);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .serif{font-family:"Noto Serif TC",serif}
+
+  /* paper texture — faint grain */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:radial-gradient(rgba(133,125,109,.06) 1px,transparent 1px);
+    background-size:4px 4px;
+  }
+  #app{position:relative;z-index:1}
+
+  /* ---------- eyebrow / labels ---------- */
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;font-weight:700;
+    font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:40;
+    background:rgba(236,231,220,.86);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:14px;height:58px}
+  .brand{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none}
+  .brand-mark{position:relative;width:34px;height:34px;flex:0 0 auto}
+  .brand-mark i{position:absolute;height:4px;border-radius:2px;left:2px;right:2px}
+  .brand-mark i:nth-child(1){top:9px;background:var(--hayabusa)}
+  .brand-mark i:nth-child(2){top:16px;background:var(--komachi)}
+  .brand-mark i:nth-child(3){top:23px;background:var(--ink);right:11px}
+  .brand-name{font-family:"Noto Serif TC",serif;font-weight:900;font-size:17px;letter-spacing:.02em}
+  .brand-sub{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;color:var(--muted)}
+  .topbar-actions{display:flex;align-items:center;gap:8px}
+  .btn{
+    cursor:pointer;border:1px solid var(--line);background:var(--paper-2);
+    color:var(--ink);font-family:inherit;font-size:13px;font-weight:700;
+    padding:8px 15px;border-radius:9px;transition:.16s;display:inline-flex;align-items:center;gap:7px;
+    text-decoration:none;white-space:nowrap;
+  }
+  .btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+  .btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-ink:hover{background:#000}
+  .btn-ghost{background:transparent}
+
+  /* =========================================================
+     GALLERY / WALL
+  ========================================================= */
+  .hero{padding:56px 0 30px;position:relative;overflow:hidden}
+  .hero-eye{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .hero-eye .rail{height:2px;width:54px;background:linear-gradient(90deg,var(--hayabusa),var(--komachi));border-radius:2px}
+  .hero h1{
+    font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:clamp(40px,8.4vw,82px);line-height:1.02;letter-spacing:.01em;
+  }
+  .hero h1 .ja{display:block;color:var(--muted);font-size:clamp(15px,3.4vw,22px);font-weight:700;letter-spacing:.32em;margin-bottom:12px}
+  .hero h1 em{font-style:normal;color:var(--hayabusa)}
+  .hero-lead{margin-top:22px;max-width:540px;color:var(--ink-soft);font-size:16px}
+  .hero-meta{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
+  .hero-meta .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:30px;line-height:1}
+  .hero-meta .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+  /* filter chips */
+  .filter{position:sticky;top:58px;z-index:30;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line);padding:13px 0}
+  .filter-in{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:1px}
+  .filter-in::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);color:var(--muted);
+    padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap;transition:.16s;user-select:none}
+  .chip:hover{border-color:var(--ink);color:var(--ink)}
+  .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+  /* grid */
+  .grid{display:grid;gap:24px;padding:34px 0 70px;grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
+  @media(max-width:620px){.grid{grid-template-columns:1fr;gap:18px;padding:24px 0 50px}}
+
+  .card{position:relative;background:var(--paper-2);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .22s,box-shadow .22s,border-color .22s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--faint)}
+  .card:focus-visible{outline:3px solid var(--hayabusa);outline-offset:3px}
+  .card-map{height:172px;position:relative;background:#dfe5e2;border-bottom:1px solid var(--line)}
+  .card-map .leaflet-container{height:100%;width:100%;background:#dfe5e2}
+  .card-mapband{position:absolute;left:0;right:0;bottom:0;height:54px;z-index:500;pointer-events:none;
+    background:linear-gradient(to top,rgba(22,25,29,.5),transparent)}
+  .card-badges{position:absolute;top:12px;left:12px;right:12px;z-index:600;display:flex;justify-content:space-between;gap:8px;pointer-events:none}
+  .badge{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;
+    padding:5px 10px;border-radius:7px;backdrop-filter:blur(4px)}
+  .badge-rec{background:var(--komachi);color:#fff}
+  .badge-status{background:rgba(255,255,255,.9);color:var(--ink);border:1px solid var(--line)}
+  .card-loc{position:absolute;left:14px;bottom:11px;z-index:600;color:#fff;pointer-events:none;
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .card-title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:25px;line-height:1.16;letter-spacing:.01em}
+  .card-sub{color:var(--muted);font-size:13.5px;margin-top:-5px}
+  .card-date{display:flex;align-items:baseline;gap:9px}
+  .card-date .d{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:18px}
+  .card-date .y{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted)}
+  .card-tag{color:var(--ink-soft);font-size:13.5px;line-height:1.5}
+  .card-themes{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+  .tg{font-size:11.5px;font-weight:700;color:var(--hayabusa);background:var(--hayabusa-soft);
+    padding:3px 9px;border-radius:6px}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:13px;border-top:1px solid var(--line-soft)}
+  .card-blog{font-size:12.5px;font-weight:700;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+  .card-go{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+  .card:hover .card-go{color:var(--komachi)}
+
+  /* =========================================================
+     TRIP DETAIL
+  ========================================================= */
+  .trip{padding:0 0 80px;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .cover{padding:46px 0 30px;position:relative}
+  .back{display:inline-flex;align-items:center;gap:7px;font-family:"JetBrains Mono",monospace;font-size:12px;
+    font-weight:700;color:var(--muted);text-decoration:none;margin-bottom:26px;letter-spacing:.06em}
+  .back:hover{color:var(--ink)}
+  .cover-eye{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .cover h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(38px,7.6vw,72px);line-height:1.02}
+  .cover .sub{font-size:clamp(16px,3vw,21px);color:var(--muted);margin-top:8px;letter-spacing:.04em}
+  .cover-tag{margin-top:18px;font-size:16px;color:var(--ink-soft);max-width:600px}
+
+  /* quick facts strip */
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:34px 0 8px;
+    border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper-2)}
+  .fact{padding:18px 20px;border-right:1px solid var(--line-soft)}
+  .fact:last-child{border-right:none}
+  .fact .k{display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono",monospace;font-size:10.5px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .fact .v{font-weight:700;font-size:15px;line-height:1.45}
+  .fact .v small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:3px}
+  @media(max-width:680px){.facts{grid-template-columns:1fr}.fact{border-right:none;border-bottom:1px solid var(--line-soft)}.fact:last-child{border-bottom:none}}
+
+  /* section frame */
+  .section{padding:44px 0 0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+  .sec-no{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px;color:var(--komachi)}
+  .sec-title{font-family:"Noto Serif TC",serif;font-weight:900;font-size:26px;letter-spacing:.02em}
+  .sec-line{flex:1;height:1px;background:var(--line);align-self:center}
+
+  /* overview table */
+  .otable{width:100%;border-collapse:collapse;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .otable th{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);text-align:left;padding:13px 18px;background:#efe9dd;font-weight:700}
+  .otable td{padding:14px 18px;border-top:1px solid var(--line-soft);font-size:14.5px;vertical-align:top}
+  .otable tr:hover td{background:rgba(255,255,255,.4)}
+  .otable .dcell{white-space:nowrap}
+  .otable .dcell b{font-family:"Space Grotesk",sans-serif;font-size:15px}
+  .otable .theme{font-weight:700}
+  .otable .stars{color:var(--peach);white-space:nowrap;font-size:13px}
+
+  /* info cards (flight/stay/pass) */
+  .infogrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.infogrid{grid-template-columns:1fr}}
+  .infocard{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .infocard h3{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .irow{display:flex;gap:12px;padding:7px 0;font-size:14px;border-top:1px dashed var(--line-soft)}
+  .irow:first-of-type{border-top:none}
+  .irow .ik{color:var(--muted);flex:0 0 64px;font-size:12.5px;padding-top:1px}
+  .irow .iv{flex:1}
+  .stay-item{padding:11px 0;border-top:1px dashed var(--line-soft)}
+  .stay-item:first-child{border-top:none}
+  .stay-item .sn{font-weight:700}
+  .stay-item .sm{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .rate{color:var(--peach);font-weight:700;font-family:"Space Grotesk",sans-serif}
+
+  /* ---- DAY RAIL (signature) ---- */
+  .days{position:relative;margin-top:6px}
+  .day{position:relative;padding:0 0 8px 0}
+  .day-head{display:flex;align-items:center;gap:16px;margin-bottom:4px}
+  .day-no{flex:0 0 auto;width:62px;text-align:center}
+  .day-no .n{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:34px;line-height:.9;color:var(--ink)}
+  .day-no .l{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .day-head .meta{flex:1}
+  .day-head .dt{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--komachi);font-weight:700;letter-spacing:.08em}
+  .day-head .th{font-family:"Noto Serif TC",serif;font-weight:700;font-size:20px;line-height:1.25;margin-top:2px}
+  .day-body{margin-left:30px;padding:14px 0 26px 32px;border-left:2px solid var(--hayabusa);position:relative}
+  .day:last-child .day-body{border-image:linear-gradient(var(--hayabusa),transparent) 1}
+  .day.couple .day-body{border-left-color:transparent;
+    border-image:linear-gradient(var(--hayabusa) 0 50%,var(--komachi) 50% 100%) 1}
+  .stop{position:relative;padding:0 0 16px 4px}
+  .stop:last-child{padding-bottom:0}
+  .stop::before{content:"";position:absolute;left:-39px;top:5px;width:11px;height:11px;border-radius:50%;
+    background:var(--paper);border:2.5px solid var(--hayabusa);z-index:2}
+  .day.couple .stop::before{border-color:var(--komachi)}
+  .stop .t{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:13px;color:var(--hayabusa);letter-spacing:.02em}
+  .day.couple .stop .t{color:var(--komachi)}
+  .stop .x{font-size:14.5px;color:var(--ink-soft);margin-top:1px;line-height:1.55}
+  .tip{margin:6px 0 0 32px;padding:13px 16px;border-radius:11px;font-size:13.5px;display:flex;gap:11px;align-items:flex-start}
+  .tip.info{background:var(--hayabusa-soft);color:#0c5c43}
+  .tip.warn{background:var(--komachi-soft);color:#9a2638}
+  .tip .ti{font-weight:700;flex:0 0 auto}
+
+  /* spots */
+  .spots{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.spots{grid-template-columns:1fr}}
+  .spot{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px;position:relative}
+  .spot h3{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .spot .area{font-size:12px;font-weight:700;color:var(--tazawa);background:#e4ebf3;padding:2px 8px;border-radius:6px}
+  .spot .meta{display:flex;gap:14px;flex-wrap:wrap;margin:9px 0 11px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
+  .spot .meta b{color:var(--peach)}
+  .spot .desc{font-size:14px;color:var(--ink-soft);line-height:1.65}
+
+  /* utility lists */
+  .ucols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.ucols{grid-template-columns:1fr}}
+  .ucard{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .ucard h3{font-family:"Noto Serif TC",serif;font-size:17px;font-weight:700;margin-bottom:13px;display:flex;align-items:center;gap:8px}
+  .ulist{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .ulist li{font-size:13.5px;color:var(--ink-soft);padding-left:18px;position:relative;line-height:1.5}
+  .ulist li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--hayabusa)}
+  .budget-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px dashed var(--line-soft);font-size:13.5px}
+  .budget-row:first-child{border-top:none}
+  .budget-row.total{border-top:2px solid var(--ink);margin-top:3px;font-weight:700}
+  .budget-row .c{font-family:"Space Grotesk",sans-serif;font-weight:700;white-space:nowrap}
+
+  /* detail map */
+  .detailmap{height:420px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .detailmap .leaflet-container{height:100%;width:100%;background:#dfe5e2;font-family:inherit}
+  .map-cap{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
+
+  /* blog reference */
+  .blogref{margin-top:20px;background:var(--ink);color:var(--paper);border-radius:16px;padding:22px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .blogref .l .e{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.2em;color:var(--peach);text-transform:uppercase}
+  .blogref .l .t{font-family:"Noto Serif TC",serif;font-size:19px;font-weight:700;margin-top:4px}
+  .blogref .l .t small{display:block;font-family:"Noto Sans TC";font-weight:400;font-size:12.5px;color:#bdb6a6;margin-top:3px}
+
+  .footer{padding:40px 0;text-align:center;color:var(--faint);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em}
+
+  /* print-only */
+  .print-only{display:none}
+
+  /* =========================================================
+     PRINT — 旅遊書
+  ========================================================= */
+  @media print{
+    @page{size:A4;margin:15mm 14mm}
+    body{background:#fff;color:#000;font-size:11pt}
+    body::before{display:none}
+    .topbar,.filter,.footer,.back,.detailmap,.map-cap,.blogref a,.no-print{display:none !important}
+    .wrap{max-width:none;padding:0}
+    .trip{padding:0;animation:none}
+    .cover{padding:0 0 8mm}
+    .print-only{display:block}
+    .print-cover-map{width:100%;height:62mm;object-fit:cover;border:1px solid #ccc;border-radius:4px;margin-top:6mm}
+    .section{padding:7mm 0 0;break-inside:avoid}
+    .sec-head{margin-bottom:4mm}
+    .day{break-inside:avoid}
+    .day-body{break-inside:avoid}
+    .spots,.ucols,.infogrid{break-inside:avoid}
+    .spot,.ucard,.infocard{break-inside:avoid;box-shadow:none}
+    .facts{break-inside:avoid}
+    .blogref{background:#f2f2f2;color:#000;border:1px solid #ccc}
+    .blogref .l .e{color:#000}
+    .card,.infocard,.spot,.ucard,.otable,.facts,.infogrid>*{box-shadow:none !important}
+    a{text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="data/trips.js"></script>
+<script>
+(function(){
+  "use strict";
+  var TRIPS = window.TRIPS || [];
+  var app = document.getElementById("app");
+  var liveMaps = [];   // 追蹤 Leaflet 實例以便切換 view 時銷毀
+
+  /* ---------- helpers ---------- */
+  function el(html){var t=document.createElement("template");t.innerHTML=html.trim();return t.content.firstChild;}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function stars(n){var s="";for(var i=0;i<5;i++)s+=i<n?"★":"☆";return s;}
+  function byId(id){for(var i=0;i<TRIPS.length;i++)if(TRIPS[i].id===id)return TRIPS[i];return null;}
+  function destroyMaps(){liveMaps.forEach(function(m){try{m.remove();}catch(e){}});liveMaps=[];}
+
+  /* OSM 靜態地圖(列印用,Leaflet 圖磚列印常缺圖) */
+  function staticMapURL(trip,w,h){
+    var c=trip.mapCenter, z=trip.mapZoom;
+    var mk=(trip.spots||[]).slice(0,10).map(function(s){return "markers="+s.latlng[0]+","+s.latlng[1]+",lightblue1";}).join("&");
+    return "https://staticmap.openstreetmap.de/staticmap.php?center="+c[0]+","+c[1]+
+           "&zoom="+z+"&size="+w+"x"+h+"&maptype=mapnik"+(mk?"&"+mk:"");
+  }
+
+  /* ---------- ROUTER ---------- */
+  function route(){
+    destroyMaps();
+    var h=location.hash.replace(/^#/,"");
+    var m=h.match(/^\/trip\/(.+)$/);
+    if(m){var trip=byId(decodeURIComponent(m[1]));if(trip){renderTrip(trip);window.scrollTo(0,0);return;}}
+    renderGallery();
+  }
+  window.addEventListener("hashchange",route);
+
+  /* ---------- GALLERY ---------- */
+  var activeFilter="全部";
+  function renderGallery(){
+    var trips=TRIPS.slice();
+    var countries=[]; trips.forEach(function(t){if(countries.indexOf(t.country)<0)countries.push(t.country);});
+    var filters=["全部"].concat(countries);
+    var nNights=trips.reduce(function(a,t){return a+(t.nights||0);},0);
+    var nSpots=trips.reduce(function(a,t){return a+((t.spots||[]).length);},0);
+
+    app.innerHTML=
+      topbar(false,null)+
+      '<header class="hero"><div class="wrap">'+
+        '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
+        '<h1><span class="ja">たびの きろく</span>走過的路,<br>想去的<em>遠方</em>。</h1>'+
+        '<p class="hero-lead">把每一趟旅程收進這面牆 —— 給自己留念,也當成攻略分享給朋友。喜歡的話,可以整本下載成旅遊書帶著走。</p>'+
+        '<div class="hero-meta">'+
+          stat(trips.length,"趟旅程 Trips")+stat(nNights,"晚住宿 Nights")+stat(nSpots,"個景點 Spots")+
+        '</div>'+
+      '</div></header>'+
+      '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
+        filters.map(function(f){return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(f)+'</button>';}).join("")+
+      '</div></div></div>'+
+      '<main class="wrap"><div class="grid" id="grid"></div></main>'+
+      footer();
+
+    document.getElementById("filters").addEventListener("click",function(e){
+      var b=e.target.closest(".chip");if(!b)return;activeFilter=b.getAttribute("data-f");renderGallery();
+    });
+    paintCards();
+  }
+  function stat(n,l){return '<div><div class="num">'+n+'</div><div class="lbl">'+l+'</div></div>';}
+
+  function paintCards(){
+    destroyMaps();
+    var grid=document.getElementById("grid");
+    var list=TRIPS.filter(function(t){return activeFilter==="全部"||t.country===activeFilter;});
+    grid.innerHTML="";
+    list.forEach(function(t){
+      var card=el(
+        '<a class="card" href="#/trip/'+encodeURIComponent(t.id)+'" tabindex="0" aria-label="'+esc(t.title)+'">'+
+          '<div class="card-map" id="cm-'+esc(t.id)+'">'+
+            '<div class="card-badges">'+
+              '<span>'+(t.recommended?'<span class="badge badge-rec">★ 最推薦</span>':'')+'</span>'+
+              '<span class="badge badge-status">'+esc(t.status||"")+'</span>'+
+            '</div>'+
+            '<div class="card-mapband"></div>'+
+            '<div class="card-loc">'+esc(t.country)+' / '+esc(t.region)+'</div>'+
+          '</div>'+
+          '<div class="card-body">'+
+            '<div>'+
+              '<div class="card-title">'+esc(t.title)+'</div>'+
+              '<div class="card-sub">'+esc(t.subtitle||"")+'</div>'+
+            '</div>'+
+            '<div class="card-date"><span class="d">'+esc(t.dateLabel)+'</span><span class="y">'+esc(t.year)+'</span></div>'+
+            '<div class="card-tag">'+esc(t.tagline||"")+'</div>'+
+            '<div class="card-themes">'+(t.themes||[]).map(function(x){return '<span class="tg">'+esc(x)+'</span>';}).join("")+'</div>'+
+            '<div class="card-foot">'+
+              '<span class="card-blog">📖 '+esc((t.blogRef&&t.blogRef.title)||"攻略參考")+'</span>'+
+              '<span class="card-go">查看行程 →</span>'+
+            '</div>'+
+          '</div>'+
+        '</a>'
+      );
+      grid.appendChild(card);
+      buildMiniMap("cm-"+t.id,t);
+    });
+  }
+
+  function buildMiniMap(elId,trip){
+    var node=document.getElementById(elId);if(!node||!window.L)return;
+    var map=L.map(node,{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,
+      doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false}).setView(trip.mapCenter,trip.mapZoom);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{maxZoom:18}).addTo(map);
+    (trip.spots||[]).forEach(function(s){
+      L.circleMarker(s.latlng,{radius:5,color:"#c8344a",weight:2,fillColor:"#c8344a",fillOpacity:.85}).addTo(map);
+    });
+    liveMaps.push(map);
+  }
+
+  /* ---------- TRIP DETAIL ---------- */
+  function renderTrip(t){
+    var couplingDay=function(d){return (d.items||[]).some(function(i){return /連結|分裂/.test(i.text);});};
+    var n=0;
+    app.innerHTML=
+      topbar(true,t)+
+      '<article class="trip"><div class="wrap">'+
+        '<section class="cover">'+
+          '<a class="back" href="#/">← 回集錦牆</a>'+
+          '<div class="cover-eye"><span class="eyebrow">'+esc(t.country)+' ・ '+esc(t.region)+' ・ '+esc(t.year)+'</span></div>'+
+          '<h1>'+esc(t.title)+'</h1>'+
+          '<div class="sub">'+esc(t.subtitle||"")+'</div>'+
+          '<p class="cover-tag">'+esc(t.tagline||"")+'</p>'+
+          '<img class="print-only print-cover-map" src="'+staticMapURL(t,900,360)+'" alt="'+esc(t.region)+'地圖">'+
+          factsStrip(t)+
+        '</section>'+
+
+        sec(++n,"行程總覽",overviewTable(t))+
+        sec(++n,"航班・住宿・票券",infoCards(t))+
+        sec(++n,"每日行程",daysRail(t,couplingDay))+
+        sec(++n,"景點介紹",spotsGrid(t))+
+        sec(++n,"東北美食指南",foodTable(t))+
+        sec(++n,"實用旅遊資訊",utilCols(t))+
+        sec(++n,"路線地圖",
+          '<div class="detailmap" id="detail-map"></div>'+
+          '<div class="map-cap">OpenStreetMap ・ 點選標記可看景點名稱 ・ 紅點 = 行程景點</div>'+
+          blogRefBlock(t))+
+      '</div></article>'+
+      footer();
+
+    // 列印
+    var pb=document.getElementById("printBtn");
+    if(pb)pb.addEventListener("click",function(){window.print();});
+    buildDetailMap(t);
+  }
+
+  function factsStrip(t){
+    var stay=(t.stay||[]).map(function(s){return s.name+"("+s.nights+")";}).join("・");
+    return '<div class="facts">'+
+      fact("✈","航班",(t.flight&&t.flight.airline)||"-","<small>"+esc((t.flight&&t.flight.out)||"")+"</small>")+
+      fact("🏨","住宿",esc(t.nights||"-")+" 晚","<small>"+esc(stay)+"</small>")+
+      fact("🚄","交通",(t.pass&&t.pass.name)||"-","<small>"+esc((t.pass&&t.pass.price)||"")+"</small>")+
+    '</div>';
+  }
+  function fact(ic,k,v,sub){return '<div class="fact"><div class="k">'+ic+' '+esc(k)+'</div><div class="v">'+v+(sub||"")+'</div></div>';}
+
+  function overviewTable(t){
+    var rows=(t.days||[]).map(function(d){
+      return '<tr><td class="dcell"><b>'+esc(d.date)+'</b><br><span class="mono" style="font-size:11px;color:var(--muted)">Day '+d.day+'</span></td>'+
+             '<td class="theme">'+esc(d.theme)+'</td></tr>';
+    }).join("");
+    return '<table class="otable"><thead><tr><th>日期</th><th>主題與重點</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  }
+
+  function infoCards(t){
+    var f=t.flight||{}, p=t.pass||{};
+    var flight='<div class="infocard"><h3>✈ 航班</h3>'+
+      irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("快線",f.note)+'</div>';
+    var stay='<div class="infocard"><h3>🏨 住宿</h3>'+
+      (t.stay||[]).map(function(s){return '<div class="stay-item"><div class="sn">'+esc(s.name)+
+        ' <span class="rate">★'+s.rating+'</span></div><div class="sm">'+esc(s.nights)+' ・ '+esc(s.note)+'</div></div>';}).join("")+'</div>';
+    var passrows=(p.rows||[]).map(function(r){return '<tr><td>'+esc(r.seg)+'</td><td>'+esc(r.train)+'</td><td class="dcell mono" style="font-size:12px">'+esc(r.time)+'</td></tr>';}).join("");
+    var pass='<div class="infocard" style="grid-column:1/-1"><h3>🚄 交通票券 — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
+      '<table class="otable" style="margin-top:6px"><thead><tr><th>路段</th><th>車種</th><th>時間</th></tr></thead><tbody>'+passrows+'</tbody></table></div>';
+    return '<div class="infogrid">'+flight+stay+pass+'</div>';
+  }
+  function irow(k,v){if(!v)return"";return '<div class="irow"><span class="ik">'+esc(k)+'</span><span class="iv">'+esc(v)+'</span></div>';}
+
+  function daysRail(t,isCouple){
+    return '<div class="days">'+(t.days||[]).map(function(d){
+      var couple=isCouple(d);
+      var stops=(d.items||[]).map(function(i){
+        return '<div class="stop"><div class="t">'+esc(i.time)+'</div><div class="x">'+esc(i.text)+'</div></div>';
+      }).join("");
+      var tip=d.tip?'<div class="tip '+esc(d.tip.type)+'"><span class="ti">'+(d.tip.type==="warn"?"⚠️":"💡")+' '+esc(d.tip.title)+'</span><span>'+esc(d.tip.text)+'</span></div>':"";
+      return '<div class="day'+(couple?' couple':'')+'">'+
+        '<div class="day-head">'+
+          '<div class="day-no"><div class="n">'+d.day+'</div><div class="l">Day</div></div>'+
+          '<div class="meta"><div class="dt">'+esc(d.date)+'</div><div class="th">'+esc(d.theme)+'</div></div>'+
+        '</div>'+
+        '<div class="day-body">'+stops+'</div>'+tip+
+      '</div>';
+    }).join("")+'</div>';
+  }
+
+  function spotsGrid(t){
+    return '<div class="spots">'+(t.spots||[]).map(function(s){
+      var meta=[];
+      if(s.rating)meta.push('<b>★ '+s.rating+'</b>');
+      if(s.hours)meta.push(esc(s.hours));
+      if(s.tel)meta.push('☎ '+esc(s.tel));
+      return '<div class="spot"><h3>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span></h3>'+
+        '<div class="meta">'+meta.join("<span>·</span>")+'</div>'+
+        '<div class="desc">'+esc(s.desc)+'</div></div>';
+    }).join("")+'</div>';
+  }
+
+  function foodTable(t){
+    var rows=(t.food||[]).map(function(f){
+      return '<tr><td style="font-weight:700">'+esc(f.name)+'</td><td>'+esc(f.area)+'</td>'+
+        '<td class="stars">'+stars(f.stars)+' <span style="color:var(--ink-soft)">'+esc(f.note)+'</span></td></tr>';
+    }).join("");
+    return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  }
+
+  function utilCols(t){
+    var budget='<div class="ucard"><h3>💴 預算估算</h3>'+(t.budget||[]).map(function(b){
+      return '<div class="budget-row'+(b.total?' total':'')+'"><span>'+esc(b.item)+'</span><span class="c">'+esc(b.cost)+'</span></div>';
+    }).join("")+'</div>';
+    var apps='<div class="ucard"><h3>📱 必備 App</h3><ul class="ulist">'+(t.apps||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
+    var weather='<div class="ucard"><h3>🌡️ 天氣</h3><ul class="ulist">'+(t.weather||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
+    var notes='<div class="ucard"><h3>⚠️ 注意事項</h3><ul class="ulist">'+(t.notes||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
+    return '<div class="ucols">'+budget+apps+weather+notes+'</div>';
+  }
+
+  function blogRefBlock(t){
+    var b=t.blogRef||{};
+    var hasUrl=b.url&&b.url.length;
+    return '<div class="blogref">'+
+      '<div class="l"><div class="e">最推薦網誌 ・ Reference</div>'+
+        '<div class="t">'+esc(b.title||"攻略參考")+'<small>'+(hasUrl?esc(b.url):"連結待補 — 之後可在 data/trips.js 的 blogRef.url 填入")+'</small></div></div>'+
+      (hasUrl?'<a class="btn btn-ink" href="'+esc(b.url)+'" target="_blank" rel="noopener">開啟網誌 →</a>':'')+
+    '</div>';
+  }
+
+  function buildDetailMap(t){
+    var node=document.getElementById("detail-map");if(!node||!window.L)return;
+    var map=L.map(node,{scrollWheelZoom:false}).setView(t.mapCenter,t.mapZoom);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
+      maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+    var pts=[];
+    (t.spots||[]).forEach(function(s){
+      pts.push(s.latlng);
+      L.circleMarker(s.latlng,{radius:8,color:"#fff",weight:2,fillColor:"#c8344a",fillOpacity:.95})
+        .addTo(map).bindPopup('<b>'+esc(s.name)+'</b><br>'+esc(s.area)+(s.rating?' ・ ★'+s.rating:''));
+    });
+    if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40]});}catch(e){}}
+    liveMaps.push(map);
+    setTimeout(function(){map.invalidateSize();},120);
+  }
+
+  /* ---------- shared chrome ---------- */
+  function topbar(inTrip,t){
+    return '<div class="topbar"><div class="wrap"><div class="topbar-in">'+
+      '<a class="brand" href="#/"><span class="brand-mark"><i></i><i></i><i></i></span>'+
+        '<span><span class="brand-name">行程集錦</span><br><span class="brand-sub">TRAVEL JOURNAL</span></span></a>'+
+      '<div class="topbar-actions">'+
+        (inTrip
+          ? '<a class="btn btn-ghost" href="#/">← 集錦牆</a><button class="btn btn-ink no-print" id="printBtn">⬇ 下載旅遊書</button>'
+          : '<span class="eyebrow" style="opacity:.65">收藏 ・ 分享 ・ 帶著走</span>')+
+      '</div>'+
+    '</div></div></div>';
+  }
+  function sec(no,title,body){
+    return '<section class="section"><div class="sec-head"><span class="sec-no mono">'+String(no).padStart(2,"0")+'</span>'+
+      '<span class="sec-title">'+esc(title)+'</span><span class="sec-line"></span></div>'+body+'</section>';
+  }
+  function footer(){return '<footer class="footer">行程集錦 ・ TRAVEL JOURNAL ・ 收藏與分享每一趟旅程</footer>';}
+
+  /* ---------- boot ---------- */
+  if(!TRIPS.length){app.innerHTML='<div style="padding:80px;text-align:center;color:#857d6d">尚無行程資料 — 請確認 data/trips.js 已載入。</div>';}
+  else route();
+})();
+</script>
+</body>
+</html>
