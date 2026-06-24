@@ -406,6 +406,7 @@ window.TRIPS = [
     mapZoom: 8,
 
     flight: {
+      airline: "中華航空 China Airlines",
       out: "4/11 桃園 TPE → 東京(19:00 抵達)",
       back: "4/19 東京 → 桃園(14:30 回台)",
       note: "日暮里進出・市區 JR/地鐵 + 北陸新幹線往輕井澤"
