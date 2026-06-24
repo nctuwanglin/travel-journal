@@ -310,6 +310,8 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.2/dist/html2pdf.bundle.min.js"
+        integrity="sha384-aBc0BOllaGWrQx51DYt978St/L7B+21jzNGc4N/jnGD0NxGwj8S/ftRgW0AkXIak" crossorigin="anonymous"></script>
 <script src="data/trips.js"></script>
 <script>
 (function(){
@@ -400,7 +402,7 @@
             '<div class="card-tag">'+esc(t.tagline||"")+'</div>'+
             '<div class="card-themes">'+(t.themes||[]).map(function(x){return '<span class="tg">'+esc(x)+'</span>';}).join("")+'</div>'+
             '<div class="card-foot">'+
-              '<span class="card-blog">📖 '+esc((t.blogRef&&t.blogRef.title)||"攻略參考")+'</span>'+
+              '<span class="card-blog">📍 '+((t.spots||[]).length)+' 景點 ・ 🍽 '+((t.food||[]).length)+' 美食</span>'+
               '<span class="card-go">查看行程 →</span>'+
             '</div>'+
           '</div>'+
@@ -447,14 +449,13 @@
         sec(++n,"實用旅遊資訊",utilCols(t))+
         sec(++n,"路線地圖",
           '<div class="detailmap" id="detail-map"></div>'+
-          '<div class="map-cap">OpenStreetMap ・ 點選標記可看景點名稱 ・ 紅點 = 行程景點</div>'+
-          blogRefBlock(t))+
+          '<div class="map-cap">OpenStreetMap ・ 點選標記可看景點名稱 ・ 紅點 = 行程景點</div>')+
       '</div></article>'+
       footer();
 
-    // 列印
+    // 下載旅遊書(直接產生 PDF 檔)
     var pb=document.getElementById("printBtn");
-    if(pb)pb.addEventListener("click",function(){window.print();});
+    if(pb)pb.addEventListener("click",function(){downloadBook(t,pb);});
     buildDetailMap(t);
   }
 
@@ -542,14 +543,32 @@
     return '<div class="ucols">'+budget+apps+weather+notes+'</div>';
   }
 
-  function blogRefBlock(t){
-    var b=t.blogRef||{};
-    var hasUrl=b.url&&b.url.length;
-    return '<div class="blogref">'+
-      '<div class="l"><div class="e">整體行程攻略 ・ Trip Guide</div>'+
-        '<div class="t">'+esc(b.title||"攻略參考")+'<small>'+(hasUrl?esc(b.url):"連結待補 — 之後可在 data/trips.js 的 blogRef.url 填入")+'</small></div></div>'+
-      (hasUrl?'<a class="btn btn-ink" href="'+esc(b.url)+'" target="_blank" rel="noopener">開啟網誌 →</a>':'')+
-    '</div>';
+  /* 下載旅遊書:把行程內容渲染成 PDF 檔下載到裝置(不開列印對話框) */
+  function downloadBook(t,btn){
+    if(!window.html2pdf){alert("PDF 元件尚未載入完成,請稍候再試(需要網路)。");return;}
+    var src=document.querySelector(".trip");if(!src)return;
+    var clone=src.cloneNode(true);
+    clone.style.animation="none";
+    clone.style.background="#fff";
+    // 移除互動地圖(canvas 無法擷取)與返回鍵;地圖整段移除
+    clone.querySelectorAll(".back,.no-print").forEach(function(node){node.remove();});
+    var mp=clone.querySelector("#detail-map");
+    if(mp){var sec=mp.closest(".section");if(sec)sec.remove();}
+    var holder=document.createElement("div");
+    holder.style.cssText="position:fixed;left:-10000px;top:0;width:820px;background:#fff;z-index:-1";
+    holder.appendChild(clone);
+    document.body.appendChild(holder);
+    var label=btn?btn.innerHTML:"";
+    if(btn){btn.innerHTML="產生 PDF 中…";btn.disabled=true;}
+    function done(){holder.remove();if(btn){btn.innerHTML=label;btn.disabled=false;}}
+    window.html2pdf().set({
+      margin:[10,10,13,10],
+      filename:t.region+"_"+t.year+"_旅遊書.pdf",
+      image:{type:"jpeg",quality:0.96},
+      html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",windowWidth:820},
+      jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
+      pagebreak:{mode:["css","legacy"],avoid:[".day",".spot",".ucard",".infocard",".fact","tr",".infogrid"]}
+    }).from(clone).save().then(done).catch(function(e){done();alert("PDF 產生失敗:"+e);});
   }
 
   function buildDetailMap(t){
