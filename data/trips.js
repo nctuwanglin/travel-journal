@@ -385,5 +385,222 @@ window.TRIPS = [
       { title: "🌧️ 雨天備案", items: ["DMM Kariyushi 水族館(全室內)", "名護鳳梨園(全室內)", "iias / AEON 購物中心", "部瀨名海中公園展望塔"] },
       { title: "🚨 緊急聯絡", items: ["警察 110・救護消防 119・海上事故 118", "小兒急救諮詢 #8000(夜間兒童突發先打)", "駐日代表處那霸分處 098-862-7008", "急難救助專線(24hr) 090-1942-1107"] }
     ]
+  },
+
+  {
+    id: "tokyo-2026",
+    title: "東京・輕井澤之旅",
+    subtitle: "東京迪士尼・輕井澤・賞櫻",
+    country: "日本",
+    region: "東京",
+    year: 2026,
+    dateLabel: "4/11 – 4/19",
+    dateStart: "2026-04-11",
+    dateEnd: "2026-04-19",
+    nights: 8,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "目黑川賞櫻・東京迪士尼雙園・輕井澤虹夕諾雅",
+    themes: ["賞櫻", "迪士尼", "輕井澤", "美食"],
+    mapCenter: [36.0, 139.2],
+    mapZoom: 8,
+
+    flight: {
+      out: "4/11 桃園 TPE → 東京(19:00 抵達)",
+      back: "4/19 東京 → 桃園(14:30 回台)",
+      note: "日暮里進出・市區 JR/地鐵 + 北陸新幹線往輕井澤"
+    },
+    stay: [
+      { name: "東京宿・日暮里館", nights: "4/11–4/15 ・ 4 晚", note: "日暮里・自由行民宿" },
+      { name: "星野虹夕諾雅 輕井澤", nights: "4/15–4/17 ・ 2 晚", note: "輕井澤頂級溫泉度假村" },
+      { name: "東京錦糸町樂天城市飯店", nights: "4/17–4/19 ・ 2 晚", note: "錦糸町・近晴空塔" }
+    ],
+    pass: {
+      icon: "🚄", label: "交通",
+      name: "JR + 東京メトロ + 北陸新幹線",
+      price: "建議 Suica/PASMO",
+      head: ["路段", "交通", "時間"],
+      rows: [
+        ["機場 → 市區", "Skyliner(成田)/ 京急(羽田)", "約 40 分"],
+        ["東京 ↔ 輕井澤", "北陸新幹線 あさま/はくたか", "約 70 分"],
+        ["市區移動", "JR 山手線 + 東京メトロ", "Suica/PASMO 嗶卡"],
+        ["迪士尼", "JR 京葉線 → 舞濱站", "東京站約 15 分"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "4/11 (六)", theme: "✈ 抵達東京",
+        items: [
+          { time: "19:00", text: "抵達東京" },
+          { time: "晚餐", text: "大阪燒肉 日暮里店" },
+          { time: "住宿", text: "東京宿・日暮里館" }
+        ]
+      },
+      {
+        day: 2, date: "4/12 (日)", theme: "🌸 東京市區・目黑川賞櫻",
+        items: [
+          { time: "上午", text: "目黑川賞櫻、中目黑星巴克典藏旗艦店" },
+          { time: "午餐", text: "Peter Luger Steak House(惠比壽)" },
+          { time: "晚餐", text: "AFURI 阿夫利柚子鹽拉麵" },
+          { time: "住宿", text: "東京宿・日暮里館" }
+        ]
+      },
+      {
+        day: 3, date: "4/13 (一)", theme: "🏰 東京迪士尼樂園 (Land)",
+        items: [
+          { time: "全天", text: "東京迪士尼樂園 Disneyland" },
+          { time: "住宿", text: "東京宿・日暮里館" }
+        ]
+      },
+      {
+        day: 4, date: "4/14 (二)", theme: "🌊 東京迪士尼海洋 (Sea)",
+        items: [
+          { time: "全天", text: "東京迪士尼海洋 DisneySea" },
+          { time: "住宿", text: "東京宿・日暮里館" }
+        ]
+      },
+      {
+        day: 5, date: "4/15 (三)", theme: "🚄 前進輕井澤",
+        items: [
+          { time: "上午", text: "搭北陸新幹線至輕井澤(約 70 分)" },
+          { time: "玩", text: "雲場池、舊輕井澤銀座通" },
+          { time: "逛", text: "輕井澤・王子購物廣場 Outlet" },
+          { time: "午餐", text: "川上庵 蕎麥麵" },
+          { time: "晚餐", text: "虹夕諾雅 度假村內晚餐" },
+          { time: "住宿", text: "星野虹夕諾雅 輕井澤" }
+        ],
+        tips: [
+          { type: "info", title: "交通", text: "東京站 → 北陸新幹線 あさま/はくたか → 輕井澤站(約 70 分)" }
+        ]
+      },
+      {
+        day: 6, date: "4/16 (四)", theme: "⛪ 輕井澤・森林教堂",
+        items: [
+          { time: "早午餐", text: "虹夕諾雅 度假村早午餐" },
+          { time: "玩", text: "榆樹街小鎮(ハルニレテラス)、高原教堂、石之教堂" },
+          { time: "晚餐", text: "村民食堂" },
+          { time: "住宿", text: "星野虹夕諾雅 輕井澤" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "星野區內榆樹街小鎮、兩座教堂、村民食堂有免費接駁巴士串聯" }
+        ]
+      },
+      {
+        day: 7, date: "4/17 (五)", theme: "🛍 輕井澤 → 東京市區採買",
+        items: [
+          { time: "早午餐", text: "虹夕諾雅 度假村早午餐" },
+          { time: "逛", text: "阿卡將、西松屋、3COINS、UNIQLO、SUNDRUG、西友超市" },
+          { time: "晚餐", text: "居酒屋" },
+          { time: "住宿", text: "東京錦糸町樂天城市飯店" }
+        ]
+      },
+      {
+        day: 8, date: "4/18 (六)", theme: "🗼 淺草・晴空塔",
+        items: [
+          { time: "玩", text: "雷門・淺草寺、墨田水族館" },
+          { time: "逛", text: "東京晴空塔 SKYTREE・Solamachi" },
+          { time: "午餐", text: "淺草今半(壽喜燒)" },
+          { time: "晚餐", text: "敘敘苑 燒肉" },
+          { time: "住宿", text: "東京錦糸町樂天城市飯店" }
+        ]
+      },
+      {
+        day: 9, date: "4/19 (日)", theme: "✈ 回台灣",
+        items: [
+          { time: "14:30", text: "班機返回台灣,滿載而歸!" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "目黑川賞櫻", area: "中目黑", hours: "戶外・夜櫻點燈傍晚起",
+        latlng: [35.6445, 139.6987],
+        desc: "東京最具代表的賞櫻河岸,約 800 棵染井吉野櫻沿河 4 公里齊放,中目黑站一帶最熱鬧。夜間白×粉提燈點燈,粉色光暈與櫻花相映夢幻。櫻橋是必拍場景。",
+        ref: { title: "波比看世界・目黑川櫻花夜櫻點燈", url: "https://bobbyfun.tw/2024-01-04-2655/" }
+      },
+      {
+        name: "中目黑星巴克典藏旗艦店", area: "中目黑", hours: "7:00–22:00",
+        latlng: [35.6470, 139.6985],
+        desc: "隈研吾設計,開幕時為全球最大星巴克。四層樓臻選烘焙工坊,銅製烘豆槽、Princi 義式烘焙坊、限定櫻花商品。櫻花季賞目黑川第一排,需線上預約入場。",
+        ref: { title: "樂活的大方・中目黑星巴克臻選烘焙工坊", url: "https://www.bigfang.tw/blog/post/starbucks-reserve-roastery-tokyo" }
+      },
+      {
+        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        latlng: [35.6329, 139.8804],
+        desc: "經典童話主題園區,城堡、遊行、煙火必看。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡,熱門設施善用快速通關。與海洋分開購票,各排一天。",
+        ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
+      },
+      {
+        name: "東京迪士尼海洋", area: "舞濱", hours: "依官方每日公告",
+        latlng: [35.6267, 139.8850],
+        desc: "全球唯一的海洋主題迪士尼,以七大主題港灣與成熟氛圍著稱,2024 新增『夢幻泉鄉』園區。表演、煙火與限定餐點豐富,善用 DPA 安排熱門設施更順暢。",
+        ref: { title: "花時光旅行實驗室・迪士尼海洋攻略", url: "https://whatime.space/tokyo-disneysea/" }
+      },
+      {
+        name: "雲場池", area: "輕井澤", hours: "戶外・全日",
+        latlng: [36.3490, 138.6260],
+        desc: "有『天鵝湖』美名的輕井澤代表水景,池水碧綠映著林木藍天,環池步道散策約 20–30 分。距輕井澤站約 1.3km,可步行或租自行車前往。",
+        ref: { title: "Mimi韓・雲場池(附交通＆Mapcode)", url: "https://mimigo.tw/kumoba-pond/" }
+      },
+      {
+        name: "舊輕井澤銀座通", area: "輕井澤", hours: "店家約 10:00–17:00",
+        latlng: [36.3568, 138.6377],
+        desc: "約 600 公尺的歐風紅磚商店街,輕井澤最熱鬧的散策地。澤屋果醬(整顆草莓)、法式麵包、布丁、輕井澤雕工藝品必逛。店家多 17:00 開始打烊。",
+        ref: { title: "Mimi韓・舊輕井澤銀座通逛街地圖", url: "https://mimigo.tw/karuizawa-ginza/" }
+      },
+      {
+        name: "榆樹街小鎮 ハルニレテラス", area: "中輕井澤", hours: "店家約 10:00–18:00",
+        latlng: [36.3856, 138.5972],
+        desc: "星野集團以『輕井澤的日常』打造的森林商店街,沿湯川架高木棧道串起 16 間咖啡、餐廳與選物店(丸山珈琲、川上庵)。走在春榆樹叢間悠閒愜意。",
+        ref: { title: "BringYou・星野區榆樹街小鎮攻略", url: "https://www.bring-you.info/zh-tw/hoshino-karuizawa-area" }
+      },
+      {
+        name: "高原教堂・石之教堂", area: "中輕井澤", hours: "參觀依官方開放時間",
+        latlng: [36.3866, 138.5949],
+        desc: "星野區兩座絕美教堂:1921 年的高原教會木造溫潤;石之教堂(內村鑑三紀念堂)由石與玻璃交織、隱於森林,光影莊嚴動人,是夢幻婚禮聖地。",
+        ref: { title: "凱子凱・中輕井澤星野區攻略", url: "https://ksk.tw/blog/post/341974776" }
+      },
+      {
+        name: "雷門・淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        latlng: [35.7148, 139.7967],
+        desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通 250 公尺商店街集結人形燒、仙貝與和風雜貨。可租和服參拜、求籤、收御朱印。",
+        ref: { title: "BringYou・淺草寺雷門散步路線全攻略", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
+      },
+      {
+        name: "墨田水族館・晴空塔", area: "押上・晴空塔", hours: "水族館 10:00–20:00(假日延長)",
+        latlng: [35.7101, 139.8107],
+        desc: "晴空塔(世界第一高塔)集展望台、Solamachi 商場於一身;5–6 樓墨田水族館有日本最大室內開放水槽,企鵝、海狗萌度爆表,是雨天親子首選。",
+        ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
+      }
+    ],
+
+    food: [
+      { name: "大阪燒肉 日暮里店", area: "日暮里", stars: 4, note: "抵達晚餐", ref: { title: "", url: "" } },
+      { name: "Peter Luger Steak House", area: "惠比壽", stars: 5, note: "傳奇紐約牛排", ref: { title: "樂活的大方・Peter Luger 東京", url: "https://www.bigfang.tw/blog/post/peter-luger-steak-tokyo" } },
+      { name: "AFURI 阿夫利拉麵", area: "東京", stars: 4, note: "清爽柚子鹽", ref: { title: "樂活的大方・AFURI 阿夫利", url: "https://www.bigfang.tw/blog/post/afuri-harajuku" } },
+      { name: "川上庵 蕎麥麵", area: "輕井澤", stars: 4, note: "炸大蝦天婦羅蕎麥麵", ref: { title: "桃桃's・川上庵輕井澤本店", url: "https://momoblog.tw/kawakamian/" } },
+      { name: "村民食堂", area: "輕井澤", stars: 4, note: "信州料理・森林餐廳", ref: { title: "福寶媽・輕井澤村民食堂", url: "https://gogojp.tw/sonminsyokudou-karuizawa/" } },
+      { name: "淺草今半 壽喜燒", area: "淺草", stars: 5, note: "百年壽喜燒名店", ref: { title: "凱子凱・淺草今半本店", url: "https://ksk.tw/blog/post/341373966" } },
+      { name: "敘敘苑 燒肉", area: "東京", stars: 5, note: "高級燒肉・午間套餐划算", ref: { title: "娜塔蝦・敘敘苑用餐心得", url: "https://natasha-traveler.tw/jyujyuen-yakiniku-review/" } }
+    ],
+
+    weather: [
+      "東京 4 月:約 12–20°C,櫻花季,早晚偏涼",
+      "輕井澤海拔高,比東京低 5–8°C,務必帶保暖外套",
+      "洋蔥式穿搭、輕便雨具備用"
+    ],
+    info: [
+      { title: "🌸 賞櫻提醒", items: ["目黑川櫻花約 3 月底–4 月初,4 月中旬視花況可能已開始落櫻", "中目黑星巴克旗艦店櫻花季需線上預約入場", "賞夜櫻點燈傍晚最美"] },
+      { title: "🏰 迪士尼攻略", items: ["陸地、海洋分開購票,各排一天", "入園前先下載官方 App(Standby Pass / DPA)", "熱門設施善用 DPA 尊享卡"] },
+      { title: "🚄 輕井澤交通", items: ["東京站搭北陸新幹線 あさま/はくたか 約 70 分", "星野區景點有免費接駁巴士串聯", "雲場池、舊輕井澤可租自行車串聯"] },
+      { title: "🛍️ 採買清單", items: ["阿卡將、西松屋:嬰幼兒用品", "3COINS、UNIQLO、SUNDRUG", "西友超市:自炊與零食補給"] }
+    ],
+    notes: [
+      "Peter Luger、淺草今半、敘敘苑、村民食堂等人氣餐廳建議提前訂位。",
+      "虹夕諾雅輕井澤為頂級度假村,旺季房源緊張,需早訂。",
+      "迪士尼門票採日期指定,建議提前購買。"
+    ]
   }
 ];
