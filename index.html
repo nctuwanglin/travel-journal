@@ -445,7 +445,7 @@
         sec(++n,"航班・住宿・票券",infoCards(t))+
         sec(++n,"每日行程",daysRail(t,couplingDay))+
         sec(++n,"景點介紹",spotsGrid(t))+
-        sec(++n,"東北美食指南",foodTable(t))+
+        sec(++n,(t.region||"")+"美食指南",foodTable(t))+
         sec(++n,"實用旅遊資訊",utilCols(t))+
         sec(++n,"路線地圖",
           '<div class="detailmap" id="detail-map"></div>'+
@@ -480,13 +480,17 @@
   function infoCards(t){
     var f=t.flight||{}, p=t.pass||{};
     var flight='<div class="infocard"><h3>✈ 航班</h3>'+
-      irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("快線",f.note)+'</div>';
+      irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("備註",f.note)+'</div>';
     var stay='<div class="infocard"><h3>🏨 住宿</h3>'+
       (t.stay||[]).map(function(s){return '<div class="stay-item"><div class="sn">'+esc(s.name)+
-        ' <span class="rate">★'+s.rating+'</span></div><div class="sm">'+esc(s.nights)+' ・ '+esc(s.note)+'</div></div>';}).join("")+'</div>';
-    var passrows=(p.rows||[]).map(function(r){return '<tr><td>'+esc(r.seg)+'</td><td>'+esc(r.train)+'</td><td class="dcell mono" style="font-size:12px">'+esc(r.time)+'</td></tr>';}).join("");
-    var pass='<div class="infocard" style="grid-column:1/-1"><h3>🚄 交通票券 — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
-      '<table class="otable" style="margin-top:6px"><thead><tr><th>路段</th><th>車種</th><th>時間</th></tr></thead><tbody>'+passrows+'</tbody></table></div>';
+        (s.rating?' <span class="rate">★'+s.rating+'</span>':'')+'</div><div class="sm">'+esc(s.nights)+' ・ '+esc(s.note)+'</div></div>';}).join("")+'</div>';
+    var pass="";
+    if(p.rows&&p.rows.length){
+      var head=p.head||["路段","車種","時間"];
+      var passrows=p.rows.map(function(r){return '<tr>'+r.map(function(c,i){return '<td'+(i===2?' class="dcell mono" style="font-size:12px"':'')+'>'+esc(c)+'</td>';}).join("")+'</tr>';}).join("");
+      pass='<div class="infocard" style="grid-column:1/-1"><h3>'+(p.icon||"🚄")+' '+esc(p.label||"交通票券")+' — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
+        '<table class="otable" style="margin-top:6px"><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+passrows+'</tbody></table></div>';
+    }
     return '<div class="infogrid">'+flight+stay+pass+'</div>';
   }
   function irow(k,v){if(!v)return"";return '<div class="irow"><span class="ik">'+esc(k)+'</span><span class="iv">'+esc(v)+'</span></div>';}
@@ -497,7 +501,8 @@
       var stops=(d.items||[]).map(function(i){
         return '<div class="stop"><div class="t">'+esc(i.time)+'</div><div class="x">'+esc(i.text)+'</div></div>';
       }).join("");
-      var tip=d.tip?'<div class="tip '+esc(d.tip.type)+'"><span class="ti">'+(d.tip.type==="warn"?"⚠️":"💡")+' '+esc(d.tip.title)+'</span><span>'+esc(d.tip.text)+'</span></div>':"";
+      var tips=d.tips||(d.tip?[d.tip]:[]);
+      var tip=tips.map(function(tp){return '<div class="tip '+esc(tp.type)+'"><span class="ti">'+(tp.type==="warn"?"⚠️":"💡")+' '+esc(tp.title)+'</span><span>'+esc(tp.text)+'</span></div>';}).join("");
       return '<div class="day'+(couple?' couple':'')+'">'+
         '<div class="day-head">'+
           '<div class="day-no"><div class="n">'+d.day+'</div><div class="l">Day</div></div>'+
@@ -533,14 +538,21 @@
     return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th><th>推薦文</th></tr></thead><tbody>'+rows+'</tbody></table>';
   }
 
+  function listCard(title,items){
+    return '<div class="ucard"><h3>'+esc(title)+'</h3><ul class="ulist">'+(items||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
+  }
   function utilCols(t){
-    var budget='<div class="ucard"><h3>💴 預算估算</h3>'+(t.budget||[]).map(function(b){
-      return '<div class="budget-row'+(b.total?' total':'')+'"><span>'+esc(b.item)+'</span><span class="c">'+esc(b.cost)+'</span></div>';
-    }).join("")+'</div>';
-    var apps='<div class="ucard"><h3>📱 必備 App</h3><ul class="ulist">'+(t.apps||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
-    var weather='<div class="ucard"><h3>🌡️ 天氣</h3><ul class="ulist">'+(t.weather||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
-    var notes='<div class="ucard"><h3>⚠️ 注意事項</h3><ul class="ulist">'+(t.notes||[]).map(function(a){return '<li>'+esc(a)+'</li>';}).join("")+'</ul></div>';
-    return '<div class="ucols">'+budget+apps+weather+notes+'</div>';
+    var cards=[];
+    if(t.budget&&t.budget.length){
+      cards.push('<div class="ucard"><h3>💴 預算估算</h3>'+t.budget.map(function(b){
+        return '<div class="budget-row'+(b.total?' total':'')+'"><span>'+esc(b.item)+'</span><span class="c">'+esc(b.cost)+'</span></div>';
+      }).join("")+'</div>');
+    }
+    if(t.apps&&t.apps.length)cards.push(listCard("📱 必備 App",t.apps));
+    if(t.weather&&t.weather.length)cards.push(listCard("🌡️ 天氣",t.weather));
+    if(t.notes&&t.notes.length)cards.push(listCard("⚠️ 注意事項",t.notes));
+    (t.info||[]).forEach(function(c){cards.push(listCard(c.title,c.items));});
+    return '<div class="ucols">'+cards.join("")+'</div>';
   }
 
   /* 下載旅遊書:把行程內容渲染成 PDF 檔下載到裝置(不開列印對話框) */
@@ -548,14 +560,27 @@
     if(!window.html2pdf){alert("PDF 元件尚未載入完成,請稍候再試(需要網路)。");return;}
     var src=document.querySelector(".trip");if(!src)return;
     var clone=src.cloneNode(true);
+    clone.classList.add("pdfbook");
     clone.style.animation="none";
     clone.style.background="#fff";
     // 移除互動地圖(canvas 無法擷取)與返回鍵;地圖整段移除
     clone.querySelectorAll(".back,.no-print").forEach(function(node){node.remove();});
     var mp=clone.querySelector("#detail-map");
     if(mp){var sec=mp.closest(".section");if(sec)sec.remove();}
+    // PDF 專用版面:把 grid 攤平成單欄、每個區塊不可被分頁切斷(解決每頁截一半)
+    var st=document.createElement("style");
+    st.textContent=
+      ".pdfbook .spots,.pdfbook .ucols,.pdfbook .infogrid,.pdfbook .facts{display:block !important}"+
+      ".pdfbook .fact{border-right:none !important;border-bottom:1px solid var(--line-soft)}"+
+      ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard{margin-bottom:12px}"+
+      ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard,.pdfbook .fact,.pdfbook .facts,"+
+      ".pdfbook .day,.pdfbook .day-head,.pdfbook .day-body,.pdfbook .tip,.pdfbook .stop,"+
+      ".pdfbook .otable tr,.pdfbook .sec-head,.pdfbook .cover,.pdfbook .blogref"+
+      "{break-inside:avoid;page-break-inside:avoid}"+
+      ".pdfbook .section{break-inside:auto;page-break-inside:auto}";
     var holder=document.createElement("div");
     holder.style.cssText="position:fixed;left:-10000px;top:0;width:820px;background:#fff;z-index:-1";
+    holder.appendChild(st);
     holder.appendChild(clone);
     document.body.appendChild(holder);
     var label=btn?btn.innerHTML:"";
@@ -567,7 +592,7 @@
       image:{type:"jpeg",quality:0.96},
       html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",windowWidth:820},
       jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
-      pagebreak:{mode:["css","legacy"],avoid:[".day",".spot",".ucard",".infocard",".fact","tr",".infogrid"]}
+      pagebreak:{mode:["avoid-all","css","legacy"]}
     }).from(clone).save().then(done).catch(function(e){done();alert("PDF 產生失敗:"+e);});
   }
 
