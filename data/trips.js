@@ -1098,5 +1098,278 @@ window.TRIPS = [
       "廣安里無人機秀限週六、受天候影響,先確認當週是否演出。",
       "熱門餐廳(豬肉湯飯、鹽烤肉)用餐尖峰需排隊。"
     ]
+  },
+
+  {
+    id: "kansai-sanyo-2025",
+    title: "關西・山陽鐵道之旅",
+    subtitle: "大阪・岡山・廣島・京都",
+    country: "日本",
+    region: "關西・山陽",
+    year: 2025,
+    dateLabel: "12/6 – 12/14",
+    dateStart: "2025-12-06",
+    dateEnd: "2025-12-14",
+    nights: 8,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "宮島海上鳥居・倉敷美觀・宇治平等院・天橋立・teamLab 植物園",
+    themes: ["鐵路", "世界遺產", "親子", "美食"],
+    mapCenter: [34.95, 134.1],
+    mapZoom: 7,
+
+    flight: {
+      out: "12/6 桃園 TPE → 大阪 KIX",
+      back: "12/14 大阪 KIX → 桃園",
+      note: "關西機場進出・大阪/岡山/京都周遊・JR Pass(Day2–6)"
+    },
+    stay: [
+      { name: "阪急大阪 RESPIRE 飯店", nights: "12/6 ・ 1 晚", note: "大阪梅田" },
+      { name: "岡山格蘭比亞酒店", nights: "12/7–12/10 ・ 3 晚", note: "JR 岡山站直結" },
+      { name: "京都世紀飯店", nights: "12/10–12/12 ・ 2 晚", note: "JR 京都站旁・含早餐" },
+      { name: "星野 OMO7 大阪", nights: "12/12–12/14 ・ 2 晚", note: "新今宮・含早餐" }
+    ],
+    pass: {
+      icon: "🚄", label: "鐵路周遊券",
+      name: "關西&廣島地區鐵路周遊券",
+      price: "Day2–Day6 使用",
+      head: ["路段", "車種", "時間"],
+      rows: [
+        ["新大阪 ↔ 岡山", "山陽新幹線", "約 45 分"],
+        ["岡山 ↔ 廣島", "山陽新幹線", "約 35 分"],
+        ["廣島 → 宮島口 → 宮島", "JR + 宮島渡輪", "約 30 分"],
+        ["岡山 ↔ 京都", "山陽/東海道新幹線", "約 1 小時"],
+        ["京都 ↔ 天橋立", "JR + 京都丹後鐵道", "約 2 小時"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "12/6 (六)", theme: "✈ 抵達大阪・梅田",
+        items: [
+          { time: "抵達", text: "抵達關西機場,前往大阪梅田入住" },
+          { time: "玩", text: "梅田周邊(梅田藍天大廈空中庭園、購物)" },
+          { time: "晚餐", text: "燒肉力丸 梅田" },
+          { time: "住宿", text: "阪急大阪 RESPIRE 飯店" }
+        ]
+      },
+      {
+        day: 2, date: "12/7 (日)", theme: "🏯 大阪 → 岡山・後樂園與岡山城",
+        items: [
+          { time: "上午", text: "搭山陽新幹線 大阪 → 岡山(約 45 分)" },
+          { time: "玩", text: "岡山後樂園(日本三名園)、岡山城(烏城)" },
+          { time: "午餐", text: "岡山車站二樓美食街" },
+          { time: "晚餐", text: "一人鍋 惠 或 燒肉 J's 苑" },
+          { time: "住宿", text: "岡山格蘭比亞酒店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "山陽新幹線 新大阪 → 岡山約 45 分;岡山站直結格蘭比亞" }
+        ]
+      },
+      {
+        day: 3, date: "12/8 (一)", theme: "⛩ 岡山 ↔ 廣島・宮島與和平公園",
+        items: [
+          { time: "上午", text: "搭山陽新幹線 岡山 → 廣島,轉 JR + 渡輪至宮島" },
+          { time: "玩", text: "宮島嚴島神社海上鳥居、宮島纜車;廣島原爆圓頂、和平紀念資料館" },
+          { time: "午餐", text: "宮島牡蠣屋 或 牡蠣之林(烤牡蠣)" },
+          { time: "晚餐", text: "長田屋 廣島燒" },
+          { time: "住宿", text: "岡山格蘭比亞酒店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "岡山 ↔ 廣島 山陽新幹線約 35 分;廣島 → 宮島口 → 渡輪約 30 分" },
+          { type: "warn", title: "提醒", text: "嚴島神社海上鳥居依潮汐:漲潮浮於海上、退潮可步行至鳥居,先查潮汐表" }
+        ]
+      },
+      {
+        day: 4, date: "12/9 (二)", theme: "🏘 岡山・倉敷美觀",
+        items: [
+          { time: "玩", text: "倉敷美觀地區(白壁老街、倉敷川遊船)、倉敷三井 Outlet" },
+          { time: "午餐", text: "梅之木味噌豬排 或 有鄰庵(幸福布丁)" },
+          { time: "晚餐", text: "一人鍋 惠 或 燒肉 J's 苑" },
+          { time: "住宿", text: "岡山格蘭比亞酒店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "岡山 ↔ 倉敷 JR 約 15 分" }
+        ]
+      },
+      {
+        day: 5, date: "12/10 (三)", theme: "🍵 岡山 → 京都・宇治平等院",
+        items: [
+          { time: "上午", text: "搭新幹線 岡山 → 京都,轉 JR 奈良線至宇治" },
+          { time: "玩", text: "宇治平等院鳳凰堂、上賀茂神社、京都塔" },
+          { time: "午餐", text: "中村藤吉 抹茶(宇治本店)" },
+          { time: "晚餐", text: "新福菜館 拉麵" },
+          { time: "住宿", text: "京都世紀飯店" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "平等院鳳凰堂內部需現場拿號碼牌、分梯入場,一到先領票" }
+        ]
+      },
+      {
+        day: 6, date: "12/11 (四)", theme: "🐉 京都・天橋立",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "玩", text: "天橋立 View Land(飛龍觀吊椅纜車)、海鷗觀光船" },
+          { time: "午餐", text: "野雞三仙兵衛(天橋立)" },
+          { time: "晚餐", text: "京的燒肉處 弘 或 名代豬排かつくら" },
+          { time: "住宿", text: "京都世紀飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "京都 ↔ 天橋立 JR + 京都丹後鐵道約 2 小時,建議安排整天" }
+        ]
+      },
+      {
+        day: 7, date: "12/12 (五)", theme: "🎨 京都 → 大阪・下鴨神社與 teamLab",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "玩", text: "下鴨神社(糺之森)、道頓堀逛街(扭蛋之森)、大阪 teamLab 長居植物園(夜間)" },
+          { time: "晚餐", text: "壽司郎 天王寺店" },
+          { time: "住宿", text: "星野 OMO7 大阪" }
+        ],
+        tips: [
+          { type: "info", title: "提醒", text: "teamLab 長居植物園為夜間常設展,線上預約較保險" }
+        ]
+      },
+      {
+        day: 8, date: "12/13 (六)", theme: "🦓 大阪・天王寺",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "玩", text: "天王寺動物園、阿倍野 HARUKAS 300 展望台(夜景)、大國藥妝(天王寺逛街)" },
+          { time: "晚餐", text: "一蘭 阿倍野店" },
+          { time: "住宿", text: "星野 OMO7 大阪" }
+        ]
+      },
+      {
+        day: 9, date: "12/14 (日)", theme: "✈ 返回台灣",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "上午", text: "飯店退房,前往關西機場返台,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2.5–3 小時抵達關西機場辦理出境" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "大阪梅田", area: "大阪", hours: "店家約 10:00–21:00",
+        latlng: [34.7025, 135.4959],
+        desc: "大阪北區商業中心,梅田藍天大廈空中庭園展望台、阪急/阪神百貨、Grand Front 與 LUCUA 購物聚集,夜景與聖誕點燈季節氛圍濃厚。"
+      },
+      {
+        name: "岡山後樂園", area: "岡山", hours: "7:30/8:00–17:00(依季節)",
+        latlng: [34.6657, 133.9356],
+        desc: "日本三名園之一、米其林綠色指南三星,廣闊草坪、水池與唯心山借景岡山城,四季皆美。澤之池西北側可同框古城與池水倒影,清晨光線最柔。",
+        ref: { title: "凱子凱・後樂園&岡山城", url: "https://ksk.tw/blog/post/350054986" }
+      },
+      {
+        name: "岡山城", area: "岡山", hours: "9:00–17:30",
+        latlng: [34.6651, 133.9361],
+        desc: "黑色城牆加金色裝飾、人稱『烏城』,2022 年整修後重新開放,與對岸後樂園隔旭川相望。天守內有歷史展示與體驗,可穿城主服拍照。",
+        ref: { title: "日本。私旅行・黑武士岡山城", url: "https://aliciatseng.net/blog/post/48719067" }
+      },
+      {
+        name: "宮島嚴島神社", area: "宮島", hours: "6:30–18:00(依季節)",
+        latlng: [34.2960, 132.3197],
+        desc: "世界文化遺產、日本三景之一,朱紅海上大鳥居為廣島地標。漲潮時神社與鳥居浮於海上、退潮可步行至鳥居下,可搭宮島纜車登彌山俯瞰瀨戶內海。",
+        ref: { title: "福寶媽・宮島一日遊", url: "https://gogojp.tw/miyajima-trip/" }
+      },
+      {
+        name: "廣島和平紀念公園", area: "廣島", hours: "資料館 8:30–18:00",
+        latlng: [34.3955, 132.4536],
+        desc: "原爆圓頂(原爆 Dome)為 1945 年原子彈爆炸後唯一倖存建物,1996 年列為世界遺產。和平紀念資料館完整呈現核爆史實與祈願世界和平,園內有和平之火、原爆之子像。",
+        ref: { title: "許傑・廣島原爆圓頂與和平紀念公園", url: "https://journey.tw/peace-hiroshima/" }
+      },
+      {
+        name: "倉敷美觀地區", area: "倉敷", hours: "店家約 10:00–17:00",
+        latlng: [34.5979, 133.7714],
+        desc: "400 年歷史的白壁老街,倉敷川兩岸柳樹、町家與倉庫改建的咖啡選物店林立,可搭川舟遊船,大原美術館、長春藤廣場、紙膠帶文青店都在此。",
+        ref: { title: "BringYou・倉敷美觀地區自由行攻略", url: "https://www.bring-you.info/zh-tw/kurashiki-travel-guide" }
+      },
+      {
+        name: "宇治平等院", area: "宇治", hours: "庭園 8:30–17:30",
+        latlng: [34.8893, 135.8076],
+        desc: "1053 年建、世界文化遺產,鳳凰堂為十円硬幣與舊萬元紙鈔取景地,阿字池倒映鳳凰堂如鏡。鳳凰堂內部分梯限額入場(需現場領號),鳳翔館藏國寶文物。",
+        ref: { title: "來一球叭噗・宇治平等院鳳凰堂", url: "https://gototravel.tw/uji-byodoin/" }
+      },
+      {
+        name: "上賀茂神社", area: "京都", hours: "境內 5:30–17:00",
+        latlng: [35.0606, 135.7528],
+        desc: "京都最古老神社之一、世界文化遺產(古都京都的文化財),以兩座圓錐『立砂』與朱紅樓門著稱,清流御手洗川流經境內,與下鴨神社並稱賀茂兩社。"
+      },
+      {
+        name: "京都塔", area: "京都", hours: "10:00–21:00",
+        latlng: [34.9876, 135.7591],
+        desc: "京都車站正對面的城市地標,展望台位於地面 100m 處,360 度俯瞰京都市景與東山,天氣好可遠眺清水寺。日落前後最美,塔下有 SANDO 美食與伴手禮。",
+        ref: { title: "許傑・京都塔展望台", url: "https://journey.tw/kyoto-tower/" }
+      },
+      {
+        name: "天橋立 View Land", area: "天橋立", hours: "約 9:00–17:00",
+        latlng: [35.5667, 135.1939],
+        desc: "位於文珠山頂、欣賞日本三景天橋立的展望樂園,搭單人吊椅或纜車登頂,從『飛龍觀』跨下倒看,長沙洲宛如飛龍升天。可再搭觀光船餵海鷗橫渡。",
+        ref: { title: "樂活的大方・天橋立 View Land 飛龍觀", url: "https://www.bigfang.tw/blog/post/kyoto-amanohashidate-viewland" }
+      },
+      {
+        name: "下鴨神社", area: "京都", hours: "境內 6:30–17:00",
+        latlng: [35.0388, 135.7728],
+        desc: "世界文化遺產,境內原生林『糺之森』約 12 萬㎡、樹齡 200–600 年,秋日紅葉銀杏絕美。求姻緣的相生社、美人社河合神社與夢幻四季御守人氣高。",
+        ref: { title: "芒果這一家・下鴨神社糺之森", url: "https://mangofamily56.com/shimogamo-jinja/" }
+      },
+      {
+        name: "道頓堀(扭蛋之森)", area: "大阪", hours: "店家約 10:00–22:00",
+        latlng: [34.6687, 135.5013],
+        desc: "大阪最熱鬧的水岸商圈,固力果跑跑人看板、章魚燒與大型招牌林立,周邊有大型扭蛋專賣店(扭蛋之森/扭蛋百貨),扭蛋機如森林般成排,扭蛋控必逛。"
+      },
+      {
+        name: "teamLab 長居植物園", area: "大阪・長居", hours: "夜間常設展(日落後)",
+        latlng: [34.6135, 135.5187],
+        desc: "大阪長居植物園內的夜間沉浸式光影藝術常設展,十多件作品融入真實樹林與池水,隨風雨與人的互動變化,漫步森林光影中超夢幻。建議線上預約。",
+        ref: { title: "BringYou・teamLab 長居植物園夜間展", url: "https://www.bring-you.info/zh-tw/teamlab-botanical-garden-osaka" }
+      },
+      {
+        name: "天王寺動物園", area: "天王寺", hours: "9:30–17:00(週一休)",
+        latlng: [34.6519, 135.5089],
+        desc: "1915 年開園、市區內的百年動物園,約 170 種動物採生態展示,北極熊餵食秀、企鵝公園與海獅碼頭人氣高。緊鄰通天閣、新世界,持大阪周遊卡可免費入場。",
+        ref: { title: "Mimi韓・天王寺動物園", url: "https://mimigo.tw/osaka-zoo/" }
+      },
+      {
+        name: "阿倍野 HARUKAS 300", area: "天王寺", hours: "9:00–22:00",
+        latlng: [34.6459, 135.5132],
+        desc: "日本數一數二高樓(300m)頂端的 360 度展望台,玻璃空中漫步俯瞰大阪市景與大阪灣,日落後魔幻時刻夜景最美,58–60 樓還有空中花園與咖啡。",
+        ref: { title: "波比看世界・阿倍野展望台 HARUKAS 300", url: "https://bobbytravel.tw/harukas-300/" }
+      }
+    ],
+
+    food: [
+      { name: "燒肉力丸 梅田", area: "梅田", stars: 4, note: "和牛燒肉吃到飽", ref: { title: "水晶安蹄・燒肉力丸梅田", url: "https://auntie.tw/yakiniku-rikimaru/" } },
+      { name: "一人鍋 惠 / 燒肉 J's 苑", area: "岡山", stars: 4, note: "岡山晚餐(一人鍋/燒肉)", ref: { title: "", url: "" } },
+      { name: "宮島牡蠣屋", area: "宮島", stars: 5, note: "宮島排名第一烤牡蠣", ref: { title: "金大佛・宮島牡蠣屋", url: "https://yama.tw/kakiya/" } },
+      { name: "長田屋 廣島燒", area: "廣島", stars: 5, note: "和平公園旁排隊廣島燒", ref: { title: "周花花・長田屋廣島燒", url: "https://tenjo.tw/nagataya/" } },
+      { name: "有鄰庵 / 梅之木味噌豬排", area: "倉敷", stars: 4, note: "倉敷古宅幸福布丁", ref: { title: "許傑・倉敷有鄰庵幸福布丁", url: "https://journey.tw/yuurin-an/" } },
+      { name: "中村藤吉 抹茶", area: "宇治", stars: 5, note: "宇治百年抹茶聖代", ref: { title: "莉芙小姐・中村藤吉宇治本店", url: "https://travelerliv.com/tokichi/" } },
+      { name: "新福菜館 拉麵", area: "京都", stars: 4, note: "京都最早醬油拉麵・炒飯", ref: { title: "樂活的大方・新福菜館本店", url: "https://www.bigfang.tw/blog/post/shinpuku-ramen-kyoto" } },
+      { name: "京的燒肉處 弘", area: "京都", stars: 5, note: "京都人氣和牛燒肉", ref: { title: "樂活的大方・京的燒肉處弘", url: "https://www.bigfang.tw/blog/post/yakiniku-hiro-kyoto-ekimae" } },
+      { name: "名代豬排 かつくら", area: "京都", stars: 4, note: "排隊炸豬排名店", ref: { title: "周花花・名代豬排かつくら", url: "https://tenjo.tw/katsukura/" } },
+      { name: "壽司郎 天王寺店", area: "天王寺", stars: 4, note: "迴轉壽司", ref: { title: "", url: "" } },
+      { name: "一蘭 阿倍野店", area: "阿倍野", stars: 4, note: "豚骨拉麵", ref: { title: "", url: "" } }
+    ],
+
+    weather: [
+      "關西/山陽 12 月:約 4–12°C,冬日乾冷",
+      "京都、天橋立山區更冷,保暖外套、圍巾必備",
+      "日落早(約 17:00),夜景行程注意時間"
+    ],
+    info: [
+      { title: "🎫 JR Pass", items: ["關西&廣島地區鐵路周遊券 Day2–Day6 使用", "可搭山陽新幹線(自由席)與 JR 在來線", "宮島渡輪 JR 船班可用"] },
+      { title: "📅 預約/提醒", items: ["平等院鳳凰堂內部需現場拿號碼牌", "teamLab 長居植物園線上預約", "京的燒肉處弘、燒肉力丸建議網路訂位", "嚴島神社看潮汐(漲退潮兩種風貌)"] },
+      { title: "🍜 在地必吃", items: ["廣島燒(廣島)", "宮島烤牡蠣", "倉敷幸福布丁", "宇治抹茶", "京都拉麵/和牛燒肉"] },
+      { title: "🚄 交通提醒", items: ["山陽新幹線串聯大阪–岡山–廣島", "岡山 ↔ 倉敷 JR 約 15 分", "京都 ↔ 天橋立較遠(約 2 小時),安排整天"] }
+    ],
+    notes: [
+      "12 月關西山陽偏冷,務必保暖。",
+      "平等院鳳凰堂、teamLab 等熱門點建議早到或線上預約。",
+      "宮島依潮汐有海上鳥居/可步行兩種風貌,先查潮汐表。"
+    ]
   }
 ];
