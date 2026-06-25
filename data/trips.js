@@ -2084,5 +2084,170 @@ window.TRIPS = [
       "高千穗峽划船、豪斯登堡等熱門點建議提前安排。",
       "餐廳明細未提供,美食以九州名物呈現,可隨時補上指定店家。"
     ]
+  },
+
+  {
+    id: "phuquoc-2024",
+    title: "富國島渡假之旅",
+    subtitle: "Phú Quốc・大世界・珍珠樂園",
+    country: "越南",
+    region: "富國島",
+    year: 2024,
+    dateLabel: "10/16 – 10/20",
+    dateStart: "2024-10-16",
+    dateEnd: "2024-10-20",
+    nights: 4,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "大世界不夜城・VinWonders・世界最長跨海纜車・地中海小鎮",
+    themes: ["海島", "渡假", "主題樂園", "親子"],
+    mapCenter: [10.18, 103.95],
+    mapZoom: 10,
+
+    flight: {
+      airline: "越捷航空 VietJet Air",
+      out: "10/16 桃園 TPE → 富國島 PQC",
+      back: "10/20 富國島 PQC → 桃園 TPE",
+      note: "富國島渡假・北部 Vinpearl 區 + 南部 Hon Thom"
+    },
+    stay: [
+      { name: "星灣皇冠假日飯店 Crowne Plaza Starbay", nights: "10/16–10/18 ・ 2 晚", note: "富國島北部海灘" },
+      { name: "薩琳達渡假村 Salinda Resort", nights: "10/18–10/20 ・ 2 晚", note: "楊東/中部海灘" }
+    ],
+    pass: {
+      icon: "🚗", label: "交通",
+      name: "島內計程車 / 包車 / Grab",
+      price: "—",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["機場 → 飯店", "計程車 / 接送", "約 20–40 分"],
+        ["北部 Vinpearl 區", "包車或 Grab", "大世界/Safari/VinWonders 集中"],
+        ["南部 Hon Thom", "包車 → 跨海纜車", "纜車站在 An Thới 日落小鎮"],
+        ["楊東夜市", "計程車 / Grab", "市區"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "10/16 (三)", theme: "🏝 抵達富國島・大世界",
+        items: [
+          { time: "抵達", text: "搭越捷抵達富國島,前往飯店" },
+          { time: "玩", text: "大世界不夜城(Grand World)北部・威尼斯運河貢多拉" },
+          { time: "住宿", text: "星灣皇冠假日飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "富國島機場 → 北部飯店約 30–40 分;大世界 24h 開放,貢多拉/表演有固定時段" }
+        ]
+      },
+      {
+        day: 2, date: "10/17 (四)", theme: "🦁 富國野生動物園",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "休閒", text: "飯店休閒" },
+          { time: "玩", text: "富國野生動物園(Vinpearl Safari)、再逛大世界不夜城" },
+          { time: "住宿", text: "星灣皇冠假日飯店" }
+        ]
+      },
+      {
+        day: 3, date: "10/18 (五)", theme: "🎢 珍珠樂園・陽東夜市",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "休閒", text: "飯店休閒" },
+          { time: "玩", text: "珍珠樂園(VinWonders)、海龜水族館" },
+          { time: "逛", text: "陽東夜市" },
+          { time: "住宿", text: "薩琳達渡假村" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "VinWonders 海龜水族館美人魚秀約 11:00、14:00;陽東夜市傍晚後熱鬧,注意隨身財物" }
+        ]
+      },
+      {
+        day: 4, date: "10/19 (六)", theme: "🚠 地中海小鎮・跨海纜車",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "休閒", text: "飯店休閒" },
+          { time: "玩", text: "地中海小鎮(日落小鎮)、世界最長跨海纜車、太陽世界遊樂園(Hon Thom)" },
+          { time: "住宿", text: "薩琳達渡假村" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "跨海纜車全長近 8km、世界最長,單程約 20 分;日落小鎮夕陽與海之吻水舞秀必看" }
+        ]
+      },
+      {
+        day: 5, date: "10/20 (日)", theme: "✈ 返回台灣",
+        items: [
+          { time: "早餐", text: "飯店 Buffet" },
+          { time: "上午", text: "前往機場,搭越捷返回台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2 小時抵達富國島機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "大世界不夜城(Grand World)", area: "富國島北部", hours: "24h(設施 8:30–22:00)",
+        latlng: [10.3338, 103.8540],
+        desc: "Vingroup 打造、越南首座 24 小時不夜城,以威尼斯運河為主題的歐風園區,可搭貢多拉、看《越南精髓》劇場、逛泰迪熊博物館與大型竹建築,夜間水舞秀夢幻。入場免費(部分設施另購票)。",
+        ref: { title: "蔡小妞依玲・富國大世界 Grand World", url: "https://tsnio.com/grand-world-phu-quoc/" }
+      },
+      {
+        name: "富國野生動物園(Vinpearl Safari)", area: "富國島北部", hours: "約 9:00–16:00",
+        latlng: [10.3489, 103.8606],
+        desc: "全越南最大野生動物園,150 種、3000 多隻動物,搭免費遊園車進開放式 Safari 近距離看獅子、長頸鹿、斑馬,可餵長頸鹿、看百鳥秀,親子必訪。",
+        ref: { title: "寶寶溫・珍珠野生動物園", url: "https://bobowin.blog/vinpearl-safari-phu-quoc/" }
+      },
+      {
+        name: "珍珠樂園 VinWonders・海龜水族館", area: "富國島北部", hours: "約 9:00–20:00",
+        latlng: [10.3478, 103.8420],
+        desc: "被譽為『越南迪士尼』,結合陸上樂園、水上樂園與世界最大海龜造型水族館(The Sea Shell,300+ 種海洋生物、美人魚秀),夢幻城堡、滑水道一天玩不完,壓軸燈光閉園秀必看。",
+        ref: { title: "蔡小妞依玲・珍珠樂園 VinWonders", url: "https://tsnio.com/vinwonders-phu-quoc/" }
+      },
+      {
+        name: "陽東夜市", area: "楊東鎮", hours: "18:00–23:30",
+        latlng: [10.2136, 103.9606],
+        desc: "富國島最大夜市,百餘攤越式小吃與海鮮排檔:現烤龍蝦、海膽、生蠔、椰子冰淇淋、越式法國麵包,還有珍珠飾品、胡椒等伴手禮。傍晚 18:00 後最熱鬧,留意隨身財物。",
+        ref: { title: "Stancy・陽東夜市富國最大夜市", url: "https://stancylife.com/phu-quoc-night-market/" }
+      },
+      {
+        name: "地中海小鎮(日落小鎮)", area: "富國島南部", hours: "戶外・夕陽時最美",
+        latlng: [10.0414, 104.0167],
+        desc: "Sun Group 以義大利阿瑪菲為靈感打造,300 多棟地中海彩色別墅依山傍海,跨海纜車起點站、親吻橋(Kiss Bridge)與海之吻(Kiss of the Sea)水舞秀都在此,是富國島最美夕陽觀賞點。",
+        ref: { title: "蔡小妞依玲・日落小鎮 Sunset Town", url: "https://tsnio.com/sunset-town-phu-quoc/" }
+      },
+      {
+        name: "跨海纜車・太陽世界(Hon Thom)", area: "香島 Hon Thom", hours: "纜車約 8:30–17:30",
+        latlng: [10.0300, 104.0200],
+        desc: "金氏世界紀錄『世界最長三線跨海纜車』,全長近 8km、單程約 20 分,360 度全景車廂飽覽海島漁村;抵香島 Hon Thom 後是太陽世界自然公園,有 Aquatopia 水上樂園與木造雲霄飛車。",
+        ref: { title: "寶寶溫・太陽世界跨海纜車", url: "https://bobowin.blog/sunworld-cable-car/" }
+      }
+    ],
+
+    food: [
+      { name: "富國島海鮮", area: "富國島", stars: 5, note: "陽東夜市現烤龍蝦/海膽", ref: { title: "Stancy・陽東夜市海鮮", url: "https://stancylife.com/phu-quoc-night-market/" } },
+      { name: "富國魚露 nước mắm", area: "富國島", stars: 5, note: "富國島特產伴手禮", ref: { title: "", url: "" } },
+      { name: "越南河粉 Phở", area: "越南", stars: 4, note: "越式湯河粉", ref: { title: "", url: "" } },
+      { name: "越式法國麵包 Bánh mì", area: "越南", stars: 4, note: "越南三明治", ref: { title: "", url: "" } },
+      { name: "椰子冰淇淋", area: "富國島", stars: 4, note: "夜市必吃", ref: { title: "", url: "" } },
+      { name: "生蠔・烤海鮮", area: "富國島", stars: 4, note: "海鮮排檔", ref: { title: "", url: "" } }
+    ],
+
+    weather: [
+      "富國島 10 月:約 26–31°C,熱帶海島,偶有午後陣雨",
+      "防曬、輕便透氣衣物、泳具必備",
+      "雨季尾聲,備輕便雨具"
+    ],
+    info: [
+      { title: "🎫 套票建議", items: ["VinWonders + Safari + Grand World 可買 Vinpearl 聯票", "跨海纜車 + 太陽世界(Hon Thom)套票", "Vinpearl 北部園區群有免費接駁"] },
+      { title: "🍤 在地必吃", items: ["富國島海鮮(龍蝦、海膽、生蠔)", "富國魚露 nước mắm", "越南河粉 phở、法國麵包 bánh mì", "椰子冰淇淋"] },
+      { title: "💵 實用提醒", items: ["貨幣越南盾(VND),備小額現金", "Grab 叫車方便", "越捷為 LCC,行李需加購", "夜市留意隨身財物"] },
+      { title: "🏝 行程提醒", items: ["北部 Vinpearl 區景點集中可連玩", "南部跨海纜車 + 太陽世界留半天", "日落小鎮看夕陽與海之吻水舞秀"] }
+    ],
+    notes: [
+      "10 月為雨季尾聲,備防曬與輕便雨具。",
+      "Vinpearl 北部樂園群與南部 Hon Thom 距離較遠,已分區安排。",
+      "餐廳未指定,美食以富國島/越南名物呈現,可隨時補上指定店家。"
+    ]
   }
 ];
