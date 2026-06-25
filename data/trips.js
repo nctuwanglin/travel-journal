@@ -2480,5 +2480,190 @@ window.TRIPS = [
       "富良野薰衣草 6 月下旬才陸續盛開,6 月初以其他花卉為主。",
       "名店(根室花丸、GARAKU)用餐尖峰需抽號排隊。"
     ]
+  },
+
+  {
+    id: "okinawa-2023",
+    title: "沖繩包棟團",
+    subtitle: "那霸・恩納・美麗海・古宇利",
+    country: "日本",
+    region: "沖繩",
+    year: 2023,
+    dateLabel: "11/15 – 11/19",
+    dateStart: "2023-11-15",
+    dateEnd: "2023-11-19",
+    nights: 4,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "美麗海水族館・古宇利大橋・玉泉洞・瀨長島・恩納包棟自駕",
+    themes: ["包棟", "自駕", "親子", "美食"],
+    mapCenter: [26.4, 127.9],
+    mapZoom: 10,
+
+    flight: {
+      airline: "台灣虎航 Tigerair",
+      out: "11/15 桃園 TPE → 那霸 OKA",
+      back: "11/19 那霸 OKA → 桃園 TPE",
+      note: "那霸進出・OTS 自駕・恩納包棟 10 人"
+    },
+    stay: [
+      { name: "恩納包棟別墅(Nakadomari)", nights: "全程 4 晚", note: "恩納村・10 人包棟・可自炊" }
+    ],
+    pass: {
+      icon: "🚗", label: "交通",
+      name: "OTS 租車自駕",
+      price: "那霸機場取還車",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["那霸機場 → OTS 豐崎", "接駁取車", "約 10 分"],
+        ["南部(瀨長島/玉泉洞/ASHIBINAA)", "自駕", "景點集中南部"],
+        ["北部(美麗海/古宇利/名護)", "自駕", "西海岸 58 號北上"],
+        ["恩納包棟別墅", "自駕", "據點"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "11/15 (三)", theme: "✈ 抵達沖繩・那霸南部",
+        items: [
+          { time: "抵達", text: "抵達那霸機場,OTS 取車(豬肉蛋飯糰當早午餐)" },
+          { time: "玩", text: "瀨長島 Umikaji Terrace、波上宮、SAN-A 浦添西海岸 PARCO CITY" },
+          { time: "晚餐", text: "燒肉 琉球の牛 恩納店" },
+          { time: "住宿", text: "恩納包棟別墅" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "那霸機場 OTS 豐崎取車約 10 分;瀨長島看飛機與夕陽" }
+        ]
+      },
+      {
+        day: 2, date: "11/16 (四)", theme: "🐠 美麗海・古宇利",
+        items: [
+          { time: "玩", text: "部瀨名海中公園、古宇利海洋塔、古宇利大橋觀景台、沖繩美麗海水族館、DINO 恐龍 PARK" },
+          { time: "午餐", text: "古宇利蝦蝦飯" },
+          { time: "晚餐", text: "百年古家 大家(阿古豬)" },
+          { time: "住宿", text: "恩納包棟別墅" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "美麗海鯨鯊餵食秀 15:00/17:00;古宇利蝦蝦飯、大家阿古豬建議預約" }
+        ]
+      },
+      {
+        day: 3, date: "11/17 (五)", theme: "🕳 玉泉洞・南部購物",
+        items: [
+          { time: "玩", text: "玉泉洞(沖繩世界文化王國)、ASHIBINAA Outlet" },
+          { time: "午餐", text: "暖暮拉麵 糸滿店" },
+          { time: "晚餐", text: "燒肉五苑" },
+          { time: "住宿", text: "恩納包棟別墅" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "玉泉洞步行約 30–40 分;暖暮糸滿店、燒肉五苑有停車場" }
+        ]
+      },
+      {
+        day: 4, date: "11/18 (六)", theme: "🛍 那霸市區",
+        items: [
+          { time: "玩", text: "國際通、第一牧志公設市場、永旺夢樂城 沖繩來客夢" },
+          { time: "住宿", text: "恩納包棟別墅" }
+        ]
+      },
+      {
+        day: 5, date: "11/19 (日)", theme: "✈ 返回台灣",
+        items: [
+          { time: "上午", text: "前往那霸機場,搭虎航返回台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2 小時抵達那霸機場(含 OTS 還車時間)" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "瀨長島 Umikaji Terrace", area: "豐見城・瀨長島", hours: "店家約 10:00–21:00",
+        latlng: [26.1736, 127.6486],
+        desc: "緊鄰那霸機場的離島『沖繩小希臘』,純白階梯式 Umikaji Terrace 約 50 間店,地中海風海景與夕陽超好拍,還能近距離看飛機起降。幸福鬆餅必吃(建議預約)。",
+        ref: { title: "波比看世界・瀨長島 Umikaji Terrace", url: "https://bobbytravel.tw/senaga-island/" }
+      },
+      {
+        name: "波上宮", area: "那霸", hours: "境內 24h・授與所 9:00–17:00",
+        latlng: [26.2178, 127.6678],
+        desc: "琉球八社之首、建於斷崖上的臨海神社,緊鄰波之上海灘,紅型與貝殼御守、書包御守人氣高。距國際通不遠,可順遊。",
+        ref: { title: "波比看世界・波上宮", url: "https://bobbytravel.tw/naminoue-shrine/" }
+      },
+      {
+        name: "部瀨名海中公園", area: "名護・部瀨名", hours: "9:00–18:00",
+        latlng: [26.5363, 127.9648],
+        desc: "不用下水也能看魚!海中展望塔 24 圓窗 + 鯨魚造型玻璃底遊艇,全年齡、雨天備案首選。",
+        ref: { title: "Marktrip・部瀨名海中公園", url: "https://marktrip.tw/busena-marinepark/" }
+      },
+      {
+        name: "古宇利海洋塔", area: "今歸仁・古宇利", hours: "10:00–18:00",
+        latlng: [26.7019, 128.0186],
+        desc: "戀之島古宇利上的 82m 白色展望塔,搭無人電動車穿越亞熱帶林上塔,360 度俯瞰古宇利大橋與『古宇利藍』大海,頂樓愛情鐘是情侶打卡點。",
+        ref: { title: "許傑・古宇利海洋塔", url: "https://journey.tw/kouri-oceantower/" }
+      },
+      {
+        name: "古宇利大橋", area: "今歸仁・古宇利", hours: "戶外・全日",
+        latlng: [26.6917, 128.0247],
+        desc: "全長近 2km、橫跨翡翠海的跨海大橋,連接屋我地島與古宇利島,兩端觀景台與沙灘俯瞰夢幻『古宇利藍』,沖繩必拍地標。",
+        ref: { title: "波比看世界・古宇利島一日遊", url: "https://bobbyworld.tw/2024-01-07-2704/" }
+      },
+      {
+        name: "沖繩美麗海水族館", area: "本部", hours: "約 8:30–18:30",
+        latlng: [26.6943, 127.8779],
+        desc: "亞洲最大、全球第二的水族館,『黑潮之海』巨型水槽有鯨鯊、鬼蝠魟,鯨鯊餵食秀(15:00/17:00)與海豚秀必看,位於海洋博公園內。",
+        ref: { title: "Wendy's Journey・美麗海水族館攻略", url: "https://www.wendyjourney.com/churaumi-okinawa/" }
+      },
+      {
+        name: "DINO 恐龍 PARK 山原亞熱帶之森", area: "名護", hours: "9:00–18:00",
+        latlng: [26.5917, 127.9772],
+        desc: "御菓子御殿名護店旁的恐龍主題森林,日本唯一筆筒樹原生林中藏 80+ 種逼真恐龍,搭配音效與 AR 平板,彷彿侏羅紀公園,親子探險首選。",
+        ref: { title: "鯊魚大口咬・DINO 恐龍公園", url: "https://bigsharkgogogo.tw/dinopark-okinawa/" }
+      },
+      {
+        name: "玉泉洞(沖繩世界文化王國)", area: "南城", hours: "9:00–17:30",
+        latlng: [26.1419, 127.7475],
+        desc: "全長約 5km、開放約 890m 的日本最大級鐘乳洞,鐘乳石與燈光造景壯觀;地面王國村可看 EISA 太鼓秀、毒蛇秀與琉球古民家。",
+        ref: { title: "Mimi韓・玉泉洞王國村", url: "https://mimigo.tw/okinawa-world/" }
+      },
+      {
+        name: "國際通", area: "那霸", hours: "店家約 10:00–22:00",
+        latlng: [26.2146, 127.6857],
+        desc: "那霸最熱鬧的 1.6km 商店街,土產、藥妝、餐廳與屋台林立,鄰第一牧志公設市場與壺屋通,夜晚也熱鬧。",
+        ref: { title: "阿君的玩食天堂・國際通必逛攻略", url: "https://ajunfun.tw/kokusai-dori/" }
+      },
+      {
+        name: "第一牧志公設市場", area: "那霸", hours: "8:00–22:00",
+        latlng: [26.2156, 127.6883],
+        desc: "沖繩人的廚房,1 樓買海鮮(夜光貝、伊勢龍蝦)與石垣牛、阿古豬,2 樓食堂可代客料理現買現吃,2023 新館重新開幕。",
+        ref: { title: "Wendy's Journey・第一牧志公設市場", url: "https://www.wendyjourney.com/makishi-public-market/" }
+      }
+    ],
+
+    food: [
+      { name: "豬肉蛋飯糰(機場店)", area: "那霸機場", stars: 4, note: "沖繩飯糰名物", ref: { title: "波比看世界・沖繩豬肉蛋飯糰", url: "https://bobby.tw/blog/post/225082454" } },
+      { name: "燒肉 琉球の牛 恩納店", area: "恩納", stars: 5, note: "A5 和牛燒肉(需訂位)", ref: { title: "TISS 玩味食尚・琉球の牛恩納店", url: "https://tisshuang.com/blog/post/u-shi" } },
+      { name: "古宇利蝦蝦飯", area: "古宇利", stars: 5, note: "蒜香奶油蝦飯・看海", ref: { title: "波比看世界・古宇利島蝦蝦飯", url: "https://bobbytravel.tw/kouri-shrimp/" } },
+      { name: "百年古家 大家(阿古豬)", area: "名護", stars: 5, note: "百年古宅阿古豬料理(需預約)", ref: { title: "Mimi韓・百年古家大家", url: "https://mimigo.tw/okinawa-ufuya/" } },
+      { name: "暖暮拉麵 糸滿店", area: "糸滿", stars: 5, note: "沖繩排隊豚骨拉麵", ref: { title: "波比看世界・暖暮拉麵", url: "https://bobbytravel.tw/danbo-ramen/" } },
+      { name: "燒肉五苑", area: "沖繩", stars: 4, note: "燒肉吃到飽・不限時", ref: { title: "壞波妞・燒肉五苑", url: "https://boniutravel.com/blog/post/5781079" } }
+    ],
+
+    weather: [
+      "沖繩 11 月:約 20–26°C,溫暖舒適",
+      "海風較涼,薄外套備用",
+      "適合戶外與海島行程"
+    ],
+    info: [
+      { title: "🏝 包棟自駕", items: ["10 人包棟別墅,自駕最方便(OTS)", "景點分北部(美麗海/古宇利)、南部(玉泉洞/瀨長島)", "別墅可自炊,超市採買補給"] },
+      { title: "📅 預約/提醒", items: ["琉球の牛、大家阿古豬建議提前訂位", "美麗海水族館 KKday/Klook 套票較划算", "暖暮拉麵牧志店常排隊,分店較好停車"] },
+      { title: "🍤 沖繩必吃", items: ["A5 和牛燒肉、阿古豬", "古宇利蒜香奶油蝦飯", "暖暮豚骨拉麵、燒肉吃到飽", "沖繩飯糰、海葡萄"] },
+      { title: "🚗 交通提醒", items: ["那霸機場 OTS 取還車", "西海岸 58 號公路北上美麗海", "南部玉泉洞、瀨長島集中"] }
+    ],
+    notes: [
+      "11 月沖繩溫暖,海風稍涼,薄外套備用。",
+      "人氣餐廳(琉球の牛、大家)建議提前預約。",
+      "10 人包棟自駕,行程已分北部/南部安排。"
+    ]
   }
 ];
