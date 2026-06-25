@@ -15,7 +15,7 @@ window.TRIPS = [
     dateEnd: "2026-08-26",
     nights: 5,
     status: "即將出發",
-    recommended: true,
+    recommended: false,
     tagline: "新幹線 E5+E6 連結奇景・田澤湖深藍・角館武家屋敷",
     themes: ["新幹線", "祕境峽谷", "親子", "美食"],
     mapCenter: [39.2, 140.85],

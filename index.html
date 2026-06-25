@@ -88,7 +88,7 @@
   /* =========================================================
      GALLERY / WALL
   ========================================================= */
-  .hero{padding:56px 0 30px;position:relative;overflow:hidden}
+  .hero{padding:34px 0 22px;position:relative;overflow:hidden}
   .hero-eye{display:flex;align-items:center;gap:14px;margin-bottom:20px}
   .hero-eye .rail{height:2px;width:54px;background:linear-gradient(90deg,var(--hayabusa),var(--komachi));border-radius:2px}
   .hero h1{
@@ -101,6 +101,11 @@
   .hero-meta{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
   .hero-meta .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:30px;line-height:1}
   .hero-meta .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .hero-flags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .flagstat{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);
+    border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:var(--shadow)}
+  .flagstat .fg{font-size:19px;line-height:1}
+  .flagstat b{font-family:"Space Grotesk",sans-serif;font-size:16px;color:var(--hayabusa)}
 
   /* filter chips */
   .filter{position:sticky;top:58px;z-index:30;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
@@ -320,6 +325,19 @@
   var app = document.getElementById("app");
   var liveMaps = [];   // 追蹤 Leaflet 實例以便切換 view 時銷毀
 
+  var FLAGS = { "日本": "🇯🇵", "韓國": "🇰🇷", "越南": "🇻🇳" };
+  function flagOf(c){ return FLAGS[c] || "🏳️"; }
+  // 卡片標題:國家 地區 年份
+  function displayTitle(t){ return t.country + " " + t.region + " " + t.year; }
+  // 排序:即將出發置頂(越接近出發日越靠前),其餘旅遊回憶依日期由新到舊
+  function tripSort(a,b){
+    var au = a.status === "即將出發", bu = b.status === "即將出發";
+    if(au !== bu) return au ? -1 : 1;
+    var da = a.dateStart || "", db = b.dateStart || "";
+    if(au) return da < db ? -1 : (da > db ? 1 : 0);
+    return da < db ? 1 : (da > db ? -1 : 0);
+  }
+
   /* ---------- helpers ---------- */
   function el(html){var t=document.createElement("template");t.innerHTML=html.trim();return t.content.firstChild;}
   function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
@@ -350,22 +368,22 @@
   function renderGallery(){
     var trips=TRIPS.slice();
     var countries=[]; trips.forEach(function(t){if(countries.indexOf(t.country)<0)countries.push(t.country);});
+    var countBy={}; trips.forEach(function(t){countBy[t.country]=(countBy[t.country]||0)+1;});
     var filters=["全部"].concat(countries);
-    var nNights=trips.reduce(function(a,t){return a+(t.nights||0);},0);
-    var nSpots=trips.reduce(function(a,t){return a+((t.spots||[]).length);},0);
 
     app.innerHTML=
       topbar(false,null)+
       '<header class="hero"><div class="wrap">'+
         '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
-        '<h1><span class="ja">たびの きろく</span>走過的路,<br>想去的<em>遠方</em>。</h1>'+
-        '<p class="hero-lead">把每一趟旅程收進這面牆 —— 給自己留念,也當成攻略分享給朋友。喜歡的話,可以整本下載成旅遊書帶著走。</p>'+
-        '<div class="hero-meta">'+
-          stat(trips.length,"趟旅程 Trips")+stat(nNights,"晚住宿 Nights")+stat(nSpots,"個景點 Spots")+
+        '<div class="hero-flags">'+
+          countries.map(function(c){return '<span class="flagstat"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></span>';}).join("")+
         '</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
-        filters.map(function(f){return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(f)+'</button>';}).join("")+
+        filters.map(function(f){
+          var label=(f==="全部")?"全部":(flagOf(f)+" "+f+" "+(countBy[f]||0));
+          return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(label)+'</button>';
+        }).join("")+
       '</div></div></div>'+
       '<main class="wrap"><div class="grid" id="grid"></div></main>'+
       footer();
@@ -380,7 +398,7 @@
   function paintCards(){
     destroyMaps();
     var grid=document.getElementById("grid");
-    var list=TRIPS.filter(function(t){return activeFilter==="全部"||t.country===activeFilter;});
+    var list=TRIPS.filter(function(t){return activeFilter==="全部"||t.country===activeFilter;}).slice().sort(tripSort);
     grid.innerHTML="";
     list.forEach(function(t){
       var card=el(
@@ -395,14 +413,14 @@
           '</div>'+
           '<div class="card-body">'+
             '<div>'+
-              '<div class="card-title">'+esc(t.title)+'</div>'+
+              '<div class="card-title">'+esc(displayTitle(t))+'</div>'+
               '<div class="card-sub">'+esc(t.subtitle||"")+'</div>'+
             '</div>'+
             '<div class="card-date"><span class="d">'+esc(t.dateLabel)+'</span><span class="y">'+esc(t.year)+'</span></div>'+
             '<div class="card-tag">'+esc(t.tagline||"")+'</div>'+
             '<div class="card-themes">'+(t.themes||[]).map(function(x){return '<span class="tg">'+esc(x)+'</span>';}).join("")+'</div>'+
             '<div class="card-foot">'+
-              '<span class="card-blog">📍 '+((t.spots||[]).length)+' 景點 ・ 🍽 '+((t.food||[]).length)+' 美食</span>'+
+              '<span class="card-blog">📍 '+((t.spots||[]).length)+' 個景點 ・ 🍽 '+((t.food||[]).length)+' 美食</span>'+
               '<span class="card-go">查看行程 →</span>'+
             '</div>'+
           '</div>'+
@@ -433,8 +451,8 @@
       '<article class="trip"><div class="wrap">'+
         '<section class="cover">'+
           '<a class="back" href="#/">← 回集錦牆</a>'+
-          '<div class="cover-eye"><span class="eyebrow">'+esc(t.country)+' ・ '+esc(t.region)+' ・ '+esc(t.year)+'</span></div>'+
-          '<h1>'+esc(t.title)+'</h1>'+
+          '<div class="cover-eye"><span class="eyebrow">'+esc(t.title)+'</span></div>'+
+          '<h1>'+esc(displayTitle(t))+'</h1>'+
           '<div class="sub">'+esc(t.subtitle||"")+'</div>'+
           '<p class="cover-tag">'+esc(t.tagline||"")+'</p>'+
           '<img class="print-only print-cover-map" src="'+staticMapURL(t,900,360)+'" alt="'+esc(t.region)+'地圖">'+
