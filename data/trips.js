@@ -2665,5 +2665,169 @@ window.TRIPS = [
       "人氣餐廳(琉球の牛、大家)建議提前預約。",
       "10 人包棟自駕,行程已分北部/南部安排。"
     ]
+  },
+
+  {
+    id: "tokyo-2022",
+    title: "東京親子團",
+    subtitle: "淺草・迪士尼・新宿・輕井澤",
+    country: "日本",
+    region: "東京",
+    year: 2022,
+    dateLabel: "12/23 – 12/27",
+    dateStart: "2022-12-23",
+    dateEnd: "2022-12-27",
+    nights: 4,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "淺草晴空塔・迪士尼樂園・新宿六本木夜景・輕井澤 Outlet",
+    themes: ["親子", "迪士尼", "購物", "美食"],
+    mapCenter: [35.95, 139.3],
+    mapZoom: 8,
+
+    flight: {
+      airline: "台灣虎航 Tigerair",
+      out: "12/23 桃園 TPE → 東京",
+      back: "12/27 東京 → 桃園 TPE",
+      note: "淺草進出・Richmond 淺草為據點"
+    },
+    stay: [
+      { name: "Richmond Hotel Premier 淺草 International", nights: "全程 4 晚", note: "淺草・近雷門/晴空塔" }
+    ],
+    pass: {
+      icon: "🚇", label: "交通",
+      name: "JR + 東京メトロ + 北陸新幹線",
+      price: "建議 Suica/PASMO",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["機場 → 淺草", "Skyliner(成田)/ 京急(羽田)", "約 40–60 分"],
+        ["市區移動", "JR + 東京メトロ", "淺草/新宿/六本木"],
+        ["迪士尼", "東武/JR → 舞濱", "舞濱站"],
+        ["東京 ↔ 輕井澤", "北陸新幹線 あさま", "約 70 分"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "12/23 (五)", theme: "🏮 抵達東京・淺草晴空塔",
+        items: [
+          { time: "抵達", text: "抵達東京,前往淺草 Richmond 入住" },
+          { time: "玩", text: "淺草雷門・淺草寺、晴空塔、阿卡將(錦糸町・嬰幼兒用品)" },
+          { time: "晚餐", text: "壽喜燒" },
+          { time: "住宿", text: "Richmond Hotel Premier 淺草 International" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "成田/羽田 → 淺草約 40–60 分;阿卡將在錦糸町 ARCAKIT 5F" }
+        ]
+      },
+      {
+        day: 2, date: "12/24 (六)", theme: "🏰 東京迪士尼樂園",
+        items: [
+          { time: "玩", text: "東京迪士尼樂園 Disneyland(聖誕季)" },
+          { time: "宵夜", text: "居酒屋串燒" },
+          { time: "住宿", text: "Richmond Hotel Premier 淺草 International" }
+        ]
+      },
+      {
+        day: 3, date: "12/25 (日)", theme: "🌃 新宿・六本木",
+        items: [
+          { time: "玩", text: "新宿(都廳展望台/歌舞伎町)、六本木之丘 Tokyo City View 夜景" },
+          { time: "午餐", text: "六歌仙 燒肉(新宿)" },
+          { time: "晚餐", text: "AFURI 阿夫利拉麵" },
+          { time: "住宿", text: "Richmond Hotel Premier 淺草 International" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "六本木 Tokyo City View 看日落後夜景最美;六歌仙建議先訂位" }
+        ]
+      },
+      {
+        day: 4, date: "12/26 (一)", theme: "🛍 輕井澤一日遊",
+        items: [
+          { time: "玩", text: "輕井澤:王子購物廣場 Outlet、雲場池/舊輕井澤銀座通" },
+          { time: "晚餐", text: "晚餐未定" },
+          { time: "住宿", text: "Richmond Hotel Premier 淺草 International" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "東京 ↔ 輕井澤北陸新幹線約 70 分;12 月輕井澤可能下雪,保暖防滑" }
+        ]
+      },
+      {
+        day: 5, date: "12/27 (二)", theme: "✈ 返回台灣",
+        items: [
+          { time: "早餐", text: "飯店早餐" },
+          { time: "玩", text: "淺草附近隨意逛逛" },
+          { time: "上午", text: "前往機場,搭虎航返回台灣,滿載而歸!" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "淺草雷門・淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        latlng: [35.7148, 139.7967],
+        desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通商店街集結人形燒、仙貝與和風雜貨,可租和服參拜、求籤。",
+        ref: { title: "BringYou・淺草寺雷門散步路線", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
+      },
+      {
+        name: "晴空塔・墨田水族館", area: "押上・晴空塔", hours: "水族館 10:00–20:00",
+        latlng: [35.7101, 139.8107],
+        desc: "世界第一高塔,展望台俯瞰東京、Solamachi 商場好逛;5–6 樓墨田水族館有企鵝、海狗,是雨天/寒天親子首選。",
+        ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
+      },
+      {
+        name: "阿卡將本舖(錦糸町)", area: "錦糸町", hours: "約 10:00–21:00",
+        latlng: [35.6967, 139.8142],
+        desc: "媽媽朝聖的婦嬰用品專賣店,位於錦糸町 ARCAKIT 百貨 5 樓,奶粉、副食品、童裝、推車與明星商品超好買,可退稅。距淺草近。",
+        ref: { title: "小桃媽・錦糸町阿卡將本舖", url: "https://anity0404.pixnet.net/blog/post/208336966" }
+      },
+      {
+        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        latlng: [35.6329, 139.8804],
+        desc: "經典童話主題園區,城堡、遊行、煙火必看,聖誕季節限定裝飾與表演夢幻。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡。",
+        ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
+      },
+      {
+        name: "新宿", area: "新宿", hours: "店家約 10:00–22:00",
+        latlng: [35.6896, 139.7006],
+        desc: "東京最繁華的轉運與購物商圈,新宿御苑、歌舞伎町、東京都廳免費展望台(可遠眺富士山)、3D 巨貓、思出橫丁居酒屋,日夜皆熱鬧。",
+        ref: { title: "波比看世界・新宿 10 大景點一日遊", url: "https://bobbytravel.tw/shinjuku/" }
+      },
+      {
+        name: "六本木之丘 Tokyo City View", area: "六本木", hours: "約 10:00–22:00",
+        latlng: [35.6605, 139.7292],
+        desc: "六本木之丘森大樓 52 樓 360 度展望台,眺望東京鐵塔、新宿與台場的絕美夜景,《天氣之子》場景之一,並設森美術館。",
+        ref: { title: "BringYou・六本木之丘 Tokyo City View", url: "https://www.bring-you.info/zh-tw/roppongi-hills-tokyo-city-view" }
+      },
+      {
+        name: "輕井澤(王子 Outlet・雲場池)", area: "輕井澤", hours: "Outlet 約 10:00–19:00",
+        latlng: [36.3415, 138.6357],
+        desc: "東京近郊高原避暑/雪景勝地,輕井澤王子購物廣場(Outlet)品牌齊全好買,鄰雲場池、舊輕井澤銀座通,搭北陸新幹線約 70 分可達。12 月可能下雪。",
+        ref: { title: "Mimi韓・雲場池(輕井澤)", url: "https://mimigo.tw/kumoba-pond/" }
+      }
+    ],
+
+    food: [
+      { name: "六歌仙 燒肉", area: "新宿", stars: 5, note: "和牛海鮮吃到飽(需訂位)", ref: { title: "波比看世界・新宿六歌仙燒肉吃到飽", url: "https://bobbytravel.tw/rokkasen/" } },
+      { name: "AFURI 阿夫利拉麵", area: "東京", stars: 4, note: "清爽柚子鹽拉麵", ref: { title: "樂活的大方・AFURI 阿夫利", url: "https://www.bigfang.tw/blog/post/afuri-harajuku" } },
+      { name: "壽喜燒", area: "淺草", stars: 4, note: "抵達晚餐", ref: { title: "", url: "" } },
+      { name: "居酒屋串燒", area: "東京", stars: 4, note: "迪士尼後宵夜", ref: { title: "", url: "" } }
+    ],
+
+    weather: [
+      "東京 12 月:約 5–13°C,乾爽晴朗",
+      "輕井澤更冷、可能下雪,保暖防滑",
+      "早晚偏涼,圍巾手套備用"
+    ],
+    info: [
+      { title: "🎫 預約提醒", items: ["迪士尼門票日期指定、先下載官方 App", "六歌仙、AFURI 建議線上預約/抽號", "六本木 Tokyo City View 夜景看日落後"] },
+      { title: "👶 親子採買", items: ["阿卡將本舖(錦糸町 ARCAKIT 5F)嬰幼兒用品", "西松屋、Babies R Us", "藥妝、超市補給"] },
+      { title: "🍜 在地必吃", items: ["壽喜燒、和牛燒肉(六歌仙)", "AFURI 柚子鹽拉麵", "居酒屋串燒", "輕井澤西式料理"] },
+      { title: "🚄 交通提醒", items: ["淺草為據點,銀座線/淺草線串聯", "迪士尼舞濱站", "輕井澤搭北陸新幹線一日遊"] }
+    ],
+    notes: [
+      "12 月東京乾爽,輕井澤更冷可能下雪,保暖防滑。",
+      "迪士尼、六歌仙等熱門點建議提前預約。",
+      "親子採買阿卡將在錦糸町 ARCAKIT,距淺草近。"
+    ]
   }
 ];
