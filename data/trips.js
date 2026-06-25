@@ -917,6 +917,7 @@ window.TRIPS = [
     mapZoom: 10,
 
     flight: {
+      airline: "中華航空 China Airlines",
       out: "1/29 桃園 TPE → 釜山 PUS(18:50 抵達)",
       back: "2/3 釜山 PUS → 桃園(11:50)",
       note: "金海機場進出・海雲台為據點,地鐵周遊"
