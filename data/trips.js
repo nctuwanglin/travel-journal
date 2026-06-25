@@ -624,6 +624,7 @@ window.TRIPS = [
     mapZoom: 8,
 
     flight: {
+      airline: "中華航空 China Airlines",
       out: "10/9 桃園 TPE → 高松 TAK(10:30 抵達)",
       back: "10/17 高松 TAK → 桃園(19:05)",
       note: "高松/松山/高知周遊・10/11–16 高松站租車自駕"
