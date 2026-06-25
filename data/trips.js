@@ -2270,7 +2270,7 @@ window.TRIPS = [
     mapZoom: 8,
 
     flight: {
-      airline: "星宇航空 STARLUX",
+      airline: "台灣虎航 Tigerair",
       out: "6/2 桃園 TPE → 新千歲 CTS",
       back: "6/9 新千歲 CTS → 桃園 TPE",
       note: "新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)"
