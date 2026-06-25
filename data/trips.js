@@ -3207,5 +3207,209 @@ window.TRIPS = [
       "景福宮週二休、穿韓服免費入場。",
       "南怡島一日遊從仁寺洞集合,當日往返。"
     ]
+  },
+
+  {
+    id: "kyushu-2019",
+    title: "九州自由行",
+    subtitle: "福岡・由布院・熊本・柳川",
+    country: "日本",
+    region: "九州",
+    year: 2019,
+    dateLabel: "2/28 – 3/5",
+    dateStart: "2019-02-28",
+    dateEnd: "2019-03-05",
+    nights: 5,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "由布院之森・金鱗湖・熊本城・柳川渡船・太宰府",
+    themes: ["鐵路", "溫泉", "古城", "美食"],
+    mapCenter: [33.3, 130.9],
+    mapZoom: 8,
+
+    flight: {
+      out: "2/28 桃園 TPE → 福岡 FUK(6:50–9:55)",
+      back: "3/5 福岡 FUK → 桃園 TPE(20:35)",
+      note: "福岡進出・博多為據點・JR 九州 Pass"
+    },
+    stay: [
+      { name: "博多西鐵飯店(Nishitetsu Hotel)", nights: "全程 5 晚", note: "博多・JR 博多站一帶" }
+    ],
+    pass: {
+      icon: "🚄", label: "鐵路周遊券",
+      name: "JR 九州鐵路周遊券 + 西鐵",
+      price: "JR 九州 Pass",
+      head: ["路段", "車種", "時間"],
+      rows: [
+        ["博多 ↔ 柳川/太宰府", "西鐵電車 特急", "約 45–50 分"],
+        ["博多 → 由布院", "由布院之森(指定席)", "約 2 小時"],
+        ["博多 ↔ 熊本", "九州新幹線", "約 40 分"],
+        ["博多 → 秋月/門司港", "JR + 甘木鐵道 + 巴士", "當地接駁"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "2/28 (四)", theme: "✈ 抵達福岡・博多",
+        items: [
+          { time: "抵達", text: "搭機抵達福岡(6:50–9:55),博多西鐵飯店 Check in" },
+          { time: "午餐", text: "一蘭拉麵 本社總本店" },
+          { time: "逛", text: "PARCO、天神地下街、博多運河城、川端通商店街" },
+          { time: "晚餐", text: "博多燒肉" },
+          { time: "玩", text: "福岡塔" },
+          { time: "住宿", text: "博多西鐵飯店" }
+        ]
+      },
+      {
+        day: 2, date: "3/1 (五)", theme: "⛩ 柳川・太宰府",
+        items: [
+          { time: "玩", text: "柳川(渡船遊河)" },
+          { time: "午餐", text: "柳川蒸籠鰻魚飯" },
+          { time: "玩", text: "太宰府天滿宮(梅枝餅、星巴克)、福岡巨蛋" },
+          { time: "住宿", text: "博多西鐵飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "西鐵天神 → 柳川約 50 分;太宰府・柳川觀光套票較划算" }
+        ]
+      },
+      {
+        day: 3, date: "3/2 (六)", theme: "♨ 由布院",
+        items: [
+          { time: "交通", text: "搭『由布院之森』專車約 2 小時(指定席先劃位)" },
+          { time: "玩", text: "金鱗湖、湯之坪街道、史努比茶屋、泡湯" },
+          { time: "午餐", text: "金賞可樂餅、烏骨雞料理" },
+          { time: "住宿", text: "博多西鐵飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "博多 → 由布院『由布院之森』約 2 小時,指定席需先劃位" }
+        ]
+      },
+      {
+        day: 4, date: "3/3 (日)", theme: "🐻 熊本",
+        items: [
+          { time: "玩", text: "熊本城、熊本熊部長辦公室(KUMAMON SQUARE)" },
+          { time: "住宿", text: "博多西鐵飯店" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "九州新幹線博多 → 熊本約 40 分;熊本熊見面會看官網時刻表" }
+        ]
+      },
+      {
+        day: 5, date: "3/4 (一)", theme: "🌸 秋月・門司港",
+        items: [
+          { time: "玩", text: "秋月(筑前小京都)、門司港/小倉、福岡巨蛋、JR 博多城" },
+          { time: "住宿", text: "博多西鐵飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "博多 →(JR)基山 →(甘木鐵道)甘木 →(巴士)秋月" }
+        ]
+      },
+      {
+        day: 6, date: "3/5 (二)", theme: "✈ 福岡補貨・返台",
+        items: [
+          { time: "玩", text: "福岡補貨、櫛田神社、貓頭鷹咖啡館" },
+          { time: "傍晚", text: "18:00 抵福岡空港,20:35 飛機回台,滿載而歸!" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "福岡塔", area: "福岡・百道", hours: "9:30–22:00",
+        latlng: [33.5933, 130.3514],
+        desc: "高 234m 的日本最高海濱塔,123m 展望室 360 度俯瞰福岡市與博多灣,入夜燈光浪漫,鄰百道海濱公園與福岡巨蛋。",
+        ref: { title: "olga・福岡塔與天神屋台", url: "https://olga1013.pixnet.net/blog/posts/10357564645" }
+      },
+      {
+        name: "天神(地下街・運河城)", area: "福岡・天神", hours: "店家約 10:00–21:00",
+        latlng: [33.5914, 130.3990],
+        desc: "福岡最熱鬧商圈,天神地下街、PARCO、博多運河城(Canal City)與川端通商店街,逛街美食一次滿足,入夜屋台登場。",
+        ref: { title: "波比看世界・天神商圈逛街攻略", url: "https://bobbytravel.tw/tenjin/" }
+      },
+      {
+        name: "柳川", area: "柳川", hours: "渡船依班次",
+        latlng: [33.1631, 130.4061],
+        desc: "被譽為『九州威尼斯』的水鄉,搖櫓平底船沿護城運河巡遊,柳枝石橋古樸,郷土料理蒸籠鰻魚飯必吃。",
+        ref: { title: "Klook・柳川一日遊水鄉遊船", url: "https://www.klook.com/zh-TW/blog/yanagawa-japan/" }
+      },
+      {
+        name: "太宰府天滿宮", area: "太宰府", hours: "境內約 6:30–18:30",
+        latlng: [33.5217, 130.5350],
+        desc: "全日本 12000 座天滿宮總本社,學問之神菅原道真,考生必拜。表參道梅枝餅與隈研吾設計的星巴克必訪。",
+        ref: { title: "Mimi韓・太宰府一日遊", url: "https://mimigo.tw/dazaifu/" }
+      },
+      {
+        name: "福岡巨蛋(PayPay Dome)", area: "福岡・百道", hours: "依賽事/設施",
+        latlng: [33.5953, 130.3622],
+        desc: "軟銀鷹主場、日本五大巨蛋之一,可看職棒;王貞治棒球博物館與 BOSS E・ZO 體感設施好玩。",
+        ref: { title: "逸起旅行・福岡巨蛋看棒球攻略", url: "https://tingbereat.com/npb-fukuoka-dome/" }
+      },
+      {
+        name: "由布院(金鱗湖)", area: "大分・由布院", hours: "店家約 9:00–17:30",
+        latlng: [33.2647, 131.3608],
+        desc: "大分人氣溫泉鄉,由布院車站至金鱗湖的湯之坪街道甜點雜貨林立,金鱗湖晨霧夢幻,背倚由布岳,泡湯散策超愜意。",
+        ref: { title: "兩豬小妹・湯之坪街道與金鱗湖", url: "https://twopigsfun.com/lake-kinrin/" }
+      },
+      {
+        name: "史努比茶屋(由布院)", area: "大分・由布院", hours: "約 10:00–17:00",
+        latlng: [33.2655, 131.3640],
+        desc: "全日本第一家 SNOOPY 茶屋,位於湯之坪街道,結合茶屋、SNOOPY Chocolat 與 WOODSTOCK NEST,限定周邊與造型拿鐵超可愛。",
+        ref: { title: "BringYou・由布院史努比茶屋", url: "https://www.bring-you.info/zh-tw/yufuin-snoopy-chaya" }
+      },
+      {
+        name: "熊本城", area: "熊本", hours: "9:00–17:00",
+        latlng: [32.8061, 130.7058],
+        desc: "加藤清正所築、日本三大名城之一,黑色天守與『武者返』石垣壯觀,2016 地震後修復、天守 2021 重新開放。",
+        ref: { title: "BringYou・熊本城特別參觀路線", url: "https://www.bring-you.info/zh-tw/kumamoto-castle" }
+      },
+      {
+        name: "熊本熊部長辦公室(KUMAMON SQUARE)", area: "熊本", hours: "10:00–19:00",
+        latlng: [32.8043, 130.7083],
+        desc: "鶴屋百貨東館 1 樓的酷 MA 萌廣場,免費參觀,每日定時有熊本熊部長唱跳見面會(假日為主,先查官網時刻)。",
+        ref: { title: "許傑・熊本熊部長辦公室", url: "https://journey.tw/kumamon-square/" }
+      },
+      {
+        name: "秋月", area: "朝倉・秋月", hours: "戶外・全日",
+        latlng: [33.5294, 130.6586],
+        desc: "朝倉的『筑前小京都』,城下町古街、秋月城跡黑門與杉之馬場,春櫻 500m 隧道、秋楓著名,典雅日式街道令人換然一新。",
+        ref: { title: "樂活的大方・秋月城跡賞櫻", url: "https://www.bigfang.tw/blog/post/asakura-akizuzki-castle-fukuoka" }
+      },
+      {
+        name: "門司港", area: "北九州・門司港", hours: "店家約 10:00–18:00",
+        latlng: [33.9436, 130.9628],
+        desc: "北九州門司港懷舊區,大正復古洋館與港灣浪漫,名物燒咖哩必吃,鄰小倉、九州鐵道紀念館。",
+        ref: { title: "波比看世界・門司港一日遊", url: "https://bobbytravel.tw/mojiko/" }
+      },
+      {
+        name: "櫛田神社", area: "博多", hours: "境內 4:00–22:00",
+        latlng: [33.5933, 130.4106],
+        desc: "博多總鎮守『お櫛田さん』,博多祇園山笠祭發源地,常年展示約 13m 高飾山笠,千年銀杏與力石、結緣求運人氣高。"
+      }
+    ],
+
+    food: [
+      { name: "一蘭拉麵 本社總本店", area: "中洲・博多", stars: 5, note: "唯一一蘭屋台的總本店", ref: { title: "樂活的大方・一蘭本社總本店", url: "https://www.bigfang.tw/blog/post/ichiran-mainstore" } },
+      { name: "博多燒肉", area: "博多", stars: 4, note: "博多燒肉", ref: { title: "", url: "" } },
+      { name: "柳川蒸籠鰻魚飯", area: "柳川", stars: 5, note: "元祖本吉屋・300 年老店", ref: { title: "波比看世界・元祖本吉屋蒸籠鰻魚飯", url: "https://bobbytravel.tw/motoyoshiya/" } },
+      { name: "太宰府 梅枝餅", area: "太宰府", stars: 4, note: "表參道名物", ref: { title: "Mimi韓・太宰府梅枝餅", url: "https://mimigo.tw/dazaifu/" } },
+      { name: "由布院 金賞可樂餅", area: "由布院", stars: 4, note: "金賞コロッケ・人氣炸物", ref: { title: "BringYou・由布院金賞可樂餅", url: "https://www.bring-you.info/zh-tw/kinshoukorokke" } }
+    ],
+
+    weather: [
+      "九州 2 月底–3 月初:約 5–13°C,冬末偏冷",
+      "由布院山區更冷,泡湯保暖",
+      "早晚溫差大,薄外套圍巾備用"
+    ],
+    info: [
+      { title: "🎫 JR 九州 Pass", items: ["JR 九州鐵路周遊券暢遊新幹線/特急", "『由布院之森』指定席需先劃位", "柳川・太宰府用西鐵觀光套票"] },
+      { title: "📅 提示", items: ["熊本熊部長見面會看官網時刻(假日為主)", "由布院之森熱門先訂位", "秋月轉乘多段(JR+甘木鐵道+巴士)"] },
+      { title: "🍜 九州名物", items: ["一蘭拉麵、博多燒肉", "柳川蒸籠鰻魚飯", "太宰府梅枝餅", "由布院金賞可樂餅"] },
+      { title: "🚄 交通提醒", items: ["博多為據點,西鐵往柳川/太宰府", "由布院之森直達由布院", "九州新幹線往熊本約 40 分"] }
+    ],
+    notes: [
+      "2 月底九州仍冷,由布院泡湯保暖。",
+      "由布院之森、熊本熊見面會建議先查時刻/訂位。",
+      "秋月轉乘較多段,預留交通時間。"
+    ]
   }
 ];
