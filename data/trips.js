@@ -1119,6 +1119,7 @@ window.TRIPS = [
     mapZoom: 7,
 
     flight: {
+      airline: "國泰航空 Cathay Pacific",
       out: "12/6 桃園 TPE → 大阪 KIX",
       back: "12/14 大阪 KIX → 桃園",
       note: "關西機場進出・大阪/岡山/京都周遊・JR Pass(Day2–6)"
