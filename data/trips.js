@@ -1838,15 +1838,15 @@ window.TRIPS = [
   },
 
   {
-    id: "kyushu-2023",
+    id: "kyushu-2024",
     title: "北九州環島之旅",
     subtitle: "福岡・大分・熊本・長崎",
     country: "日本",
     region: "九州",
-    year: 2023,
+    year: 2024,
     dateLabel: "1/27 – 2/4",
-    dateStart: "2023-01-27",
-    dateEnd: "2023-02-04",
+    dateStart: "2024-01-27",
+    dateEnd: "2024-02-04",
     nights: 8,
     status: "旅遊回憶",
     recommended: false,
@@ -1879,7 +1879,7 @@ window.TRIPS = [
 
     days: [
       {
-        day: 1, date: "1/27 (五)", theme: "✈ 抵達福岡・天神",
+        day: 1, date: "1/27 (六)", theme: "✈ 抵達福岡・天神",
         items: [
           { time: "抵達", text: "搭虎航抵達福岡機場,前往天神" },
           { time: "玩", text: "天神地下街、天神屋台、福岡塔" }
@@ -1889,13 +1889,13 @@ window.TRIPS = [
         ]
       },
       {
-        day: 2, date: "1/28 (六)", theme: "🦁 大分・動物公園與由布院",
+        day: 2, date: "1/28 (日)", theme: "🦁 大分・動物公園與由布院",
         items: [
           { time: "玩", text: "九州自然動物公園(African Safari)、由布院湯之坪街道" }
         ]
       },
       {
-        day: 3, date: "1/29 (日)", theme: "♨ 金鱗湖・草千里・黑川溫泉",
+        day: 3, date: "1/29 (一)", theme: "♨ 金鱗湖・草千里・黑川溫泉",
         items: [
           { time: "玩", text: "由布院金鱗湖、阿蘇草千里、黑川溫泉" }
         ],
@@ -1904,7 +1904,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 4, date: "1/30 (一)", theme: "⛩ 宮崎・熊本",
+        day: 4, date: "1/30 (二)", theme: "⛩ 宮崎・熊本",
         items: [
           { time: "玩", text: "高千穗峽(划船看真名井瀑布)、熊本城" }
         ],
@@ -1913,7 +1913,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 5, date: "1/31 (二)", theme: "🌃 長崎・稻佐山夜景",
+        day: 5, date: "1/31 (三)", theme: "🌃 長崎・稻佐山夜景",
         items: [
           { time: "玩", text: "長崎原爆資料館、和平公園、稻佐山夜景" }
         ],
@@ -1922,13 +1922,13 @@ window.TRIPS = [
         ]
       },
       {
-        day: 6, date: "2/1 (三)", theme: "🎡 長崎・豪斯登堡",
+        day: 6, date: "2/1 (四)", theme: "🎡 長崎・豪斯登堡",
         items: [
           { time: "玩", text: "豪斯登堡(荷蘭風情主題樂園)" }
         ]
       },
       {
-        day: 7, date: "2/2 (四)", theme: "⛵ 九十九島・太宰府",
+        day: 7, date: "2/2 (五)", theme: "⛵ 九十九島・太宰府",
         items: [
           { time: "玩", text: "九十九島遊覽船、太宰府天滿宮" }
         ],
@@ -1937,13 +1937,13 @@ window.TRIPS = [
         ]
       },
       {
-        day: 8, date: "2/3 (五)", theme: "🚂 北九州・門司港",
+        day: 8, date: "2/3 (六)", theme: "🚂 北九州・門司港",
         items: [
           { time: "玩", text: "門司港懷舊區、九州鐵道紀念館、逛街" }
         ]
       },
       {
-        day: 9, date: "2/4 (六)", theme: "✈ 返回台灣",
+        day: 9, date: "2/4 (日)", theme: "✈ 返回台灣",
         items: [
           { time: "上午", text: "搭虎航從福岡機場返回桃園,滿載而歸!" }
         ],
