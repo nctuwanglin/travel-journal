@@ -2829,5 +2829,175 @@ window.TRIPS = [
       "迪士尼、六歌仙等熱門點建議提前預約。",
       "親子採買阿卡將在錦糸町 ARCAKIT,距淺草近。"
     ]
+  },
+
+  {
+    id: "keihanshin-2023",
+    title: "京阪神之旅",
+    subtitle: "大阪・京都・神戶・環球影城",
+    country: "日本",
+    region: "京阪神",
+    year: 2023,
+    dateLabel: "2/16 – 2/21",
+    dateStart: "2023-02-16",
+    dateEnd: "2023-02-21",
+    nights: 5,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "環球影城・清水寺和服・嵐山・神戶牛・黑門市場",
+    themes: ["環球影城", "古都", "美食", "親子"],
+    mapCenter: [34.85, 135.45],
+    mapZoom: 9,
+
+    flight: {
+      airline: "台灣虎航 Tigerair",
+      out: "2/16 桃園 TPE → 大阪 KIX",
+      back: "2/21 大阪 KIX → 桃園 TPE",
+      note: "關西機場進出・大阪 Vischio 為據點"
+    },
+    stay: [
+      { name: "大阪 Vischio 飯店 by GRANVIA(比偲奇格蘭比亞)", nights: "全程 5 晚", note: "大阪市區・JR 難波/新今宮一帶" }
+    ],
+    pass: {
+      icon: "🚇", label: "交通",
+      name: "JR + 大阪地下鐵 + 阪急/阪神",
+      price: "建議 ICOCA",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["關西機場 → 大阪市區", "JR 關空快速 / ラピート", "約 50 分"],
+        ["大阪 ↔ 京都", "JR 京都線 / 阪急", "約 30–45 分"],
+        ["京都 ↔ 嵐山", "JR 嵯峨野線 / 嵐電", "約 15–20 分"],
+        ["大阪 ↔ 神戶三宮", "JR / 阪神 / 阪急", "約 30 分"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "2/16 (四)", theme: "✈ 抵達大阪・心斎橋道頓堀",
+        items: [
+          { time: "抵達", text: "抵達關西機場,前往大阪市區入住" },
+          { time: "逛", text: "心斎橋、道頓堀(固力果跑跑人、章魚燒)" },
+          { time: "晚餐", text: "燒肉力丸 難波道頓堀店" },
+          { time: "住宿", text: "大阪 Vischio 飯店 by GRANVIA" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "關西機場 → 大阪市區 JR 關空快速約 50 分" }
+        ]
+      },
+      {
+        day: 2, date: "2/17 (五)", theme: "🎢 日本環球影城",
+        items: [
+          { time: "玩", text: "日本環球影城 USJ(超級任天堂世界、哈利波特)" },
+          { time: "住宿", text: "大阪 Vischio 飯店 by GRANVIA" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "USJ 超級任天堂世界需整理券或快速通關;善用 App 看排隊時間" }
+        ]
+      },
+      {
+        day: 3, date: "2/18 (六)", theme: "⛩ 京都・清水寺和服",
+        items: [
+          { time: "玩", text: "京都車站(空中徑路/京都塔)、清水寺、二三年坂、和服體驗" },
+          { time: "住宿", text: "大阪 Vischio 飯店 by GRANVIA" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "清水寺和服建議線上預約、挑早場;京都車站空中徑路免費看夜景" }
+        ]
+      },
+      {
+        day: 4, date: "2/19 (日)", theme: "🎋 嵐山",
+        items: [
+          { time: "玩", text: "嵐山:竹林小徑、渡月橋、天龍寺、嵐山小火車" },
+          { time: "住宿", text: "大阪 Vischio 飯店 by GRANVIA" }
+        ]
+      },
+      {
+        day: 5, date: "2/20 (一)", theme: "🥩 黑門市場・神戶",
+        items: [
+          { time: "玩", text: "黑門市場(海鮮、河豚)" },
+          { time: "玩", text: "神戶三宮、北野異人館/港區" },
+          { time: "晚餐", text: "神戶牛鐵板燒(三宮)" },
+          { time: "住宿", text: "大阪 Vischio 飯店 by GRANVIA" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "黑門市場早上最熱鬧;大阪 ↔ 神戶三宮 JR 約 30 分,神戶牛建議訂位" }
+        ]
+      },
+      {
+        day: 6, date: "2/21 (二)", theme: "✈ 返回台灣",
+        items: [
+          { time: "上午", text: "前往關西機場,搭虎航返回台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2.5–3 小時抵達關西機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "心斎橋・道頓堀", area: "道頓堀", hours: "店家約 10:00–22:00",
+        latlng: [34.6687, 135.5013],
+        desc: "大阪南區最熱鬧的水岸商圈,固力果跑跑人看板、巨型蟹招牌與章魚燒、大阪燒林立;心斎橋筋商店街、美國村好逛好買。"
+      },
+      {
+        name: "日本環球影城 USJ", area: "此花・USJ", hours: "依官方每日公告",
+        latlng: [34.6654, 135.4323],
+        desc: "關西最大主題樂園,超級任天堂世界、哈利波特魔法世界、小小兵與環球必玩設施;善用快速通關/整理券更順暢。",
+        ref: { title: "波比看世界・日本環球影城 USJ 攻略", url: "https://bobbytravel.tw/usj/" }
+      },
+      {
+        name: "京都車站", area: "京都", hours: "店家約 10:00–22:00",
+        latlng: [34.9858, 135.7588],
+        desc: "原廣司設計的未來感巨型車站,11 樓空中徑路免費走廊俯瞰京都市景與京都塔夜景,拉麵小路、伊勢丹百貨好逛。",
+        ref: { title: "Albert Blog・京都車站空中徑路", url: "https://albertblog.tw/22962/skyway" }
+      },
+      {
+        name: "清水寺", area: "京都", hours: "6:00–18:00",
+        latlng: [34.9949, 135.7850],
+        desc: "京都世界文化遺產,清水舞台懸空遠眺市景,音羽瀑布祈願,周邊二三年坂、產寧坂石坂老街與和服體驗超好拍。",
+        ref: { title: "兩株小豬・清水寺和服半日遊", url: "https://rebecca1003.pixnet.net/blog/post/353753239" }
+      },
+      {
+        name: "嵐山", area: "京都・嵐山", hours: "戶外・全日",
+        latlng: [35.0094, 135.6737],
+        desc: "京都西郊代表名勝,嵯峨野竹林小徑、橫跨桂川的渡月橋、世界遺產天龍寺庭園,可搭嵐山小火車或人力車,四季皆美。",
+        ref: { title: "Curly・京都嵐山一日遊", url: "https://curly.com.tw/arashiyama/" }
+      },
+      {
+        name: "黑門市場", area: "大阪・日本橋", hours: "約 9:00–18:00",
+        latlng: [34.6657, 135.5061],
+        desc: "『大阪的廚房』,580m 拱廊聚集 150+ 店,海鮮生魚片、巨無霸干貝、河豚、和牛串與水果現吃,早上最熱鬧。",
+        ref: { title: "BringYou・大阪黑門市場攻略", url: "https://www.bring-you.info/zh-tw/kuromon-ichiba-market" }
+      },
+      {
+        name: "神戶三宮", area: "神戶", hours: "店家約 10:00–21:00",
+        latlng: [34.6938, 135.1956],
+        desc: "神戶最熱鬧的市中心,鄰舊居留地、南京町中華街、北野異人館與港區 Harborland,神戶牛鐵板燒名店聚集。"
+      }
+    ],
+
+    food: [
+      { name: "燒肉力丸 難波道頓堀店", area: "道頓堀", stars: 5, note: "和牛燒肉吃到飽(需訂位)", ref: { title: "福寶媽・燒肉力丸難波道頓堀店", url: "https://gogojp.tw/yakiniku-rikimaru/" } },
+      { name: "神戶牛鐵板燒(三宮)", area: "神戶三宮", stars: 5, note: "A5 神戶牛鐵板燒", ref: { title: "水晶安蹄・神戶牛鐵板燒 仙", url: "https://auntie.tw/sen/" } },
+      { name: "黑門市場海鮮", area: "大阪", stars: 4, note: "海鮮生魚片、河豚、干貝", ref: { title: "BringYou・黑門市場必吃美食", url: "https://www.bring-you.info/zh-tw/kuromon-ichiba-market" } }
+    ],
+
+    weather: [
+      "京阪神 2 月:約 3–10°C,冬日偏冷",
+      "京都、嵐山山區更冷,可能飄雪,保暖防滑",
+      "早晚溫差大,圍巾手套備用"
+    ],
+    info: [
+      { title: "🎫 預約提醒", items: ["USJ 任天堂/哈利波特區善用快速通關或整理券", "清水寺和服建議提前線上預約、挑早場", "燒肉力丸難波道頓堀店熱門需提前訂位"] },
+      { title: "🍜 在地必吃", items: ["大阪燒肉力丸、章魚燒、大阪燒", "黑門市場海鮮、河豚", "神戶牛鐵板燒", "京都抹茶甜點"] },
+      { title: "👘 體驗", items: ["清水寺/祇園和服體驗", "嵐山小火車、人力車", "京都車站空中徑路看夜景"] },
+      { title: "🚄 交通提醒", items: ["大阪為據點,JR/地鐵串聯", "大阪 ↔ 京都/神戶皆約 30–45 分", "嵐山搭 JR 嵯峨野線或嵐電"] }
+    ],
+    notes: [
+      "2 月京阪神偏冷,京都/嵐山可能飄雪,保暖防滑。",
+      "USJ、清水寺和服、力丸等熱門點建議提前預約。",
+      "以大阪為據點,京都/神戶當日往返。"
+    ]
   }
 ];
