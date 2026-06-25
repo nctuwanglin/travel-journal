@@ -1862,7 +1862,13 @@ window.TRIPS = [
       note: "福岡進出・九州環遊"
     },
     stay: [
-      { name: "九州周遊住宿", nights: "共 8 晚", note: "福岡・由布院/黑川溫泉・長崎等地(待補)" }
+      { name: "西鐵 Hotel Croom 博多", nights: "1/27 ・ 1 晚", note: "博多・近 JR 博多站" },
+      { name: "由布院 Lamp no Yado", nights: "1/28 ・ 1 晚", note: "由布院溫泉旅館" },
+      { name: "湯峽之響 優彩(黑川/杖立溫泉)", nights: "1/29 ・ 1 晚", note: "溫泉露天風呂旅館" },
+      { name: "KOKO Hotel Premier 熊本", nights: "1/30 ・ 1 晚", note: "熊本市區" },
+      { name: "Dormy Inn Premium 長崎站前", nights: "1/31 ・ 1 晚", note: "長崎站前・天然溫泉" },
+      { name: "Hotel Nikko 豪斯登堡", nights: "2/1 ・ 1 晚", note: "豪斯登堡園區飯店" },
+      { name: "博多都飯店 Miyako Hotel Hakata", nights: "2/2–2/4 ・ 2 晚", note: "博多・近 JR 博多站" }
     ],
     pass: {
       icon: "🚗", label: "交通",
@@ -1882,7 +1888,8 @@ window.TRIPS = [
         day: 1, date: "1/27 (六)", theme: "✈ 抵達福岡・天神",
         items: [
           { time: "抵達", text: "搭虎航抵達福岡機場,前往天神" },
-          { time: "玩", text: "天神地下街、天神屋台、福岡塔" }
+          { time: "玩", text: "天神地下街、天神屋台、福岡塔" },
+          { time: "住宿", text: "西鐵 Hotel Croom 博多" }
         ],
         tips: [
           { type: "info", title: "交通時間軸", text: "福岡機場 → 天神 地下鐵約 11 分;入夜中洲/天神屋台吃宵夜" }
@@ -1891,13 +1898,15 @@ window.TRIPS = [
       {
         day: 2, date: "1/28 (日)", theme: "🦁 大分・動物公園與由布院",
         items: [
-          { time: "玩", text: "九州自然動物公園(African Safari)、由布院湯之坪街道" }
+          { time: "玩", text: "九州自然動物公園(African Safari)、由布院湯之坪街道" },
+          { time: "住宿", text: "由布院 Lamp no Yado" }
         ]
       },
       {
         day: 3, date: "1/29 (一)", theme: "♨ 金鱗湖・草千里・黑川溫泉",
         items: [
-          { time: "玩", text: "由布院金鱗湖、阿蘇草千里、黑川溫泉" }
+          { time: "玩", text: "由布院金鱗湖、阿蘇草千里、黑川溫泉" },
+          { time: "住宿", text: "湯峽之響 優彩" }
         ],
         tips: [
           { type: "warn", title: "提醒", text: "黑川溫泉『入湯手形』¥1,500 可巡泡 3 間露天湯;冬季有『湯明』點燈" }
@@ -1906,7 +1915,8 @@ window.TRIPS = [
       {
         day: 4, date: "1/30 (二)", theme: "⛩ 宮崎・熊本",
         items: [
-          { time: "玩", text: "高千穗峽(划船看真名井瀑布)、熊本城" }
+          { time: "玩", text: "高千穗峽(划船看真名井瀑布)、熊本城" },
+          { time: "住宿", text: "KOKO Hotel Premier 熊本" }
         ],
         tips: [
           { type: "info", title: "提示", text: "高千穗峽划船旺季須提前線上預約" }
@@ -1915,7 +1925,8 @@ window.TRIPS = [
       {
         day: 5, date: "1/31 (三)", theme: "🌃 長崎・稻佐山夜景",
         items: [
-          { time: "玩", text: "長崎原爆資料館、和平公園、稻佐山夜景" }
+          { time: "玩", text: "長崎原爆資料館、和平公園、稻佐山夜景" },
+          { time: "住宿", text: "Dormy Inn Premium 長崎站前" }
         ],
         tips: [
           { type: "info", title: "提示", text: "稻佐山夜景日落前後一小時最美,搭纜車或巴士上山" }
@@ -1924,13 +1935,15 @@ window.TRIPS = [
       {
         day: 6, date: "2/1 (四)", theme: "🎡 長崎・豪斯登堡",
         items: [
-          { time: "玩", text: "豪斯登堡(荷蘭風情主題樂園)" }
+          { time: "玩", text: "豪斯登堡(荷蘭風情主題樂園)" },
+          { time: "住宿", text: "Hotel Nikko 豪斯登堡" }
         ]
       },
       {
         day: 7, date: "2/2 (五)", theme: "⛵ 九十九島・太宰府",
         items: [
-          { time: "玩", text: "九十九島遊覽船、太宰府天滿宮" }
+          { time: "玩", text: "九十九島遊覽船、太宰府天滿宮" },
+          { time: "住宿", text: "博多都飯店 Miyako Hotel Hakata" }
         ],
         tips: [
           { type: "info", title: "提示", text: "九十九島搭珍珠皇后號約 50 分;太宰府表參道必吃梅枝餅" }
@@ -1939,7 +1952,8 @@ window.TRIPS = [
       {
         day: 8, date: "2/3 (六)", theme: "🚂 北九州・門司港",
         items: [
-          { time: "玩", text: "門司港懷舊區、九州鐵道紀念館、逛街" }
+          { time: "玩", text: "門司港懷舊區、九州鐵道紀念館、逛街" },
+          { time: "住宿", text: "博多都飯店 Miyako Hotel Hakata" }
         ]
       },
       {
@@ -2068,7 +2082,7 @@ window.TRIPS = [
     notes: [
       "冬季九州偏冷,山區可能積雪結冰,防寒防滑準備。",
       "高千穗峽划船、豪斯登堡等熱門點建議提前安排。",
-      "此趟未提供住宿/餐廳明細,住宿以周遊、美食以九州名物呈現,可隨時補上指定店家。"
+      "餐廳明細未提供,美食以九州名物呈現,可隨時補上指定店家。"
     ]
   }
 ];
