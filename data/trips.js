@@ -2249,5 +2249,236 @@ window.TRIPS = [
       "Vinpearl 北部樂園群與南部 Hon Thom 距離較遠,已分區安排。",
       "餐廳未指定,美食以富國島/越南名物呈現,可隨時補上指定店家。"
     ]
+  },
+
+  {
+    id: "hokkaido-2024",
+    title: "北海道夏季之旅",
+    subtitle: "TOMAMU・富良野・小樽・札幌",
+    country: "日本",
+    region: "北海道",
+    year: 2024,
+    dateLabel: "6/2 – 6/9",
+    dateStart: "2024-06-02",
+    dateEnd: "2024-06-09",
+    nights: 7,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "TOMAMU 雲海・富良野花田・青池・旭山動物園・小樽運河",
+    themes: ["薰衣草", "自駕", "美食", "親子"],
+    mapCenter: [43.2, 141.7],
+    mapZoom: 8,
+
+    flight: {
+      airline: "星宇航空 STARLUX",
+      out: "6/2 桃園 TPE → 新千歲 CTS",
+      back: "6/9 新千歲 CTS → 桃園 TPE",
+      note: "新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)"
+    },
+    stay: [
+      { name: "星野度假村 TOMAMU", nights: "6/2–6/4 ・ 2 晚", note: "占冠・雲海平台滑雪度假村" },
+      { name: "OMO7 旭川 by 星野集團", nights: "6/4 ・ 1 晚", note: "旭川市區" },
+      { name: "OMO5 小樽 by 星野集團", nights: "6/5 ・ 1 晚", note: "小樽運河旁" },
+      { name: "京急 EX Hotel 札幌", nights: "6/6–6/9 ・ 3 晚", note: "札幌市區" }
+    ],
+    pass: {
+      icon: "🚗", label: "交通",
+      name: "北海道自駕 / JR",
+      price: "—",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["新千歲 → TOMAMU", "自駕 / JR 特急", "約 1.5 小時"],
+        ["富良野・美瑛", "自駕", "花田景點分散"],
+        ["旭川 → 小樽 → 札幌", "自駕 / JR", "道央移動"],
+        ["札幌市區", "地下鐵 + 市電", "大通/狸小路"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "6/2 (日)", theme: "✈ 抵達北海道・TOMAMU",
+        items: [
+          { time: "抵達", text: "抵達新千歲機場,前往星野 TOMAMU(約 1.5 小時)" },
+          { time: "住宿", text: "星野度假村 TOMAMU" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "新千歲 → TOMAMU 自駕/JR 特急約 1.5 小時" }
+        ]
+      },
+      {
+        day: 2, date: "6/3 (一)", theme: "☁ TOMAMU 度假村",
+        items: [
+          { time: "玩", text: "星野 TOMAMU:雲海平台、微笑海灘、牧場、水之教堂" },
+          { time: "住宿", text: "星野度假村 TOMAMU" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "雲海平台清晨限定,山上氣溫低需保暖;天候影響雲海出現率" }
+        ]
+      },
+      {
+        day: 3, date: "6/4 (二)", theme: "💜 富良野・美瑛・旭川",
+        items: [
+          { time: "午餐", text: "唯我獨尊(富良野咖哩蛋包飯)" },
+          { time: "玩", text: "富田農場、四季彩之丘、白金青池" },
+          { time: "晚餐", text: "成吉思汗大黑屋(烤羊肉)" },
+          { time: "住宿", text: "OMO7 旭川 by 星野集團" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "富良野/美瑛花田景點分散,自駕較順;富良野薰衣草約 6 月下旬–8 月上旬滿開" }
+        ]
+      },
+      {
+        day: 4, date: "6/5 (三)", theme: "🐧 旭山動物園・小樽",
+        items: [
+          { time: "玩", text: "旭山動物園" },
+          { time: "午餐", text: "旭川拉麵村" },
+          { time: "玩", text: "前往小樽:天狗山、小樽車站" },
+          { time: "住宿", text: "OMO5 小樽 by 星野集團" }
+        ]
+      },
+      {
+        day: 5, date: "6/6 (四)", theme: "⚓ 小樽運河・札幌",
+        items: [
+          { time: "玩", text: "小樽運河、出拔小路" },
+          { time: "晚餐", text: "札幌螃蟹家總店、海鮮料理" },
+          { time: "住宿", text: "京急 EX Hotel 札幌" }
+        ]
+      },
+      {
+        day: 6, date: "6/7 (五)", theme: "🍛 札幌市區",
+        items: [
+          { time: "玩", text: "二條市場、北海道神宮、藻岩山展望台" },
+          { time: "晚餐", text: "湯咖哩 GARAKU" },
+          { time: "住宿", text: "京急 EX Hotel 札幌" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "二條市場海鮮丼早上最新鮮;藻岩山為日本新三大夜景" }
+        ]
+      },
+      {
+        day: 7, date: "6/8 (六)", theme: "🍫 大通・白色戀人",
+        items: [
+          { time: "玩", text: "大通公園、白色戀人公園、狸小路商店街" },
+          { time: "午餐", text: "迴轉壽司 根室花丸(JR Tower)" },
+          { time: "住宿", text: "京急 EX Hotel 札幌" }
+        ]
+      },
+      {
+        day: 8, date: "6/9 (日)", theme: "✈ 返回台灣",
+        items: [
+          { time: "上午", text: "前往新千歲機場,搭星宇返回台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2 小時抵達新千歲機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "星野 TOMAMU 雲海平台", area: "占冠・TOMAMU", hours: "雲海平台清晨限定(夏季)",
+        latlng: [43.0658, 142.6275],
+        desc: "星野 TOMAMU 度假村的夏季限定絕景,搭纜車登雲海平台,210 度展望彷彿漫步雲端;度假村還有日本最大室內造浪『微笑海灘』、星野牧場與水之教堂。山上清晨氣溫低需保暖。",
+        ref: { title: "娜塔蝦・TOMAMU 夏天這樣玩", url: "https://natasha-traveler.tw/tomamu-summer/" }
+      },
+      {
+        name: "富田農場", area: "富良野・中富良野", hours: "8:30–17:00(依季節)",
+        latlng: [43.4218, 142.4097],
+        desc: "富良野最具代表的薰衣草花田,傳統薰衣草田、七彩花田漸層紫色花海絕美,薰衣草冰淇淋必吃。免費入場,薰衣草約 6 月下旬–8 月上旬最盛。",
+        ref: { title: "波比看世界・富田農場薰衣草", url: "https://bobbytravel.tw/farm-tomita/" }
+      },
+      {
+        name: "四季彩之丘", area: "美瑛", hours: "8:40–17:30(6–9 月)",
+        latlng: [43.5775, 142.4569],
+        desc: "美瑛 15 公頃的拼布花田,數十種花卉隨季節綻放,可搭 NOROCCO 號或蹦蹦車在花海中漫遊,遠眺丘陵與雪山。5–6 月鬱金香、魯冰花,7–8 月薰衣草、向日葵。",
+        ref: { title: "Mimi韓・四季彩之丘拼布花田", url: "https://mimigo.tw/shikisai-no-oka/" }
+      },
+      {
+        name: "白金青池", area: "美瑛", hours: "戶外・全日",
+        latlng: [43.4925, 142.6411],
+        desc: "美瑛白金地區的夢幻藍綠池水,因火山礦物形成獨特色澤,水中枯木倒影如畫,四季與光線變化各異。冬季有夜間點燈。鄰白鬚瀑布、白金溫泉。",
+        ref: { title: "許傑・美瑛白金青池", url: "https://journey.tw/blue-pond/" }
+      },
+      {
+        name: "旭山動物園", area: "旭川", hours: "夏季約 9:30–17:15",
+        latlng: [43.7681, 142.4806],
+        desc: "日本最具人氣的動物園之一,以『行動展示』讓動物自然展現天性,海豹圓柱水槽、企鵝水中隧道、北極熊都是亮點(企鵝散步為冬季限定)。",
+        ref: { title: "依娃旅行小確幸・旭山動物園", url: "https://evalife.tw/asahiyama-zoo/" }
+      },
+      {
+        name: "天狗山", area: "小樽", hours: "纜車約 9:00–21:00",
+        latlng: [43.1869, 140.9869],
+        desc: "小樽象徵山,搭纜車約 4 分鐘登 532m 山頂,俯瞰小樽港都與石狩灣,北海道三大夜景之一。日劇《情書》場景,山頂有摸鼻祈福天狗像與展望台。",
+        ref: { title: "蔡小妞依玲・小樽天狗山纜車", url: "https://tsnio.com/otaru-tenguyama/" }
+      },
+      {
+        name: "小樽運河", area: "小樽", hours: "戶外・倉庫點燈至 22:30",
+        latlng: [43.1990, 140.9947],
+        desc: "大正時代的運河,沿岸石造倉庫改建為咖啡廳與餐廳,黃昏點燈後最浪漫。鄰堺町通商店街(LeTAO、玻璃工藝、音樂盒)與出拔小路屋台村,半日散策剛好。",
+        ref: { title: "樂活的大方・小樽運河堺町通逛街", url: "https://www.bigfang.tw/blog/post/41398024" }
+      },
+      {
+        name: "二條市場", area: "札幌", hours: "約 7:00–18:00",
+        latlng: [43.0600, 141.3556],
+        desc: "札幌市區百年海鮮市場,帝王蟹、海膽、鮭魚卵海鮮丼澎湃新鮮,鄰狸小路與電視塔,步行可達。多數店家早上營業、午後陸續打烊,早點來最佳。",
+        ref: { title: "樂活的大方・札幌二條市場", url: "https://www.bigfang.tw/blog/post/sapporo-nijo-market" }
+      },
+      {
+        name: "北海道神宮", area: "札幌", hours: "6:00–17:00",
+        latlng: [43.0539, 141.3072],
+        desc: "北海道第一大神社,位於圓山公園內,供奉開拓三神與明治天皇。表參道古木參天、四季優美,粉紅 Hello Kitty 御守人氣高,六花亭神宮茶屋的判官餅必吃。",
+        ref: { title: "波比看世界・北海道神宮", url: "https://bobbytravel.tw/hokkaidojingu/" }
+      },
+      {
+        name: "藻岩山展望台", area: "札幌", hours: "纜車約 10:30–22:00",
+        latlng: [43.0289, 141.3258],
+        desc: "海拔 531m,搭纜車與登山列車登頂,360 度俯瞰札幌市區夜景,與函館山、小樽天狗山並稱北海道三大夜景,亦為日本新三大夜景。山頂幸福鐘是戀人聖地。",
+        ref: { title: "Mimi韓・藻岩山夜景", url: "https://mimigo.tw/moiwa/" }
+      },
+      {
+        name: "大通公園", area: "札幌", hours: "戶外・全日",
+        latlng: [43.0608, 141.3469],
+        desc: "貫穿札幌市中心約 1.5km 的帶狀公園,噴泉、花壇與札幌電視塔展望台,是雪祭、YOSAKOI 索朗祭與夏季啤酒節的舞台,市民與旅人休憩好去處。"
+      },
+      {
+        name: "白色戀人公園", area: "札幌", hours: "10:00–19:00",
+        latlng: [43.0908, 141.2778],
+        desc: "石屋製菓打造的歐風童話園區,可參觀白色戀人餅乾與年輪蛋糕生產線、巧克力幻想館,並體驗餅乾 DIY。玫瑰花園、格列佛小鎮好拍,親子同遊首選。",
+        ref: { title: "Mimi韓・白色戀人公園觀光工廠", url: "https://mimigo.tw/shiroi-koibito-park/" }
+      },
+      {
+        name: "狸小路商店街", area: "札幌", hours: "店家約 10:00–21:00",
+        latlng: [43.0567, 141.3536],
+        desc: "札幌最大有頂商店街,綿延 7 條街區,藥妝、餐廳、土產與唐吉訶德齊聚,鄰薄野與湯咖哩名店,雨天逛街與宵夜的好去處。"
+      }
+    ],
+
+    food: [
+      { name: "唯我獨尊", area: "富良野", stars: 5, note: "富良野咖哩蛋包飯", ref: { title: "凱子凱・唯我獨尊咖哩蛋包飯", url: "https://ksk.tw/blog/post/348541414" } },
+      { name: "成吉思汗大黑屋", area: "旭川", stars: 5, note: "正宗烤羊肉・無羶味", ref: { title: "Mimi韓・成吉思汗大黑屋", url: "https://mimigo.tw/daikokuya/" } },
+      { name: "旭川拉麵村", area: "旭川", stars: 4, note: "旭川醬油拉麵(8 家名店)", ref: { title: "小兔小安・旭川拉麵村", url: "https://bunnyann.tw/asahikawa-ramen/" } },
+      { name: "小樽出拔小路", area: "小樽", stars: 4, note: "屋台村・哈密瓜霜淇淋", ref: { title: "許傑・小樽出拔小路屋台村", url: "https://journey.tw/otaru-unga/" } },
+      { name: "札幌螃蟹家總店", area: "札幌", stars: 5, note: "松葉蟹/帝王蟹料理", ref: { title: "美奈子・札幌螃蟹家本店", url: "https://minako.tw/hokkaido-sapporo-kanihonke/" } },
+      { name: "Kagayoi 海鮮", area: "札幌", stars: 4, note: "海鮮居酒屋", ref: { title: "", url: "" } },
+      { name: "湯咖哩 GARAKU", area: "札幌", stars: 5, note: "狸小路湯咖哩名店", ref: { title: "波比看世界・湯咖哩 GARAKU", url: "https://bobbytravel.tw/garaku/" } },
+      { name: "迴轉壽司 根室花丸", area: "札幌", stars: 5, note: "札幌站平價迴轉壽司", ref: { title: "娜塔蝦・根室花丸迴轉壽司", url: "https://natasha-traveler.tw/sushi-hanamaru-sapporo/" } }
+    ],
+
+    weather: [
+      "北海道 6 月:約 12–22°C,涼爽乾爽",
+      "TOMAMU 雲海平台清晨可能單位數低溫,務必保暖",
+      "早晚溫差大,洋蔥式穿搭"
+    ],
+    info: [
+      { title: "💜 賞花季", items: ["富良野薰衣草約 6 月下旬–8 月上旬滿開", "6 月初富田農場可賞其他花卉與初開薰衣草", "四季彩之丘 5–6 月鬱金香/魯冰花"] },
+      { title: "📅 預約/提醒", items: ["TOMAMU 雲海平台清晨纜車,天候影響出現率", "根室花丸、GARAKU 等名店先抽號碼牌", "旭山動物園企鵝散步為冬季限定"] },
+      { title: "🍜 北海道必吃", items: ["富良野咖哩、旭川拉麵", "成吉思汗烤羊肉、湯咖哩", "札幌螃蟹、海鮮丼、迴轉壽司", "哈密瓜霜淇淋"] },
+      { title: "🚗 交通提醒", items: ["富良野/美瑛花田分散,自駕最方便", "道央移動距離長,預留車程", "札幌市區地下鐵/市電便利"] }
+    ],
+    notes: [
+      "6 月北海道涼爽,TOMAMU 山上清晨偏冷,務必保暖。",
+      "富良野薰衣草 6 月下旬才陸續盛開,6 月初以其他花卉為主。",
+      "名店(根室花丸、GARAKU)用餐尖峰需抽號排隊。"
+    ]
   }
 ];
