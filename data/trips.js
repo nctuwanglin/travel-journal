@@ -2999,5 +2999,213 @@ window.TRIPS = [
       "USJ、清水寺和服、力丸等熱門點建議提前預約。",
       "以大阪為據點,京都/神戶當日往返。"
     ]
+  },
+
+  {
+    id: "seoul-2019",
+    title: "首爾自由行",
+    subtitle: "明洞・弘大・景福宮・南怡島",
+    country: "韓國",
+    region: "首爾",
+    year: 2019,
+    dateLabel: "2/27 – 3/4",
+    dateStart: "2019-02-27",
+    dateEnd: "2019-03-04",
+    nights: 5,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "景福宮韓服・南怡島・廣藏市場・一隻雞・參雞湯",
+    themes: ["購物", "美食", "古宮", "韓劇"],
+    mapCenter: [37.56, 126.99],
+    mapZoom: 11,
+
+    flight: {
+      airline: "真航空 Jin Air・德威航空 T'way",
+      out: "2/27 桃園 TPE → 仁川 ICN(真航空)",
+      back: "3/4 金浦 GMP → 松山 TSA(德威航空)",
+      note: "仁川進、金浦出"
+    },
+    stay: [
+      { name: "宜必思大使 首爾仁寺洞(ibis Ambassador Insadong)", nights: "全程 5 晚", note: "仁寺洞・近安國/鐘閣站" }
+    ],
+    pass: {
+      icon: "🚇", label: "交通",
+      name: "首爾地鐵 + T-money",
+      price: "機場買 T-money 卡",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["仁川機場 → 市區", "機場快線 AREX", "約 60 分"],
+        ["市區移動", "地鐵 1–9 號線", "T-money 嗶卡"],
+        ["南怡島", "仁寺洞集合搭車(一日遊)", "約 1.5 小時"],
+        ["金浦機場", "地鐵 5/9 號線", "返程"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "2/27 (三)", theme: "✈ 抵達首爾・明洞",
+        items: [
+          { time: "抵達", text: "真航空抵達仁川機場,機場買 T-money,入住仁寺洞" },
+          { time: "逛", text: "明洞逛街、換韓幣" },
+          { time: "晚餐", text: "新村食堂烤肉 或 橋村炸雞 / BCH 炸雞" },
+          { time: "住宿", text: "宜必思大使 首爾仁寺洞" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "仁川機場 → 市區 AREX 約 60 分;機場先買 T-money 卡" }
+        ]
+      },
+      {
+        day: 2, date: "2/28 (四)", theme: "🛍 江南・COEX",
+        items: [
+          { time: "早餐", text: "ISSAC 三明治(東大門)" },
+          { time: "玩", text: "COEX Mall 星空圖書館、COEX 水族館" },
+          { time: "逛", text: "狎鷗亭、新沙洞林蔭道、清潭洞" },
+          { time: "晚餐", text: "醬缸台泡菜湯(清潭總店)" },
+          { time: "住宿", text: "宜必思大使 首爾仁寺洞" }
+        ]
+      },
+      {
+        day: 3, date: "3/1 (五)", theme: "🌳 南怡島・東大門",
+        items: [
+          { time: "玩", text: "南怡島(冬季戀歌水杉林場景)" },
+          { time: "午餐", text: "春川辣炒雞排" },
+          { time: "晚餐", text: "陳玉華一隻雞" },
+          { time: "逛", text: "東大門、N 首爾塔、樂天超市(首爾站)" },
+          { time: "住宿", text: "宜必思大使 首爾仁寺洞" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "南怡島從仁寺洞集合搭車約 1.5 小時;一隻雞晚間排隊,N 首爾塔看夜景" }
+        ]
+      },
+      {
+        day: 4, date: "3/2 (六)", theme: "⛩ 景福宮・北村",
+        items: [
+          { time: "早餐", text: "廣藏市場(綠豆煎餅、生牛肉)" },
+          { time: "玩", text: "北村韓屋村、景福宮、三清洞、梨泰院漢南洞" },
+          { time: "午餐", text: "土俗村參雞湯" },
+          { time: "晚餐", text: "梨大部隊鍋" },
+          { time: "住宿", text: "宜必思大使 首爾仁寺洞" }
+        ],
+        tips: [
+          { type: "info", title: "提示", text: "景福宮週二休、穿韓服免費入場;廣藏市場週日公休" }
+        ]
+      },
+      {
+        day: 5, date: "3/3 (日)", theme: "🎓 梨大・弘大",
+        items: [
+          { time: "早餐", text: "梨大火飯" },
+          { time: "玩", text: "梨大、新村、弘大" },
+          { time: "午餐", text: "站著吃韓牛(新村)" },
+          { time: "晚餐", text: "元祖奶奶菜包肉(弘大)" },
+          { time: "住宿", text: "宜必思大使 首爾仁寺洞" }
+        ]
+      },
+      {
+        day: 6, date: "3/4 (一)", theme: "✈ 返回台灣",
+        items: [
+          { time: "上午", text: "前往金浦機場,德威航空返台(松山機場),滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2 小時抵達金浦機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "明洞", area: "明洞", hours: "店家約 10:00–22:00",
+        latlng: [37.5636, 126.9850],
+        desc: "首爾最熱鬧的購物商圈,Olive Young 美妝、潮牌與百貨齊聚,傍晚後街頭攤販(雞蛋糕、烤肉串)出攤超熱鬧,換錢所匯率最好。",
+        ref: { title: "波比看世界・明洞逛街地圖", url: "https://bobbytravel.tw/myeongdong/" }
+      },
+      {
+        name: "COEX 星空圖書館", area: "三成・江南", hours: "10:30–22:00",
+        latlng: [37.5128, 127.0590],
+        desc: "三成洞 COEX Mall 內的網紅地標,三座兩層樓高巨型書牆超好拍,免費開放;同棟有韓國最大 COEX 水族館(約 650 種、4 萬隻海洋生物)。",
+        ref: { title: "Alina 愛琳娜・COEX 星空圖書館", url: "https://alinalife.tw/starfield-library/" }
+      },
+      {
+        name: "南怡島", area: "加平", hours: "約 8:00–21:00",
+        latlng: [37.7902, 127.5256],
+        desc: "加平的半月形小島,韓劇《冬季戀歌》水杉林大道場景,四季皆美,可搭船或滑索進島,辣炒雞排必吃。從首爾約 1.5 小時。",
+        ref: { title: "波比看世界・南怡島一日遊", url: "https://bobbytravel.tw/nami-island/" }
+      },
+      {
+        name: "東大門", area: "東大門", hours: "商場至凌晨",
+        latlng: [37.5663, 127.0090],
+        desc: "首爾不夜城購物聖地,DDP 設計廣場(Zaha Hadid 設計)、零售商場(Hello apm/NYU NYU)與深夜批發市場,汗蒸幕、橋村炸雞、一隻雞都在此。",
+        ref: { title: "波比看世界・東大門逛街攻略", url: "https://bobbyfun.tw/dongdaemun/" }
+      },
+      {
+        name: "N 首爾塔", area: "南山", hours: "約 10:00–23:00",
+        latlng: [37.5512, 126.9882],
+        desc: "南山頂的首爾地標,纜車上山看愛情鎖牆與市區夜景,《來自星星的你》《藍色大海的傳說》等韓劇場景。",
+        ref: { title: "波比看世界・N 首爾塔攻略", url: "https://bobbytravel.tw/seoul-tower/" }
+      },
+      {
+        name: "廣藏市場", area: "鐘路", hours: "小吃約 9:00–23:00(週日休)",
+        latlng: [37.5701, 127.0019],
+        desc: "1905 年的百年傳統市場,綠豆煎餅(順熙家)、麻藥紫菜飯捲、生牛肉與生章魚超人氣,韓國庶民美食天堂。週日公休。",
+        ref: { title: "Mimi韓・廣藏市場必吃美食", url: "https://mimigo.tw/kwangjang-market/" }
+      },
+      {
+        name: "北村韓屋村", area: "鐘路", hours: "戶外・住宅區請輕聲",
+        latlng: [37.5826, 126.9836],
+        desc: "景福宮與昌德宮之間的傳統韓屋聚落『北村八景』,朝鮮時代上流住宅,巷弄古色古香,穿韓服漫步拍照超美。安國站下車最近。",
+        ref: { title: "Klook・北村韓屋村", url: "https://www.klook.com/zh-TW/blog/%E5%8C%97%E6%9D%91%E9%9F%93%E5%B1%8B%E6%9D%91/" }
+      },
+      {
+        name: "景福宮", area: "鐘路", hours: "9:00–17:00(週二休)",
+        latlng: [37.5796, 126.9770],
+        desc: "朝鮮王朝正宮、首爾最古老宮殿,光化門守門將換崗儀式必看,穿著韓服可免費入場。每週二休館。",
+        ref: { title: "KKday・景福宮韓服與門票攻略", url: "https://www.kkday.com/zh-tw/blog/28389/korea-seoul-gyeongbokgung-royal-palace" }
+      },
+      {
+        name: "三清洞", area: "鐘路", hours: "店家約 11:00–21:00",
+        latlng: [37.5824, 126.9810],
+        desc: "北村旁的文青散步街,韓屋咖啡、藝廊與特色小店,《鬼怪》取景地,三清洞年糕鍋、麵疙瘩必吃。",
+        ref: { title: "Funliday・三清洞逛街地圖", url: "https://www.funliday.com/posts/2025-samcheong-dong/" }
+      },
+      {
+        name: "弘大", area: "弘大", hours: "店家至深夜",
+        latlng: [37.5563, 126.9236],
+        desc: "弘益大學一帶的年輕潮流商圈,街頭藝人表演、個性小店、夜店與美食林立,菜包肉、烤肉名店聚集。"
+      },
+      {
+        name: "梨大・新村", area: "新村", hours: "店家約 10:00–22:00",
+        latlng: [37.5596, 126.9425],
+        desc: "梨花女大與新村大學城,平價服飾、美妝與學生美食,梨大壁畫、新村食堂、站著吃韓牛都在此。"
+      }
+    ],
+
+    food: [
+      { name: "新村食堂 烤肉", area: "新村/弘大", stars: 4, note: "白種元平價烤肉・24h", ref: { title: "小氣少年・新村食堂", url: "https://nicklee.tw/2094/saemaeul-sikdang/" } },
+      { name: "橋村炸雞 KyoChon", area: "東大門", stars: 5, note: "蜂蜜/辣味炸雞", ref: { title: "Mimi韓・橋村炸雞東大門1號店", url: "https://mimigo.tw/kyochon-dongdaemun/" } },
+      { name: "陳玉華一隻雞", area: "東大門", stars: 5, note: "東大門元祖一隻雞", ref: { title: "樂活的大方・陳玉華一隻雞", url: "https://www.bigfang.tw/blog/post/chen-dongdaemun" } },
+      { name: "土俗村參雞湯", area: "景福宮", stars: 5, note: "總統也愛的人蔘雞", ref: { title: "周花花・土俗村蔘雞湯", url: "https://tenjo.tw/tosokchon/" } },
+      { name: "站著吃韓牛", area: "新村", stars: 5, note: "鐵桶站著烤韓牛", ref: { title: "Alina・新村站著吃烤肉", url: "https://alina00.com/seoseogalbi/" } },
+      { name: "元祖奶奶菜包肉", area: "弘大", stars: 5, note: "菜包肉 + 韓國豬腳", ref: { title: "樂活的大方・元祖奶奶菜包肉", url: "https://www.bigfang.tw/blog/post/bossam-hongdae" } },
+      { name: "醬缸台泡菜湯", area: "清潭", stars: 4, note: "24h 泡菜湯", ref: { title: "", url: "" } },
+      { name: "春川辣炒雞排", area: "南怡島", stars: 4, note: "南怡島辣炒雞排", ref: { title: "", url: "" } },
+      { name: "梨大部隊鍋", area: "梨大", stars: 4, note: "部隊鍋", ref: { title: "", url: "" } },
+      { name: "ISSAC 三明治", area: "東大門", stars: 4, note: "韓式三明治早餐", ref: { title: "", url: "" } }
+    ],
+
+    weather: [
+      "首爾 2 月底–3 月初:約 -3 ~ 8°C,冬末偏冷",
+      "南山/南怡島山區更冷,防風保暖",
+      "早晚溫差大,圍巾手套暖暖包備好"
+    ],
+    info: [
+      { title: "🎫 提醒", items: ["景福宮週二休,穿韓服可免費入場", "南怡島從仁寺洞集合一日遊", "廣藏市場、部分老店週日公休先確認"] },
+      { title: "🍗 首爾必吃", items: ["一隻雞、參雞湯、部隊鍋", "橋村炸雞、菜包肉", "站著吃韓牛、新村食堂烤肉", "廣藏市場綠豆煎餅、生牛肉"] },
+      { title: "🛍 購物", items: ["明洞美妝、東大門服飾(批發深夜)", "狎鷗亭/新沙洞林蔭道", "樂天超市(首爾站)伴手禮"] },
+      { title: "🚇 交通提醒", items: ["機場買 T-money 搭地鐵", "仁寺洞為據點,近安國/鐘閣", "仁川進、金浦出"] }
+    ],
+    notes: [
+      "2 月底首爾仍冷,防風保暖、暖暖包備好。",
+      "景福宮週二休、穿韓服免費入場。",
+      "南怡島一日遊從仁寺洞集合,當日往返。"
+    ]
   }
 ];
