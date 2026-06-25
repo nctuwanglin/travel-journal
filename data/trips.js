@@ -3002,15 +3002,15 @@ window.TRIPS = [
   },
 
   {
-    id: "seoul-2019",
+    id: "seoul-2018",
     title: "首爾自由行",
     subtitle: "明洞・弘大・景福宮・南怡島",
     country: "韓國",
     region: "首爾",
-    year: 2019,
+    year: 2018,
     dateLabel: "2/27 – 3/4",
-    dateStart: "2019-02-27",
-    dateEnd: "2019-03-04",
+    dateStart: "2018-02-27",
+    dateEnd: "2018-03-04",
     nights: 5,
     status: "旅遊回憶",
     recommended: false,
@@ -3043,7 +3043,7 @@ window.TRIPS = [
 
     days: [
       {
-        day: 1, date: "2/27 (三)", theme: "✈ 抵達首爾・明洞",
+        day: 1, date: "2/27 (二)", theme: "✈ 抵達首爾・明洞",
         items: [
           { time: "抵達", text: "真航空抵達仁川機場,機場買 T-money,入住仁寺洞" },
           { time: "逛", text: "明洞逛街、換韓幣" },
@@ -3055,7 +3055,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 2, date: "2/28 (四)", theme: "🛍 江南・COEX",
+        day: 2, date: "2/28 (三)", theme: "🛍 江南・COEX",
         items: [
           { time: "早餐", text: "ISSAC 三明治(東大門)" },
           { time: "玩", text: "COEX Mall 星空圖書館、COEX 水族館" },
@@ -3065,7 +3065,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 3, date: "3/1 (五)", theme: "🌳 南怡島・東大門",
+        day: 3, date: "3/1 (四)", theme: "🌳 南怡島・東大門",
         items: [
           { time: "玩", text: "南怡島(冬季戀歌水杉林場景)" },
           { time: "午餐", text: "春川辣炒雞排" },
@@ -3078,7 +3078,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 4, date: "3/2 (六)", theme: "⛩ 景福宮・北村",
+        day: 4, date: "3/2 (五)", theme: "⛩ 景福宮・北村",
         items: [
           { time: "早餐", text: "廣藏市場(綠豆煎餅、生牛肉)" },
           { time: "玩", text: "北村韓屋村、景福宮、三清洞、梨泰院漢南洞" },
@@ -3091,7 +3091,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 5, date: "3/3 (日)", theme: "🎓 梨大・弘大",
+        day: 5, date: "3/3 (六)", theme: "🎓 梨大・弘大",
         items: [
           { time: "早餐", text: "梨大火飯" },
           { time: "玩", text: "梨大、新村、弘大" },
@@ -3101,7 +3101,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 6, date: "3/4 (一)", theme: "✈ 返回台灣",
+        day: 6, date: "3/4 (日)", theme: "✈ 返回台灣",
         items: [
           { time: "上午", text: "前往金浦機場,德威航空返台(松山機場),滿載而歸!" }
         ],
