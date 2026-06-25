@@ -1605,5 +1605,235 @@ window.TRIPS = [
       "奧入瀨冰瀑、藏王樹冰、銀山溫泉等冬季活動受天候影響,先確認運行/管制。",
       "D6 麵包超人博物館位於仙台(非山形),當日住東仙台大都會飯店。"
     ]
+  },
+
+  {
+    id: "tokyo-2024",
+    title: "東京・橫濱鎌倉之旅",
+    subtitle: "上野・迪士尼・橫濱・鎌倉",
+    country: "日本",
+    region: "東京・神奈川",
+    year: 2024,
+    dateLabel: "12/14 – 12/22",
+    dateStart: "2024-12-14",
+    dateEnd: "2024-12-22",
+    nights: 8,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "迪士尼雙園・橫濱港・鎌倉大佛江之島・麻布台 teamLab",
+    themes: ["迪士尼", "親子", "海濱", "美食"],
+    mapCenter: [35.5, 139.7],
+    mapZoom: 9,
+
+    flight: {
+      airline: "星宇航空 STARLUX",
+      out: "12/14 桃園 TPE → 東京 成田 NRT",
+      back: "12/22 東京 成田 NRT → 桃園 TPE",
+      note: "成田進出・上野/銀座為據點・迪士尼住 1 晚"
+    },
+    stay: [
+      { name: "三井花園飯店 上野", nights: "12/14–12/17 ・ 3 晚", note: "上野・近 JR 上野站" },
+      { name: "東京迪士尼玩具總動員飯店", nights: "12/17 ・ 1 晚", note: "迪士尼度假區內" },
+      { name: "銀座大和 ROYNET 飯店", nights: "12/18–12/22 ・ 4 晚", note: "銀座・購物便利" }
+    ],
+    pass: {
+      icon: "🚇", label: "交通",
+      name: "JR + 東京メトロ + 江之電",
+      price: "建議 Suica/PASMO",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["成田機場 → 上野", "Skyliner / JR", "約 45 分"],
+        ["市區移動", "JR 山手線 + 東京メトロ", "Suica 嗶卡"],
+        ["迪士尼", "JR 京葉線 → 舞濱", "東京站約 15 分"],
+        ["橫濱/鎌倉/江之島", "JR + 江之電", "約 1 小時"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "12/14 (六)", theme: "🏮 抵達東京・淺草晴空塔",
+        items: [
+          { time: "抵達", text: "抵達成田機場,前往上野入住" },
+          { time: "玩", text: "淺草寺雷門、晴空塔(墨田水族館)" },
+          { time: "晚餐", text: "米久本店壽喜燒 或 敘敘苑" },
+          { time: "住宿", text: "三井花園飯店 上野" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "成田機場 → 上野 Skyliner 約 45 分" }
+        ]
+      },
+      {
+        day: 2, date: "12/15 (日)", theme: "🐼 上野・阿美橫町",
+        items: [
+          { time: "玩", text: "上野公園、上野動物園、阿美橫町" },
+          { time: "晚餐", text: "上野 鴨肉鍋 或 拉麵" },
+          { time: "住宿", text: "三井花園飯店 上野" }
+        ]
+      },
+      {
+        day: 3, date: "12/16 (一)", theme: "⚓ 橫濱港未來",
+        items: [
+          { time: "玩", text: "橫濱(紅磚倉庫、港未來、中華街)" },
+          { time: "住宿", text: "三井花園飯店 上野" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "上野/澀谷 → 橫濱 港未來線直通約 1 小時" }
+        ]
+      },
+      {
+        day: 4, date: "12/17 (二)", theme: "🌊 東京迪士尼海洋",
+        items: [
+          { time: "玩", text: "東京迪士尼海洋 DisneySea" },
+          { time: "住宿", text: "東京迪士尼玩具總動員飯店" }
+        ]
+      },
+      {
+        day: 5, date: "12/18 (三)", theme: "🏰 東京迪士尼樂園",
+        items: [
+          { time: "玩", text: "東京迪士尼樂園 Disneyland" },
+          { time: "住宿", text: "銀座大和 ROYNET 飯店" }
+        ]
+      },
+      {
+        day: 6, date: "12/19 (四)", theme: "🛍 銀座・澀谷",
+        items: [
+          { time: "玩", text: "銀座逛街、澀谷(SHIBUYA SKY、十字路口)" },
+          { time: "住宿", text: "銀座大和 ROYNET 飯店" }
+        ]
+      },
+      {
+        day: 7, date: "12/20 (五)", theme: "⛩ 鎌倉・江之島",
+        items: [
+          { time: "玩", text: "鎌倉大佛(高德院)、鶴岡八幡宮、江之島(江島神社、海蠟燭)" },
+          { time: "住宿", text: "銀座大和 ROYNET 飯店" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "JR 至鎌倉,轉江之電串聯長谷大佛、鎌倉高校前、江之島" }
+        ]
+      },
+      {
+        day: 8, date: "12/21 (六)", theme: "🎨 東京車站・麻布台 teamLab",
+        items: [
+          { time: "玩", text: "東京車站(丸之內紅磚站舍、KITTE)、麻布台之丘 teamLab Borderless" },
+          { time: "住宿", text: "銀座大和 ROYNET 飯店" }
+        ],
+        tips: [
+          { type: "info", title: "提醒", text: "麻布台 teamLab Borderless 需線上預約場次" }
+        ]
+      },
+      {
+        day: 9, date: "12/22 (日)", theme: "✈ 返回台灣",
+        items: [
+          { time: "上午", text: "前往成田機場,返回台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "建議提前 2.5–3 小時抵達成田機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        latlng: [35.7148, 139.7967],
+        desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通商店街集結人形燒、仙貝與和風雜貨,可租和服參拜、求籤、收御朱印。",
+        ref: { title: "BringYou・淺草寺雷門散步路線", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
+      },
+      {
+        name: "晴空塔・墨田水族館", area: "押上・晴空塔", hours: "水族館 10:00–20:00",
+        latlng: [35.7101, 139.8107],
+        desc: "世界第一高塔,展望台俯瞰東京、Solamachi 商場好逛;5–6 樓墨田水族館有企鵝、海狗,是雨天/寒天親子首選。",
+        ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
+      },
+      {
+        name: "上野公園・上野動物園", area: "上野", hours: "動物園 9:30–17:00(週一休)",
+        latlng: [35.7156, 139.7714],
+        desc: "上野恩賜公園腹地廣闊,集結博物館、美術館與不忍池;園內上野動物園為日本最古老動物園,動物明星與單軌列車是孩子最愛(曾以大貓熊聞名,貓熊已於 2026 初返回中國)。",
+        ref: { title: "波比看世界・上野 7 大景點一日遊", url: "https://bobbytravel.tw/ueno/" }
+      },
+      {
+        name: "阿美橫町", area: "上野", hours: "店家約 10:00–19:00",
+        latlng: [35.7100, 139.7740],
+        desc: "JR 上野–御徒町高架下約 500m 商店街,藥妝、零食、海鮮乾貨與服飾雜貨齊聚,多慶屋、YODOBASHI 一次購足,熱鬧又好殺價。",
+        ref: { title: "樂活的大方・阿美橫町必買必吃", url: "https://www.bigfang.tw/blog/post/uneo-ameyoko-tokyo" }
+      },
+      {
+        name: "橫濱紅磚倉庫", area: "橫濱", hours: "約 11:00–20:00",
+        latlng: [35.4530, 139.6425],
+        desc: "橫濱港未來代表地標,百年紅磚倉庫改為文創商業設施,鄰中華街、大棧橋、Cosmo World 摩天輪與空中纜車,港灣夜景浪漫,可從澀谷/池袋直通。",
+        ref: { title: "心旅生活・橫濱一日遊路線", url: "https://shinblog.com.tw/yokohama/" }
+      },
+      {
+        name: "東京迪士尼海洋", area: "舞濱", hours: "依官方每日公告",
+        latlng: [35.6267, 139.8850],
+        desc: "全球唯一的海洋主題迪士尼,以七大主題港灣與成熟氛圍著稱,2024 新增『夢幻泉鄉』園區,表演、煙火與限定餐點豐富,善用 DPA 更順暢。",
+        ref: { title: "花時光旅行實驗室・迪士尼海洋攻略", url: "https://whatime.space/tokyo-disneysea/" }
+      },
+      {
+        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        latlng: [35.6329, 139.8804],
+        desc: "經典童話主題園區,城堡、遊行、煙火必看。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡,與海洋分開購票各排一天。",
+        ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
+      },
+      {
+        name: "銀座", area: "銀座", hours: "店家約 11:00–20:00",
+        latlng: [35.6717, 139.7650],
+        desc: "東京頂級購物區,精品旗艦、GINZA SIX、和光鐘樓與百年老舖林立,週末中央通『步行者天國』可悠閒逛街。"
+      },
+      {
+        name: "澀谷 SHIBUYA SKY", area: "澀谷", hours: "約 10:00–22:30",
+        latlng: [35.6595, 139.7004],
+        desc: "澀谷 Scramble Square 頂樓 360 度開放式空中展望台,俯瞰著名澀谷全向十字路口與東京夜景,日落前時段最美。樓下八公像、宮下公園、PARCO 好逛。",
+        ref: { title: "樂活的大方・SHIBUYA SKY 展望台", url: "https://www.bigfang.tw/blog/post/tokyo-shibuya-sky" }
+      },
+      {
+        name: "鎌倉大佛(高德院)", area: "鎌倉", hours: "約 8:00–17:00",
+        latlng: [35.3169, 139.5358],
+        desc: "高約 13.35m、重 121 噸的青銅阿彌陀如來坐像,日本國寶,可入胎內參觀。江之電長谷站步行約 10 分,可串長谷寺、小町通、鶴岡八幡宮。",
+        ref: { title: "波比看世界・鎌倉大佛殿高德院", url: "https://bobbytravel.tw/kotokuin-temple/" }
+      },
+      {
+        name: "江之島", area: "江之島", hours: "燈塔 9:00–20:00",
+        latlng: [35.2992, 139.4806],
+        desc: "湘南外海小島,江島神社三宮巡禮、弁財天商店街吃章魚仙貝,登 60m 海蠟燭展望燈塔眺望湘南海岸與富士山,冬季『湘南寶石』燈飾浪漫。",
+        ref: { title: "波比看世界・江之島一日遊", url: "https://bobbytravel.tw/enoshima/" }
+      },
+      {
+        name: "東京車站", area: "丸之內", hours: "店家約 10:00–21:00",
+        latlng: [35.6812, 139.7671],
+        desc: "丸之內側百年紅磚站舍華麗復古,站內一番街(角色街)、拉麵街與大丸百貨好逛,KITTE 屋頂庭園可眺望站舍與東京夜景。"
+      },
+      {
+        name: "麻布台之丘 teamLab Borderless", area: "麻布台", hours: "約 10:00–21:00",
+        latlng: [35.6602, 139.7400],
+        desc: "2023 開幕的麻布台之丘內、無邊界沉浸式數位藝術美術館,作品彼此交融無界,《Bubble Universe》《花卉森林》等夢幻必拍。熱門需線上預約場次。",
+        ref: { title: "Mimi韓・麻布台之丘 teamLab 無界", url: "https://mimigo.tw/teamlab-daiba/" }
+      }
+    ],
+
+    food: [
+      { name: "米久本店 壽喜燒", area: "淺草", stars: 5, note: "百年和牛壽喜燒老店", ref: { title: "小氣少年・淺草米久本店", url: "https://nicklee.tw/2467/tokyo-asakusa-yonekyu/" } },
+      { name: "敘敘苑 燒肉", area: "東京", stars: 5, note: "高級燒肉・午間套餐划算", ref: { title: "娜塔蝦・敘敘苑用餐心得", url: "https://natasha-traveler.tw/jyujyuen-yakiniku-review/" } },
+      { name: "上野 鴨肉鍋 / 拉麵", area: "上野", stars: 4, note: "上野晚餐", ref: { title: "", url: "" } },
+      { name: "橫濱中華街", area: "橫濱", stars: 4, note: "肉包・小籠包・港式點心", ref: { title: "", url: "" } },
+      { name: "江之島海鮮", area: "江之島", stars: 4, note: "吻仔魚丼・章魚仙貝", ref: { title: "", url: "" } }
+    ],
+
+    weather: [
+      "東京 12 月:約 5–13°C,乾爽晴朗",
+      "早晚偏涼,保暖外套、圍巾備用",
+      "海濱(江之島)風大體感更冷"
+    ],
+    info: [
+      { title: "🎫 預約提醒", items: ["迪士尼陸/海分開購票,各排一天", "麻布台 teamLab Borderless 線上預約場次", "SHIBUYA SKY 建議日落前時段預約", "迪士尼善用官方 App(Standby Pass / DPA)"] },
+      { title: "🍜 在地必吃", items: ["淺草壽喜燒(米久本店)", "橫濱中華街", "江之島章魚仙貝、吻仔魚丼", "上野鴨肉鍋/拉麵"] },
+      { title: "🛍️ 購物", items: ["阿美橫町藥妝、多慶屋", "銀座、澀谷 PARCO/宮下公園", "橫濱港未來購物"] },
+      { title: "🚄 交通提醒", items: ["上野/銀座為據點,山手線串聯", "迪士尼搭京葉線到舞濱", "鎌倉江之島搭 JR + 江之電一日遊"] }
+    ],
+    notes: [
+      "12 月東京乾爽,早晚與海濱偏涼,注意保暖。",
+      "迪士尼、teamLab、SHIBUYA SKY 等熱門點建議提前預約。",
+      "鎌倉、江之島可搭江之電串聯,安排整天。"
+    ]
   }
 ];
