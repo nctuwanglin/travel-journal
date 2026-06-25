@@ -1393,6 +1393,7 @@ window.TRIPS = [
     mapZoom: 6,
 
     flight: {
+      airline: "長榮航空 EVA Air",
       out: "3/1 桃園 TPE → 仙台 SDJ",
       back: "3/9 仙台 SDJ → 桃園",
       note: "仙台進出・青森/函館/山形周遊"
