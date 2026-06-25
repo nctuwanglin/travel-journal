@@ -896,5 +896,206 @@ window.TRIPS = [
       "小豆島為離島須搭渡輪,留意末班船時刻。",
       "人氣餐廳(一鶴、寄鳥味鳥、東大)建議避開尖峰或預留排隊時間。"
     ]
+  },
+
+  {
+    id: "busan-2026",
+    title: "釜山冬遊之旅",
+    subtitle: "海雲台・廣安里・南浦",
+    country: "韓國",
+    region: "釜山",
+    year: 2026,
+    dateLabel: "1/29 – 2/3",
+    dateStart: "2026-01-29",
+    dateEnd: "2026-02-03",
+    nights: 5,
+    status: "旅遊回憶",
+    recommended: false,
+    tagline: "海雲台膠囊列車・廣安里無人機秀・釜山樂天世界・道地豬肉湯飯",
+    themes: ["親子", "主題樂園", "美食", "冬遊"],
+    mapCenter: [35.13, 129.10],
+    mapZoom: 10,
+
+    flight: {
+      out: "1/29 桃園 TPE → 釜山 PUS(18:50 抵達)",
+      back: "2/3 釜山 PUS → 桃園(11:50)",
+      note: "金海機場進出・海雲台為據點,地鐵周遊"
+    },
+    stay: [
+      { name: "L7 海雲台 by LOTTE", nights: "全程 5 晚", note: "海雲台・樂天集團設計飯店" }
+    ],
+    pass: {
+      icon: "🚇", label: "交通",
+      name: "釜山地鐵 + 巴士",
+      price: "建議 T-money 卡",
+      head: ["路段", "交通", "備註"],
+      rows: [
+        ["金海機場 → 海雲台", "機場巴士 / 輕電鐵+地鐵", "約 50–70 分"],
+        ["海雲台 ↔ 西面/南浦", "地鐵 2 號線", "T-money 嗶卡"],
+        ["機張(樂天世界)", "東海線電鐵 → 奧西利亞站", "約 30 分"],
+        ["市區移動", "計程車(Kakao T 叫車)", "跳表合理"]
+      ]
+    },
+
+    days: [
+      {
+        day: 1, date: "1/29 (四)", theme: "✈ 抵達釜山・海雲台",
+        items: [
+          { time: "18:50", text: "抵達釜山金海機場,前往海雲台入住" },
+          { time: "晚餐", text: "水邊最高豬肉湯飯(海雲台)" },
+          { time: "住宿", text: "L7 海雲台 by LOTTE" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "金海機場 →(機場巴士 / 輕電鐵+地鐵約 50–70 分)海雲台" }
+        ]
+      },
+      {
+        day: 2, date: "1/30 (五)", theme: "🎢 海雲台・機張樂天世界",
+        items: [
+          { time: "玩", text: "釜山樂天世界、樂天 Outlet 東釜山(機張)" },
+          { time: "午餐", text: "樂天世界園內用餐" },
+          { time: "晚餐", text: "the east 3 樓(機張海景)" },
+          { time: "住宿", text: "L7 海雲台 by LOTTE" }
+        ],
+        tips: [
+          { type: "info", title: "交通時間軸", text: "東海線電鐵 → 奧西利亞(OSIRIA)站,步行約 10 分至樂天世界" }
+        ]
+      },
+      {
+        day: 3, date: "1/31 (六)", theme: "🚝 海雲台・廣安里",
+        items: [
+          { time: "玩", text: "天空膠囊列車、海岸列車、鑽石灣遊艇、廣安里無人機表演" },
+          { time: "午餐", text: "Diart Coffee(青沙浦海景・土耳其蜂蜜奶油吐司)" },
+          { time: "晚餐", text: "釜山宅烤肉(廣安里炭火燒肉)" },
+          { time: "住宿", text: "L7 海雲台 by LOTTE" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "膠囊列車提前官網預約;廣安里無人機秀僅週六晚間(冬季約 19:00/21:00),天候不佳可能取消" }
+        ]
+      },
+      {
+        day: 4, date: "2/1 (日)", theme: "🎨 西面・南浦",
+        items: [
+          { time: "玩", text: "松島海上纜車、ARTE Museum、BIFF 廣場" },
+          { time: "午餐", text: "秀英家豬肉湯飯(西面湯飯一條街)" },
+          { time: "晚餐", text: "紅油短中華料理(南浦洞)" },
+          { time: "住宿", text: "L7 海雲台 by LOTTE" }
+        ]
+      },
+      {
+        day: 5, date: "2/2 (一)", theme: "🐠 海雲台一日",
+        items: [
+          { time: "玩", text: "SEA LIFE 水族館、海雲台海灘、新世界百貨 Centum City、釜山 X the Sky" },
+          { time: "午餐", text: "海雲台 31 公分海鮮刀削麵" },
+          { time: "晚餐", text: "味讚王鹽烤肉(海雲台)" },
+          { time: "住宿", text: "L7 海雲台 by LOTTE" }
+        ]
+      },
+      {
+        day: 6, date: "2/3 (二)", theme: "✈ 回台灣",
+        items: [
+          { time: "上午", text: "飯店退房,前往金海機場" },
+          { time: "11:50", text: "釜山 → 台灣,滿載而歸!" }
+        ],
+        tips: [
+          { type: "warn", title: "提醒", text: "班機 11:50,建議提前 2 小時抵達金海機場" }
+        ]
+      }
+    ],
+
+    spots: [
+      {
+        name: "釜山樂天世界", area: "機張", hours: "10:00–19:00(假日至 20:00)",
+        latlng: [35.1936, 129.2167],
+        desc: "韓國最大的童話風主題樂園,位於機張奧西利亞,24 項遊樂設施與大型城堡、森林系場景超好拍,定時表演與遊行精彩。鄰近海東龍宮寺、機張市場。",
+        ref: { title: "蔡小妞依玲・釜山樂天世界冒險樂園", url: "https://tsnio.com/lotte-world-adventure-busan/" }
+      },
+      {
+        name: "海雲台藍線公園(膠囊・海岸列車)", area: "海雲台", hours: "依官網班次",
+        latlng: [35.1583, 129.1747],
+        desc: "由舊東海南部線改建的 4.8km 海岸鐵道:上層天空膠囊列車(4 人小車廂、離地 7–10m)、下層海岸列車面海而行,串起尾浦–青沙浦–松亭。廣安大橋海景與韓版櫻木花道平交道必拍。膠囊列車務必官網提前預約。",
+        ref: { title: "樂活的大方・海雲台藍線公園全攻略", url: "https://www.bigfang.tw/blog/post/bluelinepark-busan" }
+      },
+      {
+        name: "鑽石灣遊艇", area: "海雲台", hours: "日/夜多班次",
+        latlng: [35.1556, 129.1456],
+        desc: "海雲台雙層大型遊艇,日間五六島航線、夜間海雲台–廣安里航線,從海上眺望廣安大橋與海岸夜景。持 Visit Busan Pass 日間免費、夜間加價搭乘,建議線上預約。",
+        ref: { title: "愛旅遊的貓奴小梨・鑽石灣遊艇", url: "https://judyer.com/diamond/" }
+      },
+      {
+        name: "廣安里無人機表演", area: "廣安里", hours: "週六晚間(冬季 19:00/21:00)",
+        latlng: [35.1532, 129.1186],
+        desc: "全韓最大規模的常態無人機燈光秀,每週六晚於廣安里海灘上空演出,約 700 架無人機結合廣安大橋打造彩色光雕,每場約 10 分鐘、一晚兩場。天候不佳可能取消。",
+        ref: { title: "一起去巴黎 Liz・廣安里無人機表演", url: "https://lizzzstyle.tw/gwangallimdrone/" }
+      },
+      {
+        name: "松島海上纜車", area: "松島", hours: "約 9:00–20:00",
+        latlng: [35.0758, 129.0181],
+        desc: "韓國首條跨海纜車(Busan Air Cruise),全長逾 1.6km、最高 86m,透明水晶車廂俯瞰松島海水浴場,可順遊松島龍宮雲橋空中步道。持 Visit Busan Pass 可免費搭水晶車廂。",
+        ref: { title: "蔡小妞依玲・松島海上纜車龍宮雲橋", url: "https://tsnio.com/busan-air-cruise/" }
+      },
+      {
+        name: "ARTE Museum 釜山", area: "影島", hours: "約 10:00–20:00",
+        latlng: [35.0866, 129.0744],
+        desc: "d'strict 打造、佔地約 1700 坪的全球最大沉浸式光影美術館,以『永恆自然』為題,19 件數位媒體藝術中 16 件為釜山限定。喜歡 teamLab 的人必訪,持 VBP 可免費入場。",
+        ref: { title: "許傑・釜山 Arte Museum", url: "https://journey.tw/arte-museum-busan/" }
+      },
+      {
+        name: "BIFF 廣場", area: "南浦洞", hours: "店家約 10:00–22:00",
+        latlng: [35.0986, 129.0269],
+        desc: "釜山國際電影節發源地,地上有電影人手印與銅像,周邊串起國際市場、富平罐頭夜市、光復路時尚街與札嘎其海鮮市場。必吃排隊糖餅(호떡)。",
+        ref: { title: "Mimi韓・南浦洞札嘎其逛街地圖", url: "https://mimigo.tw/nampo-dong-trips/" }
+      },
+      {
+        name: "釜山 X the Sky", area: "海雲台", hours: "約 10:00–21:00",
+        latlng: [35.1592, 129.1739],
+        desc: "位於海雲台 LCT The Sharp(411.6m)、韓國最高觀景台,100 樓 360 度俯瞰海雲台海岸線、廣安大橋與市景,還有世界最高星巴克。日落與夜景人氣極高。",
+        ref: { title: "樂活的大方・釜山 X the Sky 觀景台", url: "https://www.bigfang.tw/blog/post/busan-x-thesky" }
+      },
+      {
+        name: "SEA LIFE 釜山水族館", area: "海雲台", hours: "約 10:00–19:00",
+        latlng: [35.1597, 129.1606],
+        desc: "海雲台海灘旁的大型地下水族館,主缸 3500 噸、80 公尺海底隧道,展示逾 250 種、上萬隻海洋生物,有美人魚表演與鯊魚餵食秀,是雨天/寒天親子首選。",
+        ref: { title: "波比看世界・SEA LIFE 釜山水族館", url: "https://bobbytravel.tw/sea-life-busan/" }
+      },
+      {
+        name: "海雲台海灘", area: "海雲台", hours: "戶外・全日",
+        latlng: [35.1587, 129.1604],
+        desc: "釜山最具代表的海水浴場,冬日海風凜冽但海景遼闊,沿岸有冬柏島、The Bay 101 夜景與眾多海景咖啡廳,適合散步拍照。"
+      },
+      {
+        name: "新世界百貨 Centum City", area: "Centum City", hours: "約 10:30–20:00",
+        latlng: [35.1689, 129.1294],
+        desc: "金氏世界紀錄認證全球最大百貨,集精品、SPA LAND 汗蒸幕、美食街與屋頂花園於一身,是冬日逛街避寒的好去處。"
+      }
+    ],
+
+    food: [
+      { name: "水邊最高豬肉湯飯", area: "海雲台", stars: 5, note: "釜山三大豬肉湯飯", ref: { title: "一起去巴黎 Liz・水邊最高豬肉湯飯", url: "https://lizzzstyle.tw/su-byeon/" } },
+      { name: "the east 3 樓", area: "機張", stars: 4, note: "機張海景餐廳", ref: { title: "", url: "" } },
+      { name: "Diart Coffee", area: "青沙浦", stars: 4, note: "土耳其蜂蜜奶油吐司・海景", ref: { title: "windko・青沙浦 DIART COFFEE", url: "https://windko.tw/diart-coffee/" } },
+      { name: "釜山宅烤肉", area: "廣安里", stars: 4, note: "廣安里炭火燒肉", ref: { title: "We4 Travel・廣安里炭火燒肉釜山宅", url: "https://we4-travel.com/busandeak/" } },
+      { name: "秀英家豬肉湯飯", area: "西面", stars: 5, note: "西面湯飯一條街・24h", ref: { title: "樂活的大方・秀英本家豬肉湯飯", url: "https://www.bigfang.tw/blog/post/suyeong-porksoup-seomyeon" } },
+      { name: "紅油短中華料理", area: "南浦洞", stars: 4, note: "南浦洞中華料理", ref: { title: "", url: "" } },
+      { name: "海雲台 31 公分海鮮刀削麵", area: "海雲台", stars: 4, note: "比臉大海鮮刀削麵", ref: { title: "樂活的大方・海雲台 31cm 海鮮刀削麵", url: "https://www.bigfang.tw/blog/post/haeundae-31cm-noodle" } },
+      { name: "味讚王鹽烤肉", area: "海雲台", stars: 5, note: "3.5cm 厚切鹽烤肉・專人代烤", ref: { title: "樂活的大方・味贊王鹽烤肉海雲台", url: "https://www.bigfang.tw/blog/post/matwang-haeundae-busan" } }
+    ],
+
+    weather: [
+      "釜山 1–2 月:約 -1 ~ 8°C,乾冷",
+      "海邊風大體感更冷,保暖防風外套、帽子手套必備",
+      "室內外溫差大,洋蔥式穿搭"
+    ],
+    info: [
+      { title: "🎫 Visit Busan Pass", items: ["鑽石灣遊艇、松島纜車、ARTE Museum、X the Sky 多為 VBP 免費/優惠", "行程多景點時購 Pass 較划算", "換票/入場規則先看官網"] },
+      { title: "📅 提前預約", items: ["天空膠囊列車官網提前 3–4 週預約", "鑽石灣遊艇線上預約", "廣安里無人機秀僅週六、天候不佳可能取消"] },
+      { title: "🍜 釜山必吃", items: ["豬肉湯飯(돼지국밥)", "鹽烤肉厚切五花", "海鮮刀削麵", "BIFF 廣場糖餅(호떡)"] },
+      { title: "🚇 交通提醒", items: ["T-money 卡搭地鐵/巴士", "機張樂天世界搭東海線到奧西利亞", "計程車用 Kakao T 叫車方便"] }
+    ],
+    notes: [
+      "冬季釜山乾冷,務必保暖防風。",
+      "廣安里無人機秀限週六、受天候影響,先確認當週是否演出。",
+      "熱門餐廳(豬肉湯飯、鹽烤肉)用餐尖峰需排隊。"
+    ]
   }
 ];
