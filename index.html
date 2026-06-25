@@ -325,7 +325,7 @@
   var app = document.getElementById("app");
   var liveMaps = [];   // 追蹤 Leaflet 實例以便切換 view 時銷毀
 
-  var FLAGS = { "日本": "🇯🇵", "韓國": "🇰🇷", "越南": "🇻🇳" };
+  var FLAGS = { "日本": "🇯🇵", "韓國": "🇰🇷", "越南": "🇻🇳", "香港": "🇭🇰" };
   function flagOf(c){ return FLAGS[c] || "🏳️"; }
   // 卡片標題:國家 地區 年份
   function displayTitle(t){ return t.country + " " + t.region + " " + t.year; }
@@ -381,7 +381,7 @@
       '</div></header>'+
       '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
         filters.map(function(f){
-          var label=(f==="全部")?"全部":(flagOf(f)+" "+f+" "+(countBy[f]||0));
+          var label=(f==="全部")?"全部":(flagOf(f)+" "+f);
           return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(label)+'</button>';
         }).join("")+
       '</div></div></div>'+
