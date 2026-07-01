@@ -101,12 +101,14 @@
   .hero-meta{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
   .hero-meta .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:30px;line-height:1}
   .hero-meta .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-  .hero-flags{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .hero-groups{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+  .cgroup{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .flagstat{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);
-    border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:var(--shadow)}
+    border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:var(--shadow);
+    flex:0 0 auto;min-width:104px}
   .flagstat .fg{font-size:19px;line-height:1}
-  .flagstat b{font-family:"Space Grotesk",sans-serif;font-size:16px;color:var(--hayabusa)}
-  .hero-regions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .flagstat b{font-family:"Space Grotesk",sans-serif;font-size:16px;color:var(--hayabusa);margin-left:auto}
+  .cregs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .regtag{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--ink-soft);
     border:1px solid var(--line-soft);border-radius:999px;padding:3px 11px;white-space:nowrap}
   .regtag b{font-family:"Space Grotesk",sans-serif;font-size:12px;color:var(--hayabusa);font-weight:700}
@@ -373,19 +375,39 @@
     var trips=TRIPS.slice();
     var countries=[]; trips.forEach(function(t){if(countries.indexOf(t.country)<0)countries.push(t.country);});
     var countBy={}; trips.forEach(function(t){countBy[t.country]=(countBy[t.country]||0)+1;});
-    var regionCountBy={}; trips.forEach(function(t){regionCountBy[t.region]=(regionCountBy[t.region]||0)+1;});
-    var regions=Object.keys(regionCountBy).sort(function(a,b){return regionCountBy[b]-regionCountBy[a];});
     var filters=["全部"].concat(countries);
+
+    // 將子區域正規化為大區域;跨兩區的行程同時計入兩個大區域
+    var REGION_MAP={
+      "京阪神":["關西"], "東京・神奈川":["東京"],
+      "關西・山陽":["關西","中國地方"], "東北・函館":["東北","北海道"]
+    };
+    function bigRegions(r){ return REGION_MAP[r] || [r]; }
+    // 依國家分組統計大區域次數
+    var regionsByCountry={}; // country → { region → count }
+    trips.forEach(function(t){
+      var bag=regionsByCountry[t.country]||(regionsByCountry[t.country]={});
+      bigRegions(t.region).forEach(function(r){ bag[r]=(bag[r]||0)+1; });
+    });
+    function sortedRegions(country){
+      var bag=regionsByCountry[country]||{};
+      return Object.keys(bag).sort(function(a,b){return bag[b]-bag[a];});
+    }
 
     app.innerHTML=
       topbar(false,null)+
       '<header class="hero"><div class="wrap">'+
         '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
-        '<div class="hero-flags">'+
-          countries.map(function(c){return '<span class="flagstat"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></span>';}).join("")+
-        '</div>'+
-        '<div class="hero-regions">'+
-          regions.map(function(r){return '<span class="regtag">'+esc(r)+' <b>×'+regionCountBy[r]+'</b></span>';}).join("")+
+        '<div class="hero-groups">'+
+          countries.map(function(c){
+            var bag=regionsByCountry[c]||{};
+            return '<div class="cgroup">'+
+              '<span class="flagstat"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></span>'+
+              '<div class="cregs">'+
+                sortedRegions(c).map(function(r){return '<span class="regtag">'+esc(r)+' <b>×'+bag[r]+'</b></span>';}).join("")+
+              '</div>'+
+            '</div>';
+          }).join("")+
         '</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
