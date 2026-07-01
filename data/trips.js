@@ -2979,7 +2979,7 @@ window.TRIPS = [
 
     food: [
       { name: "燒肉力丸 難波道頓堀店", area: "道頓堀", stars: 5, note: "和牛燒肉吃到飽(需訂位)", ref: { title: "福寶媽・燒肉力丸難波道頓堀店", url: "https://gogojp.tw/yakiniku-rikimaru/" } },
-      { name: "神戶牛鐵板燒(三宮)", area: "神戶三宮", stars: 5, note: "A5 神戶牛鐵板燒", ref: { title: "水晶安蹄・神戶牛鐵板燒 仙", url: "https://auntie.tw/sen/" } },
+      { name: "神戶牛鐵板燒(三宮)", area: "神戶三宮", stars: 5, note: "A5 神戶牛鐵板燒" },
       { name: "黑門市場海鮮", area: "大阪", stars: 4, note: "海鮮生魚片、河豚、干貝", ref: { title: "BringYou・黑門市場必吃美食", url: "https://www.bring-you.info/zh-tw/kuromon-ichiba-market" } }
     ],
 
@@ -3417,7 +3417,7 @@ window.TRIPS = [
     id: "hongkong-2017",
     title: "香港自由行",
     subtitle: "尖沙嘴・中環・大嶼山・赤柱",
-    country: "香港",
+    country: "中國",
     region: "香港",
     year: 2017,
     dateLabel: "3/10 – 3/13",
