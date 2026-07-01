@@ -3210,15 +3210,15 @@ window.TRIPS = [
   },
 
   {
-    id: "kyushu-2016",
+    id: "kyushu-2019",
     title: "九州自由行",
     subtitle: "福岡・由布院・熊本・柳川",
     country: "日本",
     region: "九州",
-    year: 2016,
-    dateLabel: "2/28 – 3/4",
-    dateStart: "2016-02-28",
-    dateEnd: "2016-03-04",
+    year: 2019,
+    dateLabel: "2/28 – 3/5",
+    dateStart: "2019-02-28",
+    dateEnd: "2019-03-05",
     nights: 5,
     status: "旅遊回憶",
     recommended: false,
@@ -3230,7 +3230,7 @@ window.TRIPS = [
     flight: {
       airline: "中華航空 China Airlines",
       out: "2/28 桃園 TPE → 福岡 FUK(6:50–9:55)",
-      back: "3/4 福岡 FUK → 桃園 TPE(20:35)",
+      back: "3/5 福岡 FUK → 桃園 TPE(20:35)",
       note: "福岡進出・博多為據點・JR 九州 Pass"
     },
     stay: [
@@ -3251,7 +3251,7 @@ window.TRIPS = [
 
     days: [
       {
-        day: 1, date: "2/28 (日)", theme: "✈ 抵達福岡・博多",
+        day: 1, date: "2/28 (四)", theme: "✈ 抵達福岡・博多",
         items: [
           { time: "抵達", text: "搭機抵達福岡(6:50–9:55),博多西鐵飯店 Check in" },
           { time: "午餐", text: "一蘭拉麵 本社總本店" },
@@ -3262,7 +3262,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 2, date: "2/29 (一)", theme: "⛩ 柳川・太宰府",
+        day: 2, date: "3/1 (五)", theme: "⛩ 柳川・太宰府",
         items: [
           { time: "玩", text: "柳川(渡船遊河)" },
           { time: "午餐", text: "柳川蒸籠鰻魚飯" },
@@ -3274,7 +3274,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 3, date: "3/1 (二)", theme: "♨ 由布院",
+        day: 3, date: "3/2 (六)", theme: "♨ 由布院",
         items: [
           { time: "交通", text: "搭『由布院之森』專車約 2 小時(指定席先劃位)" },
           { time: "玩", text: "金鱗湖、湯之坪街道、史努比茶屋、泡湯" },
@@ -3286,7 +3286,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 4, date: "3/2 (三)", theme: "🐻 熊本",
+        day: 4, date: "3/3 (日)", theme: "🐻 熊本",
         items: [
           { time: "玩", text: "熊本城、熊本熊部長辦公室(KUMAMON SQUARE)" },
           { time: "住宿", text: "博多西鐵飯店" }
@@ -3296,7 +3296,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 5, date: "3/3 (四)", theme: "🌸 秋月・門司港",
+        day: 5, date: "3/4 (一)", theme: "🌸 秋月・門司港",
         items: [
           { time: "玩", text: "秋月(筑前小京都)、門司港/小倉、福岡巨蛋、JR 博多城" },
           { time: "住宿", text: "博多西鐵飯店" }
@@ -3306,7 +3306,7 @@ window.TRIPS = [
         ]
       },
       {
-        day: 6, date: "3/4 (五)", theme: "✈ 福岡補貨・返台",
+        day: 6, date: "3/5 (二)", theme: "✈ 福岡補貨・返台",
         items: [
           { time: "玩", text: "福岡補貨、櫛田神社、貓頭鷹咖啡館" },
           { time: "傍晚", text: "18:00 抵福岡空港,20:35 飛機回台,滿載而歸!" }

@@ -106,6 +106,10 @@
     border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:var(--shadow)}
   .flagstat .fg{font-size:19px;line-height:1}
   .flagstat b{font-family:"Space Grotesk",sans-serif;font-size:16px;color:var(--hayabusa)}
+  .hero-regions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .regtag{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--ink-soft);
+    border:1px solid var(--line-soft);border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .regtag b{font-family:"Space Grotesk",sans-serif;font-size:12px;color:var(--hayabusa);font-weight:700}
 
   /* filter chips */
   .filter{position:sticky;top:58px;z-index:699;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
@@ -369,6 +373,8 @@
     var trips=TRIPS.slice();
     var countries=[]; trips.forEach(function(t){if(countries.indexOf(t.country)<0)countries.push(t.country);});
     var countBy={}; trips.forEach(function(t){countBy[t.country]=(countBy[t.country]||0)+1;});
+    var regionCountBy={}; trips.forEach(function(t){regionCountBy[t.region]=(regionCountBy[t.region]||0)+1;});
+    var regions=Object.keys(regionCountBy).sort(function(a,b){return regionCountBy[b]-regionCountBy[a];});
     var filters=["全部"].concat(countries);
 
     app.innerHTML=
@@ -377,6 +383,9 @@
         '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
         '<div class="hero-flags">'+
           countries.map(function(c){return '<span class="flagstat"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></span>';}).join("")+
+        '</div>'+
+        '<div class="hero-regions">'+
+          regions.map(function(r){return '<span class="regtag">'+esc(r)+' <b>×'+regionCountBy[r]+'</b></span>';}).join("")+
         '</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
