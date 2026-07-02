@@ -712,7 +712,20 @@
     return '<section class="section"><div class="sec-head"><span class="sec-no mono">'+String(no).padStart(2,"0")+'</span>'+
       '<span class="sec-title">'+esc(title)+'</span><span class="sec-line"></span></div>'+body+'</section>';
   }
-  function footer(){return '<footer class="footer">行程集錦 ・ TRAVEL JOURNAL ・ 收藏與分享每一趟旅程</footer>';}
+  /* ---------- 瀏覽人數(counterapi.dev 免費計數,失敗時不顯示) ---------- */
+  var VISITS = null;
+  fetch("https://api.counterapi.dev/v1/nctuwanglin-travel-journal/pv/up")
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      VISITS = (d && (d.count!=null ? d.count : (d.data&&d.data.count)))||null;
+      var n=document.getElementById("visits");
+      if(n && VISITS!=null) n.textContent = "・ 瀏覽 " + Number(VISITS).toLocaleString() + " 次";
+    })
+    .catch(function(){});
+  function visitsHtml(){
+    return '<span id="visits">'+(VISITS!=null ? "・ 瀏覽 "+Number(VISITS).toLocaleString()+" 次" : "")+'</span>';
+  }
+  function footer(){return '<footer class="footer">行程集錦 ・ TRAVEL JOURNAL ・ 收藏與分享每一趟旅程 '+visitsHtml()+'</footer>';}
 
   /* ---------- boot ---------- */
   if(!TRIPS.length){app.innerHTML='<div style="padding:80px;text-align:center;color:#857d6d">尚無行程資料 — 請確認 data/trips.js 已載入。</div>';}
