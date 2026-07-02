@@ -101,17 +101,22 @@
   .hero-meta{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
   .hero-meta .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:30px;line-height:1}
   .hero-meta .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-  .hero-groups{display:flex;flex-direction:column;gap:12px;margin-top:20px}
-  .cgroup{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .flagstat{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);
-    border-radius:999px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--ink);box-shadow:var(--shadow);
-    flex:0 0 auto;min-width:104px}
-  .flagstat .fg{font-size:19px;line-height:1}
-  .flagstat b{font-family:"Space Grotesk",sans-serif;font-size:16px;color:var(--hayabusa);margin-left:auto}
-  .cregs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-  .regtag{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--ink-soft);
-    border:1px solid var(--line-soft);border-radius:999px;padding:3px 11px;white-space:nowrap}
-  .regtag b{font-family:"Space Grotesk",sans-serif;font-size:12px;color:var(--hayabusa);font-weight:700}
+  /* 國家×區域 迷你長條圖 */
+  .hero-charts{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:stretch}
+  .cchart{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:13px 16px 11px;box-shadow:var(--shadow);max-width:100%;overflow-x:auto}
+  .cchart-head{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:12px}
+  .cchart-head .fg{font-size:18px;line-height:1}
+  .cchart-head b{font-family:"Space Grotesk",sans-serif;font-size:15px;color:var(--hayabusa)}
+  .cbars{display:flex;gap:13px;align-items:flex-end}
+  .cbar{display:flex;flex-direction:column;align-items:center;gap:5px;flex:0 0 auto}
+  .cbar .val{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;color:var(--hayabusa);line-height:1}
+  .cbar .stick{width:16px;border-radius:5px 5px 2px 2px;
+    background:linear-gradient(180deg,var(--hayabusa),var(--komachi));
+    transform-origin:bottom;animation:barup .55s cubic-bezier(.2,.7,.3,1) both}
+  .cbar .lbl{font-size:10.5px;color:var(--ink-soft);white-space:nowrap;letter-spacing:.02em}
+  @keyframes barup{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @media (prefers-reduced-motion:reduce){.cbar .stick{animation:none}}
 
   /* filter chips */
   .filter{position:sticky;top:58px;z-index:699;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
@@ -335,9 +340,18 @@
   function flagOf(c){ return FLAGS[c] || "🏳️"; }
   // 卡片標題:國家 地區 年份
   function displayTitle(t){ return t.country + " " + t.region + " " + t.year; }
+  // 狀態隨現實日期自動更新:行程結束日一過,自動從「即將出發」變「旅遊回憶」
+  var TODAY = (function(){ var d=new Date(); return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2); })();
+  function tripStatus(t){
+    if(t.dateEnd && t.dateEnd < TODAY) return "旅遊回憶";
+    if(t.dateStart && t.dateStart > TODAY) return "即將出發";
+    if(t.dateStart && t.dateEnd) return "旅行中";
+    return t.status || "旅遊回憶";
+  }
+  function isUpcoming(t){ var s=tripStatus(t); return s==="即將出發"||s==="旅行中"; }
   // 排序:即將出發置頂(越接近出發日越靠前),其餘旅遊回憶依日期由新到舊
   function tripSort(a,b){
-    var au = a.status === "即將出發", bu = b.status === "即將出發";
+    var au = isUpcoming(a), bu = isUpcoming(b);
     if(au !== bu) return au ? -1 : 1;
     var da = a.dateStart || "", db = b.dateStart || "";
     if(au) return da < db ? -1 : (da > db ? 1 : 0);
@@ -398,13 +412,19 @@
       topbar(false,null)+
       '<header class="hero"><div class="wrap">'+
         '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
-        '<div class="hero-groups">'+
+        '<div class="hero-charts">'+
           countries.map(function(c){
             var bag=regionsByCountry[c]||{};
-            return '<div class="cgroup">'+
-              '<span class="flagstat"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></span>'+
-              '<div class="cregs">'+
-                sortedRegions(c).map(function(r){return '<span class="regtag">'+esc(r)+' <b>×'+bag[r]+'</b></span>';}).join("")+
+            return '<div class="cchart">'+
+              '<div class="cchart-head"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></div>'+
+              '<div class="cbars">'+
+                sortedRegions(c).map(function(r,i){
+                  return '<div class="cbar">'+
+                    '<span class="val">'+bag[r]+'</span>'+
+                    '<span class="stick" style="height:'+(bag[r]*14)+'px;animation-delay:'+(i*45)+'ms"></span>'+
+                    '<span class="lbl">'+esc(r)+'</span>'+
+                  '</div>';
+                }).join("")+
               '</div>'+
             '</div>';
           }).join("")+
@@ -437,7 +457,7 @@
           '<div class="card-map" id="cm-'+esc(t.id)+'">'+
             '<div class="card-badges">'+
               '<span>'+(t.recommended?'<span class="badge badge-rec">★ 最推薦</span>':'')+'</span>'+
-              '<span class="badge badge-status">'+esc(t.status||"")+'</span>'+
+              '<span class="badge badge-status">'+esc(tripStatus(t))+'</span>'+
             '</div>'+
             '<div class="card-mapband"></div>'+
             '<div class="card-loc">'+esc(t.country)+' / '+esc(t.region)+'</div>'+
