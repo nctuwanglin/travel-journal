@@ -104,17 +104,21 @@
   /* 國家×區域 迷你長條圖 */
   .hero-charts{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:stretch}
   .cchart{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
-    padding:13px 16px 11px;box-shadow:var(--shadow);max-width:100%;overflow-x:auto}
+    padding:13px 16px 11px;box-shadow:var(--shadow);max-width:100%;overflow-x:auto;
+    display:flex;flex-direction:column}
   .cchart-head{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:12px}
   .cchart-head .fg{font-size:18px;line-height:1}
   .cchart-head b{font-family:"Space Grotesk",sans-serif;font-size:15px;color:var(--hayabusa)}
-  .cbars{display:flex;gap:13px;align-items:flex-end}
-  .cbar{display:flex;flex-direction:column;align-items:center;gap:5px;flex:0 0 auto}
+  /* 所有國家的圖表共用同一高度(依全域最大次數),柱子從同一條基準線往上長 */
+  .cbars{display:flex;gap:13px;align-items:flex-end;margin-top:auto;position:relative}
+  .cbars::after{content:"";position:absolute;left:-2px;right:-2px;bottom:15px;height:1.5px;
+    background:var(--line);border-radius:1px}
+  .cbar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;flex:0 0 auto;height:100%;position:relative;z-index:1}
   .cbar .val{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;color:var(--hayabusa);line-height:1}
   .cbar .stick{width:16px;border-radius:5px 5px 2px 2px;
     background:linear-gradient(180deg,var(--hayabusa),var(--komachi));
     transform-origin:bottom;animation:barup .55s cubic-bezier(.2,.7,.3,1) both}
-  .cbar .lbl{font-size:10.5px;color:var(--ink-soft);white-space:nowrap;letter-spacing:.02em}
+  .cbar .lbl{font-size:10.5px;color:var(--ink-soft);white-space:nowrap;letter-spacing:.02em;line-height:1;height:11px}
   @keyframes barup{from{transform:scaleY(0)}to{transform:scaleY(1)}}
   @media (prefers-reduced-motion:reduce){.cbar .stick{animation:none}}
 
@@ -394,7 +398,7 @@
     // 將子區域正規化為大區域;跨兩區的行程同時計入兩個大區域
     var REGION_MAP={
       "京阪神":["關西"], "東京・神奈川":["東京"],
-      "關西・山陽":["關西","中國地方"], "東北・函館":["東北","北海道"]
+      "關西・山陽":["關西","中國"], "東北・函館":["東北","北海道"]
     };
     function bigRegions(r){ return REGION_MAP[r] || [r]; }
     // 依國家分組統計大區域次數
@@ -407,6 +411,13 @@
       var bag=regionsByCountry[country]||{};
       return Object.keys(bag).sort(function(a,b){return bag[b]-bag[a];});
     }
+    // 全域最大區域次數 → 每張圖表共用同一繪圖高度,基準線才會齊
+    var GMAX=1;
+    Object.keys(regionsByCountry).forEach(function(c){
+      var bag=regionsByCountry[c];
+      Object.keys(bag).forEach(function(r){ if(bag[r]>GMAX)GMAX=bag[r]; });
+    });
+    var CHART_H = GMAX*14 + 32; // 柱最高高度 + 數字/標籤/間距
 
     app.innerHTML=
       topbar(false,null)+
@@ -417,7 +428,7 @@
             var bag=regionsByCountry[c]||{};
             return '<div class="cchart">'+
               '<div class="cchart-head"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></div>'+
-              '<div class="cbars">'+
+              '<div class="cbars" style="height:'+CHART_H+'px">'+
                 sortedRegions(c).map(function(r,i){
                   return '<div class="cbar">'+
                     '<span class="val">'+bag[r]+'</span>'+
