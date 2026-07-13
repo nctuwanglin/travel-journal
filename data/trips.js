@@ -117,37 +117,37 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "猊鼻溪", area: "岩手縣", rating: 4.4, tel: "+81-191-47-2341", hours: "8:30–16:00",
+        name: "猊鼻溪", day: 2, area: "岩手縣", rating: 4.4, tel: "+81-191-47-2341", hours: "8:30–16:00",
         latlng: [38.9876, 141.2167],
         desc: "世界遺產等級的天然峽谷,搭平底木船沿溪而行,兩岸奇岩峭壁高聳入雲。船夫以竹竿撐船,歸程時用低沉嗓音吟唱岩手古調,迴響於峽谷間令人動容。小鴨會主動靠近討食,超療癒!費用 ¥2,000/人,來回約 90 分鐘。",
         ref: { title: "果子的腳印・猊鼻溪 & 嚴美溪深度攻略", url: "https://footprints.tw/blog/post/222243907" }
       },
       {
-        name: "角館武家屋敷街", area: "秋田縣", rating: 4.4, hours: "距角館站步行約 15 分",
+        name: "角館武家屋敷街", day: 3, area: "秋田縣", rating: 4.4, hours: "距角館站步行約 15 分",
         latlng: [39.6003, 140.5667],
         desc: "被譽為「小京都」的江戶時代武士街,300 年歷史的黑圍牆老宅保存完整。青柳家屋敷規模最大,展示鎧甲武器與生活文物(¥500)。春天櫻花配武家屋敷是絕景,夏天綠意盎然同樣迷人。",
         ref: { title: "BringYou・角館武家屋敷散策(交通+必看)", url: "https://www.bring-you.info/zh-tw/kakunodate" }
       },
       {
-        name: "田澤湖", area: "秋田縣", rating: 4.4, hours: "日本最深的湖(423.4m)",
+        name: "田澤湖", day: 3, area: "秋田縣", rating: 4.4, hours: "日本最深的湖(423.4m)",
         latlng: [39.7236, 140.6628],
         desc: "湖水因含鋁呈現夢幻湛藍色,晴天水色隨光線變幻如寶石。湖畔有辰子像(傳說化為龍的美女),可搭環湖巴士(¥1,210)欣賞各角度湖景,或乘高速遊覽船(約 40 分)感受深邃藍色。附近有乳頭溫泉鶴の湯,可當日入浴(建議預約)。",
         ref: { title: "莉莉安小貴婦・田澤湖辰子姬像", url: "https://lilliansblog.com/tazawako/" }
       },
       {
-        name: "福島水蜜桃", area: "福島縣", hours: "旺季 7 月下旬–9 月上旬",
+        name: "福島水蜜桃", day: 4, area: "福島縣", hours: "旺季 7 月下旬–9 月上旬",
         latlng: [37.8214, 140.5006],
         desc: "福島縣是日本最著名的桃產區,伊達市年產量全國頂尖。8 月正值白桃盛產,現採的桃子入口即化、香甜多汁,是台灣買不到的頂級滋味。B 級品(外觀不完美)一箱 ¥1,000–¥1,500,極為超值!可宅配回飯店。",
         ref: { title: "福寶媽・福島採水蜜桃 marusei 果樹園", url: "https://gojp.tw/fukushima-marusei/" }
       },
       {
-        name: "仙台海洋森林水族館", area: "宮城縣", rating: 4.2, tel: "+81-22-355-2222", hours: "9:00–17:30",
+        name: "仙台海洋森林水族館", day: 5, area: "宮城縣", rating: 4.2, tel: "+81-22-355-2222", hours: "9:00–17:30",
         latlng: [38.2697, 141.0125],
         desc: "仙台最人氣水族館,主要展示三陸海域生物。必看表演:「沙丁魚旋風秀」萬條沙丁魚組成陣型壯觀無比;海豚 & 海獅表演活潑有趣;每日企鵝大遊行萌度爆表。入場費成人 ¥2,400,建議預訂 Klook 套票較便宜。",
         ref: { title: "福寶媽・仙台海洋森林水族館爆走企鵝", url: "https://gogojp.tw/sendai-uminomori/" }
       },
       {
-        name: "麵包超人博物館", area: "宮城縣", rating: 4.2, tel: "+81-22-298-8855", hours: "10:00–17:00",
+        name: "麵包超人博物館", day: 4, area: "宮城縣", rating: 4.2, tel: "+81-22-298-8855", hours: "10:00–17:00",
         latlng: [38.2722, 140.9508],
         desc: "親子同遊首選!佔地寬廣,各房間重現動畫場景。入口麵包店售賣現烤角色麵包(可愛到捨不得吃);舞台定時表演,即使不懂日文孩子也看得開心;戶外水上遊樂區(8 月超涼爽,記得帶換洗衣物)。",
         ref: { title: "樂活的大方・仙台麵包超人博物館", url: "https://www.bigfang.tw/blog/post/30786806" }
@@ -311,49 +311,49 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "國際通", area: "那霸", hours: "10:00–22:00",
+        name: "國際通", day: 1, area: "那霸", hours: "10:00–22:00",
         latlng: [26.2146, 127.6857],
         desc: "那霸最熱鬧的 1.6 公里商店街,晚上人潮較少正好輕鬆逛。必逛:唐吉訶德(先下載 7% 優惠券)、ORION 啤酒雪糕、琉球小巷散步。全年齡、推車 OK。",
         ref: { title: "阿君的玩食天堂・國際通必逛攻略", url: "https://ajunfun.tw/kokusai-dori/" }
       },
       {
-        name: "DMM Kariyushi 水族館", area: "豐見城", hours: "9:00–20:00", tel: "098-996-4844",
+        name: "DMM Kariyushi 水族館", day: 2, area: "豐見城", hours: "9:00–20:00", tel: "098-996-4844",
         latlng: [26.1668, 127.6535],
         desc: "聲光互動數位水族館,CHURAMINAMO 玻璃地板俯瞰 6 公尺深水槽超夢幻,可餵水獺/企鵝、找樹懶。全室內冷氣、推車可借。大人 ¥2,400・4–12 歲 ¥1,500・3 歲以下免費。位於 iias 豐崎商場內。",
         ref: { title: "有料地・DMM Kariyushi 水族館完整攻略", url: "https://travelpark.tw/dmm_kariyushi_aquarium/" }
       },
       {
-        name: "沖繩兒童王國", area: "沖繩市", hours: "9:30–17:30", tel: "098-933-4190",
+        name: "沖繩兒童王國", day: 2, area: "沖繩市", hours: "9:30–17:30", tel: "098-933-4190",
         latlng: [26.3486, 127.8266],
         desc: "150 種動物的動物園樂園,小孩放電首選。小火車(¥200)、迷你賽車(¥100)、神奇博物館。2–10 歲最嗨、建議帶推車。大人 ¥600・兒童 ¥300。MAPCODE 33 561 766*72。",
         ref: { title: "好好玩 FUNIT・沖繩兒童王國完整攻略", url: "https://gofunit.com/%e6%b2%96%e7%b9%a9%e5%85%92%e7%ab%a5%e7%8e%8b%e5%9c%8b/" }
       },
       {
-        name: "JUNGLIA 叢林樂園", area: "本部", hours: "9:00–21:00",
+        name: "JUNGLIA 叢林樂園", day: 3, area: "本部", hours: "9:00–21:00",
         latlng: [26.6760, 127.9320],
         desc: "2025 年開幕、60 公頃叢林恐龍主題樂園,規模超越大阪環球。恐龍追擊體驗、高空滑索、SPA 水療館(另購票)。提前 Klook/KKday 購票;刺激設施身高限制 90–120cm;夏天極曬備防曬。導航輸入「ジャングリア沖縄」。",
         ref: { title: "V 妞的旅行・JUNGLIA 最新攻略", url: "https://vivianexplore.tw/junglia/" }
       },
       {
-        name: "真榮田岬 青之洞窟", area: "恩納", hours: "浮潛建議上午", tel: "098-982-5339",
+        name: "真榮田岬 青之洞窟", day: 4, area: "恩納", hours: "浮潛建議上午", tel: "098-982-5339",
         latlng: [26.4447, 127.7783],
         desc: "全球僅兩座的藍光海蝕洞,熱帶魚環繞、免證照。陰雨天藍光反而更美。¥3,000–4,500/人。浮潛多數業者規定 6 歲以上;浮潛後 24hr 內勿搭機。MAPCODE 206 062 685*77。",
         ref: { title: "波比看世界・青之洞窟浮潛全攻略", url: "https://bobbytravel.tw/blue-cave-okinawa/" }
       },
       {
-        name: "部瀨名海中公園", area: "名護", hours: "9:00–18:00", tel: "0980-52-3379",
+        name: "部瀨名海中公園", day: 5, area: "名護", hours: "9:00–18:00", tel: "0980-52-3379",
         latlng: [26.5363, 127.9648],
         desc: "不用下水也能看魚!海中展望塔 24 圓窗 + 鯨魚造型玻璃底遊艇(20 分一班),全年齡、雨天備案首選。套票 ¥1,500 起。MAPCODE 206 442 075*11。",
         ref: { title: "Marktrip・部瀨名海中公園完整攻略", url: "https://marktrip.tw/busena-marinepark/" }
       },
       {
-        name: "名護鳳梨園", area: "名護", hours: "10:00–18:00", tel: "0980-53-3659",
+        name: "名護鳳梨園", day: 5, area: "名護", hours: "10:00–18:00", tel: "0980-53-3659",
         latlng: [26.6258, 127.9669],
         desc: "搭鳳梨號無人遊園車穿梭園區,小小孩免走路、全室內雨天 OK。DINO Park 恐龍區、鳳梨霜淇淋必吃。大人 ¥1,200・兒童 ¥600。推車友善。MAPCODE 206 716 467*85。",
         ref: { title: "Trip.com・名護鳳梨園全攻略", url: "https://tw.trip.com/blog/nago-pineapple-park/" }
       },
       {
-        name: "iias 豐崎", area: "豐見城", hours: "10:00–22:00",
+        name: "iias 豐崎", day: 2, area: "豐見城", hours: "10:00–22:00",
         latlng: [26.1660, 127.6540],
         desc: "與 DMM 水族館同棟的大型商場,美食街午餐 + 採買:西松屋、3 Coins、UNIQLO、AEON 超市買自炊生鮮。哺乳室/尿布台/推車租借齊全。MAPCODE 232 543 368*63。",
         ref: { title: "阿君的玩食天堂・iias 沖繩豐崎購物指南", url: "https://ajunfun.tw/iias/" }
@@ -513,61 +513,61 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "目黑川賞櫻", area: "中目黑", hours: "戶外・夜櫻點燈傍晚起",
+        name: "目黑川賞櫻", day: 2, area: "中目黑", hours: "戶外・夜櫻點燈傍晚起",
         latlng: [35.6445, 139.6987],
         desc: "東京最具代表的賞櫻河岸,約 800 棵染井吉野櫻沿河 4 公里齊放,中目黑站一帶最熱鬧。夜間白×粉提燈點燈,粉色光暈與櫻花相映夢幻。櫻橋是必拍場景。",
         ref: { title: "波比看世界・目黑川櫻花夜櫻點燈", url: "https://bobbyfun.tw/2024-01-04-2655/" }
       },
       {
-        name: "中目黑星巴克典藏旗艦店", area: "中目黑", hours: "7:00–22:00",
+        name: "中目黑星巴克典藏旗艦店", day: 2, area: "中目黑", hours: "7:00–22:00",
         latlng: [35.6470, 139.6985],
         desc: "隈研吾設計,開幕時為全球最大星巴克。四層樓臻選烘焙工坊,銅製烘豆槽、Princi 義式烘焙坊、限定櫻花商品。櫻花季賞目黑川第一排,需線上預約入場。",
         ref: { title: "樂活的大方・中目黑星巴克臻選烘焙工坊", url: "https://www.bigfang.tw/blog/post/starbucks-reserve-roastery-tokyo" }
       },
       {
-        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        name: "東京迪士尼樂園", day: 3, area: "舞濱", hours: "依官方每日公告",
         latlng: [35.6329, 139.8804],
         desc: "經典童話主題園區,城堡、遊行、煙火必看。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡,熱門設施善用快速通關。與海洋分開購票,各排一天。",
         ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
       },
       {
-        name: "東京迪士尼海洋", area: "舞濱", hours: "依官方每日公告",
+        name: "東京迪士尼海洋", day: 4, area: "舞濱", hours: "依官方每日公告",
         latlng: [35.6267, 139.8850],
         desc: "全球唯一的海洋主題迪士尼,以七大主題港灣與成熟氛圍著稱,2024 新增『夢幻泉鄉』園區。表演、煙火與限定餐點豐富,善用 DPA 安排熱門設施更順暢。",
         ref: { title: "花時光旅行實驗室・迪士尼海洋攻略", url: "https://whatime.space/tokyo-disneysea/" }
       },
       {
-        name: "雲場池", area: "輕井澤", hours: "戶外・全日",
+        name: "雲場池", day: 5, area: "輕井澤", hours: "戶外・全日",
         latlng: [36.3490, 138.6260],
         desc: "有『天鵝湖』美名的輕井澤代表水景,池水碧綠映著林木藍天,環池步道散策約 20–30 分。距輕井澤站約 1.3km,可步行或租自行車前往。",
         ref: { title: "Mimi韓・雲場池(附交通＆Mapcode)", url: "https://mimigo.tw/kumoba-pond/" }
       },
       {
-        name: "舊輕井澤銀座通", area: "輕井澤", hours: "店家約 10:00–17:00",
+        name: "舊輕井澤銀座通", day: 5, area: "輕井澤", hours: "店家約 10:00–17:00",
         latlng: [36.3568, 138.6377],
         desc: "約 600 公尺的歐風紅磚商店街,輕井澤最熱鬧的散策地。澤屋果醬(整顆草莓)、法式麵包、布丁、輕井澤雕工藝品必逛。店家多 17:00 開始打烊。",
         ref: { title: "Mimi韓・舊輕井澤銀座通逛街地圖", url: "https://mimigo.tw/karuizawa-ginza/" }
       },
       {
-        name: "榆樹街小鎮 ハルニレテラス", area: "中輕井澤", hours: "店家約 10:00–18:00",
+        name: "榆樹街小鎮 ハルニレテラス", day: 6, area: "中輕井澤", hours: "店家約 10:00–18:00",
         latlng: [36.3856, 138.5972],
         desc: "星野集團以『輕井澤的日常』打造的森林商店街,沿湯川架高木棧道串起 16 間咖啡、餐廳與選物店(丸山珈琲、川上庵)。走在春榆樹叢間悠閒愜意。",
         ref: { title: "BringYou・星野區榆樹街小鎮攻略", url: "https://www.bring-you.info/zh-tw/hoshino-karuizawa-area" }
       },
       {
-        name: "高原教堂・石之教堂", area: "中輕井澤", hours: "參觀依官方開放時間",
+        name: "高原教堂・石之教堂", day: 6, area: "中輕井澤", hours: "參觀依官方開放時間",
         latlng: [36.3866, 138.5949],
         desc: "星野區兩座絕美教堂:1921 年的高原教會木造溫潤;石之教堂(內村鑑三紀念堂)由石與玻璃交織、隱於森林,光影莊嚴動人,是夢幻婚禮聖地。",
         ref: { title: "凱子凱・中輕井澤星野區攻略", url: "https://ksk.tw/blog/post/341974776" }
       },
       {
-        name: "雷門・淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        name: "雷門・淺草寺", day: 8, area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
         latlng: [35.7148, 139.7967],
         desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通 250 公尺商店街集結人形燒、仙貝與和風雜貨。可租和服參拜、求籤、收御朱印。",
         ref: { title: "BringYou・淺草寺雷門散步路線全攻略", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
       },
       {
-        name: "墨田水族館・晴空塔", area: "押上・晴空塔", hours: "水族館 10:00–20:00(假日延長)",
+        name: "墨田水族館・晴空塔", day: 8, area: "押上・晴空塔", hours: "水族館 10:00–20:00(假日延長)",
         latlng: [35.7101, 139.8107],
         desc: "晴空塔(世界第一高塔)集展望台、Solamachi 商場於一身;5–6 樓墨田水族館有日本最大室內開放水槽,企鵝、海狗萌度爆表,是雨天親子首選。",
         ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
@@ -758,101 +758,101 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "栗林公園", area: "高松", hours: "日出–日落(依季節)",
+        name: "栗林公園", day: 1, area: "高松", hours: "日出–日落(依季節)",
         latlng: [34.3289, 134.0444],
         desc: "米其林綠色指南三星、特別名勝,約 75 公頃的迴遊式大名庭園,以紫雲山為背景串起六水池十三假山,一步一景,日本人譽為更勝三大名園。可搭和船、掬月亭品茶。",
         ref: { title: "小兔小安・栗林公園", url: "https://bunnyann.tw/ritsurin-park/" }
       },
       {
-        name: "金刀比羅宮", area: "琴平", hours: "本宮 6:00–18:00",
+        name: "金刀比羅宮", day: 1, area: "琴平", hours: "本宮 6:00–18:00",
         latlng: [34.1853, 133.8108],
         desc: "海上交通守護神,號稱日本最難參拜的神社:本宮 785 階、奧社共 1368 階。沿途店家可借拐杖,每段有階數牌。可買奧社天狗御守、遇見開運こんぴら狗。",
         ref: { title: "壞波妞・金刀比羅宮 1368 階", url: "https://boniutravel.com/blog/post/kotohira-shrine" }
       },
       {
-        name: "天使之路", area: "小豆島", hours: "退潮前後浮現",
+        name: "天使之路", day: 2, area: "小豆島", hours: "退潮前後浮現",
         latlng: [34.4853, 134.2236],
         desc: "連接四座小島的 500 公尺沙洲步道,每天僅在兩次退潮時從海中浮現。傳說與心愛的人牽手走過願望會實現,約束之丘展望台可俯瞰全景。",
         ref: { title: "福寶媽・天使之路天使散步道", url: "https://gogojp.tw/angel-road/" }
       },
       {
-        name: "寒霞溪", area: "小豆島", hours: "纜車 8:30–17:00",
+        name: "寒霞溪", day: 2, area: "小豆島", hours: "纜車 8:30–17:00",
         latlng: [34.5066, 134.2731],
         desc: "與耶馬溪、妙義山並列日本三大美麗溪谷,搭空中纜車飽覽奇岩峭壁。秋日紅葉最著名(10–11 月),春夏綠意、冬雪也各有風情。",
         ref: { title: "兩株小豬・寒霞溪かんかけい", url: "https://rebecca1003.pixnet.net/blog/posts/10358035012" }
       },
       {
-        name: "小豆島橄欖公園", area: "小豆島", hours: "8:30–17:00",
+        name: "小豆島橄欖公園", day: 2, area: "小豆島", hours: "8:30–17:00",
         latlng: [34.4789, 134.2456],
         desc: "眺望瀨戶內海的山丘,種有約 2000 株橄欖與上百種香草。《魔女宅急便》拍攝場景,可免費借魔女掃帚拍出飛天照,白色希臘風車是地標。",
         ref: { title: "岡山憨吉・小豆島橄欖公園", url: "https://archerplus.pixnet.net/blog/post/234520857" }
       },
       {
-        name: "道後溫泉本館", area: "松山", hours: "6:00–23:00",
+        name: "道後溫泉本館", day: 3, area: "松山", hours: "6:00–23:00",
         latlng: [33.8519, 132.7864],
         desc: "3000 年歷史、日本最古老溫泉之一,1894 年三層木造本館為首座列為重要文化財的公共浴場,米其林綠色指南三星。2024 年整修後重新開放,神之湯最低 700 日圓可泡。",
         ref: { title: "美奈子・道後溫泉千年古湯", url: "https://minako.tw/dogo-onsen/" }
       },
       {
-        name: "松山城", area: "松山", hours: "9:00–17:00",
+        name: "松山城", day: 3, area: "松山", hours: "9:00–17:00",
         latlng: [33.8456, 132.7656],
         desc: "1602 年起興建、日本現存十二天守之一,聳立勝山山頂,可搭纜車或吊椅上山。天守最上層眺望松山平原與瀨戶內海,連同湯築城跡可規劃一日雙城。",
         ref: { title: "耕讀・伊予松山城一日雙城", url: "https://ullams.pixnet.net/blog/post/49212452" }
       },
       {
-        name: "今治城", area: "今治", hours: "9:00–17:00",
+        name: "今治城", day: 4, area: "今治", hours: "9:00–17:00",
         latlng: [34.0664, 133.0044],
         desc: "築城名手藤堂高虎 1604 年所建,引瀨戶內海水為護城河,與高松城、中津城並列日本三大水城。天守最上層 360 度展望,可眺望島波海道絕景,日落後點燈浪漫。",
         ref: { title: "Kenny's Blog・愛媛今治城", url: "https://kenfoto.pixnet.net/blog/post/485596370" }
       },
       {
-        name: "今治毛巾美術館", area: "今治", hours: "9:30–18:00",
+        name: "今治毛巾美術館", day: 4, area: "今治", hours: "9:30–18:00",
         latlng: [34.0119, 133.0992],
         desc: "世界首座結合毛巾與藝術的美術館,1–3 樓免費,4 樓嚕嚕米(Moomin)毛巾藝術需門票 800 円。可看毛巾紡織製程、逛歐風花園與選購今治毛巾。需自駕或計程車前往。",
         ref: { title: "小氣少年・今治毛巾美術館", url: "https://nicklee.tw/2564/imabari-towel-museum/" }
       },
       {
-        name: "伊予鐵高島屋摩天輪 くるりん", area: "松山", hours: "11:00–21:00",
+        name: "伊予鐵高島屋摩天輪 くるりん", day: 4, area: "松山", hours: "11:00–21:00",
         latlng: [33.8392, 132.7664],
         desc: "松山地標,位於伊予鐵高島屋頂樓、與松山市站直結。直徑 45 公尺、繞一圈約 15 分,晴天可遠眺瀨戶內海島嶼,夜晚松山夜景與季節點燈浪漫。透明地板車廂更刺激。"
       },
       {
-        name: "四萬十川", area: "高知・四萬十", hours: "戶外・全日",
+        name: "四萬十川", day: 5, area: "高知・四萬十", hours: "戶外・全日",
         latlng: [32.9889, 132.9347],
         desc: "日本『最後的清流』,全長 196 公里、48 座沉下橋(無護欄、僅容一車)。最下游的佐田沉下橋最長最知名,可自駕、騎單車或搭屋形船漂浮在祖母綠的清流上。",
         ref: { title: "許傑・四萬十川屋形船沈下橋", url: "https://journey.tw/shimanto-river-houseboat-cruising-serivce/" }
       },
       {
-        name: "高知城", area: "高知", hours: "9:00–17:00",
+        name: "高知城", day: 5, area: "高知", hours: "9:00–17:00",
         latlng: [33.5608, 133.5311],
         desc: "日本現存十二天守之一,亦稱鷹城,明治與二戰皆倖免於難,15 棟建築列為重要文化財,是少數天守與本丸御殿同時保存的城。可串聯弘人市場、商店街徒步一日遊。",
         ref: { title: "R瑋哥・高知市區徒步一日遊", url: "https://a4031320.pixnet.net/blog/post/575495588" }
       },
       {
-        name: "龍河洞", area: "香美市", hours: "8:30–17:00(冬季至 16:30)",
+        name: "龍河洞", day: 6, area: "香美市", hours: "8:30–17:00(冬季至 16:30)",
         latlng: [33.5908, 133.7458],
         desc: "日本三大鐘乳洞之一,約 1 億 7500 萬年形成、全長約 4km。觀光路線輕鬆好走,洞內瀑布、弥生時代遺物『神之壺』與持續 80 多年的科學實驗是亮點,另有冒險路線。",
         ref: { title: "岡山憨吉・龍河洞 1.5 億年鐘乳洞", url: "https://archerplus.pixnet.net/blog/post/227664362" }
       },
       {
-        name: "麵包超人博物館(柳瀨嵩紀念館)", area: "香美市", hours: "9:30–17:00",
+        name: "麵包超人博物館(柳瀨嵩紀念館)", day: 6, area: "香美市", hours: "9:30–17:00",
         latlng: [33.6953, 133.7660],
         desc: "作者柳瀨嵩故鄉香美市的市立紀念館,日本唯一的市立麵包超人博物館,獨家展出漫畫手稿與繪本。門口巨型麵包超人雕像、捉迷藏大樹整點跳舞,親子同遊首選。",
         ref: { title: "Tabirai・高知麵包超人博物館交通", url: "https://tc.tabirai.net/sightseeing/article/kochi-anpanman-museum-access/" }
       },
       {
-        name: "鳴門渦潮", area: "徳島・鳴門", hours: "依觀潮表",
+        name: "鳴門渦潮", day: 7, area: "徳島・鳴門", hours: "依觀潮表",
         latlng: [34.2386, 134.6453],
         desc: "世界三大潮流之一,可搭觀潮船(Wonder 鳴門號免預約、AQUA EDDY 小型需預約)近距離震撼,或走大鳴門橋下『渦之道』玻璃步道俯瞰。春秋大潮漩渦直徑可達 20–30 公尺。",
         ref: { title: "小氣少年・鳴門渦之道", url: "https://nicklee.tw/1214/uzunomichi/" }
       },
       {
-        name: "屋島展望台", area: "高松", hours: "戶外・全日",
+        name: "屋島展望台", day: 7, area: "高松", hours: "戶外・全日",
         latlng: [34.3678, 134.1067],
         desc: "高松屋島山上展望台,一覽瀨戶內海多島海景,夕陽與夜景人氣高。投瓦祈福(投瓦片)很有名,新地標『やしまーる』迴廊增添藝術氣息。"
       },
       {
-        name: "四國水族館", area: "宇多津", hours: "9:00–18:00(依季節)",
+        name: "四國水族館", day: 8, area: "宇多津", hours: "9:00–18:00(依季節)",
         latlng: [34.2956, 133.8169],
         desc: "2020 年開幕,以四個特色水槽(綿津見/夕陽/渦潮/神無月之景)與六大區域展示約 400 種四國近海生物。夕陽之景搭配海豚秀是亮點,雨天親子也適合。",
         ref: { title: "潔妮・四國水族館巨型水槽海豚秀", url: "https://janice.life/shikokuaquarium/" }
@@ -1001,66 +1001,66 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "釜山樂天世界", area: "機張", hours: "10:00–19:00(假日至 20:00)",
+        name: "釜山樂天世界", day: 2, area: "機張", hours: "10:00–19:00(假日至 20:00)",
         latlng: [35.1936, 129.2167],
         desc: "韓國最大的童話風主題樂園,位於機張奧西利亞,24 項遊樂設施與大型城堡、森林系場景超好拍,定時表演與遊行精彩。鄰近海東龍宮寺、機張市場。",
         ref: { title: "蔡小妞依玲・釜山樂天世界冒險樂園", url: "https://tsnio.com/lotte-world-adventure-busan/" }
       },
       {
-        name: "海雲台藍線公園(膠囊・海岸列車)", area: "海雲台", hours: "依官網班次",
+        name: "海雲台藍線公園(膠囊・海岸列車)", day: 1, area: "海雲台", hours: "依官網班次",
         latlng: [35.1583, 129.1747],
         desc: "由舊東海南部線改建的 4.8km 海岸鐵道:上層天空膠囊列車(4 人小車廂、離地 7–10m)、下層海岸列車面海而行,串起尾浦–青沙浦–松亭。廣安大橋海景與韓版櫻木花道平交道必拍。膠囊列車務必官網提前預約。",
         ref: { title: "樂活的大方・海雲台藍線公園全攻略", url: "https://www.bigfang.tw/blog/post/bluelinepark-busan" }
       },
       {
-        name: "鑽石灣遊艇", area: "海雲台", hours: "日/夜多班次",
+        name: "鑽石灣遊艇", day: 3, area: "海雲台", hours: "日/夜多班次",
         latlng: [35.1556, 129.1456],
         desc: "海雲台雙層大型遊艇,日間五六島航線、夜間海雲台–廣安里航線,從海上眺望廣安大橋與海岸夜景。持 Visit Busan Pass 日間免費、夜間加價搭乘,建議線上預約。",
         ref: { title: "愛旅遊的貓奴小梨・鑽石灣遊艇", url: "https://judyer.com/diamond/" }
       },
       {
-        name: "廣安里無人機表演", area: "廣安里", hours: "週六晚間(冬季 19:00/21:00)",
+        name: "廣安里無人機表演", day: 3, area: "廣安里", hours: "週六晚間(冬季 19:00/21:00)",
         latlng: [35.1532, 129.1186],
         desc: "全韓最大規模的常態無人機燈光秀,每週六晚於廣安里海灘上空演出,約 700 架無人機結合廣安大橋打造彩色光雕,每場約 10 分鐘、一晚兩場。天候不佳可能取消。",
         ref: { title: "一起去巴黎 Liz・廣安里無人機表演", url: "https://lizzzstyle.tw/gwangallimdrone/" }
       },
       {
-        name: "松島海上纜車", area: "松島", hours: "約 9:00–20:00",
+        name: "松島海上纜車", day: 4, area: "松島", hours: "約 9:00–20:00",
         latlng: [35.0758, 129.0181],
         desc: "韓國首條跨海纜車(Busan Air Cruise),全長逾 1.6km、最高 86m,透明水晶車廂俯瞰松島海水浴場,可順遊松島龍宮雲橋空中步道。持 Visit Busan Pass 可免費搭水晶車廂。",
         ref: { title: "蔡小妞依玲・松島海上纜車龍宮雲橋", url: "https://tsnio.com/busan-air-cruise/" }
       },
       {
-        name: "ARTE Museum 釜山", area: "影島", hours: "約 10:00–20:00",
+        name: "ARTE Museum 釜山", day: 4, area: "影島", hours: "約 10:00–20:00",
         latlng: [35.0866, 129.0744],
         desc: "d'strict 打造、佔地約 1700 坪的全球最大沉浸式光影美術館,以『永恆自然』為題,19 件數位媒體藝術中 16 件為釜山限定。喜歡 teamLab 的人必訪,持 VBP 可免費入場。",
         ref: { title: "許傑・釜山 Arte Museum", url: "https://journey.tw/arte-museum-busan/" }
       },
       {
-        name: "BIFF 廣場", area: "南浦洞", hours: "店家約 10:00–22:00",
+        name: "BIFF 廣場", day: 4, area: "南浦洞", hours: "店家約 10:00–22:00",
         latlng: [35.0986, 129.0269],
         desc: "釜山國際電影節發源地,地上有電影人手印與銅像,周邊串起國際市場、富平罐頭夜市、光復路時尚街與札嘎其海鮮市場。必吃排隊糖餅(호떡)。",
         ref: { title: "Mimi韓・南浦洞札嘎其逛街地圖", url: "https://mimigo.tw/nampo-dong-trips/" }
       },
       {
-        name: "釜山 X the Sky", area: "海雲台", hours: "約 10:00–21:00",
+        name: "釜山 X the Sky", day: 5, area: "海雲台", hours: "約 10:00–21:00",
         latlng: [35.1592, 129.1739],
         desc: "位於海雲台 LCT The Sharp(411.6m)、韓國最高觀景台,100 樓 360 度俯瞰海雲台海岸線、廣安大橋與市景,還有世界最高星巴克。日落與夜景人氣極高。",
         ref: { title: "樂活的大方・釜山 X the Sky 觀景台", url: "https://www.bigfang.tw/blog/post/busan-x-thesky" }
       },
       {
-        name: "SEA LIFE 釜山水族館", area: "海雲台", hours: "約 10:00–19:00",
+        name: "SEA LIFE 釜山水族館", day: 5, area: "海雲台", hours: "約 10:00–19:00",
         latlng: [35.1597, 129.1606],
         desc: "海雲台海灘旁的大型地下水族館,主缸 3500 噸、80 公尺海底隧道,展示逾 250 種、上萬隻海洋生物,有美人魚表演與鯊魚餵食秀,是雨天/寒天親子首選。",
         ref: { title: "波比看世界・SEA LIFE 釜山水族館", url: "https://bobbytravel.tw/sea-life-busan/" }
       },
       {
-        name: "海雲台海灘", area: "海雲台", hours: "戶外・全日",
+        name: "海雲台海灘", day: 5, area: "海雲台", hours: "戶外・全日",
         latlng: [35.1587, 129.1604],
         desc: "釜山最具代表的海水浴場,冬日海風凜冽但海景遼闊,沿岸有冬柏島、The Bay 101 夜景與眾多海景咖啡廳,適合散步拍照。"
       },
       {
-        name: "新世界百貨 Centum City", area: "Centum City", hours: "約 10:30–20:00",
+        name: "新世界百貨 Centum City", day: 5, area: "Centum City", hours: "約 10:30–20:00",
         latlng: [35.1689, 129.1294],
         desc: "金氏世界紀錄認證全球最大百貨,集精品、SPA LAND 汗蒸幕、美食街與屋頂花園於一身,是冬日逛街避寒的好去處。"
       }
@@ -1248,88 +1248,88 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "大阪梅田", area: "大阪", hours: "店家約 10:00–21:00",
+        name: "大阪梅田", day: 1, area: "大阪", hours: "店家約 10:00–21:00",
         latlng: [34.7025, 135.4959],
         desc: "大阪北區商業中心,梅田藍天大廈空中庭園展望台、阪急/阪神百貨、Grand Front 與 LUCUA 購物聚集,夜景與聖誕點燈季節氛圍濃厚。"
       },
       {
-        name: "岡山後樂園", area: "岡山", hours: "7:30/8:00–17:00(依季節)",
+        name: "岡山後樂園", day: 2, area: "岡山", hours: "7:30/8:00–17:00(依季節)",
         latlng: [34.6657, 133.9356],
         desc: "日本三名園之一、米其林綠色指南三星,廣闊草坪、水池與唯心山借景岡山城,四季皆美。澤之池西北側可同框古城與池水倒影,清晨光線最柔。",
         ref: { title: "凱子凱・後樂園&岡山城", url: "https://ksk.tw/blog/post/350054986" }
       },
       {
-        name: "岡山城", area: "岡山", hours: "9:00–17:30",
+        name: "岡山城", day: 2, area: "岡山", hours: "9:00–17:30",
         latlng: [34.6651, 133.9361],
         desc: "黑色城牆加金色裝飾、人稱『烏城』,2022 年整修後重新開放,與對岸後樂園隔旭川相望。天守內有歷史展示與體驗,可穿城主服拍照。",
         ref: { title: "日本。私旅行・黑武士岡山城", url: "https://aliciatseng.net/blog/post/48719067" }
       },
       {
-        name: "宮島嚴島神社", area: "宮島", hours: "6:30–18:00(依季節)",
+        name: "宮島嚴島神社", day: 3, area: "宮島", hours: "6:30–18:00(依季節)",
         latlng: [34.2960, 132.3197],
         desc: "世界文化遺產、日本三景之一,朱紅海上大鳥居為廣島地標。漲潮時神社與鳥居浮於海上、退潮可步行至鳥居下,可搭宮島纜車登彌山俯瞰瀨戶內海。",
         ref: { title: "福寶媽・宮島一日遊", url: "https://gogojp.tw/miyajima-trip/" }
       },
       {
-        name: "廣島和平紀念公園", area: "廣島", hours: "資料館 8:30–18:00",
+        name: "廣島和平紀念公園", day: 3, area: "廣島", hours: "資料館 8:30–18:00",
         latlng: [34.3955, 132.4536],
         desc: "原爆圓頂(原爆 Dome)為 1945 年原子彈爆炸後唯一倖存建物,1996 年列為世界遺產。和平紀念資料館完整呈現核爆史實與祈願世界和平,園內有和平之火、原爆之子像。",
         ref: { title: "許傑・廣島原爆圓頂與和平紀念公園", url: "https://journey.tw/peace-hiroshima/" }
       },
       {
-        name: "倉敷美觀地區", area: "倉敷", hours: "店家約 10:00–17:00",
+        name: "倉敷美觀地區", day: 4, area: "倉敷", hours: "店家約 10:00–17:00",
         latlng: [34.5979, 133.7714],
         desc: "400 年歷史的白壁老街,倉敷川兩岸柳樹、町家與倉庫改建的咖啡選物店林立,可搭川舟遊船,大原美術館、長春藤廣場、紙膠帶文青店都在此。",
         ref: { title: "BringYou・倉敷美觀地區自由行攻略", url: "https://www.bring-you.info/zh-tw/kurashiki-travel-guide" }
       },
       {
-        name: "宇治平等院", area: "宇治", hours: "庭園 8:30–17:30",
+        name: "宇治平等院", day: 5, area: "宇治", hours: "庭園 8:30–17:30",
         latlng: [34.8893, 135.8076],
         desc: "1053 年建、世界文化遺產,鳳凰堂為十円硬幣與舊萬元紙鈔取景地,阿字池倒映鳳凰堂如鏡。鳳凰堂內部分梯限額入場(需現場領號),鳳翔館藏國寶文物。",
         ref: { title: "來一球叭噗・宇治平等院鳳凰堂", url: "https://gototravel.tw/uji-byodoin/" }
       },
       {
-        name: "上賀茂神社", area: "京都", hours: "境內 5:30–17:00",
+        name: "上賀茂神社", day: 5, area: "京都", hours: "境內 5:30–17:00",
         latlng: [35.0606, 135.7528],
         desc: "京都最古老神社之一、世界文化遺產(古都京都的文化財),以兩座圓錐『立砂』與朱紅樓門著稱,清流御手洗川流經境內,與下鴨神社並稱賀茂兩社。"
       },
       {
-        name: "京都塔", area: "京都", hours: "10:00–21:00",
+        name: "京都塔", day: 5, area: "京都", hours: "10:00–21:00",
         latlng: [34.9876, 135.7591],
         desc: "京都車站正對面的城市地標,展望台位於地面 100m 處,360 度俯瞰京都市景與東山,天氣好可遠眺清水寺。日落前後最美,塔下有 SANDO 美食與伴手禮。",
         ref: { title: "許傑・京都塔展望台", url: "https://journey.tw/kyoto-tower/" }
       },
       {
-        name: "天橋立 View Land", area: "天橋立", hours: "約 9:00–17:00",
+        name: "天橋立 View Land", day: 6, area: "天橋立", hours: "約 9:00–17:00",
         latlng: [35.5667, 135.1939],
         desc: "位於文珠山頂、欣賞日本三景天橋立的展望樂園,搭單人吊椅或纜車登頂,從『飛龍觀』跨下倒看,長沙洲宛如飛龍升天。可再搭觀光船餵海鷗橫渡。",
         ref: { title: "樂活的大方・天橋立 View Land 飛龍觀", url: "https://www.bigfang.tw/blog/post/kyoto-amanohashidate-viewland" }
       },
       {
-        name: "下鴨神社", area: "京都", hours: "境內 6:30–17:00",
+        name: "下鴨神社", day: 7, area: "京都", hours: "境內 6:30–17:00",
         latlng: [35.0388, 135.7728],
         desc: "世界文化遺產,境內原生林『糺之森』約 12 萬㎡、樹齡 200–600 年,秋日紅葉銀杏絕美。求姻緣的相生社、美人社河合神社與夢幻四季御守人氣高。",
         ref: { title: "芒果這一家・下鴨神社糺之森", url: "https://mangofamily56.com/shimogamo-jinja/" }
       },
       {
-        name: "道頓堀(扭蛋之森)", area: "大阪", hours: "店家約 10:00–22:00",
+        name: "道頓堀(扭蛋之森)", day: 7, area: "大阪", hours: "店家約 10:00–22:00",
         latlng: [34.6687, 135.5013],
         desc: "大阪最熱鬧的水岸商圈,固力果跑跑人看板、章魚燒與大型招牌林立,周邊有大型扭蛋專賣店(扭蛋之森/扭蛋百貨),扭蛋機如森林般成排,扭蛋控必逛。"
       },
       {
-        name: "teamLab 長居植物園", area: "大阪・長居", hours: "夜間常設展(日落後)",
+        name: "teamLab 長居植物園", day: 7, area: "大阪・長居", hours: "夜間常設展(日落後)",
         latlng: [34.6135, 135.5187],
         desc: "大阪長居植物園內的夜間沉浸式光影藝術常設展,十多件作品融入真實樹林與池水,隨風雨與人的互動變化,漫步森林光影中超夢幻。建議線上預約。",
         ref: { title: "BringYou・teamLab 長居植物園夜間展", url: "https://www.bring-you.info/zh-tw/teamlab-botanical-garden-osaka" }
       },
       {
-        name: "天王寺動物園", area: "天王寺", hours: "9:30–17:00(週一休)",
+        name: "天王寺動物園", day: 8, area: "天王寺", hours: "9:30–17:00(週一休)",
         latlng: [34.6519, 135.5089],
         desc: "1915 年開園、市區內的百年動物園,約 170 種動物採生態展示,北極熊餵食秀、企鵝公園與海獅碼頭人氣高。緊鄰通天閣、新世界,持大阪周遊卡可免費入場。",
         ref: { title: "Mimi韓・天王寺動物園", url: "https://mimigo.tw/osaka-zoo/" }
       },
       {
-        name: "阿倍野 HARUKAS 300", area: "天王寺", hours: "9:00–22:00",
+        name: "阿倍野 HARUKAS 300", day: 8, area: "天王寺", hours: "9:00–22:00",
         latlng: [34.6459, 135.5132],
         desc: "日本數一數二高樓(300m)頂端的 360 度展望台,玻璃空中漫步俯瞰大阪市景與大阪灣,日落後魔幻時刻夜景最美,58–60 樓還有空中花園與咖啡。",
         ref: { title: "波比看世界・阿倍野展望台 HARUKAS 300", url: "https://bobbytravel.tw/harukas-300/" }
@@ -1501,72 +1501,72 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "奧入瀨溪流", area: "青森・十和田", hours: "戶外・冬季健行預約制",
+        name: "奧入瀨溪流", day: 2, area: "青森・十和田", hours: "戶外・冬季健行預約制",
         latlng: [40.5236, 140.9889],
         desc: "從十和田湖流出的世界級美溪,冬季溪水兩岸結成壯觀冰瀑、冰柱與雪帽。入住星野奧入瀨溪流飯店可參加雪地冰瀑健行(預約制),並泡冬限定『氷瀑之湯』。",
         ref: { title: "蔡小妞依玲・星野奧入瀨溪流飯店", url: "https://tsnio.com/hoshino-resorts-oirase-keiryu-hotel/" }
       },
       {
-        name: "睡魔之家 ワ・ラッセ", area: "青森", hours: "9:00–18:00",
+        name: "睡魔之家 ワ・ラッセ", day: 3, area: "青森", hours: "9:00–18:00",
         latlng: [40.8275, 140.7350],
         desc: "青森站旁的睡魔祭文化館,挑高大廳常設展示實際出陣的大型睡魔燈籠,伴隨笛子與睡魔囃子,即使錯過 8 月睡魔祭也能身歷其境。入場約 ¥600。",
         ref: { title: "(青森旅遊)睡魔之家 WA・RASSE", url: "https://hero789456.pixnet.net/blog/posts/14222951268" }
       },
       {
-        name: "廣田神社", area: "青森", hours: "8:30–16:30(週三休)",
+        name: "廣田神社", day: 3, area: "青森", hours: "8:30–16:30(週三休)",
         latlng: [40.8230, 140.7430],
         desc: "青森市區、全國唯一的『病厄除守護神』神社,以青森睡魔圖案的限定御朱印與精緻切繪御朱印聞名,境內五社可一一參拜。"
       },
       {
-        name: "函館早市", area: "函館", hours: "1–4 月 6:00–14:00",
+        name: "函館早市", day: 5, area: "函館", hours: "1–4 月 6:00–14:00",
         latlng: [41.7745, 140.7263],
         desc: "JR 函館站旁約 250 攤的朝市,帝王蟹、海膽、活烏賊與海鮮丼齊聚,丼飯橫丁、駅二市場可現釣活烏賊現切。清晨開市,海鮮丼配伴手禮一網打盡。",
         ref: { title: "樂活的大方・函館朝市美食購物攻略", url: "https://www.bigfang.tw/blog/post/hakodate-asaichi" }
       },
       {
-        name: "五稜郭", area: "函館", hours: "塔 9:00–18:00",
+        name: "五稜郭", day: 5, area: "函館", hours: "塔 9:00–18:00",
         latlng: [41.7969, 140.7567],
         desc: "日本唯一星形西式要塞,幕末歷史舞台,登 107m 五稜郭塔展望台俯瞰完整五芒星城郭,冬雪覆蓋與夜間點燈別有風情。米其林綠色指南二星。",
         ref: { title: "許傑・五稜郭塔一日遊", url: "https://journey.tw/goryokaku/" }
       },
       {
-        name: "金森紅磚倉庫", area: "函館", hours: "9:30–19:00",
+        name: "金森紅磚倉庫", day: 5, area: "函館", hours: "9:30–19:00",
         latlng: [41.7657, 140.7148],
         desc: "1909 年函館首座營業倉庫,紅磚建築群改建為 BAY HAKODATE 等四大商業區、約 50 間店,起司蛋糕(Snaffle's/Petite Merveille)必買,入夜燈光浪漫。",
         ref: { title: "BringYou・金森紅磚倉庫", url: "https://www.bring-you.info/zh-tw/kanemori-red-brick-warehouse" }
       },
       {
-        name: "函館山夜景", area: "函館", hours: "纜車約 10:00–22:00",
+        name: "函館山夜景", day: 5, area: "函館", hours: "纜車約 10:00–22:00",
         latlng: [41.7595, 140.7042],
         desc: "世界三大夜景之一,搭纜車 3 分鐘登 334m 山頂,函館特殊扇形地形夾在兩側海灣,華燈初上如灑落寶石。日落後 30 分『魔幻時刻』最美。",
         ref: { title: "波比看世界・函館山夜景纜車", url: "https://bobbytravel.tw/mt-hakodate/" }
       },
       {
-        name: "仙台麵包超人兒童博物館", area: "仙台", hours: "10:00–17:00",
+        name: "仙台麵包超人兒童博物館", day: 6, area: "仙台", hours: "10:00–17:00",
         latlng: [38.2722, 140.9508],
         desc: "親子同遊首選,各房間重現動畫場景,入口麵包店售現烤角色麵包,舞台定時表演,1 樓購物區免費入場。",
         ref: { title: "樂活的大方・仙台麵包超人博物館", url: "https://www.bigfang.tw/blog/post/30786806" }
       },
       {
-        name: "藏王狐狸村", area: "宮城・白石", hours: "9:00–17:00(冬季至 16:00)",
+        name: "藏王狐狸村", day: 7, area: "宮城・白石", hours: "9:00–17:00(冬季至 16:00)",
         latlng: [38.0339, 140.5147],
         desc: "宮城白石山間、日本唯一的狐狸主題園,放養逾百隻 6 種狐狸,可餵食、合影,並有抱狐狸體驗(另付費、穿防護衣)。冬季雪地裡的狐狸超療癒。",
         ref: { title: "喵爸喵媽・宮城藏王狐狸村", url: "https://kimiyo.tw/zao-fox-village/" }
       },
       {
-        name: "松島", area: "宮城・松島", hours: "遊覽船依班次",
+        name: "松島", day: 7, area: "宮城・松島", hours: "遊覽船依班次",
         latlng: [38.3700, 141.0606],
         desc: "日本三景之一,松島灣散布約 260 座松濤小島,可搭遊覽船巡島、參拜伊達家菩提寺瑞巖寺與海上五大堂,沿岸烤牡蠣與魚板名物必嚐。",
         ref: { title: "BringYou・松島一日遊", url: "https://www.bring-you.info/zh-tw/matsushima" }
       },
       {
-        name: "銀山溫泉", area: "山形", hours: "溫泉街全日",
+        name: "銀山溫泉", day: 8, area: "山形", hours: "溫泉街全日",
         latlng: [38.5750, 140.5333],
         desc: "山形深山的大正浪漫溫泉鄉,溪流兩岸木造旅館林立,入夜煤氣燈映雪如《神隱少女》場景。冬季為最美雪季,有免費和樂足湯。冬季實施交通管制需換接駁車。",
         ref: { title: "twoslowbyron・銀山溫泉冬季管制與接駁", url: "https://twoslowbyron.com/snow_hotspirng/" }
       },
       {
-        name: "藏王樹冰", area: "山形・藏王", hours: "纜車約 8:30–17:00",
+        name: "藏王樹冰", day: 8, area: "山形・藏王", hours: "纜車約 8:30–17:00",
         latlng: [38.1597, 140.4406],
         desc: "冬季寒風與日本海濕氣在針葉樹上層層結冰,形成壯觀『雪怪』樹冰原。搭藏王纜車登地藏山頂賞樹冰,夜間點燈夢幻。1 月中–2 月上為最佳觀賞期。",
         ref: { title: "許傑・藏王樹冰一日遊", url: "https://journey.tw/go-yamagatazao/" }
@@ -1726,77 +1726,77 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        name: "淺草寺", day: 1, area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
         latlng: [35.7148, 139.7967],
         desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通商店街集結人形燒、仙貝與和風雜貨,可租和服參拜、求籤、收御朱印。",
         ref: { title: "BringYou・淺草寺雷門散步路線", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
       },
       {
-        name: "晴空塔・墨田水族館", area: "押上・晴空塔", hours: "水族館 10:00–20:00",
+        name: "晴空塔・墨田水族館", day: 1, area: "押上・晴空塔", hours: "水族館 10:00–20:00",
         latlng: [35.7101, 139.8107],
         desc: "世界第一高塔,展望台俯瞰東京、Solamachi 商場好逛;5–6 樓墨田水族館有企鵝、海狗,是雨天/寒天親子首選。",
         ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
       },
       {
-        name: "上野公園・上野動物園", area: "上野", hours: "動物園 9:30–17:00(週一休)",
+        name: "上野公園・上野動物園", day: 2, area: "上野", hours: "動物園 9:30–17:00(週一休)",
         latlng: [35.7156, 139.7714],
         desc: "上野恩賜公園腹地廣闊,集結博物館、美術館與不忍池;園內上野動物園為日本最古老動物園,動物明星與單軌列車是孩子最愛(曾以大貓熊聞名,貓熊已於 2026 初返回中國)。",
         ref: { title: "波比看世界・上野 7 大景點一日遊", url: "https://bobbytravel.tw/ueno/" }
       },
       {
-        name: "阿美橫町", area: "上野", hours: "店家約 10:00–19:00",
+        name: "阿美橫町", day: 2, area: "上野", hours: "店家約 10:00–19:00",
         latlng: [35.7100, 139.7740],
         desc: "JR 上野–御徒町高架下約 500m 商店街,藥妝、零食、海鮮乾貨與服飾雜貨齊聚,多慶屋、YODOBASHI 一次購足,熱鬧又好殺價。",
         ref: { title: "樂活的大方・阿美橫町必買必吃", url: "https://www.bigfang.tw/blog/post/uneo-ameyoko-tokyo" }
       },
       {
-        name: "橫濱紅磚倉庫", area: "橫濱", hours: "約 11:00–20:00",
+        name: "橫濱紅磚倉庫", day: 3, area: "橫濱", hours: "約 11:00–20:00",
         latlng: [35.4530, 139.6425],
         desc: "橫濱港未來代表地標,百年紅磚倉庫改為文創商業設施,鄰中華街、大棧橋、Cosmo World 摩天輪與空中纜車,港灣夜景浪漫,可從澀谷/池袋直通。",
         ref: { title: "心旅生活・橫濱一日遊路線", url: "https://shinblog.com.tw/yokohama/" }
       },
       {
-        name: "東京迪士尼海洋", area: "舞濱", hours: "依官方每日公告",
+        name: "東京迪士尼海洋", day: 4, area: "舞濱", hours: "依官方每日公告",
         latlng: [35.6267, 139.8850],
         desc: "全球唯一的海洋主題迪士尼,以七大主題港灣與成熟氛圍著稱,2024 新增『夢幻泉鄉』園區,表演、煙火與限定餐點豐富,善用 DPA 更順暢。",
         ref: { title: "花時光旅行實驗室・迪士尼海洋攻略", url: "https://whatime.space/tokyo-disneysea/" }
       },
       {
-        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        name: "東京迪士尼樂園", day: 5, area: "舞濱", hours: "依官方每日公告",
         latlng: [35.6329, 139.8804],
         desc: "經典童話主題園區,城堡、遊行、煙火必看。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡,與海洋分開購票各排一天。",
         ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
       },
       {
-        name: "銀座", area: "銀座", hours: "店家約 11:00–20:00",
+        name: "銀座", day: 5, area: "銀座", hours: "店家約 11:00–20:00",
         latlng: [35.6717, 139.7650],
         desc: "東京頂級購物區,精品旗艦、GINZA SIX、和光鐘樓與百年老舖林立,週末中央通『步行者天國』可悠閒逛街。"
       },
       {
-        name: "澀谷 SHIBUYA SKY", area: "澀谷", hours: "約 10:00–22:30",
+        name: "澀谷 SHIBUYA SKY", day: 6, area: "澀谷", hours: "約 10:00–22:30",
         latlng: [35.6595, 139.7004],
         desc: "澀谷 Scramble Square 頂樓 360 度開放式空中展望台,俯瞰著名澀谷全向十字路口與東京夜景,日落前時段最美。樓下八公像、宮下公園、PARCO 好逛。",
         ref: { title: "樂活的大方・SHIBUYA SKY 展望台", url: "https://www.bigfang.tw/blog/post/tokyo-shibuya-sky" }
       },
       {
-        name: "鎌倉大佛(高德院)", area: "鎌倉", hours: "約 8:00–17:00",
+        name: "鎌倉大佛(高德院)", day: 7, area: "鎌倉", hours: "約 8:00–17:00",
         latlng: [35.3169, 139.5358],
         desc: "高約 13.35m、重 121 噸的青銅阿彌陀如來坐像,日本國寶,可入胎內參觀。江之電長谷站步行約 10 分,可串長谷寺、小町通、鶴岡八幡宮。",
         ref: { title: "波比看世界・鎌倉大佛殿高德院", url: "https://bobbytravel.tw/kotokuin-temple/" }
       },
       {
-        name: "江之島", area: "江之島", hours: "燈塔 9:00–20:00",
+        name: "江之島", day: 7, area: "江之島", hours: "燈塔 9:00–20:00",
         latlng: [35.2992, 139.4806],
         desc: "湘南外海小島,江島神社三宮巡禮、弁財天商店街吃章魚仙貝,登 60m 海蠟燭展望燈塔眺望湘南海岸與富士山,冬季『湘南寶石』燈飾浪漫。",
         ref: { title: "波比看世界・江之島一日遊", url: "https://bobbytravel.tw/enoshima/" }
       },
       {
-        name: "東京車站", area: "丸之內", hours: "店家約 10:00–21:00",
+        name: "東京車站", day: 8, area: "丸之內", hours: "店家約 10:00–21:00",
         latlng: [35.6812, 139.7671],
         desc: "丸之內側百年紅磚站舍華麗復古,站內一番街(角色街)、拉麵街與大丸百貨好逛,KITTE 屋頂庭園可眺望站舍與東京夜景。"
       },
       {
-        name: "麻布台之丘 teamLab Borderless", area: "麻布台", hours: "約 10:00–21:00",
+        name: "麻布台之丘 teamLab Borderless", day: 8, area: "麻布台", hours: "約 10:00–21:00",
         latlng: [35.6602, 139.7400],
         desc: "2023 開幕的麻布台之丘內、無邊界沉浸式數位藝術美術館,作品彼此交融無界,《Bubble Universe》《花卉森林》等夢幻必拍。熱門需線上預約場次。",
         ref: { title: "Mimi韓・麻布台之丘 teamLab 無界", url: "https://mimigo.tw/teamlab-daiba/" }
@@ -1960,89 +1960,89 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "天神(地下街・屋台)", area: "福岡・天神", hours: "地下街 10:00–20:00・屋台 18:00 起",
+        name: "天神(地下街・屋台)", day: 1, area: "福岡・天神", hours: "地下街 10:00–20:00・屋台 18:00 起",
         latlng: [33.5914, 130.3990],
         desc: "福岡最熱鬧商圈,天神地下街以歐風石板與百元商店、雜貨聞名;入夜中洲/天神屋台(路邊攤)賣豚骨拉麵、煎餃、關東煮,是博多獨有的夜生活。",
         ref: { title: "波比看世界・天神商圈逛街攻略", url: "https://bobbytravel.tw/tenjin/" }
       },
       {
-        name: "福岡塔", area: "福岡・百道", hours: "9:30–22:00",
+        name: "福岡塔", day: 1, area: "福岡・百道", hours: "9:30–22:00",
         latlng: [33.5933, 130.3514],
         desc: "高 234m 的日本最高海濱塔,123m 展望室 360 度俯瞰福岡市與博多灣,入夜燈光浪漫,鄰百道海濱公園。",
         ref: { title: "olga・福岡塔與天神屋台一日", url: "https://olga1013.pixnet.net/blog/posts/10357564645" }
       },
       {
-        name: "九州自然動物公園(African Safari)", area: "大分・宇佐", hours: "9:00–16:30(依季節)",
+        name: "九州自然動物公園(African Safari)", day: 2, area: "大分・宇佐", hours: "9:00–16:30(依季節)",
         latlng: [33.4889, 131.3300],
         desc: "大分宇佐、日本最大野生動物園,6km 賽道可自駕或搭叢林巴士近距離看獅子、長頸鹿等約 70 種動物,另有可愛動物互動區。"
       },
       {
-        name: "由布院 湯之坪街道", area: "大分・由布院", hours: "店家約 9:00–17:30",
+        name: "由布院 湯之坪街道", day: 2, area: "大分・由布院", hours: "店家約 9:00–17:30",
         latlng: [33.2647, 131.3608],
         desc: "大分人氣溫泉鄉,由布院車站至金鱗湖約 1km 的湯之坪街道,百餘間甜點、雜貨與咖啡小店,背倚由布岳,散策購物超愜意。",
         ref: { title: "兩豬小妹・湯之坪街道散步路線", url: "https://twopigsfun.com/lake-kinrin/" }
       },
       {
-        name: "金鱗湖", area: "大分・由布院", hours: "戶外・全日",
+        name: "金鱗湖", day: 3, area: "大分・由布院", hours: "戶外・全日",
         latlng: [33.2636, 131.3656],
         desc: "由布院象徵景觀,湖底同時湧出溫泉與冷泉,秋冬清晨常覆夢幻薄霧,湖畔有水上鳥居,日出至上午 9 點前最美。",
         ref: { title: "小布少爺・金鱗湖晨霧拍攝", url: "https://boo2k.com/archives/81921" }
       },
       {
-        name: "草千里(阿蘇)", area: "熊本・阿蘇", hours: "戶外・全日",
+        name: "草千里(阿蘇)", day: 3, area: "熊本・阿蘇", hours: "戶外・全日",
         latlng: [32.8847, 131.0556],
         desc: "阿蘇烏帽子岳北麓一望無際的大草原,牛馬放牧、火口湖點綴,冬日銀白雪景,可騎馬體驗,鄰阿蘇火山博物館。",
         ref: { title: "來一球叭噗・阿蘇草千里", url: "https://gototravel.tw/aso-kusasenri-ga-hama/" }
       },
       {
-        name: "黑川溫泉", area: "熊本・南小國", hours: "巡湯約 8:30–21:00",
+        name: "黑川溫泉", day: 3, area: "熊本・南小國", hours: "巡湯約 8:30–21:00",
         latlng: [33.0839, 131.1419],
         desc: "阿蘇北麓的秘境溫泉鄉,日本溫泉百選『氛圍』第一名。購『入湯手形』(¥1,500)可巡泡 3 間旅館露天湯,冬季『湯明』點燈夢幻。",
         ref: { title: "樂活的大方・黑川溫泉入湯手形", url: "https://www.bigfang.tw/blog/post/kurokawa-onsen" }
       },
       {
-        name: "高千穗峽", area: "宮崎・高千穗", hours: "划船約 8:30–16:30",
+        name: "高千穗峽", day: 4, area: "宮崎・高千穗", hours: "划船約 8:30–16:30",
         latlng: [32.7156, 131.3050],
         desc: "宮崎神話之鄉的柱狀節理峽谷,可划船近距離仰望日本瀑布百選『真名井瀑布』從 17m 高崖傾瀉。沿岸步道、高千穗神社與流水素麵都值得一訪。",
         ref: { title: "凱子凱・高千穗峽完整遊記攻略", url: "http://ksk.tw/blog/post/347926522" }
       },
       {
-        name: "熊本城", area: "熊本", hours: "9:00–17:00",
+        name: "熊本城", day: 4, area: "熊本", hours: "9:00–17:00",
         latlng: [32.8061, 130.7058],
         desc: "加藤清正所築、日本三大名城之一,黑色天守與『武者返』石垣壯觀。2016 地震後修復,天守閣 2021 重新開放,鄰櫻之馬場城彩苑。",
         ref: { title: "BringYou・熊本城特別參觀路線", url: "https://www.bring-you.info/zh-tw/kumamoto-castle" }
       },
       {
-        name: "長崎和平公園・原爆資料館", area: "長崎", hours: "資料館 8:30–17:30",
+        name: "長崎和平公園・原爆資料館", day: 5, area: "長崎", hours: "資料館 8:30–17:30",
         latlng: [32.7728, 129.8636],
         desc: "1945 年原子彈爆炸中心地,和平公園豎立和平祈念像,原爆資料館完整記錄核爆史實與祈願世界和平,是省思戰爭的重要之地。"
       },
       {
-        name: "稻佐山夜景", area: "長崎", hours: "纜車 9:00–22:00",
+        name: "稻佐山夜景", day: 5, area: "長崎", hours: "纜車 9:00–22:00",
         latlng: [32.7600, 129.8508],
         desc: "海拔 333m,世界新三大夜景之一,搭纜車 5 分鐘登頂,270 度俯瞰長崎港灣與山城燈火如灑落寶石。日落前後一小時最美。",
         ref: { title: "小氣少年・長崎稻佐山夜景", url: "https://nicklee.tw/1432/nagasaki-night-scene/" }
       },
       {
-        name: "豪斯登堡", area: "長崎・佐世保", hours: "約 9:00–21:00",
+        name: "豪斯登堡", day: 6, area: "長崎・佐世保", hours: "約 9:00–21:00",
         latlng: [33.0856, 129.7919],
         desc: "152 萬㎡的荷蘭風情主題樂園,九大園區、運河、鬱金香與夜間燈海煙火,新增 Miffy 米飛兔夢幻小鎮,親子情侶皆宜。",
         ref: { title: "卡蘿・豪斯登堡完整攻略", url: "https://carolblog.tw/huistenbosch/" }
       },
       {
-        name: "九十九島", area: "長崎・佐世保", hours: "遊覽船依班次",
+        name: "九十九島", day: 7, area: "長崎・佐世保", hours: "遊覽船依班次",
         latlng: [33.1700, 129.6594],
         desc: "佐世保『世界最美港灣』之一,208 座大小島嶼星羅棋布,搭珍珠皇后號遊覽船約 50 分巡島,展海峰/石岳展望台居高賞景,海きらら水族館也好玩。",
         ref: { title: "卡蘿・九十九島遊覽船", url: "https://carolblog.tw/kujuku-islands/" }
       },
       {
-        name: "太宰府天滿宮", area: "福岡・太宰府", hours: "境內約 6:30–18:30",
+        name: "太宰府天滿宮", day: 7, area: "福岡・太宰府", hours: "境內約 6:30–18:30",
         latlng: [33.5217, 130.5350],
         desc: "全日本 12000 座天滿宮總本社,祭祀學問之神菅原道真,考生必拜。表參道梅枝餅(かさの家)與隈研吾設計的星巴克必訪,梅花季更美。",
         ref: { title: "Mimi韓・太宰府一日遊", url: "https://mimigo.tw/dazaifu/" }
       },
       {
-        name: "門司港・九州鐵道紀念館", area: "北九州・門司港", hours: "紀念館 9:00–17:00(週二休)",
+        name: "門司港・九州鐵道紀念館", day: 8, area: "北九州・門司港", hours: "紀念館 9:00–17:00(週二休)",
         latlng: [33.9436, 130.9628],
         desc: "北九州門司港懷舊區,大正復古洋館林立、港灣浪漫,名物『燒咖哩』必吃;門司港站旁九州鐵道紀念館可看歷史車輛、駕迷你小火車,鐵道迷與親子必訪。",
         ref: { title: "波比看世界・門司港一日遊", url: "https://bobbytravel.tw/mojiko/" }
@@ -2177,37 +2177,37 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "大世界不夜城(Grand World)", area: "富國島北部", hours: "24h(設施 8:30–22:00)",
+        name: "大世界不夜城(Grand World)", day: 1, area: "富國島北部", hours: "24h(設施 8:30–22:00)",
         latlng: [10.3338, 103.8540],
         desc: "Vingroup 打造、越南首座 24 小時不夜城,以威尼斯運河為主題的歐風園區,可搭貢多拉、看《越南精髓》劇場、逛泰迪熊博物館與大型竹建築,夜間水舞秀夢幻。入場免費(部分設施另購票)。",
         ref: { title: "蔡小妞依玲・富國大世界 Grand World", url: "https://tsnio.com/grand-world-phu-quoc/" }
       },
       {
-        name: "富國野生動物園(Vinpearl Safari)", area: "富國島北部", hours: "約 9:00–16:00",
+        name: "富國野生動物園(Vinpearl Safari)", day: 2, area: "富國島北部", hours: "約 9:00–16:00",
         latlng: [10.3489, 103.8606],
         desc: "全越南最大野生動物園,150 種、3000 多隻動物,搭免費遊園車進開放式 Safari 近距離看獅子、長頸鹿、斑馬,可餵長頸鹿、看百鳥秀,親子必訪。",
         ref: { title: "寶寶溫・珍珠野生動物園", url: "https://bobowin.blog/vinpearl-safari-phu-quoc/" }
       },
       {
-        name: "珍珠樂園 VinWonders・海龜水族館", area: "富國島北部", hours: "約 9:00–20:00",
+        name: "珍珠樂園 VinWonders・海龜水族館", day: 3, area: "富國島北部", hours: "約 9:00–20:00",
         latlng: [10.3478, 103.8420],
         desc: "被譽為『越南迪士尼』,結合陸上樂園、水上樂園與世界最大海龜造型水族館(The Sea Shell,300+ 種海洋生物、美人魚秀),夢幻城堡、滑水道一天玩不完,壓軸燈光閉園秀必看。",
         ref: { title: "蔡小妞依玲・珍珠樂園 VinWonders", url: "https://tsnio.com/vinwonders-phu-quoc/" }
       },
       {
-        name: "陽東夜市", area: "楊東鎮", hours: "18:00–23:30",
+        name: "陽東夜市", day: 3, area: "楊東鎮", hours: "18:00–23:30",
         latlng: [10.2136, 103.9606],
         desc: "富國島最大夜市,百餘攤越式小吃與海鮮排檔:現烤龍蝦、海膽、生蠔、椰子冰淇淋、越式法國麵包,還有珍珠飾品、胡椒等伴手禮。傍晚 18:00 後最熱鬧,留意隨身財物。",
         ref: { title: "Stancy・陽東夜市富國最大夜市", url: "https://stancylife.com/phu-quoc-night-market/" }
       },
       {
-        name: "地中海小鎮(日落小鎮)", area: "富國島南部", hours: "戶外・夕陽時最美",
+        name: "地中海小鎮(日落小鎮)", day: 4, area: "富國島南部", hours: "戶外・夕陽時最美",
         latlng: [10.0414, 104.0167],
         desc: "Sun Group 以義大利阿瑪菲為靈感打造,300 多棟地中海彩色別墅依山傍海,跨海纜車起點站、親吻橋(Kiss Bridge)與海之吻(Kiss of the Sea)水舞秀都在此,是富國島最美夕陽觀賞點。",
         ref: { title: "蔡小妞依玲・日落小鎮 Sunset Town", url: "https://tsnio.com/sunset-town-phu-quoc/" }
       },
       {
-        name: "跨海纜車・太陽世界(Hon Thom)", area: "香島 Hon Thom", hours: "纜車約 8:30–17:30",
+        name: "跨海纜車・太陽世界(Hon Thom)", day: 4, area: "香島 Hon Thom", hours: "纜車約 8:30–17:30",
         latlng: [10.0300, 104.0200],
         desc: "金氏世界紀錄『世界最長三線跨海纜車』,全長近 8km、單程約 20 分,360 度全景車廂飽覽海島漁村;抵香島 Hon Thom 後是太陽世界自然公園,有 Aquatopia 水上樂園與木造雲霄飛車。",
         ref: { title: "寶寶溫・太陽世界跨海纜車", url: "https://bobowin.blog/sunworld-cable-car/" }
@@ -2365,78 +2365,78 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "星野 TOMAMU 雲海平台", area: "占冠・TOMAMU", hours: "雲海平台清晨限定(夏季)",
+        name: "星野 TOMAMU 雲海平台", day: 1, area: "占冠・TOMAMU", hours: "雲海平台清晨限定(夏季)",
         latlng: [43.0658, 142.6275],
         desc: "星野 TOMAMU 度假村的夏季限定絕景,搭纜車登雲海平台,210 度展望彷彿漫步雲端;度假村還有日本最大室內造浪『微笑海灘』、星野牧場與水之教堂。山上清晨氣溫低需保暖。",
         ref: { title: "娜塔蝦・TOMAMU 夏天這樣玩", url: "https://natasha-traveler.tw/tomamu-summer/" }
       },
       {
-        name: "富田農場", area: "富良野・中富良野", hours: "8:30–17:00(依季節)",
+        name: "富田農場", day: 3, area: "富良野・中富良野", hours: "8:30–17:00(依季節)",
         latlng: [43.4218, 142.4097],
         desc: "富良野最具代表的薰衣草花田,傳統薰衣草田、七彩花田漸層紫色花海絕美,薰衣草冰淇淋必吃。免費入場,薰衣草約 6 月下旬–8 月上旬最盛。",
         ref: { title: "波比看世界・富田農場薰衣草", url: "https://bobbytravel.tw/farm-tomita/" }
       },
       {
-        name: "四季彩之丘", area: "美瑛", hours: "8:40–17:30(6–9 月)",
+        name: "四季彩之丘", day: 3, area: "美瑛", hours: "8:40–17:30(6–9 月)",
         latlng: [43.5775, 142.4569],
         desc: "美瑛 15 公頃的拼布花田,數十種花卉隨季節綻放,可搭 NOROCCO 號或蹦蹦車在花海中漫遊,遠眺丘陵與雪山。5–6 月鬱金香、魯冰花,7–8 月薰衣草、向日葵。",
         ref: { title: "Mimi韓・四季彩之丘拼布花田", url: "https://mimigo.tw/shikisai-no-oka/" }
       },
       {
-        name: "白金青池", area: "美瑛", hours: "戶外・全日",
+        name: "白金青池", day: 3, area: "美瑛", hours: "戶外・全日",
         latlng: [43.4925, 142.6411],
         desc: "美瑛白金地區的夢幻藍綠池水,因火山礦物形成獨特色澤,水中枯木倒影如畫,四季與光線變化各異。冬季有夜間點燈。鄰白鬚瀑布、白金溫泉。",
         ref: { title: "許傑・美瑛白金青池", url: "https://journey.tw/blue-pond/" }
       },
       {
-        name: "旭山動物園", area: "旭川", hours: "夏季約 9:30–17:15",
+        name: "旭山動物園", day: 4, area: "旭川", hours: "夏季約 9:30–17:15",
         latlng: [43.7681, 142.4806],
         desc: "日本最具人氣的動物園之一,以『行動展示』讓動物自然展現天性,海豹圓柱水槽、企鵝水中隧道、北極熊都是亮點(企鵝散步為冬季限定)。",
         ref: { title: "依娃旅行小確幸・旭山動物園", url: "https://evalife.tw/asahiyama-zoo/" }
       },
       {
-        name: "天狗山", area: "小樽", hours: "纜車約 9:00–21:00",
+        name: "天狗山", day: 4, area: "小樽", hours: "纜車約 9:00–21:00",
         latlng: [43.1869, 140.9869],
         desc: "小樽象徵山,搭纜車約 4 分鐘登 532m 山頂,俯瞰小樽港都與石狩灣,北海道三大夜景之一。日劇《情書》場景,山頂有摸鼻祈福天狗像與展望台。",
         ref: { title: "蔡小妞依玲・小樽天狗山纜車", url: "https://tsnio.com/otaru-tenguyama/" }
       },
       {
-        name: "小樽運河", area: "小樽", hours: "戶外・倉庫點燈至 22:30",
+        name: "小樽運河", day: 5, area: "小樽", hours: "戶外・倉庫點燈至 22:30",
         latlng: [43.1990, 140.9947],
         desc: "大正時代的運河,沿岸石造倉庫改建為咖啡廳與餐廳,黃昏點燈後最浪漫。鄰堺町通商店街(LeTAO、玻璃工藝、音樂盒)與出拔小路屋台村,半日散策剛好。",
         ref: { title: "樂活的大方・小樽運河堺町通逛街", url: "https://www.bigfang.tw/blog/post/41398024" }
       },
       {
-        name: "二條市場", area: "札幌", hours: "約 7:00–18:00",
+        name: "二條市場", day: 6, area: "札幌", hours: "約 7:00–18:00",
         latlng: [43.0600, 141.3556],
         desc: "札幌市區百年海鮮市場,帝王蟹、海膽、鮭魚卵海鮮丼澎湃新鮮,鄰狸小路與電視塔,步行可達。多數店家早上營業、午後陸續打烊,早點來最佳。",
         ref: { title: "樂活的大方・札幌二條市場", url: "https://www.bigfang.tw/blog/post/sapporo-nijo-market" }
       },
       {
-        name: "北海道神宮", area: "札幌", hours: "6:00–17:00",
+        name: "北海道神宮", day: 6, area: "札幌", hours: "6:00–17:00",
         latlng: [43.0539, 141.3072],
         desc: "北海道第一大神社,位於圓山公園內,供奉開拓三神與明治天皇。表參道古木參天、四季優美,粉紅 Hello Kitty 御守人氣高,六花亭神宮茶屋的判官餅必吃。",
         ref: { title: "波比看世界・北海道神宮", url: "https://bobbytravel.tw/hokkaidojingu/" }
       },
       {
-        name: "藻岩山展望台", area: "札幌", hours: "纜車約 10:30–22:00",
+        name: "藻岩山展望台", day: 6, area: "札幌", hours: "纜車約 10:30–22:00",
         latlng: [43.0289, 141.3258],
         desc: "海拔 531m,搭纜車與登山列車登頂,360 度俯瞰札幌市區夜景,與函館山、小樽天狗山並稱北海道三大夜景,亦為日本新三大夜景。山頂幸福鐘是戀人聖地。",
         ref: { title: "Mimi韓・藻岩山夜景", url: "https://mimigo.tw/moiwa/" }
       },
       {
-        name: "大通公園", area: "札幌", hours: "戶外・全日",
+        name: "大通公園", day: 7, area: "札幌", hours: "戶外・全日",
         latlng: [43.0608, 141.3469],
         desc: "貫穿札幌市中心約 1.5km 的帶狀公園,噴泉、花壇與札幌電視塔展望台,是雪祭、YOSAKOI 索朗祭與夏季啤酒節的舞台,市民與旅人休憩好去處。"
       },
       {
-        name: "白色戀人公園", area: "札幌", hours: "10:00–19:00",
+        name: "白色戀人公園", day: 7, area: "札幌", hours: "10:00–19:00",
         latlng: [43.0908, 141.2778],
         desc: "石屋製菓打造的歐風童話園區,可參觀白色戀人餅乾與年輪蛋糕生產線、巧克力幻想館,並體驗餅乾 DIY。玫瑰花園、格列佛小鎮好拍,親子同遊首選。",
         ref: { title: "Mimi韓・白色戀人公園觀光工廠", url: "https://mimigo.tw/shiroi-koibito-park/" }
       },
       {
-        name: "狸小路商店街", area: "札幌", hours: "店家約 10:00–21:00",
+        name: "狸小路商店街", day: 7, area: "札幌", hours: "店家約 10:00–21:00",
         latlng: [43.0567, 141.3536],
         desc: "札幌最大有頂商店街,綿延 7 條街區,藥妝、餐廳、土產與唐吉訶德齊聚,鄰薄野與湯咖哩名店,雨天逛街與宵夜的好去處。"
       }
@@ -2567,61 +2567,61 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "瀨長島 Umikaji Terrace", area: "豐見城・瀨長島", hours: "店家約 10:00–21:00",
+        name: "瀨長島 Umikaji Terrace", day: 1, area: "豐見城・瀨長島", hours: "店家約 10:00–21:00",
         latlng: [26.1736, 127.6486],
         desc: "緊鄰那霸機場的離島『沖繩小希臘』,純白階梯式 Umikaji Terrace 約 50 間店,地中海風海景與夕陽超好拍,還能近距離看飛機起降。幸福鬆餅必吃(建議預約)。",
         ref: { title: "波比看世界・瀨長島 Umikaji Terrace", url: "https://bobbytravel.tw/senaga-island/" }
       },
       {
-        name: "波上宮", area: "那霸", hours: "境內 24h・授與所 9:00–17:00",
+        name: "波上宮", day: 1, area: "那霸", hours: "境內 24h・授與所 9:00–17:00",
         latlng: [26.2178, 127.6678],
         desc: "琉球八社之首、建於斷崖上的臨海神社,緊鄰波之上海灘,紅型與貝殼御守、書包御守人氣高。距國際通不遠,可順遊。",
         ref: { title: "波比看世界・波上宮", url: "https://bobbytravel.tw/naminoue-shrine/" }
       },
       {
-        name: "部瀨名海中公園", area: "名護・部瀨名", hours: "9:00–18:00",
+        name: "部瀨名海中公園", day: 2, area: "名護・部瀨名", hours: "9:00–18:00",
         latlng: [26.5363, 127.9648],
         desc: "不用下水也能看魚!海中展望塔 24 圓窗 + 鯨魚造型玻璃底遊艇,全年齡、雨天備案首選。",
         ref: { title: "Marktrip・部瀨名海中公園", url: "https://marktrip.tw/busena-marinepark/" }
       },
       {
-        name: "古宇利海洋塔", area: "今歸仁・古宇利", hours: "10:00–18:00",
+        name: "古宇利海洋塔", day: 2, area: "今歸仁・古宇利", hours: "10:00–18:00",
         latlng: [26.7019, 128.0186],
         desc: "戀之島古宇利上的 82m 白色展望塔,搭無人電動車穿越亞熱帶林上塔,360 度俯瞰古宇利大橋與『古宇利藍』大海,頂樓愛情鐘是情侶打卡點。",
         ref: { title: "許傑・古宇利海洋塔", url: "https://journey.tw/kouri-oceantower/" }
       },
       {
-        name: "古宇利大橋", area: "今歸仁・古宇利", hours: "戶外・全日",
+        name: "古宇利大橋", day: 2, area: "今歸仁・古宇利", hours: "戶外・全日",
         latlng: [26.6917, 128.0247],
         desc: "全長近 2km、橫跨翡翠海的跨海大橋,連接屋我地島與古宇利島,兩端觀景台與沙灘俯瞰夢幻『古宇利藍』,沖繩必拍地標。",
         ref: { title: "波比看世界・古宇利島一日遊", url: "https://bobbyworld.tw/2024-01-07-2704/" }
       },
       {
-        name: "沖繩美麗海水族館", area: "本部", hours: "約 8:30–18:30",
+        name: "沖繩美麗海水族館", day: 2, area: "本部", hours: "約 8:30–18:30",
         latlng: [26.6943, 127.8779],
         desc: "亞洲最大、全球第二的水族館,『黑潮之海』巨型水槽有鯨鯊、鬼蝠魟,鯨鯊餵食秀(15:00/17:00)與海豚秀必看,位於海洋博公園內。",
         ref: { title: "Wendy's Journey・美麗海水族館攻略", url: "https://www.wendyjourney.com/churaumi-okinawa/" }
       },
       {
-        name: "DINO 恐龍 PARK 山原亞熱帶之森", area: "名護", hours: "9:00–18:00",
+        name: "DINO 恐龍 PARK 山原亞熱帶之森", day: 2, area: "名護", hours: "9:00–18:00",
         latlng: [26.5917, 127.9772],
         desc: "御菓子御殿名護店旁的恐龍主題森林,日本唯一筆筒樹原生林中藏 80+ 種逼真恐龍,搭配音效與 AR 平板,彷彿侏羅紀公園,親子探險首選。",
         ref: { title: "鯊魚大口咬・DINO 恐龍公園", url: "https://bigsharkgogogo.tw/dinopark-okinawa/" }
       },
       {
-        name: "玉泉洞(沖繩世界文化王國)", area: "南城", hours: "9:00–17:30",
+        name: "玉泉洞(沖繩世界文化王國)", day: 3, area: "南城", hours: "9:00–17:30",
         latlng: [26.1419, 127.7475],
         desc: "全長約 5km、開放約 890m 的日本最大級鐘乳洞,鐘乳石與燈光造景壯觀;地面王國村可看 EISA 太鼓秀、毒蛇秀與琉球古民家。",
         ref: { title: "Mimi韓・玉泉洞王國村", url: "https://mimigo.tw/okinawa-world/" }
       },
       {
-        name: "國際通", area: "那霸", hours: "店家約 10:00–22:00",
+        name: "國際通", day: 4, area: "那霸", hours: "店家約 10:00–22:00",
         latlng: [26.2146, 127.6857],
         desc: "那霸最熱鬧的 1.6km 商店街,土產、藥妝、餐廳與屋台林立,鄰第一牧志公設市場與壺屋通,夜晚也熱鬧。",
         ref: { title: "阿君的玩食天堂・國際通必逛攻略", url: "https://ajunfun.tw/kokusai-dori/" }
       },
       {
-        name: "第一牧志公設市場", area: "那霸", hours: "8:00–22:00",
+        name: "第一牧志公設市場", day: 4, area: "那霸", hours: "8:00–22:00",
         latlng: [26.2156, 127.6883],
         desc: "沖繩人的廚房,1 樓買海鮮(夜光貝、伊勢龍蝦)與石垣牛、阿古豬,2 樓食堂可代客料理現買現吃,2023 新館重新開幕。",
         ref: { title: "Wendy's Journey・第一牧志公設市場", url: "https://www.wendyjourney.com/makishi-public-market/" }
@@ -2750,43 +2750,43 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "淺草雷門・淺草寺", area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
+        name: "淺草雷門・淺草寺", day: 1, area: "淺草", hours: "境內 24h・本堂 6:00–17:00",
         latlng: [35.7148, 139.7967],
         desc: "東京最古老寺廟,雷門大紅燈籠 24h 免費參觀,仲見世通商店街集結人形燒、仙貝與和風雜貨,可租和服參拜、求籤。",
         ref: { title: "BringYou・淺草寺雷門散步路線", url: "https://www.bring-you.info/zh-tw/sensoji-temple" }
       },
       {
-        name: "晴空塔・墨田水族館", area: "押上・晴空塔", hours: "水族館 10:00–20:00",
+        name: "晴空塔・墨田水族館", day: 1, area: "押上・晴空塔", hours: "水族館 10:00–20:00",
         latlng: [35.7101, 139.8107],
         desc: "世界第一高塔,展望台俯瞰東京、Solamachi 商場好逛;5–6 樓墨田水族館有企鵝、海狗,是雨天/寒天親子首選。",
         ref: { title: "BringYou・晴空塔墨田水族館", url: "https://www.bring-you.info/zh-tw/sumida-aquarium" }
       },
       {
-        name: "阿卡將本舖(錦糸町)", area: "錦糸町", hours: "約 10:00–21:00",
+        name: "阿卡將本舖(錦糸町)", day: 1, area: "錦糸町", hours: "約 10:00–21:00",
         latlng: [35.6967, 139.8142],
         desc: "媽媽朝聖的婦嬰用品專賣店,位於錦糸町 ARCAKIT 百貨 5 樓,奶粉、副食品、童裝、推車與明星商品超好買,可退稅。距淺草近。",
         ref: { title: "小桃媽・錦糸町阿卡將本舖", url: "https://anity0404.pixnet.net/blog/post/208336966" }
       },
       {
-        name: "東京迪士尼樂園", area: "舞濱", hours: "依官方每日公告",
+        name: "東京迪士尼樂園", day: 2, area: "舞濱", hours: "依官方每日公告",
         latlng: [35.6329, 139.8804],
         desc: "經典童話主題園區,城堡、遊行、煙火必看,聖誕季節限定裝飾與表演夢幻。入園先下載官方 App 操作 Standby Pass 與 DPA 尊享卡。",
         ref: { title: "波比看世界・東京迪士尼樂園攻略", url: "https://bobbytravel.tw/tokyo-disneyland/" }
       },
       {
-        name: "新宿", area: "新宿", hours: "店家約 10:00–22:00",
+        name: "新宿", day: 3, area: "新宿", hours: "店家約 10:00–22:00",
         latlng: [35.6896, 139.7006],
         desc: "東京最繁華的轉運與購物商圈,新宿御苑、歌舞伎町、東京都廳免費展望台(可遠眺富士山)、3D 巨貓、思出橫丁居酒屋,日夜皆熱鬧。",
         ref: { title: "波比看世界・新宿 10 大景點一日遊", url: "https://bobbytravel.tw/shinjuku/" }
       },
       {
-        name: "六本木之丘 Tokyo City View", area: "六本木", hours: "約 10:00–22:00",
+        name: "六本木之丘 Tokyo City View", day: 3, area: "六本木", hours: "約 10:00–22:00",
         latlng: [35.6605, 139.7292],
         desc: "六本木之丘森大樓 52 樓 360 度展望台,眺望東京鐵塔、新宿與台場的絕美夜景,《天氣之子》場景之一,並設森美術館。",
         ref: { title: "BringYou・六本木之丘 Tokyo City View", url: "https://www.bring-you.info/zh-tw/roppongi-hills-tokyo-city-view" }
       },
       {
-        name: "輕井澤(王子 Outlet・雲場池)", area: "輕井澤", hours: "Outlet 約 10:00–19:00",
+        name: "輕井澤(王子 Outlet・雲場池)", day: 4, area: "輕井澤", hours: "Outlet 約 10:00–19:00",
         latlng: [36.3415, 138.6357],
         desc: "東京近郊高原避暑/雪景勝地,輕井澤王子購物廣場(Outlet)品牌齊全好買,鄰雲場池、舊輕井澤銀座通,搭北陸新幹線約 70 分可達。12 月可能下雪。",
         ref: { title: "Mimi韓・雲場池(輕井澤)", url: "https://mimigo.tw/kumoba-pond/" }
@@ -2922,42 +2922,42 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "心斎橋・道頓堀", area: "道頓堀", hours: "店家約 10:00–22:00",
+        name: "心斎橋・道頓堀", day: 1, area: "道頓堀", hours: "店家約 10:00–22:00",
         latlng: [34.6687, 135.5013],
         desc: "大阪南區最熱鬧的水岸商圈,固力果跑跑人看板、巨型蟹招牌與章魚燒、大阪燒林立;心斎橋筋商店街、美國村好逛好買。"
       },
       {
-        name: "日本環球影城 USJ", area: "此花・USJ", hours: "依官方每日公告",
+        name: "日本環球影城 USJ", day: 2, area: "此花・USJ", hours: "依官方每日公告",
         latlng: [34.6654, 135.4323],
         desc: "關西最大主題樂園,超級任天堂世界、哈利波特魔法世界、小小兵與環球必玩設施;善用快速通關/整理券更順暢。",
         ref: { title: "波比看世界・日本環球影城 USJ 攻略", url: "https://bobbytravel.tw/usj/" }
       },
       {
-        name: "京都車站", area: "京都", hours: "店家約 10:00–22:00",
+        name: "京都車站", day: 3, area: "京都", hours: "店家約 10:00–22:00",
         latlng: [34.9858, 135.7588],
         desc: "原廣司設計的未來感巨型車站,11 樓空中徑路免費走廊俯瞰京都市景與京都塔夜景,拉麵小路、伊勢丹百貨好逛。",
         ref: { title: "Albert Blog・京都車站空中徑路", url: "https://albertblog.tw/22962/skyway" }
       },
       {
-        name: "清水寺", area: "京都", hours: "6:00–18:00",
+        name: "清水寺", day: 3, area: "京都", hours: "6:00–18:00",
         latlng: [34.9949, 135.7850],
         desc: "京都世界文化遺產,清水舞台懸空遠眺市景,音羽瀑布祈願,周邊二三年坂、產寧坂石坂老街與和服體驗超好拍。",
         ref: { title: "兩株小豬・清水寺和服半日遊", url: "https://rebecca1003.pixnet.net/blog/post/353753239" }
       },
       {
-        name: "嵐山", area: "京都・嵐山", hours: "戶外・全日",
+        name: "嵐山", day: 4, area: "京都・嵐山", hours: "戶外・全日",
         latlng: [35.0094, 135.6737],
         desc: "京都西郊代表名勝,嵯峨野竹林小徑、橫跨桂川的渡月橋、世界遺產天龍寺庭園,可搭嵐山小火車或人力車,四季皆美。",
         ref: { title: "Curly・京都嵐山一日遊", url: "https://curly.com.tw/arashiyama/" }
       },
       {
-        name: "黑門市場", area: "大阪・日本橋", hours: "約 9:00–18:00",
+        name: "黑門市場", day: 5, area: "大阪・日本橋", hours: "約 9:00–18:00",
         latlng: [34.6657, 135.5061],
         desc: "『大阪的廚房』,580m 拱廊聚集 150+ 店,海鮮生魚片、巨無霸干貝、河豚、和牛串與水果現吃,早上最熱鬧。",
         ref: { title: "BringYou・大阪黑門市場攻略", url: "https://www.bring-you.info/zh-tw/kuromon-ichiba-market" }
       },
       {
-        name: "神戶三宮", area: "神戶", hours: "店家約 10:00–21:00",
+        name: "神戶三宮", day: 5, area: "神戶", hours: "店家約 10:00–21:00",
         latlng: [34.6938, 135.1956],
         desc: "神戶最熱鬧的市中心,鄰舊居留地、南京町中華街、北野異人館與港區 Harborland,神戶牛鐵板燒名店聚集。"
       }
@@ -3098,66 +3098,66 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "明洞", area: "明洞", hours: "店家約 10:00–22:00",
+        name: "明洞", day: 1, area: "明洞", hours: "店家約 10:00–22:00",
         latlng: [37.5636, 126.9850],
         desc: "首爾最熱鬧的購物商圈,Olive Young 美妝、潮牌與百貨齊聚,傍晚後街頭攤販(雞蛋糕、烤肉串)出攤超熱鬧,換錢所匯率最好。",
         ref: { title: "波比看世界・明洞逛街地圖", url: "https://bobbytravel.tw/myeongdong/" }
       },
       {
-        name: "COEX 星空圖書館", area: "三成・江南", hours: "10:30–22:00",
+        name: "COEX 星空圖書館", day: 2, area: "三成・江南", hours: "10:30–22:00",
         latlng: [37.5128, 127.0590],
         desc: "三成洞 COEX Mall 內的網紅地標,三座兩層樓高巨型書牆超好拍,免費開放;同棟有韓國最大 COEX 水族館(約 650 種、4 萬隻海洋生物)。",
         ref: { title: "Alina 愛琳娜・COEX 星空圖書館", url: "https://alinalife.tw/starfield-library/" }
       },
       {
-        name: "南怡島", area: "加平", hours: "約 8:00–21:00",
+        name: "南怡島", day: 3, area: "加平", hours: "約 8:00–21:00",
         latlng: [37.7902, 127.5256],
         desc: "加平的半月形小島,韓劇《冬季戀歌》水杉林大道場景,四季皆美,可搭船或滑索進島,辣炒雞排必吃。從首爾約 1.5 小時。",
         ref: { title: "波比看世界・南怡島一日遊", url: "https://bobbytravel.tw/nami-island/" }
       },
       {
-        name: "東大門", area: "東大門", hours: "商場至凌晨",
+        name: "東大門", day: 2, area: "東大門", hours: "商場至凌晨",
         latlng: [37.5663, 127.0090],
         desc: "首爾不夜城購物聖地,DDP 設計廣場(Zaha Hadid 設計)、零售商場(Hello apm/NYU NYU)與深夜批發市場,汗蒸幕、橋村炸雞、一隻雞都在此。",
         ref: { title: "波比看世界・東大門逛街攻略", url: "https://bobbyfun.tw/dongdaemun/" }
       },
       {
-        name: "N 首爾塔", area: "南山", hours: "約 10:00–23:00",
+        name: "N 首爾塔", day: 3, area: "南山", hours: "約 10:00–23:00",
         latlng: [37.5512, 126.9882],
         desc: "南山頂的首爾地標,纜車上山看愛情鎖牆與市區夜景,《來自星星的你》《藍色大海的傳說》等韓劇場景。",
         ref: { title: "波比看世界・N 首爾塔攻略", url: "https://bobbytravel.tw/seoul-tower/" }
       },
       {
-        name: "廣藏市場", area: "鐘路", hours: "小吃約 9:00–23:00(週日休)",
+        name: "廣藏市場", day: 4, area: "鐘路", hours: "小吃約 9:00–23:00(週日休)",
         latlng: [37.5701, 127.0019],
         desc: "1905 年的百年傳統市場,綠豆煎餅(順熙家)、麻藥紫菜飯捲、生牛肉與生章魚超人氣,韓國庶民美食天堂。週日公休。",
         ref: { title: "Mimi韓・廣藏市場必吃美食", url: "https://mimigo.tw/kwangjang-market/" }
       },
       {
-        name: "北村韓屋村", area: "鐘路", hours: "戶外・住宅區請輕聲",
+        name: "北村韓屋村", day: 4, area: "鐘路", hours: "戶外・住宅區請輕聲",
         latlng: [37.5826, 126.9836],
         desc: "景福宮與昌德宮之間的傳統韓屋聚落『北村八景』,朝鮮時代上流住宅,巷弄古色古香,穿韓服漫步拍照超美。安國站下車最近。",
         ref: { title: "Klook・北村韓屋村", url: "https://www.klook.com/zh-TW/blog/%E5%8C%97%E6%9D%91%E9%9F%93%E5%B1%8B%E6%9D%91/" }
       },
       {
-        name: "景福宮", area: "鐘路", hours: "9:00–17:00(週二休)",
+        name: "景福宮", day: 4, area: "鐘路", hours: "9:00–17:00(週二休)",
         latlng: [37.5796, 126.9770],
         desc: "朝鮮王朝正宮、首爾最古老宮殿,光化門守門將換崗儀式必看,穿著韓服可免費入場。每週二休館。",
         ref: { title: "KKday・景福宮韓服與門票攻略", url: "https://www.kkday.com/zh-tw/blog/28389/korea-seoul-gyeongbokgung-royal-palace" }
       },
       {
-        name: "三清洞", area: "鐘路", hours: "店家約 11:00–21:00",
+        name: "三清洞", day: 4, area: "鐘路", hours: "店家約 11:00–21:00",
         latlng: [37.5824, 126.9810],
         desc: "北村旁的文青散步街,韓屋咖啡、藝廊與特色小店,《鬼怪》取景地,三清洞年糕鍋、麵疙瘩必吃。",
         ref: { title: "Funliday・三清洞逛街地圖", url: "https://www.funliday.com/posts/2025-samcheong-dong/" }
       },
       {
-        name: "弘大", area: "弘大", hours: "店家至深夜",
+        name: "弘大", day: 5, area: "弘大", hours: "店家至深夜",
         latlng: [37.5563, 126.9236],
         desc: "弘益大學一帶的年輕潮流商圈,街頭藝人表演、個性小店、夜店與美食林立,菜包肉、烤肉名店聚集。"
       },
       {
-        name: "梨大・新村", area: "新村", hours: "店家約 10:00–22:00",
+        name: "梨大・新村", day: 5, area: "新村", hours: "店家約 10:00–22:00",
         latlng: [37.5596, 126.9425],
         desc: "梨花女大與新村大學城,平價服飾、美妝與學生美食,梨大壁畫、新村食堂、站著吃韓牛都在此。"
       }
@@ -3300,73 +3300,73 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "福岡塔", area: "福岡・百道", hours: "9:30–22:00",
+        name: "福岡塔", day: 1, area: "福岡・百道", hours: "9:30–22:00",
         latlng: [33.5933, 130.3514],
         desc: "高 234m 的日本最高海濱塔,123m 展望室 360 度俯瞰福岡市與博多灣,入夜燈光浪漫,鄰百道海濱公園與福岡巨蛋。",
         ref: { title: "olga・福岡塔與天神屋台", url: "https://olga1013.pixnet.net/blog/posts/10357564645" }
       },
       {
-        name: "天神(地下街・運河城)", area: "福岡・天神", hours: "店家約 10:00–21:00",
+        name: "天神(地下街・運河城)", day: 1, area: "福岡・天神", hours: "店家約 10:00–21:00",
         latlng: [33.5914, 130.3990],
         desc: "福岡最熱鬧商圈,天神地下街、PARCO、博多運河城(Canal City)與川端通商店街,逛街美食一次滿足,入夜屋台登場。",
         ref: { title: "波比看世界・天神商圈逛街攻略", url: "https://bobbytravel.tw/tenjin/" }
       },
       {
-        name: "柳川", area: "柳川", hours: "渡船依班次",
+        name: "柳川", day: 2, area: "柳川", hours: "渡船依班次",
         latlng: [33.1631, 130.4061],
         desc: "被譽為『九州威尼斯』的水鄉,搖櫓平底船沿護城運河巡遊,柳枝石橋古樸,郷土料理蒸籠鰻魚飯必吃。",
         ref: { title: "Klook・柳川一日遊水鄉遊船", url: "https://www.klook.com/zh-TW/blog/yanagawa-japan/" }
       },
       {
-        name: "太宰府天滿宮", area: "太宰府", hours: "境內約 6:30–18:30",
+        name: "太宰府天滿宮", day: 2, area: "太宰府", hours: "境內約 6:30–18:30",
         latlng: [33.5217, 130.5350],
         desc: "全日本 12000 座天滿宮總本社,學問之神菅原道真,考生必拜。表參道梅枝餅與隈研吾設計的星巴克必訪。",
         ref: { title: "Mimi韓・太宰府一日遊", url: "https://mimigo.tw/dazaifu/" }
       },
       {
-        name: "福岡巨蛋(PayPay Dome)", area: "福岡・百道", hours: "依賽事/設施",
+        name: "福岡巨蛋(PayPay Dome)", day: 2, area: "福岡・百道", hours: "依賽事/設施",
         latlng: [33.5953, 130.3622],
         desc: "軟銀鷹主場、日本五大巨蛋之一,可看職棒;王貞治棒球博物館與 BOSS E・ZO 體感設施好玩。",
         ref: { title: "逸起旅行・福岡巨蛋看棒球攻略", url: "https://tingbereat.com/npb-fukuoka-dome/" }
       },
       {
-        name: "由布院(金鱗湖)", area: "大分・由布院", hours: "店家約 9:00–17:30",
+        name: "由布院(金鱗湖)", day: 3, area: "大分・由布院", hours: "店家約 9:00–17:30",
         latlng: [33.2647, 131.3608],
         desc: "大分人氣溫泉鄉,由布院車站至金鱗湖的湯之坪街道甜點雜貨林立,金鱗湖晨霧夢幻,背倚由布岳,泡湯散策超愜意。",
         ref: { title: "兩豬小妹・湯之坪街道與金鱗湖", url: "https://twopigsfun.com/lake-kinrin/" }
       },
       {
-        name: "史努比茶屋(由布院)", area: "大分・由布院", hours: "約 10:00–17:00",
+        name: "史努比茶屋(由布院)", day: 3, area: "大分・由布院", hours: "約 10:00–17:00",
         latlng: [33.2655, 131.3640],
         desc: "全日本第一家 SNOOPY 茶屋,位於湯之坪街道,結合茶屋、SNOOPY Chocolat 與 WOODSTOCK NEST,限定周邊與造型拿鐵超可愛。",
         ref: { title: "BringYou・由布院史努比茶屋", url: "https://www.bring-you.info/zh-tw/yufuin-snoopy-chaya" }
       },
       {
-        name: "熊本城", area: "熊本", hours: "9:00–17:00",
+        name: "熊本城", day: 4, area: "熊本", hours: "9:00–17:00",
         latlng: [32.8061, 130.7058],
         desc: "加藤清正所築、日本三大名城之一,黑色天守與『武者返』石垣壯觀,2016 地震後修復、天守 2021 重新開放。",
         ref: { title: "BringYou・熊本城特別參觀路線", url: "https://www.bring-you.info/zh-tw/kumamoto-castle" }
       },
       {
-        name: "熊本熊部長辦公室(KUMAMON SQUARE)", area: "熊本", hours: "10:00–19:00",
+        name: "熊本熊部長辦公室(KUMAMON SQUARE)", day: 4, area: "熊本", hours: "10:00–19:00",
         latlng: [32.8043, 130.7083],
         desc: "鶴屋百貨東館 1 樓的酷 MA 萌廣場,免費參觀,每日定時有熊本熊部長唱跳見面會(假日為主,先查官網時刻)。",
         ref: { title: "許傑・熊本熊部長辦公室", url: "https://journey.tw/kumamon-square/" }
       },
       {
-        name: "秋月", area: "朝倉・秋月", hours: "戶外・全日",
+        name: "秋月", day: 5, area: "朝倉・秋月", hours: "戶外・全日",
         latlng: [33.5294, 130.6586],
         desc: "朝倉的『筑前小京都』,城下町古街、秋月城跡黑門與杉之馬場,春櫻 500m 隧道、秋楓著名,典雅日式街道令人換然一新。",
         ref: { title: "樂活的大方・秋月城跡賞櫻", url: "https://www.bigfang.tw/blog/post/asakura-akizuzki-castle-fukuoka" }
       },
       {
-        name: "門司港", area: "北九州・門司港", hours: "店家約 10:00–18:00",
+        name: "門司港", day: 5, area: "北九州・門司港", hours: "店家約 10:00–18:00",
         latlng: [33.9436, 130.9628],
         desc: "北九州門司港懷舊區,大正復古洋館與港灣浪漫,名物燒咖哩必吃,鄰小倉、九州鐵道紀念館。",
         ref: { title: "波比看世界・門司港一日遊", url: "https://bobbytravel.tw/mojiko/" }
       },
       {
-        name: "櫛田神社", area: "博多", hours: "境內 4:00–22:00",
+        name: "櫛田神社", day: 6, area: "博多", hours: "境內 4:00–22:00",
         latlng: [33.5933, 130.4106],
         desc: "博多總鎮守『お櫛田さん』,博多祇園山笠祭發源地,常年展示約 13m 高飾山笠,千年銀杏與力石、結緣求運人氣高。"
       }
@@ -3494,37 +3494,37 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "凌霄閣 & 太平山頂", area: "中環", hours: "纜車 07:00–00:00",
+        name: "凌霄閣 & 太平山頂", day: 1, area: "中環", hours: "纜車 07:00–00:00",
         latlng: [22.2662, 114.1310],
         desc: "太平山纜車(上山坐右側)直達山頂,三合一套票含杜莎夫人蠟像館+凌霄閣百萬夜景。俯瞰維多利亞港璀璨夜色,香港最經典制高點。"
       },
       {
-        name: "維多利亞港・星光大道", area: "尖沙嘴", hours: "全天;燈光秀 20:00",
+        name: "維多利亞港・星光大道", day: 2, area: "尖沙嘴", hours: "全天;燈光秀 20:00",
         latlng: [22.2935, 114.1724],
         desc: "尖沙嘴海濱漫步,星光大道、鐘樓、1881 Heritage。每晚 20:00「幻彩詠香江」燈光音樂秀,全球最大固定燈光秀之一。"
       },
       {
-        name: "天壇大佛 & 昂坪市集", area: "大嶼山", hours: "10:00–17:30",
+        name: "天壇大佛 & 昂坪市集", day: 2, area: "大嶼山", hours: "10:00–17:30",
         latlng: [22.2539, 113.9052],
         desc: "全球最大戶外青銅坐佛,高 34 公尺,需爬 268 級台階。昂坪市集有特色紀念品與小食。2017 年纜車維修中,搭 Bus 23 前往。"
       },
       {
-        name: "大澳漁村", area: "大嶼山", hours: "全天",
+        name: "大澳漁村", day: 2, area: "大嶼山", hours: "全天",
         latlng: [22.2534, 113.8656],
         desc: "香港最具特色的水上棚屋漁村,保留百年漁鄉風貌。大澳老街有蝦醬、鹹魚等特產,可搭小船遊覽水道生態。"
       },
       {
-        name: "中環半山手扶梯", area: "中環/SOHO", hours: "上行 10:00–00:00",
+        name: "中環半山手扶梯", day: 3, area: "中環/SOHO", hours: "上行 10:00–00:00",
         latlng: [22.2831, 114.1536],
         desc: "全球最長戶外有蓋電動扶梯,全長 800 公尺。兩側是 SOHO 荷南美食區、石板街、蘭桂坊,酒吧餐廳林立。"
       },
       {
-        name: "赤柱廣場 & 赤柱大街", area: "赤柱", hours: "全天",
+        name: "赤柱廣場 & 赤柱大街", day: 3, area: "赤柱", hours: "全天",
         latlng: [22.2178, 114.2098],
         desc: "香港保存最完整的殖民地風情區,赤柱廣場面海、赤柱大街有特色小店與天后宮。搭 6 號巴士即達中環。"
       },
       {
-        name: "鵝頸橋打小人", area: "銅鑼灣", hours: "06:00–18:00",
+        name: "鵝頸橋打小人", day: 4, area: "銅鑼灣", hours: "06:00–18:00",
         latlng: [22.2772, 114.1835],
         desc: "香港最有名的民間習俗,在高架橋下請婆婆用草鞋打紙符驅走小人。每次 HK$50,銅鑼灣地標,全年無休。"
       }
@@ -3696,47 +3696,47 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "古宇利大橋 & 心型礁岩", area: "北部・今歸仁", hours: "全天",
+        name: "古宇利大橋 & 心型礁岩", day: 2, area: "北部・今歸仁", hours: "全天",
         latlng: [26.6638, 128.0274],
         desc: "全長 1960 公尺的純白海上橋樑,是沖繩最具代表性風景。島嶼北端 Ti-nu 海灘有兩塊天然心型礁岩,被稱為「戀之石」,是沖繩打卡第一名。"
       },
       {
-        name: "美麗海水族館", area: "北部・本部町", hours: "8:30–20:00",
+        name: "美麗海水族館", day: 2, area: "北部・本部町", hours: "8:30–20:00",
         latlng: [26.6938, 127.8780],
         desc: "全球最大級水族館之一,「黑潮之海」大魚缸可見鯨鯊與魟魚悠游。海豚秀每日4場,鯨鯊餵食秀每日2場,場場精彩。"
       },
       {
-        name: "真栄田岬 (青之洞窟)", area: "中部・恩納", hours: "7:00–19:00",
+        name: "真栄田岬 (青之洞窟)", day: 3, area: "中部・恩納", hours: "7:00–19:00",
         latlng: [26.3963, 127.7552],
         desc: "沖繩最知名潛水聖地,陽光折射入海蝕洞形成夢幻藍光奇景。可選擇深潛(教練帶領)或浮潛,能近距離接觸熱帶魚群。"
       },
       {
-        name: "萬座毛", area: "中部・恩納村", hours: "全天",
+        name: "萬座毛", day: 3, area: "中部・恩納村", hours: "全天",
         latlng: [26.5050, 127.8629],
         desc: "沖繩代表性自然奇景,狀似象鼻的熔岩斷崖矗立翠藍海面,夕陽時分更是浪漫絕景。附近海葡萄蓋飯是必吃在地美食。"
       },
       {
-        name: "美國村", area: "中部・北谷", hours: "依店舖",
+        name: "美國村", day: 3, area: "中部・北谷", hours: "依店舖",
         latlng: [26.3198, 127.7566],
         desc: "美日混血風格購物娛樂區,色彩繽紛建築群、夕陽海景、特色餐廳與服飾店。附近有沖繩最大的 AEON Mall Rycom。"
       },
       {
-        name: "玉泉洞・沖繩世界", area: "南部・南城市", hours: "9:00–17:30",
+        name: "玉泉洞・沖繩世界", day: 4, area: "南部・南城市", hours: "9:00–17:30",
         latlng: [26.1454, 127.7749],
         desc: "全長 5000 公尺的鐘乳石洞,開放遊覽約 890 公尺。搭配沖繩世界王國村可看琉球傳統文化表演與工藝體驗。"
       },
       {
-        name: "瀨長島 & Umikaji Terrace", area: "南部・豐見城", hours: "全天",
+        name: "瀨長島 & Umikaji Terrace", day: 4, area: "南部・豐見城", hours: "全天",
         latlng: [26.1695, 127.7672],
         desc: "緊鄰那霸機場的迷你小島,可近距離欣賞飛機起降。地中海風格商店群 Umikaji Terrace、龍宮神社、免費天然足浴一應俱全。"
       },
       {
-        name: "首里城", area: "那霸", hours: "8:30–19:00(10–11月)",
+        name: "首里城", day: 5, area: "那霸", hours: "8:30–19:00(10–11月)",
         latlng: [26.2170, 127.7192],
         desc: "琉球王朝的朱紅宮殿遺址,世界文化遺產。登上城郭可眺望那霸市區與大海。(2019年大火後重建中,部分區域已修復開放)"
       },
       {
-        name: "第一牧志公設市場 & 國際通", area: "那霸", hours: "市場 8:00–21:00",
+        name: "第一牧志公設市場 & 國際通", day: 5, area: "那霸", hours: "市場 8:00–21:00",
         latlng: [26.2165, 127.6898],
         desc: "那霸最熱鬧的傳統市場,一樓買海鮮、豬肉可上二樓代為烹調。周邊國際通是 1.6 公里購物大街,伴手禮、藥妝、餐廳全齊。"
       }
@@ -3924,62 +3924,62 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "心齋橋・道頓崛", area: "大阪・難波", hours: "全天",
+        name: "心齋橋・道頓崛", day: 1, area: "大阪・難波", hours: "全天",
         latlng: [34.6723, 135.5003],
         desc: "大阪最繁華的購物美食街區。道頓崛有巨大螃蟹招牌、格力高跑者廣告牌與各式大阪名物小吃;心齋橋筋是藥妝血拼聖地。"
       },
       {
-        name: "黑門市場", area: "大阪・難波", hours: "9:00–18:00",
+        name: "黑門市場", day: 2, area: "大阪・難波", hours: "9:00–18:00",
         latlng: [34.6596, 135.5058],
         desc: "「大阪廚房」傳統市場,新鮮螃蟹、河豚、鮪魚現點現烤。在地人與觀光客都愛的平價海鮮打牙祭勝地。"
       },
       {
-        name: "大阪城・西之丸庭園", area: "大阪・中央", hours: "9:00–17:00",
+        name: "大阪城・西之丸庭園", day: 2, area: "大阪・中央", hours: "9:00–17:00",
         latlng: [34.6873, 135.5259],
         desc: "豐臣秀吉建造的大阪地標,天守閣登頂可眺望整個大阪市區。西之丸庭園春賞櫻、秋賞楓皆美。"
       },
       {
-        name: "環球影城 USJ", area: "大阪・此花", hours: "依季節",
+        name: "環球影城 USJ", day: 3, area: "大阪・此花", hours: "依季節",
         latlng: [34.6654, 135.4323],
         desc: "日本最大主題公園之一,哈利波特魔法世界、任天堂世界等超人氣設施。節假日建議購快速通關票並早到排隊。"
       },
       {
-        name: "嵐山・嵯峨野小火車", area: "京都・嵐山", hours: "小火車 9:00–17:00",
+        name: "嵐山・嵯峨野小火車", day: 4, area: "京都・嵐山", hours: "小火車 9:00–17:00",
         latlng: [35.0094, 135.6780],
         desc: "京都最著名自然風光區。嵯峨野觀光小火車(トロッコ)穿越保津峽溪谷壯景。渡月橋・嵯峨野竹林・野宮神社・天龍寺散策皆在此一帶。"
       },
       {
-        name: "金閣寺 (鹿苑寺)", area: "京都・北部", hours: "9:00–17:00",
+        name: "金閣寺 (鹿苑寺)", day: 4, area: "京都・北部", hours: "9:00–17:00",
         latlng: [35.0394, 135.7292],
         desc: "金箔覆蓋的三層閣樓倒映於鏡湖池,是京都最具代表性的國際知名景點。參觀料 JP¥400,嵐電北野白梅町轉巴士可達。"
       },
       {
-        name: "伏見稻荷大社", area: "京都・伏見", hours: "全天(24H)",
+        name: "伏見稻荷大社", day: 5, area: "京都・伏見", hours: "全天(24H)",
         latlng: [34.9671, 135.7727],
         desc: "數千座朱紅鳥居排列成的神祕隧道聞名全球,是外國人在日本最熱門的景點。登山至山頂往返約2小時,全年免費參拜。"
       },
       {
-        name: "清水寺・二三年坂", area: "京都・東山", hours: "6:00–18:00",
+        name: "清水寺・二三年坂", day: 5, area: "京都・東山", hours: "6:00–18:00",
         latlng: [34.9949, 135.7851],
         desc: "建於斷崖上的清水舞台俯瞰京都市區,四季皆美。下山石板街道有二年坂・三年坂,穿和服漫步最有風情。"
       },
       {
-        name: "祇園・花見小路", area: "京都・東山", hours: "全天",
+        name: "祇園・花見小路", day: 5, area: "京都・東山", hours: "全天",
         latlng: [35.0037, 135.7755],
         desc: "京都最著名的藝妓街區,石板花見小路兩側是百年茶屋。傍晚偶有舞妓出沒,夜晚燈籠搖曳充滿江戶風情。"
       },
       {
-        name: "姬路城", area: "兵庫・姬路", hours: "9:00–17:00",
+        name: "姬路城", day: 7, area: "兵庫・姬路", hours: "9:00–17:00",
         latlng: [34.8394, 134.6939],
         desc: "日本最美白鷺城,世界文化遺產。雄偉白色天守閣被譽為日本第一美城。搭山陽電車至姬路站,步行約15分鐘。"
       },
       {
-        name: "北野異人館", area: "神戶・北野", hours: "9:00–18:00",
+        name: "北野異人館", day: 7, area: "神戶・北野", hours: "9:00–18:00",
         latlng: [34.7016, 135.1875],
         desc: "明治時代外國人居住的洋風街區,保留數十棟各國特色建築。風見雞之館(德國)・萌黃之館(美國)最具代表性。搭 Cityloop 輕鬆到達。"
       },
       {
-        name: "摩耶山夜景", area: "神戶・灘", hours: "纜車 10:00–21:00",
+        name: "摩耶山夜景", day: 7, area: "神戶・灘", hours: "纜車 10:00–21:00",
         latlng: [34.7228, 135.2291],
         desc: "日本三大夜景之一,海拔690公尺的掬星台俯瞰大阪灣與關西平原萬家燈火。跨年夜特別浪漫,但人潮眾多,請早到占位。"
       }
@@ -4152,47 +4152,47 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "黑門市場", area: "大阪・日本橋", hours: "9:00–18:00",
+        name: "黑門市場", day: 2, area: "大阪・日本橋", hours: "9:00–18:00",
         latlng: [34.6656, 135.5060],
         desc: "「大阪的廚房」,和牛串燒、海膽、生蠔、河豚、水果現點現吃。清晨最新鮮,是這趟早餐兩度造訪的美食基地。"
       },
       {
-        name: "大阪城・西之丸庭園", area: "大阪・中央", hours: "9:00–17:00",
+        name: "大阪城・西之丸庭園", day: 2, area: "大阪・中央", hours: "9:00–17:00",
         latlng: [34.6873, 135.5259],
         desc: "豐臣秀吉建造的大阪地標,天守閣登頂俯瞰市區。使用大阪周遊卷可免費入場,西之丸庭園是賞景野餐好去處。"
       },
       {
-        name: "天保山大摩天輪", area: "大阪・港區", hours: "10:00–22:00",
+        name: "天保山大摩天輪", day: 2, area: "大阪・港區", hours: "10:00–22:00",
         latlng: [34.6549, 135.4288],
         desc: "曾是世界最大的摩天輪,高 112.5 公尺,一圈約 15 分鐘,飽覽大阪灣與明石海峽。大阪周遊卷可免費搭乘。"
       },
       {
-        name: "梅田藍天大樓 空中庭園", area: "大阪・梅田", hours: "9:30–22:30",
+        name: "梅田藍天大樓 空中庭園", day: 2, area: "大阪・梅田", hours: "9:30–22:30",
         latlng: [34.7052, 135.4903],
         desc: "173 公尺高的空中庭園展望台,連接兩棟高樓的環形觀景台。傍晚 18:00 前入場可一次看到白天與夜晚的大阪全景。"
       },
       {
-        name: "日清泡麵發明紀念館", area: "大阪・池田", hours: "9:30–16:00",
+        name: "日清泡麵發明紀念館", day: 3, area: "大阪・池田", hours: "9:30–16:00",
         latlng: [34.8145, 135.4308],
         desc: "免費入館的杯麵主題博物館,可 DIY 手作屬於自己的雞湯拉麵與客製杯麵包裝,大人小孩都愛的體驗景點。"
       },
       {
-        name: "心齋橋・道頓崛", area: "大阪・難波", hours: "全天",
+        name: "心齋橋・道頓崛", day: 3, area: "大阪・難波", hours: "全天",
         latlng: [34.6687, 135.5013],
         desc: "大阪最熱鬧的購物美食街,固力果跑跑人看板、巨大螃蟹招牌是必拍地標。藥妝、章魚燒、炸牛排一應俱全。"
       },
       {
-        name: "伏見稻荷大社", area: "京都・伏見", hours: "全天(24H)",
+        name: "伏見稻荷大社", day: 4, area: "京都・伏見", hours: "全天(24H)",
         latlng: [34.9671, 135.7727],
         desc: "數千座朱紅千本鳥居構成的神祕隧道,外國旅客最愛的京都景點。穿著浴衣走在鳥居間拍照別有風情,全年免費。"
       },
       {
-        name: "清水寺・二三年坂", area: "京都・東山", hours: "6:00–18:00",
+        name: "清水寺・二三年坂", day: 4, area: "京都・東山", hours: "6:00–18:00",
         latlng: [34.9949, 135.7851],
         desc: "建於斷崖上的清水舞台俯瞰京都市區。下山石板坂道一年坂、二年坂、三年坂與高台寺、花見小路串成經典和服散策路線。"
       },
       {
-        name: "奈良公園・東大寺", area: "奈良", hours: "8:00–17:00",
+        name: "奈良公園・東大寺", day: 5, area: "奈良", hours: "8:00–17:00",
         latlng: [34.6851, 135.8397],
         desc: "上千頭野生小鹿自由漫步的公園,買鹿仙貝餵鹿還會鞠躬。東大寺大佛殿是世界最大木造建築,盧舍那大佛雄偉壯觀。"
       }
@@ -4337,57 +4337,57 @@ window.TRIPS = [
 
     spots: [
       {
-        name: "層雲峽・銀河流星瀑布", area: "大雪山・上川", hours: "全天",
+        name: "層雲峽・銀河流星瀑布", day: 1, area: "大雪山・上川", hours: "全天",
         latlng: [43.7247, 142.8975],
         desc: "大雪山國立公園內的峽谷溫泉勝地,銀河瀑布與流星瀑布並列「夫妻瀑布」,冬季化為壯觀冰瀑,兩旁柱狀節理斷崖雄偉。"
       },
       {
-        name: "登別地獄谷", area: "登別", hours: "全天",
+        name: "登別地獄谷", day: 2, area: "登別", hours: "全天",
         latlng: [42.4988, 141.1470],
         desc: "直徑約450公尺的火山噴發遺跡,硫磺白煙裊裊、地表滾燙,是登別溫泉的源頭。木棧步道環繞,冬季雪景與蒸氣交織成奇景。"
       },
       {
-        name: "登別尼克斯海洋公園", area: "登別", hours: "9:00–17:00",
+        name: "登別尼克斯海洋公園", day: 3, area: "登別", hours: "9:00–17:00",
         latlng: [42.4141, 141.1096],
         desc: "以北歐城堡為主題的海洋公園,國王企鵝遊行是冬季招牌活動,還有水母隧道與海獅表演,親子同樂的人氣景點。"
       },
       {
-        name: "昭和新山熊牧場", area: "壯瞥・洞爺湖", hours: "8:00–17:00",
+        name: "昭和新山熊牧場", day: 3, area: "壯瞥・洞爺湖", hours: "8:00–17:00",
         latlng: [42.5433, 140.8668],
         desc: "昭和新山腳下的棕熊牧場,可近距離觀察上百頭蝦夷棕熊,並購買飼料餵食。周邊眺望昭和新山與洞爺湖火山地景。"
       },
       {
-        name: "洞爺湖", area: "洞爺湖町", hours: "全天",
+        name: "洞爺湖", day: 3, area: "洞爺湖町", hours: "全天",
         latlng: [42.6046, 140.8558],
         desc: "北海道第三大湖,火山口形成的圓形湖泊終年不結冰。湖畔溫泉街與中島倒影如畫,是道南著名的度假勝地。"
       },
       {
-        name: "函館金森紅磚倉庫群", area: "函館・灣區", hours: "9:30–19:00",
+        name: "函館金森紅磚倉庫群", day: 3, area: "函館・灣區", hours: "9:30–19:00",
         latlng: [41.7686, 140.7205],
         desc: "明治時期的紅磚倉庫改建成購物商場與咖啡餐廳,海濱燈飾浪漫,是函館港灣區最具代表性的懷舊地標。"
       },
       {
-        name: "函館山夜景", area: "函館", hours: "纜車 10:00–22:00",
+        name: "函館山夜景", day: 3, area: "函館", hours: "纜車 10:00–22:00",
         latlng: [41.7592, 140.7043],
         desc: "世界三大夜景之一,海拔334公尺俯瞰函館獨特的雙海灣扇形市街,入夜燈火如寶石灑落,是北海道必看夜景。"
       },
       {
-        name: "五稜郭", area: "函館", hours: "塔 9:00–18:00",
+        name: "五稜郭", day: 4, area: "函館", hours: "塔 9:00–18:00",
         latlng: [41.7969, 140.7569],
         desc: "日本首座西式星形城郭,由高107公尺的五稜郭塔俯瞰完整星形輪廓最為震撼。冬季白雪覆蓋護城河別具風情。"
       },
       {
-        name: "小樽運河", area: "小樽", hours: "全天",
+        name: "小樽運河", day: 4, area: "小樽", hours: "全天",
         latlng: [43.1988, 140.9946],
         desc: "北海道最浪漫的懷舊運河,石造倉庫與煤氣路燈沿岸而立。冬季雪景配上運河倒影如夢似幻,周邊玻璃工坊、音樂盒堂林立。"
       },
       {
-        name: "貍小路商店街", area: "札幌", hours: "依店舖",
+        name: "貍小路商店街", day: 4, area: "札幌", hours: "依店舖",
         latlng: [43.0570, 141.3527],
         desc: "札幌歷史最悠久的有頂棚商店街,綿延約1公里,藥妝、伴手禮、餐廳、居酒屋齊全,是市區採買與覓食的好去處。"
       },
       {
-        name: "三井 Outlet 札幌北廣島", area: "北廣島", hours: "10:00–20:00",
+        name: "三井 Outlet 札幌北廣島", day: 5, area: "北廣島", hours: "10:00–20:00",
         latlng: [42.9846, 141.5589],
         desc: "北海道最大的暢貨中心,超過170間國內外品牌店舖,並設北海道特產美食街,回程掃貨補伴手禮的最後一站。"
       }

@@ -9,6 +9,7 @@
 - **可分享連結**:每趟行程有獨立網址(hash 路由),例如 `index.html#/trip/tohoku-2026`,可直接傳給朋友。
 - **下載旅遊書**:行程頁右上「⬇ 下載旅遊書」→ 直接產生 PDF 檔下載(專屬排版,封面含 CARTO 圖磚靜態地圖)。
 - **搜尋與篩選**:集錦牆可依國家、年份、主題、狀態篩選,並支援關鍵字搜尋(行程/景點/美食)。
+- **足跡地圖與時間軸**:hero 足跡地圖標出所有行程(同區聚合、點標記直達行程);集錦牆可切換「卡片 / 時間軸」檢視。
 
 ## 檔案結構
 
@@ -26,7 +27,7 @@ data/trips.js     # 所有行程資料(window.TRIPS)
 - `id`、`title`、`subtitle`、`country`、`region`、`year`、`dateLabel`、`status`
 - `themes`、`tagline`
 - `mapCenter: [lat, lng]`、`mapZoom` — 地圖視角
-- `flight`、`stay[]`、`pass`、`days[]`、`spots[]`(每個含 `latlng`)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
+- `flight`、`stay[]`、`pass`、`days[]`、`spots[]`(每個含 `latlng` 與 `day` 造訪日 → 路線地圖按日分色)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
 
 景點 `latlng` 座標可用 Google Maps 右鍵「這是哪裡?」取得。
 

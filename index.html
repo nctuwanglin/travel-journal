@@ -110,33 +110,18 @@
   .hero-meta{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
   .hero-meta .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:30px;line-height:1}
   .hero-meta .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-  /* 國家×區域 迷你長條圖 */
-  .hero-charts{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;align-items:stretch}
-  .cchart{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
-    padding:13px 16px 11px;box-shadow:var(--shadow);max-width:100%;overflow-x:auto;
-    display:flex;flex-direction:column}
-  .cchart-head{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:12px}
-  .cchart-head .fg{font-size:18px;line-height:1}
-  .cchart-head b{font-family:"Space Grotesk",sans-serif;font-size:15px;color:var(--hayabusa)}
-  /* 所有國家的圖表共用同一高度(依全域最大次數),柱子從同一條基準線往上長 */
-  .cbars{display:flex;gap:13px;align-items:flex-end;margin-top:auto;position:relative}
-  .cbars::after{content:"";position:absolute;left:-2px;right:-2px;bottom:15px;height:1.5px;
-    background:var(--line);border-radius:1px}
-  .cbar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;flex:0 0 auto;height:100%;position:relative;z-index:1}
-  .cbar .val{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;color:var(--hayabusa);line-height:1}
-  .cbar .stick{width:16px;border-radius:5px 5px 2px 2px;
-    background:linear-gradient(180deg,var(--hayabusa),var(--komachi));
-    transform-origin:bottom;animation:barup .55s cubic-bezier(.2,.7,.3,1) both}
-  .cbar .lbl{font-size:10.5px;color:var(--ink-soft);white-space:nowrap;letter-spacing:.02em;line-height:1;height:11px}
-  @keyframes barup{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-  @media (prefers-reduced-motion:reduce){.cbar .stick{animation:none}}
-  /* 行動版:圖表改單列橫向滑動,避免首屏被圖表佔滿、卡片被推到折線下 */
-  @media(max-width:620px){
-    .hero-charts{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
-      scrollbar-width:none;margin-right:-20px;padding-right:20px}
-    .hero-charts::-webkit-scrollbar{display:none}
-    .cchart{flex:0 0 auto}
-  }
+  /* 旅遊足跡地圖(hero) */
+  .footmap{margin-top:24px;height:380px;border:1px solid var(--line);border-radius:16px;
+    overflow:hidden;box-shadow:var(--shadow)}
+  .footmap .leaflet-container{height:100%;width:100%;background:#dfe5e2;font-family:inherit}
+  .fmk{background:none;border:none}
+  .fmk .fmk-in{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;
+    background:var(--komachi);border:2px solid #fff;color:#fff;
+    font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;box-shadow:0 1px 5px rgba(0,0,0,.3)}
+  .fmk .fmk-in:empty{width:14px;height:14px;margin:3px}
+  .fpop a{display:block;font-weight:700;color:var(--tazawa);text-decoration:none;padding:2.5px 0;font-size:13px}
+  .fpop a:hover{text-decoration:underline}
+  @media(max-width:620px){.footmap{height:300px}}
 
   /* filter chips */
   .filter{position:sticky;top:58px;z-index:699;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
@@ -155,7 +140,36 @@
     background-repeat:no-repeat;background-position:right 12px center}
   .fsel:focus{outline:none;border-color:var(--hayabusa)}
   .fcount{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;white-space:nowrap;margin-left:auto}
+  .vtoggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper-2);flex:0 0 auto}
+  .vtoggle button{border:none;background:transparent;padding:8px 13px;font-family:inherit;font-size:13px;font-weight:700;
+    color:var(--muted);cursor:pointer;transition:.15s}
+  .vtoggle button.on{background:var(--ink);color:var(--paper)}
   @media(max-width:620px){.fsearch{font-size:16px}} /* iOS 聚焦不自動縮放 */
+
+  /* 時間軸檢視 */
+  .grid.as-tl{display:block}
+  .tl-yhead{display:flex;align-items:baseline;gap:14px;margin:6px 0 14px}
+  .tl-yhead+.tl-item~.tl-yhead{margin-top:34px}
+  .tl-y{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:38px;line-height:1}
+  .tl-count{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.1em}
+  .tl-item{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--paper-2);
+    border:1px solid var(--line);border-radius:12px;margin-bottom:10px;text-decoration:none;
+    transition:transform .15s,border-color .15s,box-shadow .15s}
+  .tl-item:hover{transform:translateX(4px);border-color:var(--faint);box-shadow:var(--shadow)}
+  .tl-dot{width:10px;height:10px;border-radius:50%;background:var(--faint);flex:0 0 auto}
+  .tl-dot.up{background:var(--hayabusa);box-shadow:0 0 0 3px var(--hayabusa-soft)}
+  .tl-date{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--komachi);min-width:84px;flex:0 0 auto}
+  .tl-flag{font-size:16px;flex:0 0 auto}
+  .tl-title{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16.5px;white-space:nowrap}
+  .tl-tag{color:var(--muted);font-size:12.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .tl-go{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink);flex:0 0 auto}
+  .tl-item:hover .tl-go{color:var(--komachi)}
+  .tl-year-gap{margin-top:36px}
+  @media(max-width:620px){
+    .tl-item{flex-wrap:wrap;gap:8px 10px}
+    .tl-tag{flex-basis:100%;order:9;white-space:normal}
+    .tl-title{white-space:normal}
+  }
   .chip{flex:0 0 auto;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);color:var(--muted);
     padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap;transition:.16s;user-select:none}
   .chip:hover{border-color:var(--ink);color:var(--ink)}
@@ -289,6 +303,8 @@
   .spot h3{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
   .spot-no{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;
     background:var(--komachi);color:#fff;font-family:"Space Grotesk",sans-serif;font-size:12.5px;font-weight:700;flex:0 0 auto}
+  .spot-daytag{font-family:"Space Grotesk",sans-serif;font-size:11px;font-weight:700;color:#fff;
+    padding:2.5px 9px;border-radius:6px;letter-spacing:.02em}
   .spot .area{font-size:12px;font-weight:700;color:var(--tazawa);background:#e4ebf3;padding:2px 8px;border-radius:6px}
   .spot .meta{display:flex;gap:14px;flex-wrap:wrap;margin:9px 0 11px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
   .spot .meta b{color:var(--peach)}
@@ -319,7 +335,11 @@
     background:var(--komachi);border:2px solid #fff;color:#fff;
     font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
     box-shadow:0 1px 5px rgba(0,0,0,.35);transition:transform .15s,background .15s}
-  .nmk .nmk-in.hot{transform:scale(1.3);background:var(--tazawa)}
+  .nmk .nmk-in.hot{transform:scale(1.35);box-shadow:0 0 0 3px rgba(22,25,29,.3),0 1px 5px rgba(0,0,0,.35)}
+  .maplegend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .lgd{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;
+    color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+  .lgd i{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
   .detailmap{height:420px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
   .detailmap .leaflet-container{height:100%;width:100%;background:#dfe5e2;font-family:inherit}
   .map-cap{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
@@ -367,7 +387,7 @@
   "use strict";
   var TRIPS = window.TRIPS || [];
   var app = document.getElementById("app");
-  var liveMaps = [];   // 追蹤 Leaflet 實例以便切換 view 時銷毀
+  var liveMaps = [];   // {m,kind} 追蹤 Leaflet 實例;kind: "page"(hero/詳情) 或 "card"(集錦卡片)
 
   var FLAGS = { "日本": "🇯🇵", "韓國": "🇰🇷", "越南": "🇻🇳", "中國": "🇨🇳" };
   function flagOf(c){ return FLAGS[c] || "🏳️"; }
@@ -396,7 +416,17 @@
   function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function stars(n){var s="";for(var i=0;i<5;i++)s+=i<n?"★":"☆";return s;}
   function byId(id){for(var i=0;i<TRIPS.length;i++)if(TRIPS[i].id===id)return TRIPS[i];return null;}
-  function destroyMaps(){liveMaps.forEach(function(m){try{m.remove();}catch(e){}});liveMaps=[];}
+  /* 每日代表色(路線地圖標記/景點卡/封面地圖共用) */
+  var DAY_COLORS=["#0e7c5a","#c8344a","#163e73","#dd8a45","#7059a5","#1e8ea5","#9a5b2f","#5f7d2c","#b03a7e"];
+  function dayColor(d){return DAY_COLORS[(d-1)%DAY_COLORS.length];}
+  function addMap(m,kind){liveMaps.push({m:m,kind:kind||"page"});}
+  function destroyMaps(kind){ // 不帶參數 = 全部銷毀;帶 kind 只銷毀該類(篩選重繪不動 hero 地圖)
+    liveMaps=liveMaps.filter(function(e){
+      if(kind&&e.kind!==kind)return true;
+      try{e.m.remove();}catch(x){}
+      return false;
+    });
+  }
 
   /* 靜態地圖(列印/PDF 用):直接以 CARTO 圖磚拼圖 + 疊景點紅點。
      CARTO 圖磚有 CORS 標頭,html2canvas 也能擷取(舊用的 staticmap.openstreetmap.de 已停止服務)。 */
@@ -418,7 +448,7 @@
       var mx=lng2x(s.latlng[1])*256-px0, my=lat2y(s.latlng[0])*256-py0;
       if(mx<-8||my<-8||mx>w+8||my>h+8)return;
       html+='<span style="position:absolute;left:'+(mx-6)+'px;top:'+(my-6)+'px;width:12px;height:12px;border-radius:50%;'+
-            'background:#c8344a;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)"></span>';
+            'background:'+(s.day?dayColor(s.day):"#c8344a")+';border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)"></span>';
     });
     return '<div class="print-only print-cover-map" style="width:'+w+'px;height:'+h+'px">'+html+'</div>';
   }
@@ -434,7 +464,7 @@
   window.addEventListener("hashchange",route);
 
   /* ---------- GALLERY ---------- */
-  var activeFilter="全部", fYear="全部", fTheme="全部", fStatus="全部", fQuery="";
+  var activeFilter="全部", fYear="全部", fTheme="全部", fStatus="全部", fQuery="", viewMode="cards";
   function renderGallery(){
     document.title="行程集錦 — 旅遊回憶 & 攻略";
     var trips=TRIPS.slice();
@@ -448,30 +478,6 @@
     var themes=Object.keys(themeCount).sort(function(a,b){return themeCount[b]-themeCount[a];});
     var filters=["全部"].concat(countries);
 
-    // 將子區域正規化為大區域;跨兩區的行程同時計入兩個大區域
-    var REGION_MAP={
-      "京阪神":["關西"], "東京・神奈川":["東京"],
-      "關西・山陽":["關西","中國"], "東北・函館":["東北","北海道"]
-    };
-    function bigRegions(r){ return REGION_MAP[r] || [r]; }
-    // 依國家分組統計大區域次數
-    var regionsByCountry={}; // country → { region → count }
-    trips.forEach(function(t){
-      var bag=regionsByCountry[t.country]||(regionsByCountry[t.country]={});
-      bigRegions(t.region).forEach(function(r){ bag[r]=(bag[r]||0)+1; });
-    });
-    function sortedRegions(country){
-      var bag=regionsByCountry[country]||{};
-      return Object.keys(bag).sort(function(a,b){return bag[b]-bag[a];});
-    }
-    // 全域最大區域次數 → 每張圖表共用同一繪圖高度,基準線才會齊
-    var GMAX=1;
-    Object.keys(regionsByCountry).forEach(function(c){
-      var bag=regionsByCountry[c];
-      Object.keys(bag).forEach(function(r){ if(bag[r]>GMAX)GMAX=bag[r]; });
-    });
-    var CHART_H = GMAX*14 + 32; // 柱最高高度 + 數字/標籤/間距
-
     app.innerHTML=
       topbar(false,null)+
       '<header class="hero"><div class="wrap">'+
@@ -481,23 +487,8 @@
         '<div class="hero-meta">'+
           stat(trips.length,"趟旅程")+stat(countries.length,"個國家")+stat(totDays,"天在路上")+stat(totSpots,"個景點")+
         '</div>'+
-        '<div class="hero-charts">'+
-          countries.map(function(c){
-            var bag=regionsByCountry[c]||{};
-            return '<div class="cchart">'+
-              '<div class="cchart-head"><span class="fg">'+flagOf(c)+'</span>'+esc(c)+' <b>×'+countBy[c]+'</b></div>'+
-              '<div class="cbars" style="height:'+CHART_H+'px">'+
-                sortedRegions(c).map(function(r,i){
-                  return '<div class="cbar">'+
-                    '<span class="val">'+bag[r]+'</span>'+
-                    '<span class="stick" style="height:'+(bag[r]*14)+'px;animation-delay:'+(i*45)+'ms"></span>'+
-                    '<span class="lbl">'+esc(r)+'</span>'+
-                  '</div>';
-                }).join("")+
-              '</div>'+
-            '</div>';
-          }).join("")+
-        '</div>'+
+        '<div class="footmap" id="foot-map"></div>'+
+        '<div class="map-cap">旅遊足跡 ・ 數字 = 同區域行程數 ・ 點標記看行程並可直接前往</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap">'+
         '<div class="filter-top">'+
@@ -509,6 +500,10 @@
           '<select id="fstatus" class="fsel"><option value="全部">全部狀態</option>'+
             '<option'+(fStatus==="即將出發"?' selected':'')+'>即將出發</option>'+
             '<option'+(fStatus==="旅遊回憶"?' selected':'')+'>旅遊回憶</option></select>'+
+          '<div class="vtoggle" id="vtoggle">'+
+            '<button data-v="cards"'+(viewMode==="cards"?' class="on"':'')+'>▦ 卡片</button>'+
+            '<button data-v="timeline"'+(viewMode==="timeline"?' class="on"':'')+'>≣ 時間軸</button>'+
+          '</div>'+
           '<span class="fcount" id="fcount"></span>'+
         '</div>'+
         '<div class="filter-in" id="filters">'+
@@ -534,6 +529,15 @@
     document.getElementById("fyear").addEventListener("change",function(){fYear=this.value;paintCards();});
     document.getElementById("ftheme").addEventListener("change",function(){fTheme=this.value;paintCards();});
     document.getElementById("fstatus").addEventListener("change",function(){fStatus=this.value;paintCards();});
+    document.getElementById("vtoggle").addEventListener("click",function(e){
+      var b=e.target.closest("button");if(!b)return;
+      viewMode=b.getAttribute("data-v");
+      document.querySelectorAll("#vtoggle button").forEach(function(x){
+        x.classList.toggle("on",x.getAttribute("data-v")===viewMode);
+      });
+      paintCards();
+    });
+    buildFootMap();
     paintCards();
   }
   function stat(n,l){return '<div><div class="num">'+n+'</div><div class="lbl">'+l+'</div></div>';}
@@ -555,18 +559,20 @@
 
   var cardObserver=null;
   function paintCards(){
-    destroyMaps();
+    destroyMaps("card");
     if(cardObserver){cardObserver.disconnect();cardObserver=null;}
     var grid=document.getElementById("grid");
     var list=TRIPS.filter(tripMatches).slice().sort(tripSort);
     var fc=document.getElementById("fcount");
     if(fc)fc.textContent=list.length+" / "+TRIPS.length+" 趟";
     grid.innerHTML="";
+    grid.classList.toggle("as-tl",viewMode==="timeline");
     if(!list.length){
       grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)">'+
         '沒有符合條件的行程 — 換個關鍵字,或清除篩選再試。</div>';
       return;
     }
+    if(viewMode==="timeline"){renderTimeline(list,grid);return;}
     // 地圖 lazy 初始化:卡片捲進視窗前不建 Leaflet、不抓圖磚
     if("IntersectionObserver" in window){
       cardObserver=new IntersectionObserver(function(entries){
@@ -612,6 +618,35 @@
     });
   }
 
+  /* 時間軸檢視:依年份分組(新→舊),行程列可點擊,尊重現有篩選 */
+  function renderTimeline(list,grid){
+    var sorted=list.slice().sort(function(a,b){
+      var da=a.dateStart||"", db=b.dateStart||"";
+      return da<db?1:(da>db?-1:0);
+    });
+    var byYear={}, years=[];
+    sorted.forEach(function(t){
+      if(!byYear[t.year]){byYear[t.year]=[];years.push(t.year);}
+      byYear[t.year].push(t);
+    });
+    years.sort(function(a,b){return b-a;});
+    grid.innerHTML=years.map(function(y,yi){
+      return '<div class="tl-yhead'+(yi>0?' tl-year-gap':'')+'">'+
+          '<span class="tl-y">'+y+'</span><span class="tl-count">'+byYear[y].length+' 趟</span><span class="sec-line"></span>'+
+        '</div>'+
+        byYear[y].map(function(t){
+          return '<a class="tl-item" href="#/trip/'+encodeURIComponent(t.id)+'">'+
+            '<span class="tl-dot'+(isUpcoming(t)?' up':'')+'"></span>'+
+            '<span class="tl-date">'+esc(t.dateLabel||"")+'</span>'+
+            '<span class="tl-flag">'+flagOf(t.country)+'</span>'+
+            '<span class="tl-title">'+esc(displayTitle(t))+'</span>'+
+            '<span class="tl-tag">'+esc(t.tagline||t.subtitle||"")+'</span>'+
+            '<span class="tl-go">→</span>'+
+          '</a>';
+        }).join("");
+    }).join("");
+  }
+
   function buildMiniMap(node,trip){
     if(!node||!window.L)return;
     var map=L.map(node,{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,
@@ -620,7 +655,7 @@
     (trip.spots||[]).forEach(function(s){
       L.circleMarker(s.latlng,{radius:5,color:"#c8344a",weight:2,fillColor:"#c8344a",fillOpacity:.85}).addTo(map);
     });
-    liveMaps.push(map);
+    addMap(map,"card");
   }
 
   /* ---------- TRIP DETAIL ---------- */
@@ -637,8 +672,8 @@
     addSec((t.region||"")+"美食指南",(t.food&&t.food.length)?foodTable(t):"");
     addSec("實用旅遊資訊",utilCols(t));
     addSec("路線地圖",(t.spots&&t.spots.length)
-      ? '<div class="detailmap" id="detail-map"></div>'+
-        '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 點標記跳至該景點</div>'
+      ? '<div class="detailmap" id="detail-map"></div>'+dayLegend(t)+
+        '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 顏色 = 造訪日 ・ 點標記跳至該景點</div>'
       : "");
     app.innerHTML=
       topbar(true,t)+
@@ -721,6 +756,17 @@
     }).join("")+'</div>';
   }
 
+  function dayLegend(t){
+    var used=[];
+    (t.spots||[]).forEach(function(s){if(s.day&&used.indexOf(s.day)<0)used.push(s.day);});
+    if(!used.length)return "";
+    used.sort(function(a,b){return a-b;});
+    return '<div class="maplegend">'+used.map(function(d){
+      var dd=null; (t.days||[]).forEach(function(x){if(x.day===d)dd=x;});
+      return '<span class="lgd"><i style="background:'+dayColor(d)+'"></i>Day '+d+(dd?' ・ '+esc(dd.date):'')+'</span>';
+    }).join("")+'</div>';
+  }
+
   function spotsGrid(t){
     return '<div class="spots">'+(t.spots||[]).map(function(s,i){
       var meta=[];
@@ -728,7 +774,8 @@
       if(s.hours)meta.push(esc(s.hours));
       if(s.tel)meta.push('☎ '+esc(s.tel));
       var ref=(s.ref&&s.ref.url)?'<a class="spot-ref" href="'+esc(s.ref.url)+'" target="_blank" rel="noopener">📖 推薦遊記 ・ '+esc(s.ref.title)+' →</a>':'';
-      return '<div class="spot" data-spot="'+i+'"><h3><span class="spot-no">'+(i+1)+'</span>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span></h3>'+
+      return '<div class="spot" data-spot="'+i+'"><h3><span class="spot-no"'+(s.day?' style="background:'+dayColor(s.day)+'"':'')+'>'+(i+1)+'</span>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span>'+
+        (s.day?'<span class="spot-daytag" style="background:'+dayColor(s.day)+'">Day '+s.day+'</span>':'')+'</h3>'+
         '<div class="meta">'+meta.join("<span>·</span>")+'</div>'+
         '<div class="desc">'+esc(s.desc)+'</div>'+ref+'</div>';
     }).join("")+'</div>';
@@ -837,10 +884,11 @@
     var pts=[], markers=[];
     (t.spots||[]).forEach(function(s,i){
       pts.push(s.latlng);
-      var icon=L.divIcon({className:"nmk",html:'<span class="nmk-in">'+(i+1)+'</span>',
+      var icon=L.divIcon({className:"nmk",
+        html:'<span class="nmk-in"'+(s.day?' style="background:'+dayColor(s.day)+'"':'')+'>'+(i+1)+'</span>',
         iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-14]});
       var mk=L.marker(s.latlng,{icon:icon}).addTo(map)
-        .bindPopup('<b>'+esc(s.name)+'</b><br>'+esc(s.area)+(s.rating?' ・ ★'+s.rating:''));
+        .bindPopup('<b>'+esc(s.name)+'</b><br>'+esc(s.area)+(s.day?' ・ Day '+s.day:'')+(s.rating?' ・ ★'+s.rating:''));
       markers.push(mk);
     });
     // 連動:景點卡 hover → 地圖標記放大變色;點地圖標記 → 捲動至對應景點卡
@@ -859,7 +907,35 @@
       });
     });
     if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40]});}catch(e){}}
-    liveMaps.push(map);
+    addMap(map,"page");
+    setTimeout(function(){map.invalidateSize();},120);
+  }
+
+  /* 旅遊足跡地圖(hero):全部行程標在同一張地圖,0.5° 網格聚合,點開列行程連結 */
+  function buildFootMap(){
+    var node=document.getElementById("foot-map");if(!node||!window.L)return;
+    var map=L.map(node,{scrollWheelZoom:false}).setView([28,124],4);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
+      maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+    var groups={};
+    TRIPS.forEach(function(t){
+      var key=(Math.round(t.mapCenter[0]*2)/2)+","+(Math.round(t.mapCenter[1]*2)/2);
+      (groups[key]=groups[key]||[]).push(t);
+    });
+    var pts=[];
+    Object.keys(groups).forEach(function(k){
+      var list=groups[k].slice().sort(tripSort);
+      var c=list[0].mapCenter; pts.push(c);
+      var icon=L.divIcon({className:"fmk",
+        html:'<span class="fmk-in">'+(list.length>1?list.length:"")+'</span>',
+        iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-10]});
+      var html='<div class="fpop">'+list.map(function(t){
+        return '<a href="#/trip/'+encodeURIComponent(t.id)+'">'+flagOf(t.country)+' '+esc(displayTitle(t))+'</a>';
+      }).join("")+'</div>';
+      L.marker(c,{icon:icon}).addTo(map).bindPopup(html);
+    });
+    if(pts.length>1){try{map.fitBounds(pts,{padding:[36,36]});}catch(e){}}
+    addMap(map,"page");
     setTimeout(function(){map.invalidateSize();},120);
   }
 
