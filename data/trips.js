@@ -55,7 +55,7 @@ window.TRIPS = [
         tip: { type: "info", title: "小提醒", text: "仙台機場快線班次密集,可直接購票。入住後先規劃隔日路線,下載 Google Maps 離線地圖。" }
       },
       {
-        day: 2, date: "8/22 (六)", theme: "🚄 岩手一日遊 — 盛岡 + 猊鼻溪",
+        day: 2, date: "8/22 (六)", theme: "🚄 岩手一日遊 — 盛岡 + 猊鼻溪", couple: true,
         items: [
           { time: "07:00", text: "仙台站搭 E5 はやぶさ → 盛岡站(約 35 分)" },
           { time: "08:15", text: "盛岡站月台親眼目睹 E5+E6 連結/分裂奇景!往秋田的こまち與往青森的はやぶさ在此合體分離" },
@@ -364,9 +364,9 @@ window.TRIPS = [
       { name: "燒肉乃我那霸 總店", area: "名護", stars: 5, note: "Agu 島豬發源地", ref: { title: "來來琉球・燒肉乃我那霸總店官方攻略", url: "https://lailai-web.com/yakiniku-no-ganaha-honten/" } },
       { name: "燒肉本部牧場 名護店", area: "名護", stars: 5, note: "牧場直送和牛・已訂位", ref: { title: "來來琉球・燒肉 Motobu 牧場名護店", url: "https://lailai-web.com/motobu-bokujo-nago/" } },
       { name: "浜之家海鮮料理", area: "恩納", stars: 5, note: "青之洞窟旁・CP 值爆表", ref: { title: "波比看世界・浜之家海鮮料理攻略", url: "https://bobbyfun.tw/2023-10-14-2527/" } },
-      { name: "暖幕／一蘭拉麵", area: "那霸", stars: 4, note: "抵達夜消", ref: { title: "", url: "" } },
-      { name: "鳳梨霜淇淋", area: "名護", stars: 4, note: "名護鳳梨園必吃", ref: { title: "", url: "" } },
-      { name: "BLUE SEAL 冰淇淋", area: "沖繩", stars: 4, note: "限定口味", ref: { title: "", url: "" } }
+      { name: "暖幕／一蘭拉麵", area: "那霸", stars: 4, note: "抵達夜消" },
+      { name: "鳳梨霜淇淋", area: "名護", stars: 4, note: "名護鳳梨園必吃" },
+      { name: "BLUE SEAL 冰淇淋", area: "沖繩", stars: 4, note: "限定口味" }
     ],
 
     weather: [
@@ -575,7 +575,7 @@ window.TRIPS = [
     ],
 
     food: [
-      { name: "大阪燒肉 日暮里店", area: "日暮里", stars: 4, note: "抵達晚餐", ref: { title: "", url: "" } },
+      { name: "大阪燒肉 日暮里店", area: "日暮里", stars: 4, note: "抵達晚餐" },
       { name: "Peter Luger Steak House", area: "惠比壽", stars: 5, note: "傳奇紐約牛排", ref: { title: "樂活的大方・Peter Luger 東京", url: "https://www.bigfang.tw/blog/post/peter-luger-steak-tokyo" } },
       { name: "AFURI 阿夫利拉麵", area: "東京", stars: 4, note: "清爽柚子鹽", ref: { title: "樂活的大方・AFURI 阿夫利", url: "https://www.bigfang.tw/blog/post/afuri-harajuku" } },
       { name: "川上庵 蕎麥麵", area: "輕井澤", stars: 4, note: "炸大蝦天婦羅蕎麥麵", ref: { title: "桃桃's・川上庵輕井澤本店", url: "https://momoblog.tw/kawakamian/" } },
@@ -863,17 +863,17 @@ window.TRIPS = [
       { name: "讚岐烏龍麵 上原屋本店", area: "高松", stars: 5, note: "栗林公園旁自助烏龍", ref: { title: "許傑・上原屋本店自助烏龍", url: "https://journey.tw/ueharayahonten/" } },
       { name: "骨付鳥 一鶴", area: "高松", stars: 5, note: "骨付鳥元祖名店", ref: { title: "Star_Chu・骨付鳥一鶴高松店", url: "https://starland.pixnet.net/blog/post/348999610" } },
       { name: "小豆島拉麵 HISHIO", area: "小豆島", stars: 4, note: "醬油拉麵配海景", ref: { title: "許傑・小豆島拉麵 HISHIO", url: "https://journey.tw/hishio/" } },
-      { name: "鐵板燒 夢路", area: "小豆島", stars: 4, note: "小豆島鐵板燒", ref: { title: "", url: "" } },
-      { name: "松山鯛めし 秋嘉", area: "松山", stars: 4, note: "松山鯛魚飯專門店", ref: { title: "", url: "" } },
-      { name: "海鮮居酒屋 象三", area: "松山", stars: 4, note: "瀨戶內四季海鮮", ref: { title: "", url: "" } },
-      { name: "濱之台所・潮里", area: "今治", stars: 4, note: "今治海鮮料理", ref: { title: "", url: "" } },
-      { name: "レストハウス古都", area: "四萬十", stars: 4, note: "四萬十川沿線餐廳", ref: { title: "", url: "" } },
-      { name: "星野 OMO7 自助餐", area: "高知", stars: 4, note: "飯店自助餐", ref: { title: "", url: "" } },
+      { name: "鐵板燒 夢路", area: "小豆島", stars: 4, note: "小豆島鐵板燒" },
+      { name: "松山鯛めし 秋嘉", area: "松山", stars: 4, note: "松山鯛魚飯專門店" },
+      { name: "海鮮居酒屋 象三", area: "松山", stars: 4, note: "瀨戶內四季海鮮" },
+      { name: "濱之台所・潮里", area: "今治", stars: 4, note: "今治海鮮料理" },
+      { name: "レストハウス古都", area: "四萬十", stars: 4, note: "四萬十川沿線餐廳" },
+      { name: "星野 OMO7 自助餐", area: "高知", stars: 4, note: "飯店自助餐" },
       { name: "拉麵東大 徳島本店", area: "徳島", stars: 4, note: "德島拉麵第一名・生蛋吃到飽", ref: { title: "右上世界食旅・德島東大拉麵", url: "https://www.travalearth.com/post-32307811/" } },
       { name: "瀨戶の祭 迴轉壽司", area: "高松", stars: 4, note: "瀨戶內海百元迴轉壽司", ref: { title: "許傑・瀨戶の祭迴轉壽司", url: "https://journey.tw/seto-matsuri-sushi/" } },
-      { name: "麺處 綿谷", area: "高松", stars: 4, note: "肉烏龍人氣名店", ref: { title: "", url: "" } },
+      { name: "麺處 綿谷", area: "高松", stars: 4, note: "肉烏龍人氣名店" },
       { name: "寄鳥味鳥", area: "高松", stars: 5, note: "骨付鳥人氣名店", ref: { title: "許傑・寄鳥味鳥骨付鳥", url: "https://journey.tw/yoridorimidori1986/" } },
-      { name: "グリル プランチャ", area: "高松", stars: 4, note: "高松洋食 grill", ref: { title: "", url: "" } }
+      { name: "グリル プランチャ", area: "高松", stars: 4, note: "高松洋食 grill" }
     ],
 
     weather: [
@@ -1068,11 +1068,11 @@ window.TRIPS = [
 
     food: [
       { name: "水邊最高豬肉湯飯", area: "海雲台", stars: 5, note: "釜山三大豬肉湯飯", ref: { title: "一起去巴黎 Liz・水邊最高豬肉湯飯", url: "https://lizzzstyle.tw/su-byeon/" } },
-      { name: "the east 3 樓", area: "機張", stars: 4, note: "機張海景餐廳", ref: { title: "", url: "" } },
+      { name: "the east 3 樓", area: "機張", stars: 4, note: "機張海景餐廳" },
       { name: "Diart Coffee", area: "青沙浦", stars: 4, note: "土耳其蜂蜜奶油吐司・海景", ref: { title: "windko・青沙浦 DIART COFFEE", url: "https://windko.tw/diart-coffee/" } },
       { name: "釜山宅烤肉", area: "廣安里", stars: 4, note: "廣安里炭火燒肉", ref: { title: "We4 Travel・廣安里炭火燒肉釜山宅", url: "https://we4-travel.com/busandeak/" } },
       { name: "秀英家豬肉湯飯", area: "西面", stars: 5, note: "西面湯飯一條街・24h", ref: { title: "樂活的大方・秀英本家豬肉湯飯", url: "https://www.bigfang.tw/blog/post/suyeong-porksoup-seomyeon" } },
-      { name: "紅油短中華料理", area: "南浦洞", stars: 4, note: "南浦洞中華料理", ref: { title: "", url: "" } },
+      { name: "紅油短中華料理", area: "南浦洞", stars: 4, note: "南浦洞中華料理" },
       { name: "海雲台 31 公分海鮮刀削麵", area: "海雲台", stars: 4, note: "比臉大海鮮刀削麵", ref: { title: "樂活的大方・海雲台 31cm 海鮮刀削麵", url: "https://www.bigfang.tw/blog/post/haeundae-31cm-noodle" } },
       { name: "味讚王鹽烤肉", area: "海雲台", stars: 5, note: "3.5cm 厚切鹽烤肉・專人代烤", ref: { title: "樂活的大方・味贊王鹽烤肉海雲台", url: "https://www.bigfang.tw/blog/post/matwang-haeundae-busan" } }
     ],
@@ -1338,7 +1338,7 @@ window.TRIPS = [
 
     food: [
       { name: "燒肉力丸 梅田", area: "梅田", stars: 4, note: "和牛燒肉吃到飽", ref: { title: "水晶安蹄・燒肉力丸梅田", url: "https://auntie.tw/yakiniku-rikimaru/" } },
-      { name: "一人鍋 惠 / 燒肉 J's 苑", area: "岡山", stars: 4, note: "岡山晚餐(一人鍋/燒肉)", ref: { title: "", url: "" } },
+      { name: "一人鍋 惠 / 燒肉 J's 苑", area: "岡山", stars: 4, note: "岡山晚餐(一人鍋/燒肉)" },
       { name: "宮島牡蠣屋", area: "宮島", stars: 5, note: "宮島排名第一烤牡蠣", ref: { title: "金大佛・宮島牡蠣屋", url: "https://yama.tw/kakiya/" } },
       { name: "長田屋 廣島燒", area: "廣島", stars: 5, note: "和平公園旁排隊廣島燒", ref: { title: "周花花・長田屋廣島燒", url: "https://tenjo.tw/nagataya/" } },
       { name: "有鄰庵 / 梅之木味噌豬排", area: "倉敷", stars: 4, note: "倉敷古宅幸福布丁", ref: { title: "許傑・倉敷有鄰庵幸福布丁", url: "https://journey.tw/yuurin-an/" } },
@@ -1346,8 +1346,8 @@ window.TRIPS = [
       { name: "新福菜館 拉麵", area: "京都", stars: 4, note: "京都最早醬油拉麵・炒飯", ref: { title: "樂活的大方・新福菜館本店", url: "https://www.bigfang.tw/blog/post/shinpuku-ramen-kyoto" } },
       { name: "京的燒肉處 弘", area: "京都", stars: 5, note: "京都人氣和牛燒肉", ref: { title: "樂活的大方・京的燒肉處弘", url: "https://www.bigfang.tw/blog/post/yakiniku-hiro-kyoto-ekimae" } },
       { name: "名代豬排 かつくら", area: "京都", stars: 4, note: "排隊炸豬排名店", ref: { title: "周花花・名代豬排かつくら", url: "https://tenjo.tw/katsukura/" } },
-      { name: "壽司郎 天王寺店", area: "天王寺", stars: 4, note: "迴轉壽司", ref: { title: "", url: "" } },
-      { name: "一蘭 阿倍野店", area: "阿倍野", stars: 4, note: "豚骨拉麵", ref: { title: "", url: "" } }
+      { name: "壽司郎 天王寺店", area: "天王寺", stars: 4, note: "迴轉壽司" },
+      { name: "一蘭 阿倍野店", area: "阿倍野", stars: 4, note: "豚骨拉麵" }
     ],
 
     weather: [
@@ -1575,11 +1575,11 @@ window.TRIPS = [
 
     food: [
       { name: "函館海鮮丼(朝市)", area: "函館", stars: 5, note: "帝王蟹・海膽・活烏賊", ref: { title: "樂活的大方・函館朝市海鮮丼", url: "https://www.bigfang.tw/blog/post/hakodate-asaichi" } },
-      { name: "幸運小丑漢堡", area: "函館", stars: 4, note: "函館限定 Lucky Pierrot", ref: { title: "", url: "" } },
+      { name: "幸運小丑漢堡", area: "函館", stars: 4, note: "函館限定 Lucky Pierrot" },
       { name: "仙台牛舌", area: "仙台", stars: 5, note: "仙台名物", ref: { title: "樂活的大方・仙台牛舌推薦", url: "https://www.bigfang.tw/blog/post/sendai-gyutan" } },
-      { name: "松島烤牡蠣", area: "松島", stars: 4, note: "日本三景牡蠣", ref: { title: "", url: "" } },
-      { name: "青森味噌咖哩牛奶拉麵", area: "青森", stars: 4, note: "青森 B 級美食", ref: { title: "", url: "" } },
-      { name: "銀山溫泉街美食", area: "山形", stars: 4, note: "蕎麥麵・和菓子・足湯", ref: { title: "", url: "" } }
+      { name: "松島烤牡蠣", area: "松島", stars: 4, note: "日本三景牡蠣" },
+      { name: "青森味噌咖哩牛奶拉麵", area: "青森", stars: 4, note: "青森 B 級美食" },
+      { name: "銀山溫泉街美食", area: "山形", stars: 4, note: "蕎麥麵・和菓子・足湯" }
     ],
 
     weather: [
@@ -1806,9 +1806,9 @@ window.TRIPS = [
     food: [
       { name: "米久本店 壽喜燒", area: "淺草", stars: 5, note: "百年和牛壽喜燒老店", ref: { title: "小氣少年・淺草米久本店", url: "https://nicklee.tw/2467/tokyo-asakusa-yonekyu/" } },
       { name: "敘敘苑 燒肉", area: "東京", stars: 5, note: "高級燒肉・午間套餐划算", ref: { title: "娜塔蝦・敘敘苑用餐心得", url: "https://natasha-traveler.tw/jyujyuen-yakiniku-review/" } },
-      { name: "上野 鴨肉鍋 / 拉麵", area: "上野", stars: 4, note: "上野晚餐", ref: { title: "", url: "" } },
-      { name: "橫濱中華街", area: "橫濱", stars: 4, note: "肉包・小籠包・港式點心", ref: { title: "", url: "" } },
-      { name: "江之島海鮮", area: "江之島", stars: 4, note: "吻仔魚丼・章魚仙貝", ref: { title: "", url: "" } }
+      { name: "上野 鴨肉鍋 / 拉麵", area: "上野", stars: 4, note: "上野晚餐" },
+      { name: "橫濱中華街", area: "橫濱", stars: 4, note: "肉包・小籠包・港式點心" },
+      { name: "江之島海鮮", area: "江之島", stars: 4, note: "吻仔魚丼・章魚仙貝" }
     ],
 
     weather: [
@@ -2050,13 +2050,13 @@ window.TRIPS = [
     ],
 
     food: [
-      { name: "博多豚骨拉麵", area: "福岡", stars: 5, note: "天神/中洲屋台名物", ref: { title: "", url: "" } },
-      { name: "明太子", area: "福岡", stars: 5, note: "博多必買伴手禮", ref: { title: "", url: "" } },
-      { name: "長崎強棒麵 ちゃんぽん", area: "長崎", stars: 4, note: "長崎名物", ref: { title: "", url: "" } },
-      { name: "佐世保漢堡", area: "佐世保", stars: 4, note: "美式厚漢堡", ref: { title: "", url: "" } },
-      { name: "熊本馬肉料理", area: "熊本", stars: 4, note: "熊本鄉土料理", ref: { title: "", url: "" } },
+      { name: "博多豚骨拉麵", area: "福岡", stars: 5, note: "天神/中洲屋台名物" },
+      { name: "明太子", area: "福岡", stars: 5, note: "博多必買伴手禮" },
+      { name: "長崎強棒麵 ちゃんぽん", area: "長崎", stars: 4, note: "長崎名物" },
+      { name: "佐世保漢堡", area: "佐世保", stars: 4, note: "美式厚漢堡" },
+      { name: "熊本馬肉料理", area: "熊本", stars: 4, note: "熊本鄉土料理" },
       { name: "太宰府 梅枝餅", area: "太宰府", stars: 4, note: "表參道必吃", ref: { title: "Mimi韓・太宰府梅枝餅", url: "https://mimigo.tw/dazaifu/" } },
-      { name: "門司港 燒咖哩", area: "門司港", stars: 4, note: "門司港名物", ref: { title: "", url: "" } }
+      { name: "門司港 燒咖哩", area: "門司港", stars: 4, note: "門司港名物" }
     ],
 
     weather: [
@@ -2216,11 +2216,11 @@ window.TRIPS = [
 
     food: [
       { name: "富國島海鮮", area: "富國島", stars: 5, note: "陽東夜市現烤龍蝦/海膽", ref: { title: "Stancy・陽東夜市海鮮", url: "https://stancylife.com/phu-quoc-night-market/" } },
-      { name: "富國魚露 nước mắm", area: "富國島", stars: 5, note: "富國島特產伴手禮", ref: { title: "", url: "" } },
-      { name: "越南河粉 Phở", area: "越南", stars: 4, note: "越式湯河粉", ref: { title: "", url: "" } },
-      { name: "越式法國麵包 Bánh mì", area: "越南", stars: 4, note: "越南三明治", ref: { title: "", url: "" } },
-      { name: "椰子冰淇淋", area: "富國島", stars: 4, note: "夜市必吃", ref: { title: "", url: "" } },
-      { name: "生蠔・烤海鮮", area: "富國島", stars: 4, note: "海鮮排檔", ref: { title: "", url: "" } }
+      { name: "富國魚露 nước mắm", area: "富國島", stars: 5, note: "富國島特產伴手禮" },
+      { name: "越南河粉 Phở", area: "越南", stars: 4, note: "越式湯河粉" },
+      { name: "越式法國麵包 Bánh mì", area: "越南", stars: 4, note: "越南三明治" },
+      { name: "椰子冰淇淋", area: "富國島", stars: 4, note: "夜市必吃" },
+      { name: "生蠔・烤海鮮", area: "富國島", stars: 4, note: "海鮮排檔" }
     ],
 
     weather: [
@@ -2448,7 +2448,7 @@ window.TRIPS = [
       { name: "旭川拉麵村", area: "旭川", stars: 4, note: "旭川醬油拉麵(8 家名店)", ref: { title: "小兔小安・旭川拉麵村", url: "https://bunnyann.tw/asahikawa-ramen/" } },
       { name: "小樽出拔小路", area: "小樽", stars: 4, note: "屋台村・哈密瓜霜淇淋", ref: { title: "許傑・小樽出拔小路屋台村", url: "https://journey.tw/otaru-unga/" } },
       { name: "札幌螃蟹家總店", area: "札幌", stars: 5, note: "松葉蟹/帝王蟹料理", ref: { title: "美奈子・札幌螃蟹家本店", url: "https://minako.tw/hokkaido-sapporo-kanihonke/" } },
-      { name: "Kagayoi 海鮮", area: "札幌", stars: 4, note: "海鮮居酒屋", ref: { title: "", url: "" } },
+      { name: "Kagayoi 海鮮", area: "札幌", stars: 4, note: "海鮮居酒屋" },
       { name: "湯咖哩 GARAKU", area: "札幌", stars: 5, note: "狸小路湯咖哩名店", ref: { title: "波比看世界・湯咖哩 GARAKU", url: "https://bobbytravel.tw/garaku/" } },
       { name: "迴轉壽司 根室花丸", area: "札幌", stars: 5, note: "札幌站平價迴轉壽司", ref: { title: "娜塔蝦・根室花丸迴轉壽司", url: "https://natasha-traveler.tw/sushi-hanamaru-sapporo/" } }
     ],
@@ -2796,8 +2796,8 @@ window.TRIPS = [
     food: [
       { name: "六歌仙 燒肉", area: "新宿", stars: 5, note: "和牛海鮮吃到飽(需訂位)", ref: { title: "波比看世界・新宿六歌仙燒肉吃到飽", url: "https://bobbytravel.tw/rokkasen/" } },
       { name: "AFURI 阿夫利拉麵", area: "東京", stars: 4, note: "清爽柚子鹽拉麵", ref: { title: "樂活的大方・AFURI 阿夫利", url: "https://www.bigfang.tw/blog/post/afuri-harajuku" } },
-      { name: "壽喜燒", area: "淺草", stars: 4, note: "抵達晚餐", ref: { title: "", url: "" } },
-      { name: "居酒屋串燒", area: "東京", stars: 4, note: "迪士尼後宵夜", ref: { title: "", url: "" } }
+      { name: "壽喜燒", area: "淺草", stars: 4, note: "抵達晚餐" },
+      { name: "居酒屋串燒", area: "東京", stars: 4, note: "迪士尼後宵夜" }
     ],
 
     weather: [
@@ -3170,10 +3170,10 @@ window.TRIPS = [
       { name: "土俗村參雞湯", area: "景福宮", stars: 5, note: "總統也愛的人蔘雞", ref: { title: "周花花・土俗村蔘雞湯", url: "https://tenjo.tw/tosokchon/" } },
       { name: "站著吃韓牛", area: "新村", stars: 5, note: "鐵桶站著烤韓牛", ref: { title: "Alina・新村站著吃烤肉", url: "https://alina00.com/seoseogalbi/" } },
       { name: "元祖奶奶菜包肉", area: "弘大", stars: 5, note: "菜包肉 + 韓國豬腳", ref: { title: "樂活的大方・元祖奶奶菜包肉", url: "https://www.bigfang.tw/blog/post/bossam-hongdae" } },
-      { name: "醬缸台泡菜湯", area: "清潭", stars: 4, note: "24h 泡菜湯", ref: { title: "", url: "" } },
-      { name: "春川辣炒雞排", area: "南怡島", stars: 4, note: "南怡島辣炒雞排", ref: { title: "", url: "" } },
-      { name: "梨大部隊鍋", area: "梨大", stars: 4, note: "部隊鍋", ref: { title: "", url: "" } },
-      { name: "ISSAC 三明治", area: "東大門", stars: 4, note: "韓式三明治早餐", ref: { title: "", url: "" } }
+      { name: "醬缸台泡菜湯", area: "清潭", stars: 4, note: "24h 泡菜湯" },
+      { name: "春川辣炒雞排", area: "南怡島", stars: 4, note: "南怡島辣炒雞排" },
+      { name: "梨大部隊鍋", area: "梨大", stars: 4, note: "部隊鍋" },
+      { name: "ISSAC 三明治", area: "東大門", stars: 4, note: "韓式三明治早餐" }
     ],
 
     weather: [
@@ -3374,7 +3374,7 @@ window.TRIPS = [
 
     food: [
       { name: "一蘭拉麵 本社總本店", area: "中洲・博多", stars: 5, note: "唯一一蘭屋台的總本店", ref: { title: "樂活的大方・一蘭本社總本店", url: "https://www.bigfang.tw/blog/post/ichiran-mainstore" } },
-      { name: "博多燒肉", area: "博多", stars: 4, note: "博多燒肉", ref: { title: "", url: "" } },
+      { name: "博多燒肉", area: "博多", stars: 4, note: "博多燒肉" },
       { name: "柳川蒸籠鰻魚飯", area: "柳川", stars: 5, note: "元祖本吉屋・300 年老店", ref: { title: "波比看世界・元祖本吉屋蒸籠鰻魚飯", url: "https://bobbytravel.tw/motoyoshiya/" } },
       { name: "太宰府 梅枝餅", area: "太宰府", stars: 4, note: "表參道名物", ref: { title: "Mimi韓・太宰府梅枝餅", url: "https://mimigo.tw/dazaifu/" } },
       { name: "由布院 金賞可樂餅", area: "由布院", stars: 4, note: "金賞コロッケ・人氣炸物", ref: { title: "BringYou・由布院金賞可樂餅", url: "https://www.bring-you.info/zh-tw/kinshoukorokke" } }

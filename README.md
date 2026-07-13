@@ -27,9 +27,15 @@ data/trips.js     # 所有行程資料(window.TRIPS)
 - `id`、`title`、`subtitle`、`country`、`region`、`year`、`dateLabel`、`status`
 - `themes`、`tagline`
 - `mapCenter: [lat, lng]`、`mapZoom` — 地圖視角
-- `flight`、`stay[]`、`pass`、`days[]`、`spots[]`(每個含 `latlng` 與 `day` 造訪日 → 路線地圖按日分色)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
+- `flight`、`stay[]`、`pass`、`days[]`(可加 `couple: true` → 每日行程軌道呈綠紅雙色,如新幹線連結日)、`spots[]`(每個含 `latlng` 與 `day` 造訪日 → 路線地圖按日分色)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
 
 景點 `latlng` 座標可用 Google Maps 右鍵「這是哪裡?」取得。
+
+新增或修改後跑一次驗證(檢查缺欄位、緯經度顛倒、day 超界、日期格式等):
+
+```bash
+python3 validate_trips.py
+```
 
 ## 部署到 GitHub Pages
 

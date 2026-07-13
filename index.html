@@ -25,8 +25,8 @@
     --paper-2:#f6f2e9;      /* 卡片表面 */
     --ink:#16191d;
     --ink-soft:#454b54;
-    --muted:#857d6d;
-    --faint:#a59c89;
+    --muted:#6e6557;      /* 由 #857d6d 加深:對紙底對比 4.65:1,過 WCAG AA */
+    --faint:#8a8171;
     --line:#dcd5c5;
     --line-soft:#e6e0d2;
     --hayabusa:#0e7c5a;     /* E5 はやぶさ 常磐綠 */
@@ -174,6 +174,8 @@
     padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap;transition:.16s;user-select:none}
   .chip:hover{border-color:var(--ink);color:var(--ink)}
   .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .chip:focus-visible,.btn:focus-visible,.vtoggle button:focus-visible,.fsel:focus-visible,.tl-item:focus-visible{
+    outline:3px solid var(--hayabusa);outline-offset:2px}
 
   /* grid */
   .grid{display:grid;gap:24px;padding:34px 0 70px;grid-template-columns:repeat(auto-fill,minmax(360px,1fr))}
@@ -487,22 +489,22 @@
         '<div class="hero-meta">'+
           stat(trips.length,"趟旅程")+stat(countries.length,"個國家")+stat(totDays,"天在路上")+stat(totSpots,"個景點")+
         '</div>'+
-        '<div class="footmap" id="foot-map"></div>'+
+        '<div class="footmap" id="foot-map" role="region" aria-label="旅遊足跡地圖"></div>'+
         '<div class="map-cap">旅遊足跡 ・ 數字 = 同區域行程數 ・ 點標記看行程並可直接前往</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap">'+
         '<div class="filter-top">'+
-          '<input id="fq" class="fsearch" type="search" placeholder="搜尋行程、景點、美食…" value="'+esc(fQuery)+'">'+
-          '<select id="fyear" class="fsel"><option value="全部">全部年份</option>'+
+          '<input id="fq" class="fsearch" type="search" aria-label="搜尋行程、景點、美食" placeholder="搜尋行程、景點、美食…" value="'+esc(fQuery)+'">'+
+          '<select id="fyear" class="fsel" aria-label="依年份篩選"><option value="全部">全部年份</option>'+
             years.map(function(y){return '<option'+(String(y)===String(fYear)?' selected':'')+'>'+y+'</option>';}).join("")+'</select>'+
-          '<select id="ftheme" class="fsel"><option value="全部">全部主題</option>'+
+          '<select id="ftheme" class="fsel" aria-label="依主題篩選"><option value="全部">全部主題</option>'+
             themes.map(function(th){return '<option'+(th===fTheme?' selected':'')+'>'+esc(th)+'</option>';}).join("")+'</select>'+
-          '<select id="fstatus" class="fsel"><option value="全部">全部狀態</option>'+
+          '<select id="fstatus" class="fsel" aria-label="依狀態篩選"><option value="全部">全部狀態</option>'+
             '<option'+(fStatus==="即將出發"?' selected':'')+'>即將出發</option>'+
             '<option'+(fStatus==="旅遊回憶"?' selected':'')+'>旅遊回憶</option></select>'+
-          '<div class="vtoggle" id="vtoggle">'+
-            '<button data-v="cards"'+(viewMode==="cards"?' class="on"':'')+'>▦ 卡片</button>'+
-            '<button data-v="timeline"'+(viewMode==="timeline"?' class="on"':'')+'>≣ 時間軸</button>'+
+          '<div class="vtoggle" id="vtoggle" role="group" aria-label="檢視方式">'+
+            '<button data-v="cards"'+(viewMode==="cards"?' class="on"':'')+' aria-pressed="'+(viewMode==="cards")+'">▦ 卡片</button>'+
+            '<button data-v="timeline"'+(viewMode==="timeline"?' class="on"':'')+' aria-pressed="'+(viewMode==="timeline")+'">≣ 時間軸</button>'+
           '</div>'+
           '<span class="fcount" id="fcount"></span>'+
         '</div>'+
@@ -533,7 +535,9 @@
       var b=e.target.closest("button");if(!b)return;
       viewMode=b.getAttribute("data-v");
       document.querySelectorAll("#vtoggle button").forEach(function(x){
-        x.classList.toggle("on",x.getAttribute("data-v")===viewMode);
+        var on=x.getAttribute("data-v")===viewMode;
+        x.classList.toggle("on",on);
+        x.setAttribute("aria-pressed",String(on));
       });
       paintCards();
     });
@@ -587,7 +591,7 @@
     list.forEach(function(t){
       var card=el(
         '<a class="card" href="#/trip/'+encodeURIComponent(t.id)+'" tabindex="0" aria-label="'+esc(t.title)+'">'+
-          '<div class="card-map" id="cm-'+esc(t.id)+'">'+
+          '<div class="card-map" id="cm-'+esc(t.id)+'" aria-hidden="true">'+
             '<div class="card-badges">'+
               '<span></span>'+
               '<span class="badge badge-status">'+esc(tripStatus(t))+'</span>'+
@@ -661,7 +665,7 @@
   /* ---------- TRIP DETAIL ---------- */
   function renderTrip(t){
     document.title=displayTitle(t)+"｜行程集錦";
-    var couplingDay=function(d){return (d.items||[]).some(function(i){return /連結|分裂/.test(i.text);});};
+    var couplingDay=function(d){return !!d.couple;}; // 資料欄位 days[].couple: true → 雙色軌道日
     // 無資料的區塊連標題一起省略,編號自動遞補
     var secs=[];
     function addSec(title,body){if(body)secs.push([title,body]);}
@@ -672,7 +676,7 @@
     addSec((t.region||"")+"美食指南",(t.food&&t.food.length)?foodTable(t):"");
     addSec("實用旅遊資訊",utilCols(t));
     addSec("路線地圖",(t.spots&&t.spots.length)
-      ? '<div class="detailmap" id="detail-map"></div>'+dayLegend(t)+
+      ? '<div class="detailmap" id="detail-map" role="region" aria-label="路線地圖"></div>'+dayLegend(t)+
         '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 顏色 = 造訪日 ・ 點標記跳至該景點</div>'
       : "");
     app.innerHTML=
@@ -789,7 +793,7 @@
         ? '<a class="food-ref" href="'+esc(f.ref.url)+'" target="_blank" rel="noopener" title="'+esc(f.ref.title)+'">📖 推薦文 →</a>'
         : '<span class="food-ref empty">—</span>';
       return '<tr><td style="font-weight:700">'+esc(f.name)+'</td><td>'+esc(f.area)+'</td>'+
-        '<td class="stars">'+stars(f.stars)+' <span style="color:var(--ink-soft)">'+esc(f.note)+'</span></td>'+
+        '<td class="stars"><span role="img" aria-label="推薦 '+f.stars+' 顆星(滿分 5 顆)">'+stars(f.stars)+'</span> <span style="color:var(--ink-soft)">'+esc(f.note)+'</span></td>'+
         (hasRef?'<td>'+ref+'</td>':'')+'</tr>';
     }).join("");
     return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th>'+(hasRef?'<th>推薦文</th>':'')+'</tr></thead><tbody>'+rows+'</tbody></table>';
