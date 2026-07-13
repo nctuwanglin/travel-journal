@@ -130,12 +130,32 @@
   .cbar .lbl{font-size:10.5px;color:var(--ink-soft);white-space:nowrap;letter-spacing:.02em;line-height:1;height:11px}
   @keyframes barup{from{transform:scaleY(0)}to{transform:scaleY(1)}}
   @media (prefers-reduced-motion:reduce){.cbar .stick{animation:none}}
+  /* 行動版:圖表改單列橫向滑動,避免首屏被圖表佔滿、卡片被推到折線下 */
+  @media(max-width:620px){
+    .hero-charts{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+      scrollbar-width:none;margin-right:-20px;padding-right:20px}
+    .hero-charts::-webkit-scrollbar{display:none}
+    .cchart{flex:0 0 auto}
+  }
 
   /* filter chips */
   .filter{position:sticky;top:58px;z-index:699;background:rgba(236,231,220,.82);backdrop-filter:blur(10px);
     border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line);padding:13px 0}
   .filter-in{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:1px}
   .filter-in::-webkit-scrollbar{display:none}
+  .filter-top{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+  .fsearch{flex:1 1 220px;min-width:150px;padding:8px 15px;border-radius:999px;border:1px solid var(--line);
+    background:var(--paper-2);font-family:inherit;font-size:13px;color:var(--ink)}
+  .fsearch::placeholder{color:var(--faint)}
+  .fsearch:focus{outline:none;border-color:var(--hayabusa);box-shadow:0 0 0 2px var(--hayabusa-soft)}
+  .fsel{padding:8px 30px 8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper-2);
+    font-family:inherit;font-size:13px;font-weight:700;color:var(--ink-soft);cursor:pointer;
+    -webkit-appearance:none;appearance:none;
+    background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M1 1l4 4 4-4" stroke="%23857d6d" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>');
+    background-repeat:no-repeat;background-position:right 12px center}
+  .fsel:focus{outline:none;border-color:var(--hayabusa)}
+  .fcount{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;white-space:nowrap;margin-left:auto}
+  @media(max-width:620px){.fsearch{font-size:16px}} /* iOS 聚焦不自動縮放 */
   .chip{flex:0 0 auto;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);color:var(--muted);
     padding:7px 15px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap;transition:.16s;user-select:none}
   .chip:hover{border-color:var(--ink);color:var(--ink)}
@@ -156,7 +176,6 @@
   .card-badges{position:absolute;top:12px;left:12px;right:12px;z-index:600;display:flex;justify-content:space-between;gap:8px;pointer-events:none}
   .badge{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;
     padding:5px 10px;border-radius:7px;backdrop-filter:blur(4px)}
-  .badge-rec{background:var(--komachi);color:#fff}
   .badge-status{background:rgba(255,255,255,.9);color:var(--ink);border:1px solid var(--line)}
   .card-loc{position:absolute;left:14px;bottom:11px;z-index:600;color:#fff;pointer-events:none;
     font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-shadow:0 1px 6px rgba(0,0,0,.5)}
@@ -264,8 +283,12 @@
   /* spots */
   .spots{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   @media(max-width:760px){.spots{grid-template-columns:1fr}}
-  .spot{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px;position:relative}
+  .spot{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px;position:relative;
+    transition:border-color .18s,box-shadow .18s}
+  .spot.hot{border-color:var(--komachi);box-shadow:0 0 0 2px var(--komachi-soft)}
   .spot h3{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .spot-no{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;
+    background:var(--komachi);color:#fff;font-family:"Space Grotesk",sans-serif;font-size:12.5px;font-weight:700;flex:0 0 auto}
   .spot .area{font-size:12px;font-weight:700;color:var(--tazawa);background:#e4ebf3;padding:2px 8px;border-radius:6px}
   .spot .meta{display:flex;gap:14px;flex-wrap:wrap;margin:9px 0 11px;font-size:12px;color:var(--muted);font-family:"JetBrains Mono",monospace}
   .spot .meta b{color:var(--peach)}
@@ -290,17 +313,16 @@
   .budget-row.total{border-top:2px solid var(--ink);margin-top:3px;font-weight:700}
   .budget-row .c{font-family:"Space Grotesk",sans-serif;font-weight:700;white-space:nowrap}
 
-  /* detail map */
+  /* detail map — 編號標記(與「景點介紹」卡片對應) */
+  .nmk{background:none;border:none}
+  .nmk .nmk-in{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;
+    background:var(--komachi);border:2px solid #fff;color:#fff;
+    font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;
+    box-shadow:0 1px 5px rgba(0,0,0,.35);transition:transform .15s,background .15s}
+  .nmk .nmk-in.hot{transform:scale(1.3);background:var(--tazawa)}
   .detailmap{height:420px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
   .detailmap .leaflet-container{height:100%;width:100%;background:#dfe5e2;font-family:inherit}
   .map-cap{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin-top:10px;letter-spacing:.06em}
-
-  /* blog reference */
-  .blogref{margin-top:20px;background:var(--ink);color:var(--paper);border-radius:16px;padding:22px 24px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .blogref .l .e{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.2em;color:var(--peach);text-transform:uppercase}
-  .blogref .l .t{font-family:"Noto Serif TC",serif;font-size:19px;font-weight:700;margin-top:4px}
-  .blogref .l .t small{display:block;font-family:"Noto Sans TC";font-weight:400;font-size:12.5px;color:#bdb6a6;margin-top:3px}
 
   .footer{padding:40px 0;text-align:center;color:var(--faint);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em}
 
@@ -315,7 +337,7 @@
     @page{size:A4;margin:15mm 14mm}
     body{background:#fff;color:#000;font-size:11pt}
     body::before{display:none}
-    .topbar,.filter,.footer,.back,.detailmap,.map-cap,.blogref a,.no-print{display:none !important}
+    .topbar,.filter,.footer,.back,.detailmap,.map-cap,.no-print{display:none !important}
     .wrap{max-width:none;padding:0}
     .trip{padding:0;animation:none}
     .cover{padding:0 0 8mm}
@@ -327,8 +349,6 @@
     .spots,.ucols,.infogrid{break-inside:avoid}
     .spot,.ucard,.infocard{break-inside:avoid;box-shadow:none}
     .facts{break-inside:avoid}
-    .blogref{background:#f2f2f2;color:#000;border:1px solid #ccc}
-    .blogref .l .e{color:#000}
     .card,.infocard,.spot,.ucard,.otable,.facts,.infogrid>*{box-shadow:none !important}
     a{text-decoration:none}
   }
@@ -414,7 +434,7 @@
   window.addEventListener("hashchange",route);
 
   /* ---------- GALLERY ---------- */
-  var activeFilter="全部";
+  var activeFilter="全部", fYear="全部", fTheme="全部", fStatus="全部", fQuery="";
   function renderGallery(){
     document.title="行程集錦 — 旅遊回憶 & 攻略";
     var trips=TRIPS.slice();
@@ -422,6 +442,10 @@
     var countBy={}; trips.forEach(function(t){countBy[t.country]=(countBy[t.country]||0)+1;});
     var totDays=0, totSpots=0;
     trips.forEach(function(t){totDays+=(t.days||[]).length;totSpots+=(t.spots||[]).length;});
+    var years=[]; trips.forEach(function(t){if(years.indexOf(t.year)<0)years.push(t.year);});
+    years.sort(function(a,b){return b-a;});
+    var themeCount={}; trips.forEach(function(t){(t.themes||[]).forEach(function(th){themeCount[th]=(themeCount[th]||0)+1;});});
+    var themes=Object.keys(themeCount).sort(function(a,b){return themeCount[b]-themeCount[a];});
     var filters=["全部"].concat(countries);
 
     // 將子區域正規化為大區域;跨兩區的行程同時計入兩個大區域
@@ -475,33 +499,91 @@
           }).join("")+
         '</div>'+
       '</div></header>'+
-      '<div class="filter"><div class="wrap"><div class="filter-in" id="filters">'+
-        filters.map(function(f){
-          var label=(f==="全部")?"全部":(flagOf(f)+" "+f);
-          return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(label)+'</button>';
-        }).join("")+
-      '</div></div></div>'+
+      '<div class="filter"><div class="wrap">'+
+        '<div class="filter-top">'+
+          '<input id="fq" class="fsearch" type="search" placeholder="搜尋行程、景點、美食…" value="'+esc(fQuery)+'">'+
+          '<select id="fyear" class="fsel"><option value="全部">全部年份</option>'+
+            years.map(function(y){return '<option'+(String(y)===String(fYear)?' selected':'')+'>'+y+'</option>';}).join("")+'</select>'+
+          '<select id="ftheme" class="fsel"><option value="全部">全部主題</option>'+
+            themes.map(function(th){return '<option'+(th===fTheme?' selected':'')+'>'+esc(th)+'</option>';}).join("")+'</select>'+
+          '<select id="fstatus" class="fsel"><option value="全部">全部狀態</option>'+
+            '<option'+(fStatus==="即將出發"?' selected':'')+'>即將出發</option>'+
+            '<option'+(fStatus==="旅遊回憶"?' selected':'')+'>旅遊回憶</option></select>'+
+          '<span class="fcount" id="fcount"></span>'+
+        '</div>'+
+        '<div class="filter-in" id="filters">'+
+          filters.map(function(f){
+            var label=(f==="全部")?"全部":(flagOf(f)+" "+f);
+            return '<button class="chip'+(f===activeFilter?' on':'')+'" data-f="'+esc(f)+'">'+esc(label)+'</button>';
+          }).join("")+
+        '</div>'+
+      '</div></div>'+
       '<main class="wrap"><div class="grid" id="grid"></div></main>'+
       footer();
 
+    // 篩選事件:只重繪卡片格,不重建整頁(地圖不再全部砍掉重來)
     document.getElementById("filters").addEventListener("click",function(e){
-      var b=e.target.closest(".chip");if(!b)return;activeFilter=b.getAttribute("data-f");renderGallery();
+      var b=e.target.closest(".chip");if(!b)return;
+      activeFilter=b.getAttribute("data-f");
+      document.querySelectorAll("#filters .chip").forEach(function(c){
+        c.classList.toggle("on",c.getAttribute("data-f")===activeFilter);
+      });
+      paintCards();
     });
+    document.getElementById("fq").addEventListener("input",function(){fQuery=this.value.trim();paintCards();});
+    document.getElementById("fyear").addEventListener("change",function(){fYear=this.value;paintCards();});
+    document.getElementById("ftheme").addEventListener("change",function(){fTheme=this.value;paintCards();});
+    document.getElementById("fstatus").addEventListener("change",function(){fStatus=this.value;paintCards();});
     paintCards();
   }
   function stat(n,l){return '<div><div class="num">'+n+'</div><div class="lbl">'+l+'</div></div>';}
 
+  function tripMatches(t){
+    if(activeFilter!=="全部"&&t.country!==activeFilter)return false;
+    if(fYear!=="全部"&&String(t.year)!==String(fYear))return false;
+    if(fTheme!=="全部"&&(t.themes||[]).indexOf(fTheme)<0)return false;
+    if(fStatus==="即將出發"&&!isUpcoming(t))return false;
+    if(fStatus==="旅遊回憶"&&isUpcoming(t))return false;
+    if(fQuery){
+      var hay=[t.title,t.subtitle,t.country,t.region,t.year,t.tagline,(t.themes||[]).join(" "),
+        (t.spots||[]).map(function(s){return s.name;}).join(" "),
+        (t.food||[]).map(function(f){return f.name;}).join(" ")].join(" ").toLowerCase();
+      if(hay.indexOf(fQuery.toLowerCase())<0)return false;
+    }
+    return true;
+  }
+
+  var cardObserver=null;
   function paintCards(){
     destroyMaps();
+    if(cardObserver){cardObserver.disconnect();cardObserver=null;}
     var grid=document.getElementById("grid");
-    var list=TRIPS.filter(function(t){return activeFilter==="全部"||t.country===activeFilter;}).slice().sort(tripSort);
+    var list=TRIPS.filter(tripMatches).slice().sort(tripSort);
+    var fc=document.getElementById("fcount");
+    if(fc)fc.textContent=list.length+" / "+TRIPS.length+" 趟";
     grid.innerHTML="";
+    if(!list.length){
+      grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)">'+
+        '沒有符合條件的行程 — 換個關鍵字,或清除篩選再試。</div>';
+      return;
+    }
+    // 地圖 lazy 初始化:卡片捲進視窗前不建 Leaflet、不抓圖磚
+    if("IntersectionObserver" in window){
+      cardObserver=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(!en.isIntersecting)return;
+          cardObserver.unobserve(en.target);
+          var t=byId(en.target.getAttribute("data-trip"));
+          if(t)buildMiniMap(en.target,t);
+        });
+      },{rootMargin:"280px"});
+    }
     list.forEach(function(t){
       var card=el(
         '<a class="card" href="#/trip/'+encodeURIComponent(t.id)+'" tabindex="0" aria-label="'+esc(t.title)+'">'+
           '<div class="card-map" id="cm-'+esc(t.id)+'">'+
             '<div class="card-badges">'+
-              '<span>'+(t.recommended?'<span class="badge badge-rec">★ 最推薦</span>':'')+'</span>'+
+              '<span></span>'+
               '<span class="badge badge-status">'+esc(tripStatus(t))+'</span>'+
             '</div>'+
             '<div class="card-mapband"></div>'+
@@ -523,12 +605,15 @@
         '</a>'
       );
       grid.appendChild(card);
-      buildMiniMap("cm-"+t.id,t);
+      var node=document.getElementById("cm-"+t.id);
+      node.setAttribute("data-trip",t.id);
+      if(cardObserver)cardObserver.observe(node);
+      else buildMiniMap(node,t);
     });
   }
 
-  function buildMiniMap(elId,trip){
-    var node=document.getElementById(elId);if(!node||!window.L)return;
+  function buildMiniMap(node,trip){
+    if(!node||!window.L)return;
     var map=L.map(node,{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,
       doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false}).setView(trip.mapCenter,trip.mapZoom);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{maxZoom:18}).addTo(map);
@@ -542,7 +627,19 @@
   function renderTrip(t){
     document.title=displayTitle(t)+"｜行程集錦";
     var couplingDay=function(d){return (d.items||[]).some(function(i){return /連結|分裂/.test(i.text);});};
-    var n=0;
+    // 無資料的區塊連標題一起省略,編號自動遞補
+    var secs=[];
+    function addSec(title,body){if(body)secs.push([title,body]);}
+    addSec("行程總覽",(t.days&&t.days.length)?overviewTable(t):"");
+    addSec("航班・住宿・票券",infoCards(t));
+    addSec("每日行程",(t.days&&t.days.length)?daysRail(t,couplingDay):"");
+    addSec("景點介紹",(t.spots&&t.spots.length)?spotsGrid(t):"");
+    addSec((t.region||"")+"美食指南",(t.food&&t.food.length)?foodTable(t):"");
+    addSec("實用旅遊資訊",utilCols(t));
+    addSec("路線地圖",(t.spots&&t.spots.length)
+      ? '<div class="detailmap" id="detail-map"></div>'+
+        '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 點標記跳至該景點</div>'
+      : "");
     app.innerHTML=
       topbar(true,t)+
       '<article class="trip"><div class="wrap">'+
@@ -555,16 +652,7 @@
           staticMapHTML(t,680,250)+
           factsStrip(t)+
         '</section>'+
-
-        sec(++n,"行程總覽",overviewTable(t))+
-        sec(++n,"航班・住宿・票券",infoCards(t))+
-        sec(++n,"每日行程",daysRail(t,couplingDay))+
-        sec(++n,"景點介紹",spotsGrid(t))+
-        sec(++n,(t.region||"")+"美食指南",foodTable(t))+
-        sec(++n,"實用旅遊資訊",utilCols(t))+
-        sec(++n,"路線地圖",
-          '<div class="detailmap" id="detail-map"></div>'+
-          '<div class="map-cap">OpenStreetMap ・ 點選標記可看景點名稱 ・ 紅點 = 行程景點</div>')+
+        secs.map(function(s,i){return sec(i+1,s[0],s[1]);}).join("")+
       '</div></article>'+
       footer();
 
@@ -593,20 +681,25 @@
   }
 
   function infoCards(t){
-    var f=t.flight||{}, p=t.pass||{};
-    var flight='<div class="infocard"><h3>✈ 航班</h3>'+
-      irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("備註",f.note)+'</div>';
-    var stay='<div class="infocard"><h3>🏨 住宿</h3>'+
-      (t.stay||[]).map(function(s){return '<div class="stay-item"><div class="sn">'+esc(s.name)+
-        (s.rating?' <span class="rate">★'+s.rating+'</span>':'')+'</div><div class="sm">'+esc(s.nights)+' ・ '+esc(s.note)+'</div></div>';}).join("")+'</div>';
-    var pass="";
+    var cards=[], p=t.pass||{};
+    if(t.flight){
+      var f=t.flight;
+      cards.push('<div class="infocard"><h3>✈ 航班</h3>'+
+        irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("備註",f.note)+'</div>');
+    }
+    if(t.stay&&t.stay.length){
+      cards.push('<div class="infocard"><h3>🏨 住宿</h3>'+
+        t.stay.map(function(s){return '<div class="stay-item"><div class="sn">'+esc(s.name)+
+          (s.rating?' <span class="rate">★'+s.rating+'</span>':'')+'</div><div class="sm">'+esc(s.nights)+' ・ '+esc(s.note)+'</div></div>';}).join("")+'</div>');
+    }
     if(p.rows&&p.rows.length){
       var head=p.head||["路段","車種","時間"];
       var passrows=p.rows.map(function(r){return '<tr>'+r.map(function(c,i){return '<td'+(i===2?' class="dcell mono" style="font-size:12px"':'')+'>'+esc(c)+'</td>';}).join("")+'</tr>';}).join("");
-      pass='<div class="infocard" style="grid-column:1/-1"><h3>'+(p.icon||"🚄")+' '+esc(p.label||"交通票券")+' — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
-        '<table class="otable" style="margin-top:6px"><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+passrows+'</tbody></table></div>';
+      cards.push('<div class="infocard" style="grid-column:1/-1"><h3>'+(p.icon||"🚄")+' '+esc(p.label||"交通票券")+' — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
+        '<table class="otable" style="margin-top:6px"><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+passrows+'</tbody></table></div>');
     }
-    return '<div class="infogrid">'+flight+stay+pass+'</div>';
+    if(!cards.length)return "";
+    return '<div class="infogrid">'+cards.join("")+'</div>';
   }
   function irow(k,v){if(!v)return"";return '<div class="irow"><span class="ik">'+esc(k)+'</span><span class="iv">'+esc(v)+'</span></div>';}
 
@@ -629,28 +722,30 @@
   }
 
   function spotsGrid(t){
-    return '<div class="spots">'+(t.spots||[]).map(function(s){
+    return '<div class="spots">'+(t.spots||[]).map(function(s,i){
       var meta=[];
       if(s.rating)meta.push('<b>★ '+s.rating+'</b>');
       if(s.hours)meta.push(esc(s.hours));
       if(s.tel)meta.push('☎ '+esc(s.tel));
       var ref=(s.ref&&s.ref.url)?'<a class="spot-ref" href="'+esc(s.ref.url)+'" target="_blank" rel="noopener">📖 推薦遊記 ・ '+esc(s.ref.title)+' →</a>':'';
-      return '<div class="spot"><h3>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span></h3>'+
+      return '<div class="spot" data-spot="'+i+'"><h3><span class="spot-no">'+(i+1)+'</span>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span></h3>'+
         '<div class="meta">'+meta.join("<span>·</span>")+'</div>'+
         '<div class="desc">'+esc(s.desc)+'</div>'+ref+'</div>';
     }).join("")+'</div>';
   }
 
   function foodTable(t){
+    // 整趟都沒有推薦文連結時,省略該欄(避免整欄「—」)
+    var hasRef=(t.food||[]).some(function(f){return f.ref&&f.ref.url;});
     var rows=(t.food||[]).map(function(f){
       var ref=(f.ref&&f.ref.url)
         ? '<a class="food-ref" href="'+esc(f.ref.url)+'" target="_blank" rel="noopener" title="'+esc(f.ref.title)+'">📖 推薦文 →</a>'
         : '<span class="food-ref empty">—</span>';
       return '<tr><td style="font-weight:700">'+esc(f.name)+'</td><td>'+esc(f.area)+'</td>'+
         '<td class="stars">'+stars(f.stars)+' <span style="color:var(--ink-soft)">'+esc(f.note)+'</span></td>'+
-        '<td>'+ref+'</td></tr>';
+        (hasRef?'<td>'+ref+'</td>':'')+'</tr>';
     }).join("");
-    return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th><th>推薦文</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th>'+(hasRef?'<th>推薦文</th>':'')+'</tr></thead><tbody>'+rows+'</tbody></table>';
   }
 
   function listCard(title,items){
@@ -667,6 +762,7 @@
     if(t.weather&&t.weather.length)cards.push(listCard("🌡️ 天氣",t.weather));
     if(t.notes&&t.notes.length)cards.push(listCard("⚠️ 注意事項",t.notes));
     (t.info||[]).forEach(function(c){cards.push(listCard(c.title,c.items));});
+    if(!cards.length)return "";
     return '<div class="ucols">'+cards.join("")+'</div>';
   }
 
@@ -696,7 +792,7 @@
       ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard{margin-bottom:12px}"+
       ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard,.pdfbook .fact,.pdfbook .facts,"+
       ".pdfbook .day,.pdfbook .day-head,.pdfbook .day-body,.pdfbook .tip,.pdfbook .stop,"+
-      ".pdfbook .otable,.pdfbook .otable tr,.pdfbook .sec-head,.pdfbook .cover,.pdfbook .blogref"+
+      ".pdfbook .otable,.pdfbook .otable tr,.pdfbook .sec-head,.pdfbook .cover"+
       "{break-inside:avoid;page-break-inside:avoid}"+
       ".pdfbook .section{break-inside:auto;page-break-inside:auto}";
     // 在畫面上(正座標)渲染,避免 html2canvas 把負位移烤進畫面造成左右被裁切
@@ -738,11 +834,29 @@
     var map=L.map(node,{scrollWheelZoom:false}).setView(t.mapCenter,t.mapZoom);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
       maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
-    var pts=[];
-    (t.spots||[]).forEach(function(s){
+    var pts=[], markers=[];
+    (t.spots||[]).forEach(function(s,i){
       pts.push(s.latlng);
-      L.circleMarker(s.latlng,{radius:8,color:"#fff",weight:2,fillColor:"#c8344a",fillOpacity:.95})
-        .addTo(map).bindPopup('<b>'+esc(s.name)+'</b><br>'+esc(s.area)+(s.rating?' ・ ★'+s.rating:''));
+      var icon=L.divIcon({className:"nmk",html:'<span class="nmk-in">'+(i+1)+'</span>',
+        iconSize:[26,26],iconAnchor:[13,13],popupAnchor:[0,-14]});
+      var mk=L.marker(s.latlng,{icon:icon}).addTo(map)
+        .bindPopup('<b>'+esc(s.name)+'</b><br>'+esc(s.area)+(s.rating?' ・ ★'+s.rating:''));
+      markers.push(mk);
+    });
+    // 連動:景點卡 hover → 地圖標記放大變色;點地圖標記 → 捲動至對應景點卡
+    function markerEl(mk){var e2=mk.getElement();return e2?e2.firstChild:null;}
+    document.querySelectorAll(".spot[data-spot]").forEach(function(card){
+      var mk=markers[+card.getAttribute("data-spot")];if(!mk)return;
+      card.addEventListener("mouseenter",function(){var e2=markerEl(mk);if(e2)e2.classList.add("hot");});
+      card.addEventListener("mouseleave",function(){var e2=markerEl(mk);if(e2)e2.classList.remove("hot");});
+    });
+    markers.forEach(function(mk,i){
+      mk.on("click",function(){
+        var card=document.querySelector('.spot[data-spot="'+i+'"]');if(!card)return;
+        card.scrollIntoView({behavior:"smooth",block:"center"});
+        card.classList.add("hot");
+        setTimeout(function(){card.classList.remove("hot");},1600);
+      });
     });
     if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40]});}catch(e){}}
     liveMaps.push(map);

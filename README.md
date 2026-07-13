@@ -8,7 +8,7 @@
 - **行程詳情**：航班/住宿/票券、每日行程(以新幹線軌道為視覺主軸的 timeline)、景點介紹、美食指南、預算與實用資訊,底部互動地圖。
 - **可分享連結**:每趟行程有獨立網址(hash 路由),例如 `index.html#/trip/tohoku-2026`,可直接傳給朋友。
 - **下載旅遊書**:行程頁右上「⬇ 下載旅遊書」→ 直接產生 PDF 檔下載(專屬排版,封面含 CARTO 圖磚靜態地圖)。
-- **最推薦網誌**:每趟行程可附一個參考網誌連結。
+- **搜尋與篩選**:集錦牆可依國家、年份、主題、狀態篩選,並支援關鍵字搜尋(行程/景點/美食)。
 
 ## 檔案結構
 
@@ -24,8 +24,7 @@ data/trips.js     # 所有行程資料(window.TRIPS)
 編輯 `data/trips.js`,照既有 `tohoku-2026` 的 schema 在 `window.TRIPS` 陣列加一筆即可。重點欄位:
 
 - `id`、`title`、`subtitle`、`country`、`region`、`year`、`dateLabel`、`status`
-- `recommended`(集錦牆上標「★ 最推薦」)、`themes`、`tagline`
-- `blogRef: { title, url }` — 最推薦網誌
+- `themes`、`tagline`
 - `mapCenter: [lat, lng]`、`mapZoom` — 地圖視角
 - `flight`、`stay[]`、`pass`、`days[]`、`spots[]`(每個含 `latlng`)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
 
