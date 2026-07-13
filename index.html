@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>行程集錦 — 旅遊回憶 & 攻略</title>
 <meta name="description" content="收藏走過的旅程,也能分享給朋友的攻略牆。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行程集錦 — 旅遊回憶 & 攻略">
+<meta property="og:description" content="收藏走過的旅程,也能分享給朋友的攻略牆。每趟旅程含地圖、每日行程、景點與美食指南。">
+<meta property="og:url" content="https://nctuwanglin.github.io/travel-journal/">
+<meta property="og:image" content="https://nctuwanglin.github.io/travel-journal/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><rect x="2" y="7" width="30" height="5.5" rx="2.75" fill="%230e7c5a"/><rect x="2" y="14.5" width="30" height="5.5" rx="2.75" fill="%23c8344a"/><rect x="2" y="22" width="19" height="5.5" rx="2.75" fill="%2316191d"/></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
@@ -297,6 +306,7 @@
 
   /* print-only */
   .print-only{display:none}
+  .print-cover-map{position:relative;overflow:hidden;border:1px solid #ccc;border-radius:4px;margin:16px auto 0;max-width:100%}
 
   /* =========================================================
      PRINT — 旅遊書
@@ -310,7 +320,6 @@
     .trip{padding:0;animation:none}
     .cover{padding:0 0 8mm}
     .print-only{display:block}
-    .print-cover-map{width:100%;height:62mm;object-fit:cover;border:1px solid #ccc;border-radius:4px;margin-top:6mm}
     .section{padding:7mm 0 0;break-inside:avoid}
     .sec-head{margin-bottom:4mm}
     .day{break-inside:avoid}
@@ -369,12 +378,29 @@
   function byId(id){for(var i=0;i<TRIPS.length;i++)if(TRIPS[i].id===id)return TRIPS[i];return null;}
   function destroyMaps(){liveMaps.forEach(function(m){try{m.remove();}catch(e){}});liveMaps=[];}
 
-  /* OSM 靜態地圖(列印用,Leaflet 圖磚列印常缺圖) */
-  function staticMapURL(trip,w,h){
-    var c=trip.mapCenter, z=trip.mapZoom;
-    var mk=(trip.spots||[]).slice(0,10).map(function(s){return "markers="+s.latlng[0]+","+s.latlng[1]+",lightblue1";}).join("&");
-    return "https://staticmap.openstreetmap.de/staticmap.php?center="+c[0]+","+c[1]+
-           "&zoom="+z+"&size="+w+"x"+h+"&maptype=mapnik"+(mk?"&"+mk:"");
+  /* 靜態地圖(列印/PDF 用):直接以 CARTO 圖磚拼圖 + 疊景點紅點。
+     CARTO 圖磚有 CORS 標頭,html2canvas 也能擷取(舊用的 staticmap.openstreetmap.de 已停止服務)。 */
+  function staticMapHTML(trip,w,h){
+    var z=trip.mapZoom, n=Math.pow(2,z);
+    function lng2x(lng){return (lng+180)/360*n;}
+    function lat2y(lat){var r=lat*Math.PI/180;return (1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n;}
+    var px0=lng2x(trip.mapCenter[1])*256-w/2, py0=lat2y(trip.mapCenter[0])*256-h/2;
+    var html="";
+    for(var ty=Math.floor(py0/256);ty<=Math.floor((py0+h)/256);ty++){
+      if(ty<0||ty>=n)continue;
+      for(var tx=Math.floor(px0/256);tx<=Math.floor((px0+w)/256);tx++){
+        var wx=((tx%n)+n)%n;
+        html+='<img crossorigin="anonymous" alt="" src="https://'+["a","b","c"][(tx+ty)%3]+'.basemaps.cartocdn.com/light_all/'+z+'/'+wx+'/'+ty+'.png"'+
+              ' style="position:absolute;left:'+(tx*256-px0)+'px;top:'+(ty*256-py0)+'px;width:256px;height:256px">';
+      }
+    }
+    (trip.spots||[]).forEach(function(s){
+      var mx=lng2x(s.latlng[1])*256-px0, my=lat2y(s.latlng[0])*256-py0;
+      if(mx<-8||my<-8||mx>w+8||my>h+8)return;
+      html+='<span style="position:absolute;left:'+(mx-6)+'px;top:'+(my-6)+'px;width:12px;height:12px;border-radius:50%;'+
+            'background:#c8344a;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)"></span>';
+    });
+    return '<div class="print-only print-cover-map" style="width:'+w+'px;height:'+h+'px">'+html+'</div>';
   }
 
   /* ---------- ROUTER ---------- */
@@ -390,9 +416,12 @@
   /* ---------- GALLERY ---------- */
   var activeFilter="全部";
   function renderGallery(){
+    document.title="行程集錦 — 旅遊回憶 & 攻略";
     var trips=TRIPS.slice();
     var countries=[]; trips.forEach(function(t){if(countries.indexOf(t.country)<0)countries.push(t.country);});
     var countBy={}; trips.forEach(function(t){countBy[t.country]=(countBy[t.country]||0)+1;});
+    var totDays=0, totSpots=0;
+    trips.forEach(function(t){totDays+=(t.days||[]).length;totSpots+=(t.spots||[]).length;});
     var filters=["全部"].concat(countries);
 
     // 將子區域正規化為大區域;跨兩區的行程同時計入兩個大區域
@@ -423,6 +452,11 @@
       topbar(false,null)+
       '<header class="hero"><div class="wrap">'+
         '<div class="hero-eye"><span class="rail"></span><span class="eyebrow">Travel Journal ・ 行程集錦</span></div>'+
+        '<h1><span class="ja">TRAVEL JOURNAL</span>走過的旅程，<em>收藏成冊</em></h1>'+
+        '<p class="hero-lead">每趟旅程一張卡片：地圖、每日行程、景點與美食攻略。點進去看，或下載旅遊書帶著走。</p>'+
+        '<div class="hero-meta">'+
+          stat(trips.length,"趟旅程")+stat(countries.length,"個國家")+stat(totDays,"天在路上")+stat(totSpots,"個景點")+
+        '</div>'+
         '<div class="hero-charts">'+
           countries.map(function(c){
             var bag=regionsByCountry[c]||{};
@@ -506,6 +540,7 @@
 
   /* ---------- TRIP DETAIL ---------- */
   function renderTrip(t){
+    document.title=displayTitle(t)+"｜行程集錦";
     var couplingDay=function(d){return (d.items||[]).some(function(i){return /連結|分裂/.test(i.text);});};
     var n=0;
     app.innerHTML=
@@ -517,7 +552,7 @@
           '<h1>'+esc(displayTitle(t))+'</h1>'+
           '<div class="sub">'+esc(t.subtitle||"")+'</div>'+
           '<p class="cover-tag">'+esc(t.tagline||"")+'</p>'+
-          '<img class="print-only print-cover-map" src="'+staticMapURL(t,900,360)+'" alt="'+esc(t.region)+'地圖">'+
+          staticMapHTML(t,680,250)+
           factsStrip(t)+
         '</section>'+
 
@@ -653,6 +688,9 @@
       ".pdfstage{position:fixed;inset:0;z-index:2147483647;background:#fff;overflow:auto;display:flex;justify-content:center;align-items:flex-start}"+
       ".pdfstage .pdfbook{width:794px;background:#fff}"+
       ".pdfstage .pdfbook .wrap{max-width:none !important;margin:0 !important;padding:0 28px !important}"+
+      /* 用 .pdfbook 作用域:html2pdf 擷取時會把 clone 移入自己的容器,.pdfstage 後代選擇器會失效 */
+      ".pdfbook .print-only{display:block}"+
+      ".pdfbook .print-cover-map{break-inside:avoid;page-break-inside:avoid}"+
       ".pdfbook .spots,.pdfbook .ucols,.pdfbook .infogrid,.pdfbook .facts{display:block !important}"+
       ".pdfbook .fact{border-right:none !important;border-bottom:1px solid var(--line-soft)}"+
       ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard{margin-bottom:12px}"+
@@ -670,14 +708,29 @@
     var label=btn?btn.innerHTML:"";
     if(btn){btn.innerHTML="產生 PDF 中…";btn.disabled=true;}
     function done(){holder.remove();if(btn){btn.innerHTML=label;btn.disabled=false;}}
-    window.html2pdf().set({
-      margin:[10,8,12,8],
-      filename:t.region+"_"+t.year+"_旅遊書.pdf",
-      image:{type:"jpeg",quality:0.96},
-      html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",scrollX:0,scrollY:0},
-      jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
-      pagebreak:{mode:["avoid-all","css","legacy"]}
-    }).from(clone).save().then(done).catch(function(e){done();alert("PDF 產生失敗:"+e);});
+    var started=false;
+    function runPdf(){
+      if(started)return; started=true;
+      window.html2pdf().set({
+        margin:[10,8,12,8],
+        filename:t.region+"_"+t.year+"_旅遊書.pdf",
+        image:{type:"jpeg",quality:0.96},
+        html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",scrollX:0,scrollY:0},
+        jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
+        pagebreak:{mode:["avoid-all","css","legacy"]}
+      }).from(clone).save().then(done).catch(function(e){done();alert("PDF 產生失敗:"+e);});
+    }
+    // cloneNode 的 <img>(封面地圖圖磚)需重新載入,等載完再擷取,否則地圖是空白
+    var pending=0;
+    clone.querySelectorAll("img").forEach(function(im){
+      if(im.complete&&im.naturalWidth>0)return;
+      pending++;
+      var fin=function(){if(--pending<=0)runPdf();};
+      im.addEventListener("load",fin);
+      im.addEventListener("error",fin);
+    });
+    if(pending===0)runPdf();
+    else setTimeout(runPdf,8000); // 保險:圖磚逾時也照樣輸出
   }
 
   function buildDetailMap(t){
@@ -712,8 +765,10 @@
     return '<section class="section"><div class="sec-head"><span class="sec-no mono">'+String(no).padStart(2,"0")+'</span>'+
       '<span class="sec-title">'+esc(title)+'</span><span class="sec-line"></span></div>'+body+'</section>';
   }
-  /* ---------- 瀏覽人數(counterapi.dev 免費計數,失敗時不顯示) ---------- */
+  /* ---------- 瀏覽人數(counterapi.dev 免費計數,失敗時不顯示;本機開發不計) ---------- */
   var VISITS = null;
+  var IS_LOCAL = location.protocol==="file:" || /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
+  if(!IS_LOCAL)
   fetch("https://api.counterapi.dev/v1/nctuwanglin-travel-journal/pv/up")
     .then(function(r){ return r.json(); })
     .then(function(d){
