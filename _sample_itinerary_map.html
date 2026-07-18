@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>行程圖範例 — 野球小子的四國旅行地圖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#d8d2c4;display:flex;justify-content:center;padding:16px;font-family:"Noto Sans TC",sans-serif}
+  #stage{width:1520px;max-width:100%}
+  svg{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 20px 60px -25px rgba(0,0,0,.5)}
+  text{font-family:"Noto Sans TC",sans-serif}
+  .serif{font-family:"Noto Serif TC",serif}
+</style>
+</head>
+<body>
+<div id="stage"><svg id="art" viewBox="0 0 1520 1064" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<script>
+(function(){
+"use strict";
+var INK="#4a3b2a", SOFT="#7a6a52";
+var DAY_COLORS=["#0e7c5a","#c8344a","#163e73","#dd8a45","#7059a5","#1e8ea5","#9a5b2f","#5f7d2c","#b03a7e"];
+function dc(d){return DAY_COLORS[(d-1)%DAY_COLORS.length];}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+/* ============ 行程資料(未來由 trips.js 自動帶入) ============ */
+var TITLE="野球小子的四國旅行地圖";
+var SUB="26'10/9 – 10/17 ・ 8 天 7 夜行程";
+var PANELS=[
+ {d:1,date:"10/9 (五)",note:"抵達香川 10:30",rows:[["玩","栗林公園、金刀比羅宮"],["午餐","讚岐烏龍麵 上原屋本店"],["晚餐","骨付鳥 一鶴"],["住","WeBase 高松"]]},
+ {d:2,date:"10/10 (六)",note:"香川 → 小豆島",rows:[["玩","天使之路、寒霞溪、橄欖公園"],["午餐","小豆島拉麵 HISHIO"],["晚餐","鐵板燒 夢路"],["住","WeBase 高松"]]},
+ {d:3,date:"10/11 (日)",note:"香川 → 愛媛",rows:[["玩","道後溫泉、松山城"],["午餐","松山鯛めし 秋嘉"],["晚餐","居酒屋 象三"],["住","松山大和 ROYNET"]]},
+ {d:4,date:"10/12 (一)",note:"愛媛・今治",rows:[["玩","今治城、毛巾美術館、摩天輪"],["午餐","濱之台所・潮里"],["晚餐","伊予鐵高島屋"],["住","松山大和 ROYNET"]]},
+ {d:5,date:"10/13 (二)",note:"愛媛 → 高知",rows:[["玩","四萬十川、高知城"],["午餐","レストハウス古都"],["晚餐","OMO7 Buffet"],["住","星野 OMO7 高知"]]},
+ {d:6,date:"10/14 (三)",note:"高知",rows:[["玩","龍河洞、麵包超人博物館"],["早午餐","OMO7 Buffet"],["晚餐","OMO7 Buffet"],["住","星野 OMO7 高知"]]},
+ {d:7,date:"10/15 (四)",note:"高知・徳島・香川",rows:[["玩","鳴門渦潮、屋島展望台"],["午餐","拉麵東大 徳島本店"],["晚餐","瀨戶の祭 迴轉壽司"],["住","高松 JR Clement"]]},
+ {d:8,date:"10/16 (五)",note:"香川",rows:[["玩","四國水族館"],["逛","高松中央商店街"],["午餐","麺處 綿谷"],["晚餐","寄鳥味鳥"]]},
+ {d:9,date:"10/17 (六)",note:"回台灣 19:05",rows:[["逛","高松中央商店街"],["午餐","グリル プランチャ"],["",""],["","平安回家囉!"]]}
+];
+var SPOTS=[
+ {n:1,d:1,x:990,y:302,name:"栗林公園",anchor:"end"},
+ {n:1,d:1,x:880,y:345,name:"金刀比羅宮",anchor:"end"},
+ {n:1,d:1,x:1102,y:256,name:"WeBase 高松",anchor:"start",stay:true},
+ {n:2,d:2,x:1048,y:206,name:"天使之路",anchor:"end"},
+ {n:2,d:2,x:1128,y:166,name:"寒霞溪",anchor:"start"},
+ {n:2,d:2,x:1112,y:226,name:"橄欖公園",anchor:"start"},
+ {n:3,d:3,x:486,y:438,name:"道後溫泉",anchor:"start"},
+ {n:3,d:3,x:428,y:472,name:"松山城",anchor:"end",stay:true},
+ {n:4,d:4,x:553,y:375,name:"今治城",anchor:"start"},
+ {n:4,d:4,x:601,y:400,name:"毛巾美術館",anchor:"start"},
+ {n:4,d:4,x:452,y:508,name:"摩天輪くるりん",anchor:"end"},
+ {n:5,d:5,x:523,y:812,name:"四萬十川",anchor:"start"},
+ {n:5,d:5,x:778,y:581,name:"高知城",anchor:"end",stay:true},
+ {n:6,d:6,x:872,y:572,name:"龍河洞",anchor:"start"},
+ {n:6,d:6,x:884,y:522,name:"麵包超人博物館",anchor:"start"},
+ {n:7,d:7,x:1258,y:302,name:"鳴門渦潮",anchor:"start"},
+ {n:7,d:7,x:1130,y:282,name:"屋島展望台",anchor:"start"},
+ {n:7,d:7,x:1188,y:368,name:"拉麵東大 徳島本店",anchor:"start"},
+ {n:8,d:8,x:872,y:300,name:"四國水族館",anchor:"end"}
+];
+var ROUTES=[
+ {d:1,path:"M985,335 C985,320 990,312 990,302 C945,305 900,322 880,345 C920,335 1020,290 1102,256"},
+ {d:2,path:"M1096,246 C1060,232 1042,220 1048,206 C1072,186 1100,174 1128,166 C1126,192 1120,212 1112,226 C1106,236 1100,244 1098,250"},
+ {d:3,path:"M1090,266 C900,330 640,360 486,438 C462,450 442,458 428,472"},
+ {d:4,path:"M436,462 C470,420 515,390 553,375 C572,384 590,392 601,400 C560,440 480,470 452,508"},
+ {d:5,path:"M448,520 C460,620 480,740 523,812 C620,760 700,650 778,581"},
+ {d:6,path:"M790,575 C820,570 850,572 872,572 C882,556 884,540 884,522"},
+ {d:7,path:"M792,570 C980,470 1180,380 1258,302 C1240,325 1215,345 1188,368 C1170,330 1150,300 1130,282 C1118,272 1105,264 1096,260"},
+ {d:8,path:"M1090,262 C1010,268 930,282 872,300"},
+ {d:9,path:"M1094,266 C1040,310 1000,330 988,336"}
+];
+
+/* ============ 基礎繪圖 helpers ============ */
+var S=[];
+function add(s){S.push(s);}
+
+function chibi(x,y,sc,opt){ // 手繪風 Q 版棒球小子(致敬實況野球的圓頭比例,原創角色)
+  opt=opt||{};
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  // 身體(白色球衣+紅邊)
+  g+='<rect x="-13" y="8" width="26" height="26" rx="9" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-13,14 v14 M13,14 v14" stroke="#c8344a" stroke-width="2.4" fill="none"/>';
+  g+='<text x="0" y="26" text-anchor="middle" font-size="10" font-weight="900" fill="#c8344a">1</text>';
+  // 腳
+  g+='<line x1="-6" y1="34" x2="-6" y2="41" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+  g+='<line x1="6" y1="34" x2="6" y2="41" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+  // 手
+  if(opt.bat){
+    g+='<line x1="10" y1="14" x2="24" y2="6" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+    g+='<line x1="24" y1="8" x2="40" y2="-16" stroke="#b98a4e" stroke-width="6" stroke-linecap="round"/>';
+    g+='<line x1="-10" y1="16" x2="-18" y2="22" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+  }else if(opt.wave){
+    g+='<line x1="10" y1="14" x2="20" y2="2" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+    g+='<line x1="-10" y1="16" x2="-18" y2="22" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+  }else if(opt.paddle){
+    g+='<line x1="-20" y1="4" x2="20" y2="20" stroke="#b98a4e" stroke-width="4.5" stroke-linecap="round"/>';
+    g+='<ellipse cx="-22" cy="3" rx="5" ry="8" fill="#b98a4e" transform="rotate(22 -22 3)"/>';
+  }else{
+    g+='<line x1="10" y1="14" x2="17" y2="22" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+    g+='<line x1="-10" y1="14" x2="-17" y2="22" stroke="'+INK+'" stroke-width="3" stroke-linecap="round"/>';
+  }
+  // 頭(超大圓頭)
+  g+='<circle cx="0" cy="-12" r="19" fill="#ffe9c9" stroke="'+INK+'" stroke-width="2"/>';
+  // 表情
+  g+='<circle cx="-6.5" cy="-12" r="2.2" fill="'+INK+'"/><circle cx="6.5" cy="-12" r="2.2" fill="'+INK+'"/>';
+  g+='<circle cx="-11" cy="-6" r="3" fill="#f6b8b8" opacity=".8"/><circle cx="11" cy="-6" r="3" fill="#f6b8b8" opacity=".8"/>';
+  g+='<path d="M-3,-5 Q0,-2 3,-5" stroke="'+INK+'" stroke-width="1.8" fill="none" stroke-linecap="round"/>';
+  // 帽子 / 頭巾
+  if(opt.towel){
+    g+='<path d="M-16,-22 Q0,-34 16,-22 L14,-16 Q0,-24 -14,-16 Z" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+    g+='<path d="M-3,-40 q3,-5 0,-9 M4,-37 q3,-5 0,-9" stroke="#9db8c8" stroke-width="2" fill="none" stroke-linecap="round"/>';
+  }else{
+    g+='<path d="M-17,-20 A19,17 0 0 1 17,-20 L17,-17 L-17,-17 Z" fill="#c8344a" stroke="'+INK+'" stroke-width="2"/>';
+    g+='<path d="M10,-19 q14,0 15,5 l-14,2 Z" fill="#c8344a" stroke="'+INK+'" stroke-width="1.6"/>';
+    g+='<circle cx="0" cy="-31" r="2.4" fill="#fffdf7" stroke="'+INK+'" stroke-width="1.4"/>';
+  }
+  if(opt.kayak){
+    g+='<path d="M-34,40 Q0,50 34,40 Q20,34 0,34 Q-20,34 -34,40 Z" fill="#dd8a45" stroke="'+INK+'" stroke-width="2"/>';
+  }
+  return g+'</g>';
+}
+function bowl(x,y,sc,kind,label,lx){ // 麵碗 doodle
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<path d="M-22,0 A22,20 0 0 0 22,0 Z" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-22,0 h44" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-15,-3 q5,-6 10,0 q5,-6 10,0 q5,-6 10,0" stroke="#d9a441" stroke-width="3" fill="none" stroke-linecap="round"/>';
+  if(kind==="ramen")g+='<circle cx="-8" cy="-6" r="4" fill="#f2c9a0" stroke="'+INK+'" stroke-width="1.4"/><circle cx="6" cy="-7" r="4" fill="#f6b8b8" stroke="'+INK+'" stroke-width="1.4"/>';
+  g+='<line x1="6" y1="-22" x2="20" y2="-6" stroke="'+INK+'" stroke-width="2" stroke-linecap="round"/>';
+  g+='<line x1="12" y1="-24" x2="24" y2="-9" stroke="'+INK+'" stroke-width="2" stroke-linecap="round"/>';
+  g+='<path d="M-12,6 a16,7 0 0 0 24,0" stroke="#e0d6bf" stroke-width="0" fill="none"/>';
+  g+='</g>';
+  if(label)g+=txt(x+(lx||0),y+26,label,10.5,SOFT,"middle");
+  return g;
+}
+function sushi(x,y,sc,label){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<ellipse cx="0" cy="8" rx="26" ry="6" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<rect x="-20" y="-4" width="17" height="9" rx="4" fill="#fffdf7" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<rect x="-20" y="-8" width="17" height="7" rx="3.5" fill="#f08a72" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<rect x="3" y="-4" width="17" height="9" rx="4" fill="#fffdf7" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<rect x="3" y="-8" width="17" height="7" rx="3.5" fill="#e8b64c" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='</g>';
+  if(label)g+=txt(x,y+26,label,10.5,SOFT,"middle");
+  return g;
+}
+function drumstick(x,y,sc,label){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+') rotate(-30)">';
+  g+='<ellipse cx="-6" cy="0" rx="14" ry="10" fill="#c98d4e" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<line x1="8" y1="0" x2="20" y2="0" stroke="#f3ecd9" stroke-width="5" stroke-linecap="round"/>';
+  g+='<circle cx="22" cy="-3" r="3.4" fill="#fffdf7" stroke="'+INK+'" stroke-width="1.5"/>';
+  g+='<circle cx="22" cy="3" r="3.4" fill="#fffdf7" stroke="'+INK+'" stroke-width="1.5"/>';
+  g+='</g>';
+  if(label)g+=txt(x,y+22,label,10.5,SOFT,"middle");
+  return g;
+}
+function castle(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<rect x="-16" y="4" width="32" height="12" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-20,4 L0,-2 L20,4 Z" fill="#5e7f97" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<rect x="-11" y="-12" width="22" height="10" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-15,-12 L0,-19 L15,-12 Z" fill="#5e7f97" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-4,-19 L0,-25 L4,-19" fill="none" stroke="'+INK+'" stroke-width="2" stroke-linecap="round"/>';
+  return g+'</g>';
+}
+function onsen(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<path d="M-16,6 A16,10 0 0 0 16,6 Z" fill="#9db8c8" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-8,0 q4,-7 0,-13 M0,2 q4,-8 0,-15 M8,0 q4,-7 0,-13" stroke="#8aa9bc" stroke-width="2.6" fill="none" stroke-linecap="round"/>';
+  return g+'</g>';
+}
+function whale(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<path d="M-18,0 Q-12,-12 2,-11 Q16,-10 18,-2 Q19,4 10,5 L-12,5 Q-18,5 -18,0 Z" fill="#7fa8c9" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M16,-1 q8,-3 9,-8 q2,6 -3,10 Z" fill="#7fa8c9" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<circle cx="-9" cy="-4" r="1.8" fill="'+INK+'"/>';
+  g+='<path d="M-14,-13 q2,-4 0,-7 M-10,-13 q2,-4 0,-7" stroke="#8aa9bc" stroke-width="2" fill="none" stroke-linecap="round"/>';
+  return g+'</g>';
+}
+function whirlpool(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')" fill="none" stroke="#7fa8c9" stroke-width="3" stroke-linecap="round">';
+  g+='<path d="M0,0 m-1,0 a1,1 0 0 1 2,0 a2.2,2.2 0 0 1 -4.4,0 a4.4,4.4 0 0 1 8.8,0 a7,7 0 0 1 -14,0 a10,10 0 0 1 20,0"/>';
+  return g+'</g>';
+}
+function ferris(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<circle cx="0" cy="-8" r="13" fill="none" stroke="'+INK+'" stroke-width="2"/>';
+  for(var a=0;a<6;a++){var r=(a*60)*Math.PI/180;
+    g+='<line x1="0" y1="-8" x2="'+(13*Math.cos(r)).toFixed(1)+'" y2="'+(-8+13*Math.sin(r)).toFixed(1)+'" stroke="'+INK+'" stroke-width="1.4"/>';
+    g+='<circle cx="'+(13*Math.cos(r)).toFixed(1)+'" cy="'+(-8+13*Math.sin(r)).toFixed(1)+'" r="2.6" fill="'+["#c8344a","#dd8a45","#0e7c5a","#7059a5","#1e8ea5","#e8b64c"][a]+'" stroke="'+INK+'" stroke-width="1.2"/>';}
+  g+='<path d="M-7,6 L0,-8 L7,6" fill="none" stroke="'+INK+'" stroke-width="2"/>';
+  return g+'</g>';
+}
+function carIcon(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<path d="M-18,4 q0,-6 5,-7 l4,-6 q2,-3 6,-3 h6 q4,0 6,3 l4,6 q5,1 5,7 v3 h-36 Z" fill="#d95845" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<rect x="-6" y="-9" width="10" height="6" rx="2" fill="#cfe3ee" stroke="'+INK+'" stroke-width="1.4"/>';
+  g+='<circle cx="-10" cy="8" r="4" fill="'+INK+'"/><circle cx="10" cy="8" r="4" fill="'+INK+'"/>';
+  g+='<circle cx="-10" cy="8" r="1.6" fill="#fffdf7"/><circle cx="10" cy="8" r="1.6" fill="#fffdf7"/>';
+  return g+'</g>';
+}
+function ferryIcon(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<path d="M-20,2 h40 l-6,9 h-28 Z" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<rect x="-10" y="-7" width="16" height="9" rx="2" fill="#7fa8c9" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<line x1="2" y1="-13" x2="2" y2="-7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-24,14 q4,-4 8,0 q4,-4 8,0 q4,-4 8,0 q4,-4 8,0 q4,-4 8,0" stroke="#7fa8c9" stroke-width="2" fill="none" stroke-linecap="round"/>';
+  return g+'</g>';
+}
+function trainIcon(x,y,sc){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+')">';
+  g+='<rect x="-18" y="-10" width="36" height="18" rx="6" fill="#5e8f6f" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<rect x="-13" y="-5" width="9" height="7" rx="2" fill="#cfe3ee" stroke="'+INK+'" stroke-width="1.4"/>';
+  g+='<rect x="4" y="-5" width="9" height="7" rx="2" fill="#cfe3ee" stroke="'+INK+'" stroke-width="1.4"/>';
+  g+='<circle cx="-9" cy="10" r="3.4" fill="'+INK+'"/><circle cx="9" cy="10" r="3.4" fill="'+INK+'"/>';
+  return g+'</g>';
+}
+function planeIcon(x,y,sc,rot){
+  var g='<g transform="translate('+x+','+y+') scale('+sc+') rotate('+(rot||0)+')">';
+  g+='<path d="M-20,0 h28 q10,0 12,4 q-4,4 -14,4 h-26 q-4,0 -4,-4 Z" fill="#fffdf7" stroke="'+INK+'" stroke-width="2"/>';
+  g+='<path d="M-2,0 l10,-10 h7 l-7,10 Z" fill="#c8344a" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<path d="M-14,4 l-6,7 h6 l5,-6" fill="#c8344a" stroke="'+INK+'" stroke-width="1.6"/>';
+  g+='<circle cx="6" cy="3" r="1.4" fill="#7fa8c9"/><circle cx="0" cy="3" r="1.4" fill="#7fa8c9"/><circle cx="-6" cy="3" r="1.4" fill="#7fa8c9"/>';
+  return g+'</g>';
+}
+function txt(x,y,s,size,color,anchor,weight,cls){
+  return '<text x="'+x+'" y="'+y+'" font-size="'+size+'" fill="'+(color||INK)+'" text-anchor="'+(anchor||"start")+'" font-weight="'+(weight||700)+'"'+(cls?' class="'+cls+'"':'')+'>'+esc(s)+'</text>';
+}
+
+/* ============ 畫布 ============ */
+add('<rect x="0" y="0" width="1520" height="1064" fill="#efe6cf"/>');
+// 紙紋
+var grain='';
+for(var gy=8;gy<1064;gy+=14)for(var gx=8;gx<1520;gx+=14)if((gx+gy)%42===8)grain+='<circle cx="'+gx+'" cy="'+gy+'" r="1" fill="#dccfae"/>';
+add('<g opacity=".5">'+grain+'</g>');
+add('<rect x="14" y="14" width="1492" height="1036" rx="20" fill="none" stroke="#b8a887" stroke-width="2.5"/>');
+add('<rect x="22" y="22" width="1476" height="1020" rx="16" fill="none" stroke="#cbbc9b" stroke-width="1.5" stroke-dasharray="7 6"/>');
+
+/* ============ 海與四國島 ============ */
+add('<rect x="336" y="88" width="1150" height="800" rx="18" fill="#dcE9f0"/>');
+// 海波紋
+var waves='';
+[[420,180],[620,240],[380,700],[700,880],[1330,200],[1420,520],[1310,700],[760,140],[1180,760],[560,560]].forEach(function(p){
+  waves+='<path d="M'+p[0]+','+p[1]+' q6,-5 12,0 q6,-5 12,0" stroke="#b9d2df" stroke-width="2.5" fill="none" stroke-linecap="round"/>';
+});
+add(waves);
+// 四國本島(手繪 blob)
+add('<path d="M420,470 C400,430 430,395 480,388 C520,352 560,340 620,352 C700,330 800,300 900,282 '+
+    'C960,262 1030,242 1090,252 C1160,258 1240,268 1290,300 C1320,330 1300,370 1260,392 '+
+    'C1230,430 1160,440 1080,430 C1040,470 990,520 930,560 C880,620 830,680 760,700 '+
+    'C700,760 640,840 560,858 C500,868 460,830 470,770 C450,700 430,600 445,540 C435,515 425,495 420,470 Z" '+
+    'fill="#f4eeda" stroke="#c9b995" stroke-width="3"/>');
+// 縣色塊(水彩感,半透明)
+add('<path d="M930,282 C990,258 1060,246 1110,254 C1160,262 1200,276 1210,300 C1200,330 1150,350 1090,352 C1020,352 960,330 935,312 Z" fill="#cfe3c8" opacity=".65"/>');   // 香川
+add('<path d="M1210,300 C1250,290 1290,300 1295,320 C1300,352 1270,388 1230,400 C1180,414 1130,400 1110,380 C1130,352 1170,320 1210,300 Z" fill="#ded5ef" opacity=".65"/>'); // 徳島
+add('<path d="M425,470 C420,430 445,398 490,390 C540,356 590,344 640,356 C680,370 690,400 670,430 C640,470 590,500 545,530 C500,556 455,520 425,470 Z" fill="#f6dbe0" opacity=".7"/>');  // 愛媛
+add('<path d="M545,545 C620,520 720,510 800,530 C880,545 960,540 1010,510 C1040,540 1020,580 970,610 C900,660 820,690 750,700 C680,750 620,820 565,845 C510,855 475,820 485,765 C470,700 500,600 545,545 Z" fill="#f3e9c2" opacity=".7"/>'); // 高知
+// 小豆島
+add('<path d="M1035,215 C1030,190 1055,168 1090,160 C1130,148 1165,158 1172,182 C1178,206 1155,230 1120,238 C1085,246 1042,240 1035,215 Z" fill="#f8e3cf" stroke="#c9b995" stroke-width="2.5"/>');
+// 縣名
+add(txt(1042,356,"香川",30,"#4d7a52","middle",900,"serif"));
+add(txt(1262,414,"徳島",30,"#6a5a96","middle",900,"serif"));
+add(txt(455,362,"愛媛",30,"#b25a6c","middle",900,"serif"));
+add(txt(880,655,"高知",30,"#a5822e","middle",900,"serif"));
+add(txt(1100,132,"小豆島",22,"#8a6a3f","middle",900,"serif"));
+
+/* ============ 標題 ============ */
+add(txt(495,66,"❀","28","#dd8a45","middle"));
+add(txt(1035,66,"❀","28","#dd8a45","middle"));
+add('<text x="765" y="72" font-size="44" text-anchor="middle" font-weight="900" fill="'+INK+'" class="serif">'+esc(TITLE)+'</text>');
+add('<path d="M560,86 h400 l14,17 -14,17 h-400 l-14,-17 Z" fill="#e8d9b8" stroke="#b8a887" stroke-width="2"/>');
+add(txt(760,109,SUB,17,INK,"middle",900));
+
+/* ============ 路線 ============ */
+ROUTES.forEach(function(r){
+  add('<path d="'+r.path+'" fill="none" stroke="'+dc(r.d)+'" stroke-width="3.2" stroke-dasharray="9 7" stroke-linecap="round" opacity=".9"/>');
+});
+
+/* ============ 景點小圖 ============ */
+add(castle(428,448,1));           // 松山城
+add(castle(553,352,0.9));         // 今治城
+add(castle(778,558,1));           // 高知城
+add(onsen(486,414,1));            // 道後溫泉
+add(ferris(452,483,0.95));        // 摩天輪
+add(whirlpool(1290,302,1.1));     // 鳴門
+add(whale(845,262,1));            // 水族館
+add(bowl(912,368,0.85,"udon","上原屋 讚岐烏龍",0));
+add(bowl(1196,196,0.8,"ramen","HISHIO 拉麵",0));
+add(bowl(1215,405,0.8,"ramen","",0));
+add(sushi(1172,320,0.8,"瀨戶の祭 迴轉壽司"));
+add(drumstick(1248,228,0.8,"骨付鳥 一鶴"));
+// 渡輪航線示意
+add(ferryIcon(1000,168,0.9));
+// 高松站
+add('<rect x="1042" y="236" width="9" height="9" fill="#c8344a" stroke="'+INK+'" stroke-width="1.4" transform="rotate(45 1046 240)"/>');
+add(txt(1032,244,"JR 高松站",11,SOFT,"end"));
+
+/* ============ 景點標記 ============ */
+SPOTS.forEach(function(s){
+  if(s.stay)add('<circle cx="'+s.x+'" cy="'+s.y+'" r="15" fill="none" stroke="#c8344a" stroke-width="2.4"/>');
+  add('<circle cx="'+s.x+'" cy="'+s.y+'" r="10.5" fill="'+dc(s.d)+'" stroke="#fffdf7" stroke-width="2.4"/>');
+  add('<text x="'+s.x+'" y="'+(s.y+4)+'" font-size="12" font-weight="900" fill="#fffdf7" text-anchor="middle">'+s.n+'</text>');
+  var tx=s.anchor==="end"?s.x-16:s.x+16;
+  add(txt(tx,s.y+4,s.name,12.5,INK,s.anchor,900));
+});
+
+/* ============ Q 版棒球小子 ============ */
+add(chibi(700,180,1.15,{bat:true}));                       // 海上揮棒登場
+add(chibi(1062,150,0.85,{}));                              // 小豆島散步
+add(chibi(452,540,0,{}));                                  // (預留)
+add(chibi(410,415,0.9,{towel:true}));                      // 道後溫泉頭巾
+add(chibi(470,845,0.95,{paddle:true,kayak:true}));         // 四萬十獨木舟
+add(chibi(940,600,0.9,{wave:true}));                       // 高知揮手
+add(planeIcon(640,120,1.1,-8));
+
+/* ============ 右上租車卡 ============ */
+add('<g transform="rotate(1.2 1395 150)"><rect x="1300" y="96" width="192" height="118" rx="12" fill="#fbf6e8" stroke="#b8a887" stroke-width="2"/>'+
+  txt(1396,122,"10/11–10/16 10:00",13,INK,"middle",900)+
+  txt(1396,140,"租車 JR 高松站取車",13,INK,"middle",900)+
+  carIcon(1372,178,1.15)+chibi(1436,172,0.72,{wave:true})+'</g>');
+
+/* ============ 路線圖例 ============ */
+(function(){
+  var x=1310,y=470,w=182,h=282;
+  var g='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="#fbf6e8" stroke="#b8a887" stroke-width="2"/>';
+  g+=txt(x+w/2,y+26,"路 線 圖 例",15,INK,"middle",900,"serif");
+  var dates=["10/9","10/10","10/11","10/12","10/13","10/14","10/15","10/16","10/17"];
+  for(var i=0;i<9;i++){
+    var yy=y+46+i*22;
+    g+='<line x1="'+(x+16)+'" y1="'+yy+'" x2="'+(x+52)+'" y2="'+yy+'" stroke="'+dc(i+1)+'" stroke-width="3.2" stroke-dasharray="7 5" stroke-linecap="round"/>';
+    g+=txt(x+60,yy+4,dates[i]+"  DAY"+(i+1),12,INK,"start",700);
+  }
+  g+='<circle cx="'+(x+24)+'" cy="'+(y+252)+'" r="8" fill="none" stroke="#c8344a" stroke-width="2.4"/>';
+  g+=txt(x+40,y+256,"住宿地點",12,INK,"start",700);
+  add(g);
+})();
+
+/* ============ DAY 面板 ============ */
+function panel(p,x,y,w,h,rot){
+  var g='<g transform="rotate('+rot+' '+(x+w/2)+' '+(y+h/2)+')">';
+  g+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="#fbf6e8" stroke="#b8a887" stroke-width="2"/>';
+  g+='<rect x="'+(x+12)+'" y="'+(y+11)+'" width="58" height="21" rx="10" fill="'+dc(p.d)+'"/>';
+  g+='<text x="'+(x+41)+'" y="'+(y+26)+'" font-size="12.5" font-weight="900" fill="#fffdf7" text-anchor="middle">DAY '+p.d+'</text>';
+  g+=txt(x+80,y+27,p.date+"  "+p.note,13.5,INK,"start",900);
+  var yy=y+48;
+  p.rows.forEach(function(r){
+    if(!r[1])return;
+    if(r[0]){
+      g+='<circle cx="'+(x+19)+'" cy="'+(yy-4)+'" r="2.2" fill="'+dc(p.d)+'"/>';
+      g+=txt(x+28,yy,r[0]+"：",12,SOFT,"start",900);
+      g+=txt(x+28+(r[0].length*12)+14,yy,r[1],12,INK,"start",700);
+    }else{
+      g+=txt(x+28,yy,r[1],12.5,INK,"start",900);
+    }
+    yy+=21;
+  });
+  return g+'</g>';
+}
+var LX=30,LW=298;
+[0,1,2,3,4].forEach(function(i){ add(panel(PANELS[i],LX,96+i*158,LW,148,i%2? .6:-.6)); });
+add(panel(PANELS[5],238,904,296,138,-.5));
+add(panel(PANELS[6],544,904,330,138,.5));
+add(panel(PANELS[7],884,904,296,138,-.5));
+add(panel(PANELS[8],1190,904,300,138,.5));
+add(chibi(1445,1005,0.85,{wave:true}));
+add(planeIcon(1415,970,0.9,-10));
+
+/* ============ 交通方式 ============ */
+(function(){
+  var x=30,y=904,w=198,h=138;
+  var g='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="#fbf6e8" stroke="#b8a887" stroke-width="2"/>';
+  g+='<rect x="'+(x+42)+'" y="'+(y+12)+'" width="114" height="24" rx="6" fill="#e8d9b8" stroke="#b8a887" stroke-width="1.6"/>';
+  g+=txt(x+w/2,y+29,"交 通 方 式",14,INK,"middle",900,"serif");
+  g+=carIcon(x+40,y+58,0.85)+txt(x+70,y+62,"自駕(租車)",12.5,INK,"start",700);
+  g+=trainIcon(x+40,y+88,0.8)+txt(x+70,y+92,"JR 鐵路",12.5,INK,"start",700);
+  g+=ferryIcon(x+40,y+116,0.75)+txt(x+70,y+120,"渡輪",12.5,INK,"start",700);
+  add(g);
+})();
+
+document.getElementById("art").innerHTML=S.join("");
+})();
+</script>
+</body>
+</html>

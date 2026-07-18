@@ -112,6 +112,10 @@ def main():
         if not ds or not de:
             W("%s: 建議補 dateStart/dateEnd(狀態自動切換要靠它)" % tid)
 
+        ma = t.get("mapArt")
+        if ma and not os.path.exists(os.path.join(HERE, ma)):
+            E("%s: mapArt 圖檔不存在 %r" % (tid, ma))
+
         mc = t.get("mapCenter") or [None, None]
         if not (isinstance(mc, list) and len(mc) == 2 and
                 isinstance(mc[0], (int, float)) and isinstance(mc[1], (int, float)) and

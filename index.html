@@ -361,7 +361,10 @@
 
   /* print-only */
   .print-only{display:none}
-  .print-cover-map{position:relative;overflow:hidden;border:1px solid #ccc;border-radius:4px;margin:16px auto 0;max-width:100%}
+
+  /* 00 行程圖(手繪) */
+  .mapart-link{display:block}
+  .mapart{display:block;width:100%;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 
   /* =========================================================
      PRINT — 旅遊書
@@ -439,31 +442,6 @@
       try{e.m.remove();}catch(x){}
       return false;
     });
-  }
-
-  /* 靜態地圖(列印/PDF 用):直接以 CARTO 圖磚拼圖 + 疊景點紅點。
-     CARTO 圖磚有 CORS 標頭,html2canvas 也能擷取(舊用的 staticmap.openstreetmap.de 已停止服務)。 */
-  function staticMapHTML(trip,w,h){
-    var z=trip.mapZoom, n=Math.pow(2,z);
-    function lng2x(lng){return (lng+180)/360*n;}
-    function lat2y(lat){var r=lat*Math.PI/180;return (1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n;}
-    var px0=lng2x(trip.mapCenter[1])*256-w/2, py0=lat2y(trip.mapCenter[0])*256-h/2;
-    var html="";
-    for(var ty=Math.floor(py0/256);ty<=Math.floor((py0+h)/256);ty++){
-      if(ty<0||ty>=n)continue;
-      for(var tx=Math.floor(px0/256);tx<=Math.floor((px0+w)/256);tx++){
-        var wx=((tx%n)+n)%n;
-        html+='<img crossorigin="anonymous" alt="" src="https://'+["a","b","c"][(tx+ty)%3]+'.basemaps.cartocdn.com/light_all/'+z+'/'+wx+'/'+ty+'.png"'+
-              ' style="position:absolute;left:'+(tx*256-px0)+'px;top:'+(ty*256-py0)+'px;width:256px;height:256px">';
-      }
-    }
-    (trip.spots||[]).forEach(function(s){
-      var mx=lng2x(s.latlng[1])*256-px0, my=lat2y(s.latlng[0])*256-py0;
-      if(mx<-8||my<-8||mx>w+8||my>h+8)return;
-      html+='<span style="position:absolute;left:'+(mx-6)+'px;top:'+(my-6)+'px;width:12px;height:12px;border-radius:50%;'+
-            'background:'+(s.day?dayColor(s.day):"#c8344a")+';border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)"></span>';
-    });
-    return '<div class="print-only print-cover-map" style="width:'+w+'px;height:'+h+'px">'+html+'</div>';
   }
 
   /* ---------- ROUTER ---------- */
@@ -699,9 +677,15 @@
           '<h1>'+esc(displayTitle(t))+'</h1>'+
           '<div class="sub">'+esc(t.subtitle||"")+'</div>'+
           '<p class="cover-tag">'+esc(t.tagline||"")+'</p>'+
-          staticMapHTML(t,680,250)+
           factsStrip(t)+
         '</section>'+
+        (t.mapArt
+          ? sec(0,"行程圖",
+              '<a class="mapart-link" href="'+esc(t.mapArt)+'" target="_blank" rel="noopener">'+
+                '<img class="mapart" src="'+esc(t.mapArt)+'" alt="'+esc(displayTitle(t))+' 手繪行程圖">'+
+              '</a>'+
+              '<div class="map-cap">手繪行程圖 ・ 點圖可看原尺寸 ・ 右上「下載行程圖」可存單張</div>')
+          : '')+
         secs.map(function(s,i){return sec(i+1,s[0],s[1]);}).join("")+
       '</div></article>'+
       footer();
@@ -851,8 +835,7 @@
       ".pdfstage .pdfbook{width:794px;background:#fff}"+
       ".pdfstage .pdfbook .wrap{max-width:none !important;margin:0 !important;padding:0 28px !important}"+
       /* 用 .pdfbook 作用域:html2pdf 擷取時會把 clone 移入自己的容器,.pdfstage 後代選擇器會失效 */
-      ".pdfbook .print-only{display:block}"+
-      ".pdfbook .print-cover-map{break-inside:avoid;page-break-inside:avoid}"+
+      ".pdfbook .mapart{break-inside:avoid;page-break-inside:avoid;box-shadow:none}"+
       ".pdfbook .spots,.pdfbook .ucols,.pdfbook .infogrid,.pdfbook .facts{display:block !important}"+
       ".pdfbook .fact{border-right:none !important;border-bottom:1px solid var(--line-soft)}"+
       ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard{margin-bottom:12px}"+
@@ -986,7 +969,11 @@
         '<span><span class="brand-name">行程集錦</span><br><span class="brand-sub">TRAVEL JOURNAL</span></span></a>'+
       '<div class="topbar-actions">'+
         (inTrip
-          ? '<a class="btn btn-ghost" href="#/">← 集錦牆</a><button class="btn btn-ink no-print" id="printBtn">⬇ 下載旅遊書</button>'
+          ? '<a class="btn btn-ghost" href="#/">← 集錦牆</a>'+
+            (t&&t.mapArt
+              ? '<a class="btn no-print" id="mapArtBtn" href="'+esc(t.mapArt)+'" download="'+esc(t.region+"_"+t.year+"_行程圖.jpg")+'">🗺 下載行程圖</a>'
+              : '')+
+            '<button class="btn btn-ink no-print" id="printBtn">⬇ 下載旅遊書</button>'
           : '<span class="eyebrow" style="opacity:.65">收藏 ・ 分享 ・ 帶著走</span>')+
       '</div>'+
     '</div></div></div>';

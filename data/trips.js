@@ -19,6 +19,7 @@ window.TRIPS = [
     themes: ["新幹線", "祕境峽谷", "親子", "美食"],
     mapCenter: [39.2, 140.85],
     mapZoom: 7,
+    mapArt: "img/tohoku-2026.jpg",
 
     flight: {
       airline: "星宇航空 STARLUX",
