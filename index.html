@@ -73,16 +73,17 @@
     background:rgba(236,231,220,.86);backdrop-filter:blur(12px);
     border-bottom:1px solid var(--line);
   }
-  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:14px;height:58px}
-  .brand{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none}
+  /* height 用 min-height:即使極窄螢幕文字被迫換行,topbar 也只是變高,不會裁切內容 */
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:58px;flex-wrap:wrap;padding:6px 0}
+  .brand{display:flex;align-items:center;gap:11px;cursor:pointer;text-decoration:none;min-width:0;flex:0 1 auto}
   .brand-mark{position:relative;width:34px;height:34px;flex:0 0 auto}
   .brand-mark i{position:absolute;height:4px;border-radius:2px;left:2px;right:2px}
   .brand-mark i:nth-child(1){top:9px;background:var(--hayabusa)}
   .brand-mark i:nth-child(2){top:16px;background:var(--komachi)}
   .brand-mark i:nth-child(3){top:23px;background:var(--ink);right:11px}
-  .brand-name{font-family:"Noto Serif TC",serif;font-weight:900;font-size:17px;letter-spacing:.02em}
-  .brand-sub{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;color:var(--muted)}
-  .topbar-actions{display:flex;align-items:center;gap:8px}
+  .brand-name{font-family:"Noto Serif TC",serif;font-weight:900;font-size:17px;letter-spacing:.02em;white-space:nowrap}
+  .brand-sub{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);white-space:nowrap}
+  .topbar-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
   .btn{
     cursor:pointer;border:1px solid var(--line);background:var(--paper-2);
     color:var(--ink);font-family:inherit;font-size:13px;font-weight:700;
@@ -93,6 +94,12 @@
   .btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .btn-ink:hover{background:#000}
   .btn-ghost{background:transparent}
+  /* 行動版:行程頁雙按鈕(← 集錦牆 + 下載旅遊書)較窄螢幕會擠壓品牌區,
+     縮小按鈕與副標字距、隱藏副標避免換行擠爆 logo 文字 */
+  @media(max-width:480px){
+    .brand-sub{display:none}
+    .btn{padding:7px 11px;font-size:12px;gap:5px}
+  }
 
   /* =========================================================
      GALLERY / WALL
