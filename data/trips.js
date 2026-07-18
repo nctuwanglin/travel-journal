@@ -117,7 +117,7 @@ window.TRIPS = [
         name: "猊鼻溪", day: 2, area: "岩手縣", rating: 4.4, tel: "+81-191-47-2341", hours: "8:30–16:00",
         latlng: [38.9876, 141.2167],
         desc: "世界遺產等級的天然峽谷,搭平底木船沿溪而行,兩岸奇岩峭壁高聳入雲。船夫以竹竿撐船,歸程時用低沉嗓音吟唱岩手古調,迴響於峽谷間令人動容。小鴨會主動靠近討食,超療癒!費用 ¥2,000/人,來回約 90 分鐘。",
-        ref: { title: "果子的腳印・猊鼻溪 & 嚴美溪深度攻略", url: "https://footprints.tw/blog/post/222243907" }
+        ref: { title: "猊鼻溪舟下り官方網站(中文)・路線與費用", url: "https://www.geibikei.co.jp/ch/route/index.html" }
       },
       {
         name: "角館武家屋敷街", day: 3, area: "秋田縣", rating: 4.4, hours: "距角館站步行約 15 分",
@@ -140,12 +140,14 @@ window.TRIPS = [
       {
         name: "松島遊覽船", day: 2, area: "宮城縣", hours: "環灣一周約 50 分",
         latlng: [38.3681, 141.0634],
-        desc: "日本三景之一的松島灣,260 餘座覆滿松樹的小島散落海上。搭遊覽船環灣一周,近距離欣賞奇形怪狀的島嶼與海蝕地形;下船後可順遊五大堂與瑞巖寺參道。"
+        desc: "日本三景之一的松島灣,260 餘座覆滿松樹的小島散落海上。搭遊覽船環灣一周,近距離欣賞奇形怪狀的島嶼與海蝕地形;下船後可順遊五大堂與瑞巖寺參道。",
+        ref: { title: "喵爸喵媽・松島觀光船四大體驗攻略", url: "https://kimiyo.tw/matsushima/" }
       },
       {
         name: "金蛇水神社", day: 5, area: "宮城縣・岩沼",
         latlng: [38.111, 140.843],
-        desc: "以財運與商賣繁盛聞名的古社,主祀水神。參道旁的蛇紋石群是名物——傳說用錢包輕觸蛇紋石可招財;境內牡丹園每逢花季更是壯觀。距仙台約 30 分車程,適合返台前補一發好運。"
+        desc: "以財運與商賣繁盛聞名的古社,主祀水神。參道旁的蛇紋石群是名物——傳說用錢包輕觸蛇紋石可招財;境內牡丹園每逢花季更是壯觀。距仙台約 30 分車程,適合返台前補一發好運。",
+        ref: { title: "櫻桃甜・東北最強金運能量神社參拜記", url: "https://amigo0728.pixnet.net/blog/posts/5071046589" }
       },
       {
         name: "仙台海洋森林水族館", day: 5, area: "宮城縣", rating: 4.2, tel: "+81-22-355-2222", hours: "9:00–17:30",
@@ -162,6 +164,14 @@ window.TRIPS = [
     ],
 
     food: [
+      { name: "善治郎 牛舌(牛たん通り店)", area: "仙台站 3F", stars: 5, note: "D1 晚餐・厚切炭烤", ref: { title: "周花花・善治郎 仙台車站牛舌通必吃", url: "https://tenjo.tw/tanyazenjirou/" } },
+      { name: "仙台朝市(海鮮丼早餐)", area: "仙台站西口", stars: 4, note: "D2/D6 早餐・¥500 朝市丼", ref: { title: "樂吃購・仙台朝市攻略(必吃美食/營業時間)", url: "https://tohoku.letsgojp.com/archives/20453/" } },
+      { name: "大魔王 GOLD 居酒屋", area: "仙台", stars: 4, note: "D2 晚餐・串燒雞料理", ref: { title: "大魔王 GOLD 官方網站", url: "https://hirakegoma.owst.jp/" } },
+      { name: "櫻之里(比內地雞親子丼)", area: "角館", stars: 5, note: "D3 午餐・武家屋敷名店", ref: { title: "周花花・櫻之里 角館評價最高餐廳", url: "https://tenjo.tw/sakuranosato/" } },
+      { name: "白雞舍(雞白湯拉麵)", area: "仙台一番町", stars: 4, note: "D3 晚餐・濃厚雞白湯", ref: { title: "白雞舍官方網站", url: "https://www.eastone.co.jp/hakkeisha/" } },
+      { name: "燒肉仔虎(米澤牛)", area: "仙台", stars: 5, note: "D4 晚餐・和牛燒肉名店", ref: { title: "Maruko・仔虎米澤牛燒肉 CP 值爆表", url: "https://marukoblog.tw/sendai-yakiniku.html" } },
+      { name: "閣 牛舌(米其林必比登)", area: "仙台國分町", stars: 5, note: "D5 晚餐・炭烤厚切", ref: { title: "樂活的大方・牛舌料理 閣 米其林推薦", url: "https://www.bigfang.tw/blog/post/gyutankaku-vlandome-sendai" } },
+      { name: "一蘭拉麵", area: "仙台", stars: 4, note: "D6 午餐・經典豚骨", ref: { title: "一蘭官方網站", url: "https://ichiran.com/" } },
       { name: "牛舌定食(牛たん)", area: "仙台", stars: 5, note: "必吃!", ref: { title: "樂活的大方・仙台牛舌推薦 12 間", url: "https://www.bigfang.tw/blog/post/sendai-gyutan" } },
       { name: "ずんだ餅", area: "仙台", stars: 4, note: "甜點必備", ref: { title: "凱子凱・萩の月 & ずんだ茶寮", url: "https://ksk.tw/2023-11-30-2313/" } },
       { name: "萩の月(伴手禮)", area: "仙台", stars: 5, note: "最經典", ref: { title: "樂吃購・仙台伴手禮 10 選", url: "https://tohoku.letsgojp.com/archives/520098/" } },

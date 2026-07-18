@@ -340,7 +340,11 @@
   .nmk .nmk-in.hot{transform:scale(1.35);box-shadow:0 0 0 3px rgba(22,25,29,.3),0 1px 5px rgba(0,0,0,.35)}
   .maplegend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
   .lgd{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;
-    color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+    color:var(--ink-soft);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;
+    cursor:pointer;transition:.15s}
+  .lgd:hover{border-color:var(--ink);color:var(--ink)}
+  .lgd.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .lgd:focus-visible{outline:3px solid var(--hayabusa);outline-offset:2px}
   .lgd i{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
   .detailmap{height:420px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
   .detailmap .leaflet-container{height:100%;width:100%;background:#dfe5e2;font-family:inherit}
@@ -677,7 +681,7 @@
     addSec("實用旅遊資訊",utilCols(t));
     addSec("路線地圖",(t.spots&&t.spots.length)
       ? '<div class="detailmap" id="detail-map" role="region" aria-label="路線地圖"></div>'+dayLegend(t)+
-        '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 顏色 = 造訪日 ・ 點標記跳至該景點</div>'
+        '<div class="map-cap">OpenStreetMap ・ 標記編號對應「景點介紹」・ 顏色 = 造訪日 ・ 點圖例可只看單日 ・ 點標記跳至該景點</div>'
       : "");
     app.innerHTML=
       topbar(true,t)+
@@ -765,10 +769,14 @@
     (t.spots||[]).forEach(function(s){if(s.day&&used.indexOf(s.day)<0)used.push(s.day);});
     if(!used.length)return "";
     used.sort(function(a,b){return a-b;});
-    return '<div class="maplegend">'+used.map(function(d){
-      var dd=null; (t.days||[]).forEach(function(x){if(x.day===d)dd=x;});
-      return '<span class="lgd"><i style="background:'+dayColor(d)+'"></i>Day '+d+(dd?' ・ '+esc(dd.date):'')+'</span>';
-    }).join("")+'</div>';
+    // 圖例即篩選器:點「Day N」只看該日,點「全部」還原
+    return '<div class="maplegend" id="maplegend" role="group" aria-label="路線地圖日次篩選">'+
+      '<button class="lgd on" data-day="" aria-pressed="true">全部</button>'+
+      used.map(function(d){
+        var dd=null; (t.days||[]).forEach(function(x){if(x.day===d)dd=x;});
+        return '<button class="lgd" data-day="'+d+'" aria-pressed="false">'+
+          '<i style="background:'+dayColor(d)+'"></i>Day '+d+(dd?' ・ '+esc(dd.date):'')+'</button>';
+      }).join("")+'</div>';
   }
 
   function spotsGrid(t){
@@ -910,6 +918,27 @@
         setTimeout(function(){card.classList.remove("hot");},1600);
       });
     });
+    // 圖例篩選:點 Day N 只顯示該日標記並 refit,點「全部」還原
+    var legend=document.getElementById("maplegend");
+    if(legend){
+      legend.addEventListener("click",function(e){
+        var b=e.target.closest(".lgd");if(!b)return;
+        var sel=b.getAttribute("data-day");
+        legend.querySelectorAll(".lgd").forEach(function(x){
+          var on=(x===b);
+          x.classList.toggle("on",on);
+          x.setAttribute("aria-pressed",String(on));
+        });
+        var vis=[];
+        (t.spots||[]).forEach(function(s,i){
+          var mk=markers[i];if(!mk)return;
+          if(!sel||String(s.day)===sel){mk.addTo(map);vis.push(s.latlng);}
+          else map.removeLayer(mk);
+        });
+        if(vis.length>1){try{map.fitBounds(vis,{padding:[40,40]});}catch(e2){}}
+        else if(vis.length===1)map.setView(vis[0],Math.max(t.mapZoom+1,9));
+      });
+    }
     if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40]});}catch(e){}}
     addMap(map,"page");
     setTimeout(function(){map.invalidateSize();},120);
