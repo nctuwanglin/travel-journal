@@ -636,6 +636,7 @@ window.TRIPS = [
     themes: ["自駕", "溫泉", "美食", "親子"],
     mapCenter: [33.85, 133.5],
     mapZoom: 8,
+    mapArt: "img/shikoku-2026.jpg",
 
     flight: {
       airline: "中華航空 China Airlines",
