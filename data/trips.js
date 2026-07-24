@@ -128,19 +128,19 @@ window.TRIPS = [
         name: "猊鼻溪", day: 2, area: "岩手縣", rating: 4.4, tel: "+81-191-47-2341", hours: "8:30–16:00",
         latlng: [38.9876, 141.2167],
         desc: "世界遺產等級的天然峽谷,搭平底木船沿溪而行,兩岸奇岩峭壁高聳入雲。船夫以竹竿撐船,歸程時用低沉嗓音吟唱岩手古調,迴響於峽谷間令人動容。小鴨會主動靠近討食,超療癒!費用 ¥2,000/人,來回約 90 分鐘。",
-        ref: { title: "猊鼻溪舟下り官方網站(中文)・路線與費用", url: "https://www.geibikei.co.jp/ch/route/index.html" }
+        ref: { title: "若曦的味旅人生・猊鼻溪旅遊全攻略:門票交通景點深度解析", url: "https://jamesdiscover.tw/blog/16968" }
       },
       {
         name: "角館武家屋敷街", day: 3, area: "秋田縣", rating: 4.4, hours: "距角館站步行約 15 分",
         latlng: [39.6003, 140.5667],
         desc: "被譽為「小京都」的江戶時代武士街,300 年歷史的黑圍牆老宅保存完整。青柳家屋敷規模最大,展示鎧甲武器與生活文物(¥500)。春天櫻花配武家屋敷是絕景,夏天綠意盎然同樣迷人。",
-        ref: { title: "BringYou・角館武家屋敷散策(交通+必看)", url: "https://www.bring-you.info/zh-tw/kakunodate" }
+        ref: { title: "Listen to LU 旅食光・角館武家屋敷通,四季印象皆美的陸奧小京都散策", url: "https://listentolu.com/2024/11/kakunodatemachi/" }
       },
       {
         name: "田澤湖", day: 3, area: "秋田縣", rating: 4.4, hours: "日本最深的湖(423.4m)",
         latlng: [39.7236, 140.6628],
         desc: "湖水因含鋁呈現夢幻湛藍色,晴天水色隨光線變幻如寶石。湖畔有辰子像(傳說化為龍的美女),可搭環湖巴士(¥1,210)欣賞各角度湖景,或乘高速遊覽船(約 40 分)感受深邃藍色。附近有乳頭溫泉鶴の湯,可當日入浴(建議預約)。",
-        ref: { title: "莉莉安小貴婦・田澤湖辰子姬像", url: "https://lilliansblog.com/tazawako/" }
+        ref: { title: "傑西亞的旅行手札・田澤湖琉璃色的美麗;遊船、御座石神社、辰子像", url: "https://www.jeffiafang.com/2507231557-2/" }
       },
       {
         name: "Marusei 果樹園(採水蜜桃)", day: 4, area: "福島縣", hours: "旺季 7 月下旬–9 月上旬",
@@ -152,7 +152,7 @@ window.TRIPS = [
         name: "松島遊覽船", day: 5, area: "宮城縣", hours: "環灣一周約 50 分",
         latlng: [38.3681, 141.0634],
         desc: "日本三景之一的松島灣,260 餘座覆滿松樹的小島散落海上。搭遊覽船環灣一周,近距離欣賞奇形怪狀的島嶼與海蝕地形;下船後可順遊五大堂與瑞巖寺參道。",
-        ref: { title: "喵爸喵媽・松島觀光船四大體驗攻略", url: "https://kimiyo.tw/matsushima/" }
+        ref: { title: "Huan的旅行・松島海岸一日遊,松島散步路線與遊覽船", url: "https://huannntravel.com/matsushima-trip/" }
       },
       {
         name: "金蛇水神社", day: 4, area: "宮城縣・岩沼",
@@ -164,7 +164,7 @@ window.TRIPS = [
         name: "仙台海洋森林水族館", day: 5, area: "宮城縣", rating: 4.2, tel: "+81-22-355-2222", hours: "9:00–17:30",
         latlng: [38.2697, 141.0125],
         desc: "仙台最人氣水族館,主要展示三陸海域生物。必看表演:「沙丁魚旋風秀」萬條沙丁魚組成陣型壯觀無比;海豚 & 海獅表演活潑有趣;每日企鵝大遊行萌度爆表。入場費成人 ¥2,400,建議預訂 Klook 套票較便宜。",
-        ref: { title: "福寶媽・仙台海洋森林水族館爆走企鵝", url: "https://gogojp.tw/sendai-uminomori/" }
+        ref: { title: "樂吃購！日本・仙台海洋森林水族館完整攻略", url: "https://tohoku.letsgojp.com/archives/359782/" }
       },
       {
         name: "麵包超人博物館", day: 2, area: "宮城縣", rating: 4.2, tel: "+81-22-298-8855", hours: "10:00–17:00",
@@ -178,18 +178,18 @@ window.TRIPS = [
       { name: "善治郎 牛舌(牛たん通り店)", area: "仙台站 3F", stars: 5, note: "D1 晚餐・厚切炭烤", ref: { title: "周花花・善治郎 仙台車站牛舌通必吃", url: "https://tenjo.tw/tanyazenjirou/" } },
       { name: "仙台朝市(海鮮丼早餐)", area: "仙台站西口", stars: 4, note: "D2/D6 早餐・¥500 朝市丼", ref: { title: "樂吃購・仙台朝市攻略(必吃美食/營業時間)", url: "https://tohoku.letsgojp.com/archives/20453/" } },
       { name: "大魔王 GOLD 居酒屋", area: "仙台", stars: 4, note: "D2 晚餐・串燒雞料理", ref: { title: "大魔王 GOLD 官方網站", url: "https://hirakegoma.owst.jp/" } },
-      { name: "櫻之里(比內地雞親子丼)", area: "角館", stars: 5, note: "D3 午餐・武家屋敷名店", ref: { title: "周花花・櫻之里 角館評價最高餐廳", url: "https://tenjo.tw/sakuranosato/" } },
+      { name: "櫻之里(比內地雞親子丼)", area: "角館", stars: 5, note: "D3 午餐・武家屋敷名店", ref: { title: "G子的漫畫生活・角館武家屋敷美食:櫻之里稻庭烏龍麵", url: "https://gzifood.com/sakura-no-sato/" } },
       { name: "白雞舍(雞白湯拉麵)", area: "仙台一番町", stars: 4, note: "D3 晚餐・濃厚雞白湯", ref: { title: "白雞舍官方網站", url: "https://www.eastone.co.jp/hakkeisha/" } },
-      { name: "燒肉仔虎(米澤牛)", area: "仙台", stars: 5, note: "D4 晚餐・和牛燒肉名店", ref: { title: "Maruko・仔虎米澤牛燒肉 CP 值爆表", url: "https://marukoblog.tw/sendai-yakiniku.html" } },
-      { name: "閣 牛舌(米其林必比登)", area: "仙台國分町", stars: 5, note: "D5 晚餐・炭烤厚切", ref: { title: "樂活的大方・牛舌料理 閣 米其林推薦", url: "https://www.bigfang.tw/blog/post/gyutankaku-vlandome-sendai" } },
+      { name: "燒肉仔虎(米澤牛)", area: "仙台", stars: 5, note: "D4 晚餐・和牛燒肉名店", ref: { title: "凱的日本食尚日記・仔虎燒肉實證(2025最新菜單)", url: "https://kaikk.tw/toranomon/" } },
+      { name: "閣 牛舌(米其林必比登)", area: "仙台國分町", stars: 5, note: "D5 晚餐・炭烤厚切", ref: { title: "Maruko與美食有個約會・牛舌料理閣,仙台商店街排隊名店", url: "https://marukoblog.tw/beef-tongue.html" } },
       { name: "一蘭拉麵", area: "仙台", stars: 4, note: "D6 午餐・經典豚骨", ref: { title: "一蘭官方網站", url: "https://ichiran.com/" } },
-      { name: "牛舌定食(牛たん)", area: "仙台", stars: 5, note: "必吃!", ref: { title: "樂活的大方・仙台牛舌推薦 12 間", url: "https://www.bigfang.tw/blog/post/sendai-gyutan" } },
+      { name: "牛舌定食(牛たん)", area: "仙台", stars: 5, note: "必吃!", ref: { title: "樂吃購！日本・仙台車站美食推薦:牛舌善治郎", url: "https://tohoku.letsgojp.com/archives/17952/" } },
       { name: "ずんだ餅", area: "仙台", stars: 4, note: "甜點必備", ref: { title: "凱子凱・萩の月 & ずんだ茶寮", url: "https://ksk.tw/2023-11-30-2313/" } },
-      { name: "萩の月(伴手禮)", area: "仙台", stars: 5, note: "最經典", ref: { title: "樂吃購・仙台伴手禮 10 選", url: "https://tohoku.letsgojp.com/archives/520098/" } },
+      { name: "萩の月(伴手禮)", area: "仙台", stars: 5, note: "最經典", ref: { title: "Funliday・仙台伴手禮推薦必買11選", url: "https://www.funliday.com/posts/2025-sendai-omiyage-top11/" } },
       { name: "笹かまぼこ", area: "仙台", stars: 4, note: "魚板零食", ref: { title: "樂吃購・仙台伴手禮 10 選", url: "https://tohoku.letsgojp.com/archives/520098/" } },
       { name: "福島水蜜桃", area: "福島", stars: 5, note: "超甜!", ref: { title: "福寶媽・福島採水蜜桃 marusei", url: "https://gojp.tw/fukushima-marusei/" } },
-      { name: "稻庭烏龍麵", area: "秋田", stars: 4, note: "細滑 Q 彈", ref: { title: "莉莉安・寬文五年堂稻庭烏龍麵", url: "https://lilliansblog.com/kanbun/" } },
-      { name: "比內地雞料理", area: "秋田", stars: 5, note: "秋田名物", ref: { title: "小氣少年・秋田比內地雞 & 稻庭烏龍麵", url: "https://nicklee.tw/2339/akita-gourmet-hinaijidori-udon/" } },
+      { name: "稻庭烏龍麵", area: "秋田", stars: 4, note: "細滑 Q 彈", ref: { title: "樂吃購！日本・秋田必吃美食:稻庭烏龍麵、比內地雞丼飯", url: "https://tohoku.letsgojp.com/archives/613248/" } },
+      { name: "比內地雞料理", area: "秋田", stars: 5, note: "秋田名物", ref: { title: "vocus・秋田必吃美食:比內地雞米棒鍋", url: "https://vocus.cc/article/69397b2ffd89780001c7f4e7" } },
       { name: "三陸海鮮", area: "宮城", stars: 5, note: "新鮮美味", ref: { title: "Wen・仙台必吃 13 間餐廳", url: "https://www.wenthetravelbegins.com/sendai-foodie-guide/" } }
     ],
 
@@ -796,43 +796,43 @@ window.TRIPS = [
         name: "金刀比羅宮", day: 1, area: "琴平", hours: "本宮 6:00–18:00",
         latlng: [34.1853, 133.8108],
         desc: "海上交通守護神,號稱日本最難參拜的神社:本宮 785 階、奧社共 1368 階。沿途店家可借拐杖,每段有階數牌。可買奧社天狗御守、遇見開運こんぴら狗。",
-        ref: { title: "壞波妞・金刀比羅宮 1368 階", url: "https://boniutravel.com/blog/post/kotohira-shrine" }
+        ref: { title: "許傑,旅行圖中・金刀比羅宮,爬上785階的能量行旅", url: "https://journey.tw/kotohira-gu/" }
       },
       {
         name: "天使之路", day: 2, area: "小豆島", hours: "退潮前後浮現",
         latlng: [34.4853, 134.2236],
         desc: "連接四座小島的 500 公尺沙洲步道,每天僅在兩次退潮時從海中浮現。傳說與心愛的人牽手走過願望會實現,約束之丘展望台可俯瞰全景。",
-        ref: { title: "福寶媽・天使之路天使散步道", url: "https://gogojp.tw/angel-road/" }
+        ref: { title: "許傑,旅行圖中・小豆島天使之路,在潮起潮落的浪漫之路", url: "https://journey.tw/angel-road/" }
       },
       {
         name: "寒霞溪", day: 2, area: "小豆島", hours: "纜車 8:30–17:00",
         latlng: [34.5066, 134.2731],
         desc: "與耶馬溪、妙義山並列日本三大美麗溪谷,搭空中纜車飽覽奇岩峭壁。秋日紅葉最著名(10–11 月),春夏綠意、冬雪也各有風情。",
-        ref: { title: "兩株小豬・寒霞溪かんかけい", url: "https://rebecca1003.pixnet.net/blog/posts/10358035012" }
+        ref: { title: "許傑,旅行圖中・寒霞溪,搭纜車橫越日本三大溪谷", url: "https://journey.tw/kanka-kei/" }
       },
       {
         name: "小豆島橄欖公園", day: 2, area: "小豆島", hours: "8:30–17:00",
         latlng: [34.4789, 134.2456],
         desc: "眺望瀨戶內海的山丘,種有約 2000 株橄欖與上百種香草。《魔女宅急便》拍攝場景,可免費借魔女掃帚拍出飛天照,白色希臘風車是地標。",
-        ref: { title: "岡山憨吉・小豆島橄欖公園", url: "https://archerplus.pixnet.net/blog/post/234520857" }
+        ref: { title: "許傑,旅行圖中・小豆島橄欖公園,化身魔女宅急便小魔女", url: "https://journey.tw/olive-pk/" }
       },
       {
         name: "道後溫泉本館", day: 3, area: "松山", hours: "6:00–23:00",
         latlng: [33.8519, 132.7864],
         desc: "3000 年歷史、日本最古老溫泉之一,1894 年三層木造本館為首座列為重要文化財的公共浴場,米其林綠色指南三星。2024 年整修後重新開放,神之湯最低 700 日圓可泡。",
-        ref: { title: "美奈子・道後溫泉千年古湯", url: "https://minako.tw/dogo-onsen/" }
+        ref: { title: "MATCHA・道後溫泉完全攻略(2026)", url: "https://matcha-jp.com/tw/3863" }
       },
       {
         name: "松山城", day: 3, area: "松山", hours: "9:00–17:00",
         latlng: [33.8456, 132.7656],
         desc: "1602 年起興建、日本現存十二天守之一,聳立勝山山頂,可搭纜車或吊椅上山。天守最上層眺望松山平原與瀨戶內海,連同湯築城跡可規劃一日雙城。",
-        ref: { title: "耕讀・伊予松山城一日雙城", url: "https://ullams.pixnet.net/blog/post/49212452" }
+        ref: { title: "魚漿夫婦・2024四國自由行景點遊記", url: "https://junespring.pixnet.net/blog/post/61839576" }
       },
       {
         name: "今治城", day: 4, area: "今治", hours: "9:00–17:00",
         latlng: [34.0664, 133.0044],
         desc: "築城名手藤堂高虎 1604 年所建,引瀨戶內海水為護城河,與高松城、中津城並列日本三大水城。天守最上層 360 度展望,可眺望島波海道絕景,日落後點燈浪漫。",
-        ref: { title: "Kenny's Blog・愛媛今治城", url: "https://kenfoto.pixnet.net/blog/post/485596370" }
+        ref: { title: "小氣少年・瀨戶內海跳島:今治城、來島海峽SA", url: "https://nicklee.tw/2565/setouchi-imabari-toyo-ito/" }
       },
       {
         name: "今治毛巾美術館", day: 4, area: "今治", hours: "9:30–18:00",
@@ -855,13 +855,13 @@ window.TRIPS = [
         name: "高知城", day: 5, area: "高知", hours: "9:00–17:00",
         latlng: [33.5608, 133.5311],
         desc: "日本現存十二天守之一,亦稱鷹城,明治與二戰皆倖免於難,15 棟建築列為重要文化財,是少數天守與本丸御殿同時保存的城。可串聯弘人市場、商店街徒步一日遊。",
-        ref: { title: "R瑋哥・高知市區徒步一日遊", url: "https://a4031320.pixnet.net/blog/post/575495588" }
+        ref: { title: "KKday・高知景點深度旅遊一日遊推薦(2025)", url: "https://www.kkday.com/zh-tw/blog/176219/asia-japan-kochi-guide" }
       },
       {
         name: "龍河洞", day: 6, area: "香美市", hours: "8:30–17:00(冬季至 16:30)",
         latlng: [33.5908, 133.7458],
         desc: "日本三大鐘乳洞之一,約 1 億 7500 萬年形成、全長約 4km。觀光路線輕鬆好走,洞內瀑布、弥生時代遺物『神之壺』與持續 80 多年的科學實驗是亮點,另有冒險路線。",
-        ref: { title: "岡山憨吉・龍河洞 1.5 億年鐘乳洞", url: "https://archerplus.pixnet.net/blog/post/227664362" }
+        ref: { title: "企鵝出遊・四國高知縣龍河洞", url: "https://penguingogo.com/2024/12/17/四國高知縣龍河洞.html" }
       },
       {
         name: "麵包超人博物館(柳瀨嵩紀念館)", day: 6, area: "香美市", hours: "9:30–17:00",
@@ -873,12 +873,13 @@ window.TRIPS = [
         name: "鳴門渦潮", day: 7, area: "徳島・鳴門", hours: "依觀潮表",
         latlng: [34.2386, 134.6453],
         desc: "世界三大潮流之一,可搭觀潮船(Wonder 鳴門號免預約、AQUA EDDY 小型需預約)近距離震撼,或走大鳴門橋下『渦之道』玻璃步道俯瞰。春秋大潮漩渦直徑可達 20–30 公尺。",
-        ref: { title: "小氣少年・鳴門渦之道", url: "https://nicklee.tw/1214/uzunomichi/" }
+        ref: { title: "樂吃購！日本・德島自由行攻略:鳴門渦潮×祖谷秘境", url: "https://shikoku.letsgojp.com/archives/540152/" }
       },
       {
         name: "屋島展望台", day: 7, area: "高松", hours: "戶外・全日",
         latlng: [34.3678, 134.1067],
-        desc: "高松屋島山上展望台,一覽瀨戶內海多島海景,夕陽與夜景人氣高。投瓦祈福(投瓦片)很有名,新地標『やしまーる』迴廊增添藝術氣息。"
+        desc: "高松屋島山上展望台,一覽瀨戶內海多島海景,夕陽與夜景人氣高。投瓦祈福(投瓦片)很有名,新地標『やしまーる』迴廊增添藝術氣息。",
+        ref: { title: "元六月的世界旅歷・屋島展望瀨戶內海(第84號靈場屋島寺)", url: "https://marstmel.pixnet.net/blog/post/346483675" }
       },
       {
         name: "四國水族館", day: 8, area: "宇多津", hours: "9:00–18:00(依季節)",
@@ -889,10 +890,10 @@ window.TRIPS = [
     ],
 
     food: [
-      { name: "讚岐烏龍麵 上原屋本店", area: "高松", stars: 5, note: "栗林公園旁自助烏龍", ref: { title: "許傑・上原屋本店自助烏龍", url: "https://journey.tw/ueharayahonten/" } },
+      { name: "讚岐烏龍麵 上原屋本店", area: "高松", stars: 5, note: "栗林公園旁自助烏龍", ref: { title: "周花花・讚岐烏龍麵上原屋本店,tabelog3.87分", url: "https://tenjo.tw/ueharayahonten/" } },
       { name: "骨付鳥 一鶴", area: "高松", stars: 5, note: "骨付鳥元祖名店", ref: { title: "Star_Chu・骨付鳥一鶴高松店", url: "https://starland.pixnet.net/blog/post/348999610" } },
       { name: "小豆島拉麵 HISHIO", area: "小豆島", stars: 4, note: "醬油拉麵配海景", ref: { title: "許傑・小豆島拉麵 HISHIO", url: "https://journey.tw/hishio/" } },
-      { name: "鐵板燒 夢路", area: "小豆島", stars: 4, note: "小豆島鐵板燒" },
+      { name: "鐵板燒 夢路", area: "小豆島", stars: 4, note: "小豆島鐵板燒", ref: { title: "Ken&Alice玩樂誌・高松景點美食住宿推薦(含夢路鐵板燒)", url: "https://kenalice.tw/blog/post/takamatsu-tour" } },
       { name: "松山鯛めし 秋嘉", area: "松山", stars: 4, note: "松山鯛魚飯專門店" },
       { name: "海鮮居酒屋 象三", area: "松山", stars: 4, note: "瀨戶內四季海鮮" },
       { name: "濱之台所・潮里", area: "今治", stars: 4, note: "今治海鮮料理" },
