@@ -32,8 +32,8 @@ window.TRIPS = [
     ],
     pass: {
       icon: "🚄", label: "交通票券",
-      name: "JR East Pass(東北・信越版)6 日券",
-      price: "約 ¥30,000",
+      name: "JR East Pass(東北地區)5 日券",
+      price: "約 ¥35,000",
       head: ["路段", "車種", "時間"],
       rows: [
         ["仙台 → 田澤湖", "E6 こまち(經盛岡)", "約 80 分"],

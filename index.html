@@ -770,8 +770,19 @@
       }).join("")+'</div>';
   }
 
+  /* 依造訪日排序景點(穩定排序,同天保留原順序);spotsGrid 與 buildDetailMap
+     都要用同一份排序結果,兩處的編號才會對應一致(hover/點擊連動靠 index 比對)。 */
+  function sortedSpots(t){
+    return (t.spots||[]).map(function(s,i){return [s,i];})
+      .sort(function(a,b){
+        var da=a[0].day||999, db=b[0].day||999;
+        return da!==db ? da-db : a[1]-b[1];
+      })
+      .map(function(p){return p[0];});
+  }
+
   function spotsGrid(t){
-    return '<div class="spots">'+(t.spots||[]).map(function(s,i){
+    return '<div class="spots">'+sortedSpots(t).map(function(s,i){
       var meta=[];
       if(s.rating)meta.push('<b>★ '+s.rating+'</b>');
       if(s.hours)meta.push(esc(s.hours));
@@ -884,7 +895,7 @@
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
       maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
     var pts=[], markers=[];
-    (t.spots||[]).forEach(function(s,i){
+    sortedSpots(t).forEach(function(s,i){
       pts.push(s.latlng);
       var icon=L.divIcon({className:"nmk",
         html:'<span class="nmk-in"'+(s.day?' style="background:'+dayColor(s.day)+'"':'')+'>'+(i+1)+'</span>',
