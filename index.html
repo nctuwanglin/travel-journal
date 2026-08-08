@@ -993,20 +993,34 @@
     return '<section class="section"><div class="sec-head"><span class="sec-no mono">'+String(no).padStart(2,"0")+'</span>'+
       '<span class="sec-title">'+esc(title)+'</span><span class="sec-line"></span></div>'+body+'</section>';
   }
-  /* ---------- 瀏覽人數(counterapi.dev 免費計數,失敗時不顯示;本機開發不計) ---------- */
-  var VISITS = null;
+  /* ---------- 瀏覽統計:Abacus(免註冊、免 API key) ----------
+     原用的 CounterAPI v1 已於 2026/07 停用(回 410),故遷移至 Abacus。
+     /hit/ 會遞增並回傳 {"value":N};日計數以台灣時間(UTC+8)換日,
+     避免用 UTC 造成早上 8 點才跨日。失敗時靜默不顯示,本機開發不計。 */
+  var VISITS_HTML = "";
   var IS_LOCAL = location.protocol==="file:" || /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
-  if(!IS_LOCAL)
-  fetch("https://api.counterapi.dev/v1/nctuwanglin-travel-journal/pv/up")
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      VISITS = (d && (d.count!=null ? d.count : (d.data&&d.data.count)))||null;
-      var n=document.getElementById("visits");
-      if(n && VISITS!=null) n.textContent = "・ 瀏覽 " + Number(VISITS).toLocaleString() + " 次";
-    })
-    .catch(function(){});
+  if(!IS_LOCAL){
+    (function(){
+      var base = "https://abacus.jasoncameron.dev/hit/nctuwanglin-travel-journal";
+      var today = new Date(Date.now()+8*3600*1000).toISOString().slice(0,10).replace(/-/g,"");
+      var num = function(v){ return (v && typeof v.value === "number") ? v.value.toLocaleString("en-US") : null; };
+      Promise.allSettled([
+        fetch(base+"/total").then(function(r){return r.json();}),
+        fetch(base+"/day-"+today).then(function(r){return r.json();})
+      ]).then(function(res){
+        var t = res[0].status==="fulfilled" ? num(res[0].value) : null;
+        var d = res[1].status==="fulfilled" ? num(res[1].value) : null;
+        var parts=[];
+        if(d) parts.push("今日瀏覽 "+d);
+        if(t) parts.push("累計瀏覽 "+t);
+        VISITS_HTML = parts.length ? "・ "+parts.join(" ・ ") : "";
+        var n=document.getElementById("visits");
+        if(n) n.textContent = VISITS_HTML;
+      });
+    })();
+  }
   function visitsHtml(){
-    return '<span id="visits">'+(VISITS!=null ? "・ 瀏覽 "+Number(VISITS).toLocaleString()+" 次" : "")+'</span>';
+    return '<span id="visits">'+VISITS_HTML+'</span>';
   }
   function footer(){return '<footer class="footer">行程集錦 ・ TRAVEL JOURNAL ・ 收藏與分享每一趟旅程 '+visitsHtml()+'</footer>';}
 
