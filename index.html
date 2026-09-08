@@ -259,7 +259,19 @@
   .otable .dcell{white-space:nowrap}
   .otable .dcell b{font-family:"Space Grotesk",sans-serif;font-size:15px}
   .otable .theme{font-weight:700}
-  .otable .stars{color:var(--peach);white-space:nowrap;font-size:13px}
+  .otable .stars{color:var(--peach);font-size:13px}
+  .otable .stars [role="img"]{white-space:nowrap}
+  .table-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  @media(max-width:600px){
+    .otable th,.otable td{padding:10px 8px;font-size:12px}
+    .otable .stars{font-size:12px}
+    .infocard .otable .dcell{white-space:normal}
+    .irow .iv{min-width:0;overflow-wrap:anywhere}
+    .infocard{min-width:0;padding:14px}
+    .infocard h3{flex-wrap:wrap}
+    .topbar-actions{flex-wrap:wrap;flex-shrink:1}
+    .tip{margin-left:0;flex-wrap:wrap}
+  }
 
   /* info cards (flight/stay/pass) */
   .infogrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -388,7 +400,15 @@
     .card,.infocard,.spot,.ucard,.otable,.facts,.infogrid>*{box-shadow:none !important}
     a{text-decoration:none}
   }
+  .check-note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:6px;overflow-wrap:anywhere;font-weight:400}
+  .check-note a{text-decoration:underline;color:inherit}
+  .needs-check{color:#9c4930}
+  .maintenance-summary{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
+  .map-record{font-size:12px;line-height:1.8;padding:14px 16px;background:var(--paper);border:1px solid var(--line-soft);margin-top:12px;overflow-wrap:anywhere}
+  .map-prompt summary{cursor:pointer}.map-prompt pre{white-space:pre-wrap;font:inherit;max-height:240px;overflow:auto}
 </style>
+<link rel="stylesheet" href="pdf-book.css?v=20260907-3">
+<link rel="stylesheet" href="travel-mode.css?v=2">
 </head>
 <body>
 <div id="app"></div>
@@ -397,11 +417,16 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.2/dist/html2pdf.bundle.min.js"
         integrity="sha384-aBc0BOllaGWrQx51DYt978St/L7B+21jzNGc4N/jnGD0NxGwj8S/ftRgW0AkXIak" crossorigin="anonymous"></script>
-<script src="data/trips.js"></script>
+<script src="data/trips.js?v=hokkaido-2027-3"></script>
+<script src="data/maintenance.js?v=20260908-2"></script>
+<script src="trip-maintenance.js"></script>
+<script src="travel-mode.js?v=2"></script>
+<script src="pdf-book.js?v=20260907-3"></script>
 <script>
 (function(){
   "use strict";
   var TRIPS = window.TRIPS || [];
+  var MAINT = window.TRIP_MAINTENANCE || {}, TM = window.TravelMaintenance;
   var app = document.getElementById("app");
   var liveMaps = [];   // {m,kind} 追蹤 Leaflet 實例;kind: "page"(hero/詳情) 或 "card"(集錦卡片)
 
@@ -445,7 +470,9 @@
   }
 
   /* ---------- ROUTER ---------- */
+  var disposeTravelMode=function(){};
   function route(){
+    disposeTravelMode();
     destroyMaps();
     var h=location.hash.replace(/^#/,"");
     var m=h.match(/^\/trip\/(.+)$/);
@@ -677,14 +704,14 @@
           '<h1>'+esc(displayTitle(t))+'</h1>'+
           '<div class="sub">'+esc(t.subtitle||"")+'</div>'+
           '<p class="cover-tag">'+esc(t.tagline||"")+'</p>'+
-          factsStrip(t)+
+          factsStrip(t)+maintenanceSummary(t)+
         '</section>'+
         (t.mapArt
           ? sec(0,"行程圖",
               '<a class="mapart-link" href="'+esc(t.mapArt)+'" target="_blank" rel="noopener">'+
                 '<img class="mapart" src="'+esc(t.mapArt)+'" alt="'+esc(displayTitle(t))+' 手繪行程圖">'+
               '</a>'+
-              '<div class="map-cap">手繪行程圖 ・ 點圖可看原尺寸 ・ 右上「下載行程圖」可存單張</div>')
+              '<div class="map-cap">手繪行程圖 ・ 點圖可看原尺寸 ・ 右上「下載行程圖」可存單張</div>'+mapRecord(t))
           : '')+
         secs.map(function(s,i){return sec(i+1,s[0],s[1]);}).join("")+
       '</div></article>'+
@@ -693,7 +720,27 @@
     // 下載旅遊書(直接產生 PDF 檔)
     var pb=document.getElementById("printBtn");
     if(pb)pb.addEventListener("click",function(){downloadBook(t,pb);});
+    if(window.TravelMode)disposeTravelMode=window.TravelMode.mount(t,document.getElementById("travelModeBtn"));
     buildDetailMap(t);
+  }
+
+  function checkNote(t,key){
+    if(!TM)return "";
+    var state=TM.checkState(t,key,MAINT),r=state.record;
+    var label=key.indexOf('-ref:')>=0?'連結':'資料';
+    if(!r)return '<div class="check-note">'+label+'：尚無查核紀錄</div>';
+    var sources=(r.sources||[]).filter(function(s){return /^https?:\/\//i.test(s.url);}).map(function(s){return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.title)+'</a>';}).join(' ・ ');
+    return '<div class="check-note'+(state.status==='changed'?' needs-check':'')+'">'+(state.status==='changed'?'內容已變更，需重新查核；前次':'最後查核')+' '+esc(r.checkedAt)+' ・ '+sources+'</div>';
+  }
+  function maintenanceSummary(t){
+    if(!TM)return '';
+    var s=TM.summary(t,MAINT);
+    return '<p class="maintenance-summary">'+(isUpcoming(t)?'出發前請再次確認資訊。':'歷史行程，價格與營業資訊僅供回顧。')+' 已有查核紀錄 '+s.recorded+' / '+s.total+' 項'+(s.changed?'；'+s.changed+' 項內容變更待重查':'')+'。</p>';
+  }
+  function mapRecord(t){
+    if(!TM)return '';
+    var state=TM.mapState(t,MAINT),r=state.record||{},labels={untracked:'尚未建立版本紀錄',unconfirmed:'圖片與行程尚待確認',aligned:'已有對應目前行程的確認紀錄',stale:'行程或圖片路徑已更新，圖片待同步'};
+    return '<div class="map-record"><b>'+labels[state.status]+'</b><div>版本：'+esc(r.version||'未記錄')+' ・ 圖片更新日期：'+esc(r.updatedAt||'未記錄')+'</div>'+(r.baselineRecordedAt?'<div>追蹤基準建立：'+esc(r.baselineRecordedAt)+'（非產圖日期）</div>':'')+'<details class="map-prompt"><summary>產圖提示詞</summary><pre>'+esc(r.prompt||'原始提示詞尚未記錄')+'</pre></details></div>';
   }
 
   function factsStrip(t){
@@ -719,7 +766,7 @@
     if(t.flight){
       var f=t.flight;
       cards.push('<div class="infocard"><h3>✈ 航班</h3>'+
-        irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("備註",f.note)+'</div>');
+        irow("航空",f.airline)+irow("去程",f.out)+irow("回程",f.back)+irow("備註",f.note)+checkNote(t,"flight")+'</div>');
     }
     if(t.stay&&t.stay.length){
       cards.push('<div class="infocard"><h3>🏨 住宿</h3>'+
@@ -730,8 +777,9 @@
       var head=p.head||["路段","車種","時間"];
       var passrows=p.rows.map(function(r){return '<tr>'+r.map(function(c,i){return '<td'+(i===2?' class="dcell mono" style="font-size:12px"':'')+'>'+esc(c)+'</td>';}).join("")+'</tr>';}).join("");
       cards.push('<div class="infocard" style="grid-column:1/-1"><h3>'+(p.icon||"🚄")+' '+esc(p.label||"交通票券")+' — '+esc(p.name||"")+' <span class="rate">'+esc(p.price||"")+'</span></h3>'+
-        '<table class="otable" style="margin-top:6px"><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+passrows+'</tbody></table></div>');
+        '<table class="otable" style="margin-top:6px"><thead><tr>'+head.map(function(h){return '<th>'+esc(h)+'</th>';}).join("")+'</tr></thead><tbody>'+passrows+'</tbody></table>'+checkNote(t,'pass')+'</div>');
     }
+    if(t.pass&&!(p.rows&&p.rows.length))cards.push('<div class="infocard"><h3>交通票券</h3>'+irow('名稱',p.name)+irow('價格',p.price)+checkNote(t,'pass')+'</div>');
     if(!cards.length)return "";
     return '<div class="infogrid">'+cards.join("")+'</div>';
   }
@@ -791,7 +839,7 @@
       return '<div class="spot" data-spot="'+i+'"><h3><span class="spot-no"'+(s.day?' style="background:'+dayColor(s.day)+'"':'')+'>'+(i+1)+'</span>'+esc(s.name)+' <span class="area">'+esc(s.area)+'</span>'+
         (s.day?'<span class="spot-daytag" style="background:'+dayColor(s.day)+'">Day '+s.day+'</span>':'')+'</h3>'+
         '<div class="meta">'+meta.join("<span>·</span>")+'</div>'+
-        '<div class="desc">'+esc(s.desc)+'</div>'+ref+'</div>';
+        '<div class="desc">'+esc(s.desc)+'</div>'+checkNote(t,'spot:'+s.name)+ref+(ref?checkNote(t,'spot-ref:'+s.name):'')+'</div>';
     }).join("")+'</div>';
   }
 
@@ -803,10 +851,10 @@
         ? '<a class="food-ref" href="'+esc(f.ref.url)+'" target="_blank" rel="noopener" title="'+esc(f.ref.title)+'">📖 推薦文 →</a>'
         : '<span class="food-ref empty">—</span>';
       return '<tr><td style="font-weight:700">'+esc(f.name)+'</td><td>'+esc(f.area)+'</td>'+
-        '<td class="stars"><span role="img" aria-label="推薦 '+f.stars+' 顆星(滿分 5 顆)">'+stars(f.stars)+'</span> <span style="color:var(--ink-soft)">'+esc(f.note)+'</span></td>'+
-        (hasRef?'<td>'+ref+'</td>':'')+'</tr>';
+        '<td class="stars">'+(f.stars!=null?'<span role="img" aria-label="推薦 '+f.stars+' 顆星(滿分 5 顆)">'+stars(f.stars)+'</span> ':'')+'<span style="color:var(--ink-soft)">'+esc(f.note)+'</span>'+checkNote(t,'food:'+f.name)+'</td>'+
+        (hasRef?'<td>'+ref+(f.ref&&f.ref.url?checkNote(t,'food-ref:'+f.name):'')+'</td>':'')+'</tr>';
     }).join("");
-    return '<table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th>'+(hasRef?'<th>推薦文</th>':'')+'</tr></thead><tbody>'+rows+'</tbody></table>';
+    return '<div class="table-scroll" tabindex="0" role="region" aria-label="美食指南表格"><table class="otable"><thead><tr><th>料理</th><th>地區</th><th>推薦</th>'+(hasRef?'<th>推薦文</th>':'')+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
   }
 
   function listCard(title,items){
@@ -816,77 +864,22 @@
     var cards=[];
     if(t.budget&&t.budget.length){
       cards.push('<div class="ucard"><h3>💴 預算估算</h3>'+t.budget.map(function(b){
-        return '<div class="budget-row'+(b.total?' total':'')+'"><span>'+esc(b.item)+'</span><span class="c">'+esc(b.cost)+'</span></div>';
+        return '<div class="budget-row'+(b.total?' total':'')+'"><span>'+esc(b.item)+checkNote(t,'budget:'+b.item)+'</span><span class="c">'+esc(b.cost)+'</span></div>';
       }).join("")+'</div>');
     }
-    if(t.apps&&t.apps.length)cards.push(listCard("📱 必備 App",t.apps));
-    if(t.weather&&t.weather.length)cards.push(listCard("🌡️ 天氣",t.weather));
+    if(t.apps&&t.apps.length)cards.push(listCard("📱 必備 App",t.apps.map(function(a){return typeof a==="string"?a:[a.name,a.note].filter(Boolean).join(" — ");})));
+    if(t.weather&&t.weather.length)cards.push(listCard("🌡️ 天氣",t.weather.map(function(w){return typeof w==="string"?w:[w.month,w.temp,w.rain?"降雨／雪："+w.rain:"",w.note].filter(Boolean).join(" ・ ");})));
     if(t.notes&&t.notes.length)cards.push(listCard("⚠️ 注意事項",t.notes));
-    (t.info||[]).forEach(function(c){cards.push(listCard(c.title,c.items));});
+    (t.info||[]).concat(t.tips||[]).forEach(function(c){cards.push(listCard(c.title,c.items));});
     if(!cards.length)return "";
     return '<div class="ucols">'+cards.join("")+'</div>';
   }
 
-  /* 下載旅遊書:把行程內容渲染成 PDF 檔下載到裝置(不開列印對話框) */
+  /* 分頁與輸出由 pdf-book.js 處理，保持頁面本身的渲染邏輯獨立。 */
   function downloadBook(t,btn){
-    if(!window.html2pdf){alert("PDF 元件尚未載入完成,請稍候再試(需要網路)。");return;}
     var src=document.querySelector(".trip");if(!src)return;
-    var clone=src.cloneNode(true);
-    clone.classList.add("pdfbook");
-    clone.style.animation="none";
-    clone.style.background="#fff";
-    // 移除互動地圖(canvas 無法擷取)與返回鍵;地圖整段移除
-    clone.querySelectorAll(".back,.no-print").forEach(function(node){node.remove();});
-    var mp=clone.querySelector("#detail-map");
-    if(mp){var sec=mp.closest(".section");if(sec)sec.remove();}
-    // PDF 專用版面:固定 A4 書頁寬度、攤平 grid、每個區塊不可被分頁切斷
-    var st=document.createElement("style");
-    st.textContent=
-      ".pdfstage{position:fixed;inset:0;z-index:2147483647;background:#fff;overflow:auto;display:flex;justify-content:center;align-items:flex-start}"+
-      ".pdfstage .pdfbook{width:794px;background:#fff}"+
-      ".pdfstage .pdfbook .wrap{max-width:none !important;margin:0 !important;padding:0 28px !important}"+
-      /* 用 .pdfbook 作用域:html2pdf 擷取時會把 clone 移入自己的容器,.pdfstage 後代選擇器會失效 */
-      ".pdfbook .mapart{break-inside:avoid;page-break-inside:avoid;box-shadow:none}"+
-      ".pdfbook .spots,.pdfbook .ucols,.pdfbook .infogrid,.pdfbook .facts{display:block !important}"+
-      ".pdfbook .fact{border-right:none !important;border-bottom:1px solid var(--line-soft)}"+
-      ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard{margin-bottom:12px}"+
-      ".pdfbook .spot,.pdfbook .ucard,.pdfbook .infocard,.pdfbook .fact,.pdfbook .facts,"+
-      ".pdfbook .day,.pdfbook .day-head,.pdfbook .day-body,.pdfbook .tip,.pdfbook .stop,"+
-      ".pdfbook .otable,.pdfbook .otable tr,.pdfbook .sec-head,.pdfbook .cover"+
-      "{break-inside:avoid;page-break-inside:avoid}"+
-      ".pdfbook .section{break-inside:auto;page-break-inside:auto}";
-    // 在畫面上(正座標)渲染,避免 html2canvas 把負位移烤進畫面造成左右被裁切
-    var holder=document.createElement("div");
-    holder.className="pdfstage";
-    holder.appendChild(st);
-    holder.appendChild(clone);
-    document.body.appendChild(holder);
-    var label=btn?btn.innerHTML:"";
-    if(btn){btn.innerHTML="產生 PDF 中…";btn.disabled=true;}
-    function done(){holder.remove();if(btn){btn.innerHTML=label;btn.disabled=false;}}
-    var started=false;
-    function runPdf(){
-      if(started)return; started=true;
-      window.html2pdf().set({
-        margin:[10,8,12,8],
-        filename:t.region+"_"+t.year+"_旅遊書.pdf",
-        image:{type:"jpeg",quality:0.96},
-        html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",scrollX:0,scrollY:0},
-        jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
-        pagebreak:{mode:["avoid-all","css","legacy"]}
-      }).from(clone).save().then(done).catch(function(e){done();alert("PDF 產生失敗:"+e);});
-    }
-    // cloneNode 的 <img>(封面地圖圖磚)需重新載入,等載完再擷取,否則地圖是空白
-    var pending=0;
-    clone.querySelectorAll("img").forEach(function(im){
-      if(im.complete&&im.naturalWidth>0)return;
-      pending++;
-      var fin=function(){if(--pending<=0)runPdf();};
-      im.addEventListener("load",fin);
-      im.addEventListener("error",fin);
-    });
-    if(pending===0)runPdf();
-    else setTimeout(runPdf,8000); // 保險:圖磚逾時也照樣輸出
+    if(!window.TravelBook){alert("PDF 模組未載入，請重新整理後再試。");return;}
+    window.TravelBook.download(src,t,btn).catch(function(e){alert("PDF 產生失敗："+e.message);});
   }
 
   function buildDetailMap(t){
@@ -894,8 +887,8 @@
     var map=L.map(node,{scrollWheelZoom:false}).setView(t.mapCenter,t.mapZoom);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
       maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
-    var pts=[], markers=[];
-    sortedSpots(t).forEach(function(s,i){
+    var pts=[], markers=[], orderedSpots=sortedSpots(t);
+    orderedSpots.forEach(function(s,i){
       pts.push(s.latlng);
       var icon=L.divIcon({className:"nmk",
         html:'<span class="nmk-in"'+(s.day?' style="background:'+dayColor(s.day)+'"':'')+'>'+(i+1)+'</span>',
@@ -931,7 +924,7 @@
           x.setAttribute("aria-pressed",String(on));
         });
         var vis=[];
-        (t.spots||[]).forEach(function(s,i){
+        orderedSpots.forEach(function(s,i){
           var mk=markers[i];if(!mk)return;
           if(!sel||String(s.day)===sel){mk.addTo(map);vis.push(s.latlng);}
           else map.removeLayer(mk);
@@ -981,6 +974,7 @@
       '<div class="topbar-actions">'+
         (inTrip
           ? '<a class="btn btn-ghost" href="#/">← 集錦牆</a>'+
+            (t&&t.days&&t.days.length?'<button class="btn no-print" id="travelModeBtn">手機旅行模式</button>':'')+
             (t&&t.mapArt
               ? '<a class="btn no-print" id="mapArtBtn" href="'+esc(t.mapArt)+'" download="'+esc(t.region+"_"+t.year+"_行程圖.jpg")+'">🗺 下載行程圖</a>'
               : '')+

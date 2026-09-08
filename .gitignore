@@ -1,3 +1,7 @@
 .DS_Store
 Thumbs.db
 .env
+node_modules/
+__pycache__/
+deploy-site/
+test-results/

@@ -1,0 +1,123 @@
+<!doctype html><meta charset="utf-8"><title>Travel Journal browser checks</title>
+<style>body{font:15px system-ui}iframe{width:390px;height:844px;border:1px solid #aaa}pre{white-space:pre-wrap}</style>
+<h1>瀏覽器回歸檢查</h1><pre id="result">執行中…</pre><iframe></iframe>
+<script>
+(async function(){
+ const frame=document.querySelector('iframe'),output=document.querySelector('#result');
+ let checks=0;const logs=[];
+ function check(ok,label){if(!ok)throw new Error(label);checks++;logs.push('✓ '+label);output.textContent=logs.join('\n');}
+ await new Promise(resolve=>{frame.addEventListener('load',resolve,{once:true});frame.src='../index.html?test='+Date.now()+'#/trip/tohoku-2026';});
+ const w=frame.contentWindow,d=w.document;
+ check(d.documentElement.scrollWidth<=390,'390px 手機頁面不橫向溢出');
+ const day2=d.querySelector('[data-day="2"]');day2.click();
+ check(!!w.L,'Leaflet 地圖元件已載入');
+ check(!!w.html2pdf,'PDF 輸出元件已載入');
+ check([...d.querySelectorAll('#detail-map .nmk-in')].map(n=>n.textContent).join(',')==='1,2','東北 Day 2 只顯示標記 1、2');
+ check(!!w.TravelBook,'PDF 分頁模組已載入');
+ for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013','hokkaido-2027']){
+  if(w.location.hash!=='#/trip/'+id){await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/trip/'+id;});}
+  const trip=w.TRIPS.find(t=>t.id===id),source=d.querySelector('.trip');
+  const book=await w.TravelBook.buildPages(source,{title:trip.title});
+  try{
+   check(book.pages.length>0,id+' 有 PDF 頁面');
+   for(const [i,page] of book.pages.entries()){
+    const content=page.querySelector('.book-content');
+    check(content.scrollWidth<=content.clientWidth+1,id+' PDF 內容不超出頁寬');
+    check(content.scrollHeight<=content.clientHeight+1,id+' 第 '+(i+1)+' 頁沒有溢出');
+    const last=content.lastElementChild;
+    check(!last?.classList.contains('sec-head'),id+' 第 '+(i+1)+' 頁沒有孤立章節標題');
+   }
+   const text=book.pages.map(p=>p.textContent).join('\n');
+   for(const n of source.querySelectorAll('.stop .x,.tip,.spot .desc,.ulist li,.budget-row,tbody tr,.day-head,.check-note,.maintenance-summary,.map-record>b'))check(text.includes(n.textContent),id+' 內容保留：'+n.textContent.slice(0,20));
+   check(!text.includes('[object Object]'),id+' 沒有物件轉字串');
+   if(trip.mapArt)check(book.pages.some(p=>p.querySelector('img.mapart')),id+' 包含行程圖');
+  }finally{book.dispose();}
+ }
+
+ // Exercise recorded and changed metadata without changing production data.
+ const sample=w.TRIPS.find(t=>t.id==='tohoku-2026'),target=w.TravelMaintenance.targets(sample).find(t=>t.key==='pass');
+ const saved=w.TRIP_MAINTENANCE.checks[sample.id];
+ w.TRIP_MAINTENANCE.checks[sample.id]={pass:{checkedAt:'2026-09-07',sources:[{title:'測試來源',url:'https://example.com/check'}],snapshot:JSON.parse(JSON.stringify(target.value))}};
+ async function visit(id){if(w.location.hash!=='#/trip/'+id)await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/trip/'+id;});}
+ try{
+  await visit(sample.id);
+  check(d.querySelector('.trip').textContent.includes('最後查核 2026-09-07'),'查核日期呈現在頁面');
+  const checkedBook=await w.TravelBook.buildPages(d.querySelector('.trip'),{title:'查核測試'});
+  try{check(checkedBook.pages.some(p=>p.textContent.includes('最後查核 2026-09-07')),'PDF 保留查核日期');check(checkedBook.pages.some(p=>p.querySelector('a[href="https://example.com/check"]')),'PDF 排版保留來源連結');}finally{checkedBook.dispose();}
+  w.TRIP_MAINTENANCE.checks[sample.id].pass.snapshot={price:'old'};
+  await visit('hokkaido-2013');await visit(sample.id);
+  check(d.querySelector('.needs-check').textContent.includes('內容已變更'),'內容修改後提示重新查核');
+ }finally{if(saved)w.TRIP_MAINTENANCE.checks[sample.id]=saved;else delete w.TRIP_MAINTENANCE.checks[sample.id];}
+
+ const savedMap=w.TRIP_MAINTENANCE.maps[sample.id];
+ try{
+  w.TRIP_MAINTENANCE.maps[sample.id]={...savedMap,aligned:true,version:'test-v1',updatedAt:'2026-09-07',prompt:'<b>literal prompt</b>'};
+  await visit('hokkaido-2013');await visit(sample.id);
+  check(d.querySelector('.map-record').textContent.includes('已有對應目前行程的確認紀錄'),'確認紀錄對應目前行程');
+  check(d.querySelector('.map-prompt pre').textContent==='<b>literal prompt</b>','提示詞顯示為文字');
+  w.TRIP_MAINTENANCE.maps[sample.id].baselineSnapshot={};
+  await visit('hokkaido-2013');await visit(sample.id);
+  check(d.querySelector('.map-record').textContent.includes('圖片待同步'),'行程改變後顯示圖片待同步');
+ }finally{w.TRIP_MAINTENANCE.maps[sample.id]=savedMap;}
+
+ frame.style.width='320px';
+ for(const trip of w.TRIPS){
+  if(w.location.hash!=='#/trip/'+trip.id)await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/trip/'+trip.id;});
+  check(d.documentElement.scrollWidth<=320,trip.id+' 在 320px 不撐寬整頁');
+  check(!d.querySelector('.trip').textContent.includes('[object Object]'),trip.id+' 顯示資料可讀');
+ }
+ // Stress real DOM pagination with a table and day longer than one page.
+ const fixture=d.createElement('article');fixture.className='trip';
+ fixture.innerHTML='<section class="section"><div class="sec-head">長表格</div><table class="otable"><thead><tr><th>資料</th></tr></thead><tbody>'+Array.from({length:90},(_,i)=>'<tr><td>ROW-'+i+'</td></tr>').join('')+'</tbody></table></section><section class="section"><div class="sec-head">長行程</div><div class="days"><div class="day"><div class="day-head"><div class="meta"><div class="th">DAY-STRESS</div></div></div><div class="day-body">'+Array.from({length:40},(_,i)=>'<div class="stop"><div class="x">STOP-'+i+'</div></div>').join('')+'</div><div class="tip">TAIL-TIP</div></div></div></section>';
+ d.body.appendChild(fixture);
+ const stress=await w.TravelBook.buildPages(fixture,{title:'Stress'});
+ try{
+  const whole=stress.pages.map(p=>p.textContent).join(' ');
+  check(stress.pages.reduce((n,p)=>n+p.querySelectorAll('tbody tr').length,0)===90,'長表格 90 列無遺漏或重複');
+  check(stress.pages.reduce((n,p)=>n+p.querySelectorAll('.stop').length,0)===40,'長行程 40 個停靠點無遺漏或重複');
+  check(whole.includes('TAIL-TIP'),'分頁後保留當日提醒');
+  for(const page of stress.pages){
+   const c=page.querySelector('.book-content');check(c.scrollHeight<=c.clientHeight+1,'長內容分頁不溢出');
+   for(const table of page.querySelectorAll('table'))check(!!table.querySelector('thead'),'表格續頁保留欄位標頭');
+  }
+ }finally{stress.dispose();fixture.remove();}
+
+ // Travel mode: real UI, all trips at narrow width, and simulated destination midnight.
+ for(const trip of w.TRIPS){
+  await visit(trip.id);
+  d.querySelector('#travelModeBtn').click();
+  const modal=d.querySelector('.travel-mode');
+  check(!!modal?.open,trip.id+' 可以開啟旅行模式');
+  check(modal.scrollWidth<=modal.clientWidth+1,trip.id+' 旅行模式 320px 不溢出');
+  const last=trip.days.length-1,select=modal.querySelector('select');
+  select.value=String(last);select.dispatchEvent(new w.Event('change'));
+  check(modal.querySelector('.travel-stops').children.length===(trip.days[last].items||[]).length,trip.id+' 最後一天行程完整');
+  check(modal.querySelectorAll('.travel-spot').length===trip.spots.filter(s=>s.day===trip.days[last].day).length,trip.id+' 導航僅含當日景點');
+  check(modal.querySelector('[data-next]').disabled,trip.id+' 最後一天不超出範圍');
+  modal.querySelector('[data-close]').click();
+  await new Promise(r=>w.setTimeout(r,25));
+  check(!d.querySelector('.travel-mode')&&d.body.style.overflow!=='hidden',trip.id+' 關閉後可正常捲動');
+ }
+ await visit('hokkaido-2027');
+ const RealDate=w.Date;
+ try{
+  w.Date=class extends RealDate{constructor(...args){super(...(args.length?args:['2027-01-04T15:01:00Z']));}};
+  d.querySelector('#travelModeBtn').click();
+  const modal=d.querySelector('.travel-mode');
+  check(modal.querySelector('select').value==='4','日本凌晨自動顯示 Day 5');
+  check(modal.querySelectorAll('.tip').length===2,'旅行模式保留當日提醒');
+  modal.querySelector('[data-prev]').click();modal.querySelector('[data-today]').click();
+  check(modal.querySelector('select').value==='4','今天按鈕回到正確行程');
+  const source=d.querySelector('.trip'),book=await w.TravelBook.buildPages(source,{title:'旅行模式 PDF 隔離'});
+  try{check(!book.pages.some(p=>p.querySelector('.travel-mode'))&&book.pages.map(p=>p.textContent).join('').includes('Day 10'),'旅行模式不影響完整旅遊書');}finally{book.dispose();}
+  await visit('tohoku-2026');
+  check(!d.querySelector('.travel-mode')&&d.body.style.overflow!=='hidden','切換旅程清理旅行模式');
+ }finally{w.Date=RealDate;}
+
+ const tileFixture=d.createElement('article');tileFixture.className='trip';
+ tileFixture.innerHTML='<section class="cover">文字行程</section><section class="section"><div class="sec-head">路線地圖</div><div class="detailmap"><img src="data:image/png;base64,broken"></div></section>';
+ d.body.appendChild(tileFixture);
+ try{const book=await w.TravelBook.buildPages(tileFixture,{title:'Map tile failure'});check(book.pages.length===1,'未輸出的地圖圖磚載入失敗不阻擋 PDF');book.dispose();}finally{tileFixture.remove();}
+ document.body.dataset.status='passed';output.textContent='PASS '+checks+' checks\n'+logs.join('\n');
+})().catch(e=>{document.body.dataset.status='failed';document.querySelector('#result').textContent+='\nFAIL '+e.stack;});
+</script>

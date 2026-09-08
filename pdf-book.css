@@ -1,0 +1,29 @@
+/* PDF 先排成固定 A4 頁面；不受手機 breakpoint 或整頁截圖切割影響。 */
+.book-stage{position:fixed;inset:0;z-index:2147483647;background:#e6e0d2;overflow:auto;display:block}
+.book-status{position:sticky;top:0;z-index:2;padding:12px;text-align:center;background:#16191d;color:#fff;font:14px system-ui}
+.book-page{position:relative;width:794px!important;min-width:794px!important;max-width:794px!important;height:1122px!important;padding:52px 32px 42px!important;box-sizing:border-box;background:#fff!important;color:#16191d;overflow:hidden;flex:none;margin:12px auto;font-size:14px}
+.book-content{height:1028px!important;max-width:none!important;padding:0!important;margin:0!important;animation:none!important;background:#fff!important}
+.book-content>.sec-head{margin:18px 0 14px}
+.book-content>.sec-head:first-child{margin-top:0}
+.book-content>.cover{padding:0 0 12px}
+.book-content .facts,.book-content .spots,.book-content .ucols,.book-content .infogrid{display:block!important}
+.book-content .fact{border-right:0;border-bottom:1px solid var(--line-soft)}
+.book-content .spot,.book-content .ucard,.book-content .infocard{margin:0 0 12px;padding:16px;box-shadow:none}
+.book-content .infocard h3{flex-wrap:wrap}
+.book-content .mapart{max-height:760px;width:auto;max-width:100%;margin:0 auto;object-fit:contain;box-shadow:none}
+.book-content .table-scroll{overflow:visible;max-width:none}
+.book-content .otable{width:100%;table-layout:auto;margin:0}
+.book-content .otable th,.book-content .otable td{padding:10px 12px;font-size:13px}
+.book-content .otable .stars{font-size:12px;white-space:normal}
+.book-content .otable .stars [role=img]{white-space:nowrap}
+.book-content .day{padding:0 0 8px}
+.book-content .day-head{margin-bottom:8px}
+.book-content .day-body{padding-bottom:14px}
+.book-content .stop{padding-bottom:12px}
+.book-content .tip{margin:4px 0 12px 32px;padding:10px 12px;flex-wrap:wrap}
+.book-content .day.couple .day-body{border-image:none;border-left-color:var(--komachi)}
+.book-content .spot-ref{margin-top:10px}
+.book-content .ulist{gap:7px}
+.book-content .sec-title{font-size:24px}
+.book-footer{position:absolute;left:32px;right:32px;bottom:18px;display:flex;justify-content:space-between;border-top:1px solid #ddd;padding-top:6px;color:#6e6557;font:10px system-ui}
+.book-continuation{font-size:11px;color:#6e6557;font-family:system-ui;margin-left:8px}

@@ -1,49 +1,61 @@
 # 行程集錦 ・ Travel Journal
 
-收藏走過的旅程,也能當攻略分享給朋友的「行程集錦牆」。單檔靜態網站,雙擊 `index.html` 即可開啟,亦可部署到 GitHub Pages。
+收藏走過的旅程，也能當攻略分享給朋友的靜態網站。可直接雙擊 `index.html`，以 `file://` 開啟；也可部署到 GitHub Pages。頁面本身不需要建置，但字型、Leaflet、地圖圖磚與 PDF 產生套件來自外部服務，使用相關功能時仍需連上網路。
 
 ## 功能
 
-- **集錦牆**：每趟旅程一張卡片,卡片頂部嵌入該區域的 OpenStreetMap 地圖、標出實際景點點位。
-- **行程詳情**：航班/住宿/票券、每日行程(以新幹線軌道為視覺主軸的 timeline)、景點介紹、美食指南、預算與實用資訊,底部互動地圖。
-- **可分享連結**:每趟行程有獨立網址(hash 路由),例如 `index.html#/trip/tohoku-2026`,可直接傳給朋友。
-- **00 行程圖**:行程可掛一張手繪行程圖(`mapArt` 欄位,圖檔放 `img/`),顯示於詳情頁最上方「00 行程圖」區塊,右上「🗺 下載行程圖」可單獨下載。
-- **下載旅遊書**:行程頁右上「⬇ 下載旅遊書」→ 直接產生 PDF 檔下載(專屬排版;有行程圖的行程,PDF 開頭即為行程圖)。
-- **搜尋與篩選**:集錦牆可依國家、年份、主題、狀態篩選,並支援關鍵字搜尋(行程/景點/美食)。
-- **足跡地圖與時間軸**:hero 足跡地圖標出所有行程(同區聚合、點標記直達行程);集錦牆可切換「卡片 / 時間軸」檢視。
+- **集錦牆**：每趟旅程一張卡片，可依國家、年份、主題、狀態與關鍵字篩選。
+- **行程詳情**：顯示航班、住宿、票券、每日行程、景點、美食、預算與實用資訊。
+- **地圖與時間軸**：首頁足跡地圖、行程路線地圖，以及卡片／時間軸檢視。
+- **可分享連結**：每趟行程有獨立 hash 網址，例如 `index.html#/trip/tohoku-2026`。
+- **行程圖與旅遊書**：`mapArt` 可加入本機行程圖；行程頁可下載行程圖及產生 PDF 旅遊書。
 
 ## 檔案結構
 
-```
-index.html        # 單檔 SPA(集錦牆 + 行程詳情 + 列印排版)
-data/trips.js     # 所有行程資料(window.TRIPS)
+```text
+index.html        # 靜態 SPA、畫面與行程渲染邏輯
+data/trips.js     # 所有行程資料，匯出為 window.TRIPS
+data/maintenance.js # 行程圖版本、資料查核來源與快照紀錄
+img/              # mapArt 使用的本機行程圖
+trip-maintenance.js # 網頁與 CLI 共用的快照和狀態判定
+tools/maintenance.cjs # 維護紀錄 CLI
+pdf-book.js       # PDF 分頁、產生與下載邏輯
+pdf-book.css      # PDF 固定頁面排版
 ```
 
-地圖使用 [Leaflet](https://leafletjs.com/) + OpenStreetMap / CARTO 圖磚,免 API key。
+`index.html` 可直接讀取同目錄檔案，因此不必啟動伺服器即可瀏覽。地圖使用 Leaflet 與 CARTO 圖磚，不需要 API key。
+
+含行程圖的 PDF 需從 HTTP(S) 下載；若直接雙擊 HTML，請依維護指南啟動本機預覽後再匯出。
 
 ## 新增一趟旅程
 
-編輯 `data/trips.js`,照既有 `tohoku-2026` 的 schema 在 `window.TRIPS` 陣列加一筆即可。重點欄位:
+編輯 `data/trips.js`，參考 `tohoku-2026` 在 `window.TRIPS` 陣列新增一筆。主要欄位如下：
 
-- `id`、`title`、`subtitle`、`country`、`region`、`year`、`dateLabel`、`status`
-- `themes`、`tagline`
-- `mapCenter: [lat, lng]`、`mapZoom` — 地圖視角
-- `mapArt` — 手繪行程圖路徑(選填,如 `img/tohoku-2026.jpg`),掛上後出現「00 行程圖」區塊與下載按鈕
-- `flight`、`stay[]`、`pass`、`days[]`(可加 `couple: true` → 每日行程軌道呈綠紅雙色,如新幹線連結日)、`spots[]`(每個含 `latlng` 與 `day` 造訪日 → 路線地圖按日分色)、`food[]`、`budget[]`、`apps[]`、`weather[]`、`notes[]`
+- 基本資料：`id`、`title`、`subtitle`、`country`、`region`、`year`、`dateLabel`、`dateStart`、`dateEnd`、`status`
+- 顯示資料：`themes`、`tagline`、`flight`、`stay[]`、`pass`、`days[]`、`spots[]`、`food[]`、`budget[]`、`notes[]`
+- 地圖資料：`mapCenter: [lat, lng]`、`mapZoom`，以及每個景點的 `latlng: [lat, lng]` 與 `day`
+- 行程圖：選填 `mapArt`，使用 `img/` 下的本機圖片，例如 `img/tohoku-2026.jpg`
+- 實用資訊：`apps` 可放字串或 `{name, note}`；`weather` 可放字串或 `{month, temp, rain, note}`
+- 自訂資訊卡：建議使用 `info: [{title, items}]`，其中 `title` 是字串，`items` 是字串陣列。舊資料的頂層 `tips` 格式仍受支援，新資料請優先使用 `info`
 
-景點 `latlng` 座標可用 Google Maps 右鍵「這是哪裡?」取得。
-
-新增或修改後跑一次驗證(檢查缺欄位、緯經度顛倒、day 超界、日期格式等):
+修改後執行：
 
 ```bash
-python3 validate_trips.py
+python3 -B validate_trips.py
+python3 -B -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.cjs
 ```
+
+行程資料或圖片更新後，也要查看維護狀態：
+
+```bash
+node tools/maintenance.cjs status
+```
+
+行程圖版本確認與景點、餐廳、交通、預算等資料的來源查核會寫入 `data/maintenance.js`。請先人工確認內容，再用 CLI 建立紀錄；詳細參數與狀態說明見維護指南。
+
+完整的資料檢查、瀏覽器驗證、PDF 驗收與發布步驟請見 [維護指南](docs/MAINTENANCE.md)。
 
 ## 部署到 GitHub Pages
 
-```bash
-git remote add origin <你的 repo URL>
-git push -u origin main
-```
-
-在 GitHub repo → Settings → Pages → Source 選 `main` 分支根目錄,即可取得分享網址。
+正式發布使用 `.github/workflows/pages.yml`。GitHub repo 的 **Settings → Pages → Source** 應設為 **GitHub Actions**；推送至 `master` 後，工作流程會先驗證，再只上傳網站執行所需檔案。只有使用者明確要求發布時才推送 `master`。
