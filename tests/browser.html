@@ -28,7 +28,7 @@
     check(!last?.classList.contains('sec-head'),id+' 第 '+(i+1)+' 頁沒有孤立章節標題');
    }
    const text=book.pages.map(p=>p.textContent).join('\n');
-   for(const n of source.querySelectorAll('.stop .x,.tip,.spot .desc,.ulist li,.budget-row,tbody tr,.day-head,.check-note,.maintenance-summary,.map-record>b'))check(text.includes(n.textContent),id+' 內容保留：'+n.textContent.slice(0,20));
+   for(const n of source.querySelectorAll('.stop .x,.tip,.spot .desc,.ulist li,.budget-row,tbody tr,.day-head,.check-note,.maintenance-summary'))check(text.includes(n.textContent),id+' 內容保留：'+n.textContent.slice(0,20));
    check(!text.includes('[object Object]'),id+' 沒有物件轉字串');
    if(trip.mapArt)check(book.pages.some(p=>p.querySelector('img.mapart')),id+' 包含行程圖');
   }finally{book.dispose();}
@@ -53,11 +53,11 @@
  try{
   w.TRIP_MAINTENANCE.maps[sample.id]={...savedMap,aligned:true,version:'test-v1',updatedAt:'2026-09-07',prompt:'<b>literal prompt</b>'};
   await visit('hokkaido-2013');await visit(sample.id);
-  check(d.querySelector('.map-record').textContent.includes('已有對應目前行程的確認紀錄'),'確認紀錄對應目前行程');
-  check(d.querySelector('.map-prompt pre').textContent==='<b>literal prompt</b>','提示詞顯示為文字');
+  check(w.TravelMaintenance.mapState(sample,w.TRIP_MAINTENANCE).status==='aligned','內部維護紀錄仍可確認圖片一致');
+  check(!d.querySelector('.map-record,.map-prompt'),'對外頁面不顯示圖片維護紀錄或提示詞');
   w.TRIP_MAINTENANCE.maps[sample.id].baselineSnapshot={};
   await visit('hokkaido-2013');await visit(sample.id);
-  check(d.querySelector('.map-record').textContent.includes('圖片待同步'),'行程改變後顯示圖片待同步');
+  check(w.TravelMaintenance.mapState(sample,w.TRIP_MAINTENANCE).status==='stale','行程改變後內部仍可偵測圖片待同步');
  }finally{w.TRIP_MAINTENANCE.maps[sample.id]=savedMap;}
 
  frame.style.width='320px';

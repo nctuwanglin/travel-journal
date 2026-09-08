@@ -88,7 +88,6 @@
         if(art){
           if(content.children.length)newPage();
           var artBlock=document.createElement('div');artBlock.appendChild(clean(art));
-          var record=section.querySelector('.map-record');if(record){var copy=clean(record);copy.querySelectorAll('.map-prompt').forEach(function(n){n.remove();});artBlock.appendChild(copy);}
           append(artBlock,heading);newPage();continue;
         }
         var body=section.children[1];if(!body)continue;

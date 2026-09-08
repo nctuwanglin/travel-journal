@@ -404,8 +404,6 @@
   .check-note a{text-decoration:underline;color:inherit}
   .needs-check{color:#9c4930}
   .maintenance-summary{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
-  .map-record{font-size:12px;line-height:1.8;padding:14px 16px;background:var(--paper);border:1px solid var(--line-soft);margin-top:12px;overflow-wrap:anywhere}
-  .map-prompt summary{cursor:pointer}.map-prompt pre{white-space:pre-wrap;font:inherit;max-height:240px;overflow:auto}
 </style>
 <link rel="stylesheet" href="pdf-book.css?v=20260907-3">
 <link rel="stylesheet" href="travel-mode.css?v=2">
@@ -417,11 +415,11 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.2/dist/html2pdf.bundle.min.js"
         integrity="sha384-aBc0BOllaGWrQx51DYt978St/L7B+21jzNGc4N/jnGD0NxGwj8S/ftRgW0AkXIak" crossorigin="anonymous"></script>
-<script src="data/trips.js?v=hokkaido-2027-3"></script>
+<script src="data/trips.js?v=hokkaido-2027-4"></script>
 <script src="data/maintenance.js?v=20260908-2"></script>
 <script src="trip-maintenance.js"></script>
 <script src="travel-mode.js?v=2"></script>
-<script src="pdf-book.js?v=20260907-3"></script>
+<script src="pdf-book.js?v=20260908-4"></script>
 <script>
 (function(){
   "use strict";
@@ -711,7 +709,7 @@
               '<a class="mapart-link" href="'+esc(t.mapArt)+'" target="_blank" rel="noopener">'+
                 '<img class="mapart" src="'+esc(t.mapArt)+'" alt="'+esc(displayTitle(t))+' 手繪行程圖">'+
               '</a>'+
-              '<div class="map-cap">手繪行程圖 ・ 點圖可看原尺寸 ・ 右上「下載行程圖」可存單張</div>'+mapRecord(t))
+              '<div class="map-cap">手繪行程圖 ・ 點圖可看原尺寸 ・ 右上「下載行程圖」可存單張</div>')
           : '')+
         secs.map(function(s,i){return sec(i+1,s[0],s[1]);}).join("")+
       '</div></article>'+
@@ -737,12 +735,6 @@
     var s=TM.summary(t,MAINT);
     return '<p class="maintenance-summary">'+(isUpcoming(t)?'出發前請再次確認資訊。':'歷史行程，價格與營業資訊僅供回顧。')+' 已有查核紀錄 '+s.recorded+' / '+s.total+' 項'+(s.changed?'；'+s.changed+' 項內容變更待重查':'')+'。</p>';
   }
-  function mapRecord(t){
-    if(!TM)return '';
-    var state=TM.mapState(t,MAINT),r=state.record||{},labels={untracked:'尚未建立版本紀錄',unconfirmed:'圖片與行程尚待確認',aligned:'已有對應目前行程的確認紀錄',stale:'行程或圖片路徑已更新，圖片待同步'};
-    return '<div class="map-record"><b>'+labels[state.status]+'</b><div>版本：'+esc(r.version||'未記錄')+' ・ 圖片更新日期：'+esc(r.updatedAt||'未記錄')+'</div>'+(r.baselineRecordedAt?'<div>追蹤基準建立：'+esc(r.baselineRecordedAt)+'（非產圖日期）</div>':'')+'<details class="map-prompt"><summary>產圖提示詞</summary><pre>'+esc(r.prompt||'原始提示詞尚未記錄')+'</pre></details></div>';
-  }
-
   function factsStrip(t){
     var stay=(t.stay||[]).map(function(s){return s.name+"("+s.nights+")";}).join("・");
     return '<div class="facts">'+

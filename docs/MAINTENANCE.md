@@ -173,3 +173,13 @@ pdftoppm -png -r 120 '/path/to/Downloads/檔名.pdf' /private/tmp/travel-pdf-che
 導航用國家、地區及景點名稱建立 Google Maps 路線網址，讓使用者確認入口及交通方式；不把湖中心等概略標記當作精確入口。不要求定位權限、不宣稱離線導航。URL 格式依 [Google 官方文件](https://developers.google.com/maps/documentation/urls/get-started)。
 
 `travel-mode.css` 負責獨立樣式。視窗放在 PDF 來源 `.trip` 外，旅遊書維持全行程。新增資產已列入 Pages 發布白名單；維護時記得同步更新 index 的資產版本參數。`tests/travel-preview.html` 提供 390px 手動預覽；`tests/browser.html` 包含所有行程的窄螢幕操作與日期模擬，Node 測試驗證日期邊界與導航網址。
+
+### 2026-09-08 對外呈現調整
+
+行程圖的版本、追蹤基準、提示詞與同步狀態只供維護流程使用，不再呈現在網站或 PDF。資料仍保留於 `data/maintenance.js`，使用 `node tools/maintenance.cjs status` 查看，快照與雜湊驗證持續運作。先前描述的公開圖片版本區塊已移除。
+
+北海道實用資訊改為穿搭、自駕、預約、美食、溫泉及行程提醒；原始編輯備註保存在 `docs/hokkaido-2027-editor-notes.json`，不列入網站發布檔案。旅客仍可在航班、交通及餐廳欄位看到必要的待確認事項。
+
+內容參考：
+- JR 北斗全車指定席：https://www.jrhokkaido.co.jp/train/tr003_01.html
+- 札幌官方冬季穿搭：https://www.sapporo.travel/spot/feature/clothes_winter/
