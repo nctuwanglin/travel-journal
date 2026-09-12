@@ -386,9 +386,9 @@ window.TRIP_MAINTENANCE = {
       "aligned": false
     },
     "shikoku-2026": {
-      "version": "v2",
+      "version": "v3",
       "updatedAt": "2026-09-13",
-      "prompt": "編輯這張四國旅行地圖，保留水彩紙質、可愛麵包小偷插畫、地圖和九天卡片版型。務必同步改卡片和地圖上的文字與圖示，繁體中文字清晰。標題副標改為「26’10/9–10/17・9天8夜行程」。DAY1抵達文字加入「領取香川FIT」。DAY3晚餐由象三改「車井戶鍋燒烏龍麵」，地圖象三圖示改鍋燒烏龍麵。DAY4景點改「今治城、今治毛巾美術館、JR下灘站」，午餐「白樂天」，晚餐「壽司郎 伊予松前店」；地圖刪除高島屋及摩天輪、潮里圖示，改海邊JR下灘站、白樂天燒豬玉子飯與壽司郎。DAY5景點改「桂濱水族館、高知城」，午餐「Umisachi 桂浜本店」；地圖移除四萬十川及古都，改在高知南方海邊畫桂濱水族館與Umisachi，路線松山直接前往高知桂濱，不繞四萬十。DAY7景點「鳴門渦旋、道之站 Kurukuru 鳴門、屋島展望台」，刪除午餐東大，保留早餐OMO7 Buffet、晚餐瀬戸の祭迴轉壽司、住宿高松克萊蒙特JR大飯店；地圖刪除東大拉麵改道之站Kurukuru鳴門的地瓜與休息站。租車框改「10/11 10:00 JR高松站取車／10/16 JR高松站還車」。DAY2、6、8、9其餘內容保持，所有住宿保持；DAY9飛機19:05。其餘未指定景點餐廳保留原文，避免遺漏或重複DAY。原圖高島屋、象三、潮里、四萬十川、古都、東大必須完全消失。\n\n---\n\n精準校正這張圖，保留所有九張DAY卡片文字、布局、水彩風格及已正確內容。只修改中央地圖：1 桂濱水族館、高知城、Umisachi桂浜本店前面的數字目前錯為6，全部改成5。2 中央地圖補回數字6的「龍河洞」鐘乳洞、「麵包超人博物館」博物館、「OMO7 Buffet」餐點三個圖示與文字，在高知東側空間畫清楚，不可覆蓋其他景點。3 愛媛松山旁補回數字3「松山鯛めし 秋嘉」鯛魚飯和數字3「車井戶鍋燒烏龍麵」圖示，不能把白樂天當鍋燒麵；數字4白樂天的插畫改成燒豬肉片與荷包蛋蓋飯。4 DAY3晚餐正確逐字「車井戶鍋燒烏龍麵」。5 中央地圖愛媛到高知紫色DAY5路線應由松山前往桂濱水族館和高知城，不連往鳴門。地理示意而非導航。其餘保留，標題9天8夜，所有DAY卡片不刪減。\n\n---\n\n修正圖中文字混合與誤標，請不要創作新的內容。保留原圖外圍9天卡片、標題、紙質水彩插畫。中央地圖簡化：移除所有餐廳、住宿的文字標籤及數字（例如車樂天、鍋燒烏片飯、重複瀬戶の祭、OMO7框都刪除），中央地圖僅有以下景點文字與正確日次數字，避免塞入過多字。香川：1栗林公園、1金刀比羅宮、7屋島展望台、8四國水族館；小豆島：2天使之路、2寒霞溪、2橄欖公園；愛媛：3道後溫泉、3松山城、4今治城、4今治毛巾美術館、4JR下灘站；高知：5桂濱水族館、5高知城、6龍河洞、6麵包超人博物館；徳島：7鳴門渦旋、7道之站Kurukuru鳴門。保留各區景點插畫。移除所有彩色路線與路線圖例，改成簡潔箭頭地理示意即可，避免錯誤導航。外圍卡片要逐字校正兩處：DAY3晚餐為「車井戶鍋燒烏龍麵」，DAY8晚餐為「寄鳥味鳥」。其餘DAY卡片文字不得改動！右上租車框保留10/11 10:00 JR高松站取車、10/16 JR高松站還車。9天8夜副標保留。圖上任何餐廳名稱只能出現在每日卡片，中央圖只呈現景點。\n\n---\n\n\n",
+      "prompt": "以 img/shikoku-2026-v2.png 為基礎，僅局部修改兩個區塊，其餘插畫、中央地圖與每日卡片文字保持不變。\n右上租車資訊框四行：Budget 高松站前店／10/11 10:00 取車／10/16 10:00 還車／高松市西之丸町2-20。\n左上 DAY1 在領取香川FIT後補一行：交通：機場巴士 → 高松市區。\n維持水彩风格及繁體中文字，不改九天景點、餐廳與住宿。\n",
       "baselineRecordedAt": "2026-09-13",
       "baselineSnapshot": {
         "title": "四國跨縣之旅",
@@ -404,7 +404,7 @@ window.TRIP_MAINTENANCE = {
           "airline": "中華航空 China Airlines",
           "out": "10/9 桃園 TPE → 高松 TAK(10:30 抵達)",
           "back": "10/17 高松 TAK → 桃園(19:05)",
-          "note": "高松/松山/高知周遊・10/11–16 高松站租車自駕"
+          "note": "四國周遊・機場巴士進市區・10/11–16 Budget 高松站前店租車"
         },
         "stay": [
           {
@@ -431,8 +431,8 @@ window.TRIP_MAINTENANCE = {
         "pass": {
           "icon": "🚗",
           "label": "交通",
-          "name": "JR + 渡輪 + 租車自駕",
-          "price": "租車 10/11–10/16",
+          "name": "機場巴士 + JR + 渡輪 + 租車自駕",
+          "price": "Budget 10/11 10:00–10/16 10:00",
           "head": [
             "路段",
             "交通",
@@ -440,14 +440,19 @@ window.TRIP_MAINTENANCE = {
           ],
           "rows": [
             [
+              "10/9 高松機場 → 高松市區",
+              "機場巴士（琴電巴士）",
+              "領取香川 FIT 後搭乘；至市區約 30–50 分，依下車站與路況"
+            ],
+            [
               "高松 ↔ 小豆島",
               "高松港 ⇄ 土庄港 渡輪",
               "約 60 分"
             ],
             [
-              "租車",
-              "10/11 10:00 JR 高松站取車",
-              "10/16 還車"
+              "Budget 高松站前店",
+              "10/11 10:00 取車 → 10/16 10:00 還車",
+              "高松市西之丸町 2-20；店舖 08:00–19:00"
             ],
             [
               "四縣跨縣",
@@ -455,9 +460,9 @@ window.TRIP_MAINTENANCE = {
               "ETC 收費"
             ],
             [
-              "市區",
-              "JR 予讚線 + 伊予鐵市電",
-              "Suica/ICOCA 可用"
+              "市區與 10/16 還車後",
+              "JR／市區電車；四國水族館搭 JR 至宇多津站後步行或計程車",
+              "IC 卡適用範圍依各營運單位與路段"
             ]
           ]
         },
@@ -469,7 +474,11 @@ window.TRIP_MAINTENANCE = {
             "items": [
               {
                 "time": "10:30",
-                "text": "抵達高松機場（10:30），領取香川 FIT，前往市區"
+                "text": "抵達高松機場（10:30），領取香川 FIT"
+              },
+              {
+                "time": "交通",
+                "text": "高松機場搭機場巴士 → 高松市區"
               },
               {
                 "time": "玩",
@@ -492,7 +501,12 @@ window.TRIP_MAINTENANCE = {
               {
                 "type": "info",
                 "title": "交通時間軸",
-                "text": "高松機場 →(機場巴士約 40 分)高松市區;金刀比羅宮本宮 785 階、含奧社共 1368 階"
+                "text": "機場巴士可於栗林公園前或高松市區下車，車程約 30–50 分；10 月班次出發前再查。金刀比羅宮本宮 785 階、含奧社共 1368 階，請衡量入境與移動時間。"
+              },
+              {
+                "type": "warn",
+                "title": "午餐截止時間",
+                "text": "上原屋本店營業至 14:30；出關與巴士若延誤，請先用午餐再安排景點。"
               }
             ]
           },
@@ -538,7 +552,7 @@ window.TRIP_MAINTENANCE = {
             "items": [
               {
                 "time": "取車",
-                "text": "10:00 JR 高松站取車,自駕前往松山"
+                "text": "10:00 Budget 高松站前店取車，自駕前往松山"
               },
               {
                 "time": "玩",
@@ -561,7 +575,7 @@ window.TRIP_MAINTENANCE = {
               {
                 "type": "info",
                 "title": "交通時間軸",
-                "text": "10/11 10:00 JR 高松站取車,高松 → 松山自駕約 2.5 小時"
+                "text": "10/11 10:00 Budget 高松站前店取車（高松市西之丸町 2-20）；預留辦理手續時間，高松 → 松山自駕約 2.5 小時。"
               },
               {
                 "type": "warn",
@@ -662,6 +676,11 @@ window.TRIP_MAINTENANCE = {
                 "type": "info",
                 "title": "提示",
                 "text": "麵包超人博物館在香美市香北町,距高知市約 40 分"
+              },
+              {
+                "type": "warn",
+                "title": "飯店早午餐時段",
+                "text": "OMO7 早餐供應 7:00–10:00；10/14 的早午餐請在此時段用餐。晚餐需事先預約。"
               }
             ]
           },
@@ -707,7 +726,7 @@ window.TRIP_MAINTENANCE = {
             "items": [
               {
                 "time": "還車",
-                "text": "10/16 JR 高松站還車（依租約約定時間）"
+                "text": "10:00 Budget 高松站前店還車"
               },
               {
                 "time": "玩",
@@ -734,7 +753,7 @@ window.TRIP_MAINTENANCE = {
               {
                 "type": "info",
                 "title": "還車與水族館交通",
-                "text": "先依租約確認還車時間，再安排四國水族館；若先還車，可搭 JR 到宇多津站後步行或轉乘計程車。"
+                "text": "10:00 還車前預留加油與驗車時間。還車後搭 JR 至宇多津站，再步行或搭計程車前往四國水族館；綿谷午餐需另留往返高松的時間。"
               }
             ]
           },
@@ -930,8 +949,8 @@ window.TRIP_MAINTENANCE = {
           }
         ]
       },
-      "imagePath": "img/shikoku-2026-v2.png",
-      "imageSha256": "83fadc8b13446a1b81831d9e3afbb9e5ca1ba26053c40a9c3308319009363a20",
+      "imagePath": "img/shikoku-2026-v3.png",
+      "imageSha256": "bb5504ff8dfbe417ed068e9bc8077f7ab3003a1ef6dae8720313ca83f101fce3",
       "aligned": true
     },
     "hokkaido-2027": {
@@ -2153,6 +2172,742 @@ window.TRIP_MAINTENANCE = {
         "snapshot": {
           "title": "桂浜まるごとガイド・うみさち桂浜本店（日文）",
           "url": "https://katsurahama.com/umi-no-terrace-katsurahama/umisachi/"
+        }
+      },
+      "spot:栗林公園": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "香川官方觀光・栗林公園",
+            "url": "https://www.my-kagawa.jp/static/en/ritsurin/access"
+          }
+        ],
+        "snapshot": {
+          "name": "栗林公園",
+          "area": "高松",
+          "hours": "10 月 06:00–17:30",
+          "desc": "以池塘、松樹與紫雲山借景串起庭園散步路線，可另外安排和船或茶屋體驗。成人入園 500 日圓；本次 10 月閉園時間為 17:30。"
+        }
+      },
+      "spot:金刀比羅宮": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "金刀比羅宮官方參拜說明",
+            "url": "https://www.konpira.or.jp/articles/20230427_GW_QA/article.html"
+          }
+        ],
+        "snapshot": {
+          "name": "金刀比羅宮",
+          "area": "琴平",
+          "hours": "參拜與授與所時間依宮方公告",
+          "desc": "供奉海上交通守護神的神社，本宮需登 785 階，前往奧社共 1368 階。階梯多，第一天請依抵達時間與體力決定是否登至奧社。"
+        }
+      },
+      "spot:天使之路": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小豆島觀光協會・天使之路",
+            "url": "https://shodoshima.or.jp/sightseeing/detail.php?c=1&id=139"
+          }
+        ],
+        "snapshot": {
+          "name": "天使之路",
+          "area": "小豆島",
+          "hours": "依當日潮汐；退潮時可通行",
+          "desc": "退潮時出現的沙洲步道，漲潮後無法沿原路通行。約束之丘展望台可俯瞰海景；請先查 10/10 潮汐，再決定與寒霞溪、橄欖公園的順序。"
+        }
+      },
+      "spot:寒霞溪": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "寒霞溪纜車官方",
+            "url": "https://www.kankakei.co.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "寒霞溪",
+          "area": "小豆島",
+          "hours": "纜車依官方當日運行公告",
+          "desc": "搭纜車穿越奇岩與山谷，沿途可欣賞小豆島山景及瀨戶內海。紅葉進度每年不同，10/10 不預設已到賞楓期；出發前確認纜車運行情況。"
+        }
+      },
+      "spot:小豆島橄欖公園": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小豆島橄欖公園官方",
+            "url": "https://www.olive-pk.jp/en/"
+          }
+        ],
+        "snapshot": {
+          "name": "小豆島橄欖公園",
+          "area": "小豆島",
+          "hours": "08:30–17:00",
+          "desc": "眺望瀨戶內海的橄欖公園，白色希臘風車是代表景觀。園內有真人版《魔女宅急便》拍攝相關場景，可免費借用掃帚拍照。"
+        }
+      },
+      "spot:道後溫泉本館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "道後溫泉官方・本館",
+            "url": "https://dogo.jp/tw/honkan.php"
+          }
+        ],
+        "snapshot": {
+          "name": "道後溫泉本館",
+          "area": "松山",
+          "hours": "神之湯 06:00–23:00；其他方案時段不同",
+          "desc": "具有木造建築特色的公共浴場，可選神之湯入浴或附休憩空間的方案。神之湯成人入浴 700 日圓；不同方案的最後受理與預約方式請依官網。"
+        }
+      },
+      "spot:松山城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "松山城官方・利用指南",
+            "url": "https://www.matsuyamajo.jp/guide/"
+          }
+        ],
+        "snapshot": {
+          "name": "松山城",
+          "area": "松山",
+          "hours": "天守 09:00–17:00；最後入場 16:30",
+          "desc": "位於勝山山頂，可搭纜車或吊椅上山後步行前往天守。天守成人 520 日圓，纜車另計；上山後仍需步行，請預留登城時間。"
+        }
+      },
+      "spot:今治城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "今治市官方・今治城利用指南",
+            "url": "https://www.city.imabari.ehime.jp/museum/imabarijo/info/"
+          }
+        ],
+        "snapshot": {
+          "name": "今治城",
+          "area": "今治",
+          "hours": "09:00–17:00；最後入館 16:30",
+          "desc": "天守與櫓內展示今治的歷史、自然及美術，天守最上層可眺望瀨戶內海與島波海道。成人共通觀覽券 520 日圓；戶外吹揚公園免費開放。"
+        }
+      },
+      "spot:今治毛巾美術館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "毛巾美術館官方・營業與票價",
+            "url": "https://www.towelmuseum.com/information/"
+          }
+        ],
+        "snapshot": {
+          "name": "今治毛巾美術館",
+          "area": "今治",
+          "hours": "09:30–18:00；展區最後入館 17:30",
+          "desc": "結合毛巾藝術展覽、購物與庭園的美術館。付費展區成人 1,000 日圓；僅購物或餐飲不需展覽門票。展覽主題會更換，依官網當期展覽安排。"
+        }
+      },
+      "spot:JR 下灘站": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "伊予市官方・JR 下灘站",
+            "url": "https://www.city.iyo.lg.jp/machizukuri/kanko/guidemap/jrshimonada.html"
+          }
+        ],
+        "snapshot": {
+          "name": "JR 下灘站",
+          "area": "愛媛・伊予",
+          "hours": "戶外車站・依列車時刻",
+          "desc": "面向瀨戶內海的無人車站，候車棚與海景是經典拍照構圖。車站仍有列車行駛，請在安全區域拍照，勿走入鐵軌或鄰近私人造船廠。"
+        }
+      },
+      "spot:桂濱水族館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "桂濱水族館官方",
+            "url": "https://www.katurahama-aq.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "桂濱水族館",
+          "area": "高知・桂濱",
+          "hours": "依館方當日公告",
+          "desc": "位於桂濱海邊的水族館，可觀察海洋動物；餵食與互動體驗依當日安排。可與桂濱散步、海之露台午餐一起規劃。"
+        }
+      },
+      "spot:高知城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "高知城官方",
+            "url": "https://kochipark.jp/kochijyo/"
+          }
+        ],
+        "snapshot": {
+          "name": "高知城",
+          "area": "高知",
+          "hours": "09:00–17:00；最後入館 16:30",
+          "desc": "保留天守與本丸御殿的歷史城郭，可參觀建築與展示並登高眺望市區。午後從桂濱前來，請把移動與登城步行時間算入最後入館前的安排。"
+        }
+      },
+      "spot:龍河洞": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "龍河洞官方・參觀路線",
+            "url": "https://ryugadou.or.jp/english/"
+          }
+        ],
+        "snapshot": {
+          "name": "龍河洞",
+          "area": "香美市",
+          "hours": "依官方當日公告",
+          "desc": "長年形成的鐘乳洞，可欣賞洞內地形與「神之壺」等特色。觀光路線含階梯與高低差，請穿止滑鞋並衡量體力；另有需預約的冒險路線。"
+        }
+      },
+      "spot:麵包超人博物館(柳瀨嵩紀念館)": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "柳瀨嵩紀念館官方・常見問題",
+            "url": "https://anpanman-museum.net/faq/"
+          }
+        ],
+        "snapshot": {
+          "name": "麵包超人博物館(柳瀨嵩紀念館)",
+          "area": "香美市",
+          "hours": "09:30–17:00；最後入館 16:30；週二休館",
+          "desc": "位於作者柳瀨嵩故鄉的紀念館，可欣賞原畫與繪本世界，館內設有麵包超人主題展示。週二遇國定假日時順延休館，出發前確認開館日曆。"
+        }
+      },
+      "spot:鳴門渦潮": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "鳴門觀光汽船官方・預約",
+            "url": "https://uzusio.com/yoyaku/"
+          }
+        ],
+        "snapshot": {
+          "name": "鳴門渦潮",
+          "area": "徳島・鳴門",
+          "hours": "依觀潮表與船班",
+          "desc": "觀潮船可近距離欣賞鳴門海峽潮流，漩渦大小與可見程度隨潮汐及天候變化。請先查 10/15 觀潮表再安排其他景點；AQUA EDDY 小型船需預約。"
+        }
+      },
+      "spot:道之站 Kurukuru 鳴門": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "Kurukuru 鳴門官方",
+            "url": "https://www.kurukurunaruto.com/"
+          }
+        ],
+        "snapshot": {
+          "name": "道之站 Kurukuru 鳴門",
+          "area": "徳島・鳴門",
+          "hours": "09:00–17:00；餐飲櫃位另有時段",
+          "desc": "集結鳴門物產、餐飲與甜點的道之站，可選購鳴門金時地瓜相關伴手禮，作為觀潮與返回高松之間的休息點。各餐飲櫃位營業時間不同。"
+        }
+      },
+      "spot:屋島展望台": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "屋島官方觀光・獅子之靈巖",
+            "url": "https://www.yashima-navi.jp/jp/travel/entry-109.html"
+          }
+        ],
+        "snapshot": {
+          "name": "屋島展望台",
+          "area": "高松",
+          "hours": "戶外展望區；山上設施另有開放時間",
+          "desc": "屋島山上可眺望高松市區與瀨戶內海，獅子之靈巖是代表展望點。安排傍晚到訪時，請另外確認山上停車場及各設施的開放時間。"
+        }
+      },
+      "spot:四國水族館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "四國水族館官方・日程",
+            "url": "https://shikoku-aquarium.jp/schedule/"
+          }
+        ],
+        "snapshot": {
+          "name": "四國水族館",
+          "area": "宇多津",
+          "hours": "通常 09:00–18:00；最後入館閉館前 30 分",
+          "desc": "以四國周邊水域為主題，透過不同水槽呈現海洋與河川生態。海豚活動與餵食解說依每日時間表；10/16 還車後搭 JR 至宇多津，再步行或計程車前往。"
+        }
+      },
+      "food:讚岐烏龍麵 上原屋本店": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "上原屋本店官方",
+            "url": "https://ueharayahonten.com/"
+          }
+        ],
+        "snapshot": {
+          "name": "讚岐烏龍麵 上原屋本店",
+          "area": "高松",
+          "stars": 5,
+          "note": "栗林公園旁的自助烏龍麵店，營業 09:30–14:30；10/9 抵達後請留意午餐時間。"
+        }
+      },
+      "food:骨付鳥 一鶴": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "一鶴官方・高松店",
+            "url": "https://www.ikkaku.co.jp/takamatsu/info.html"
+          }
+        ],
+        "snapshot": {
+          "name": "骨付鳥 一鶴",
+          "area": "高松",
+          "stars": 5,
+          "note": "骨付鳥名店；高松店平日 17:00–23:00、週末 11:00–23:00，週二休息。10/9 安排晚餐。"
+        }
+      },
+      "food:小豆島拉麵 HISHIO": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小豆島觀光協會・HISHIO",
+            "url": "https://shodoshima.or.jp/sightseeing/detail.php?c=3&id=30"
+          }
+        ],
+        "snapshot": {
+          "name": "小豆島拉麵 HISHIO",
+          "area": "小豆島",
+          "stars": 4,
+          "note": "天使之路店的醬油拉麵與海景。週六營業 11:00–20:30；小豆島遊覽時依潮汐調整午餐順序。"
+        }
+      },
+      "food:鐵板燒 夢路": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "夢路官方・店舖資訊",
+            "url": "https://www.teppan-yumeji.com/access.html"
+          }
+        ],
+        "snapshot": {
+          "name": "鐵板燒 夢路",
+          "area": "高松",
+          "stars": 4,
+          "note": "高松片原町鐵板燒，17:30–23:00、不定休。10/10 小豆島返程後用餐，請預留渡輪移動時間。"
+        }
+      },
+      "food:松山鯛めし 秋嘉": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "秋嘉官方・本店",
+            "url": "https://w-harmony.jp/shop/akiyoshi/"
+          }
+        ],
+        "snapshot": {
+          "name": "松山鯛めし 秋嘉",
+          "area": "松山",
+          "stars": 4,
+          "note": "鯛魚飯專門店。本店午餐 11:00–15:00（最後點餐 14:30）、週二休息；不接受預約，售完可能提早結束。"
+        }
+      },
+      "food:車井戶鍋燒烏龍麵（手打うどん 車井戸）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "リビングえひめ・2019 食記（非當日營業確認）",
+            "url": "https://mrs.living.jp/ehime/town_gourmet/reporter/3685937"
+          }
+        ],
+        "snapshot": {
+          "name": "車井戶鍋燒烏龍麵（手打うどん 車井戸）",
+          "area": "松山・大街道",
+          "note": "鍋燒烏龍麵。已比對 2019 在地食記，當時標示週日休息；尚未取得店家最新公告，10/11 週日晚餐仍需向店家確認。"
+        }
+      },
+      "food:白樂天（白楽天 今治本店）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "白楽天今治本店官方",
+            "url": "https://www.hakurakuten.net/"
+          }
+        ],
+        "snapshot": {
+          "name": "白樂天（白楽天 今治本店）",
+          "area": "今治",
+          "note": "今治名物燒豬玉子飯。午餐 11:00–14:45（最後點餐 14:30）、週二休息；10/12 午餐預留候位時間。"
+        }
+      },
+      "food:壽司郎 伊予松前店": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "壽司郎官方・伊予松前店",
+            "url": "https://www.akindo-sushiro.co.jp/shop/detail.php?id=259"
+          }
+        ],
+        "snapshot": {
+          "name": "壽司郎 伊予松前店",
+          "area": "愛媛・松前",
+          "note": "10/12 下灘站之後的迴轉壽司晚餐。導航指定伊予松前店（松前町東古泉 520-1），候位與營業時間依官方店舖頁。"
+        }
+      },
+      "food:Umisachi 桂浜本店（うみさち）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "うみさち官方・桂浜本店",
+            "url": "https://umisachi-kochi.com/"
+          }
+        ],
+        "snapshot": {
+          "name": "Umisachi 桂浜本店（うみさち）",
+          "area": "高知・桂濱",
+          "note": "桂濱本店主打活貝拉麵與貝燒，位於桂濱海之露台。安排 10/13 午餐，菜單依食材供應調整。"
+        }
+      },
+      "food:星野 OMO7 自助餐": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "星野 OMO7 高知官方・餐飲",
+            "url": "https://hoshinoresorts.com/zh_tw/hotels/omo7kochi/dining/"
+          }
+        ],
+        "snapshot": {
+          "name": "星野 OMO7 自助餐",
+          "area": "高知",
+          "stars": 4,
+          "note": "早餐 07:00–10:00；晚餐 18:00–20:30，晚餐需預約。10/14「早午餐」請在早餐供應時段內用餐。"
+        }
+      },
+      "food:瀨戶の祭 迴轉壽司": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "瀬戸の祭官方・兵庫町店",
+            "url": "https://yumekubo.com/store/hyogomachi/"
+          }
+        ],
+        "snapshot": {
+          "name": "瀨戶の祭 迴轉壽司",
+          "area": "高松",
+          "stars": 4,
+          "note": "兵庫町店的瀨戶內海鮮壽司，營業 11:00–22:00。價格依當期菜單，推薦文中的舊價格僅供遊記參考。"
+        }
+      },
+      "food:麺處 綿谷": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "綿谷官方・店舖公告",
+            "url": "https://www.maruwa-wataya.com/"
+          }
+        ],
+        "snapshot": {
+          "name": "麺處 綿谷",
+          "area": "高松",
+          "stars": 4,
+          "note": "肉烏龍麵名店；本次前往高松店（南新町 8-11），請勿導航到丸龜本店。10/16 水族館行程需另留午餐移動時間。"
+        }
+      },
+      "food:寄鳥味鳥": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・寄鳥味鳥食記（非當日營業確認）",
+            "url": "https://journey.tw/yoridorimidori1986/"
+          }
+        ],
+        "snapshot": {
+          "name": "寄鳥味鳥",
+          "area": "高松",
+          "stars": 5,
+          "note": "高松骨付鳥店，位於兵庫町二樓。已核對推薦食記；尚未取得店家最新營業公告，10/16 晚餐請先確認並預留候位時間。"
+        }
+      },
+      "food:グリル プランチャ": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "香川割烹飲食業協同組合・Grill Plancha",
+            "url": "https://k-kappou.com/recommend/1061.html"
+          }
+        ],
+        "snapshot": {
+          "name": "グリル プランチャ",
+          "area": "高松",
+          "stars": 4,
+          "note": "丸龜町二樓的鐵板洋食店，供應漢堡排等料理。午餐 11:30–14:00（最後點餐 13:30），週二及每月第一個週一休息。"
+        }
+      },
+      "spot-ref:栗林公園": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小兔小安・栗林公園",
+            "url": "https://bunnyann.tw/ritsurin-park/"
+          }
+        ],
+        "snapshot": {
+          "title": "小兔小安・栗林公園",
+          "url": "https://bunnyann.tw/ritsurin-park/"
+        }
+      },
+      "spot-ref:金刀比羅宮": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑,旅行圖中・金刀比羅宮,爬上785階的能量行旅",
+            "url": "https://journey.tw/kotohira-gu/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑,旅行圖中・金刀比羅宮,爬上785階的能量行旅",
+          "url": "https://journey.tw/kotohira-gu/"
+        }
+      },
+      "spot-ref:天使之路": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑,旅行圖中・小豆島天使之路,在潮起潮落的浪漫之路",
+            "url": "https://journey.tw/angel-road/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑,旅行圖中・小豆島天使之路,在潮起潮落的浪漫之路",
+          "url": "https://journey.tw/angel-road/"
+        }
+      },
+      "spot-ref:寒霞溪": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑,旅行圖中・寒霞溪,搭纜車橫越日本三大溪谷",
+            "url": "https://journey.tw/kanka-kei/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑,旅行圖中・寒霞溪,搭纜車橫越日本三大溪谷",
+          "url": "https://journey.tw/kanka-kei/"
+        }
+      },
+      "spot-ref:小豆島橄欖公園": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑,旅行圖中・小豆島橄欖公園,化身魔女宅急便小魔女",
+            "url": "https://journey.tw/olive-pk/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑,旅行圖中・小豆島橄欖公園,化身魔女宅急便小魔女",
+          "url": "https://journey.tw/olive-pk/"
+        }
+      },
+      "spot-ref:道後溫泉本館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "MATCHA・道後溫泉完全攻略(2026)",
+            "url": "https://matcha-jp.com/tw/3863"
+          }
+        ],
+        "snapshot": {
+          "title": "MATCHA・道後溫泉完全攻略(2026)",
+          "url": "https://matcha-jp.com/tw/3863"
+        }
+      },
+      "spot-ref:松山城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "魚漿夫婦・2024四國自由行景點遊記",
+            "url": "https://junespring.pixnet.net/blog/post/61839576"
+          }
+        ],
+        "snapshot": {
+          "title": "魚漿夫婦・2024四國自由行景點遊記",
+          "url": "https://junespring.pixnet.net/blog/post/61839576"
+        }
+      },
+      "spot-ref:今治城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小氣少年・瀨戶內海跳島:今治城、來島海峽SA",
+            "url": "https://nicklee.tw/2565/setouchi-imabari-toyo-ito/"
+          }
+        ],
+        "snapshot": {
+          "title": "小氣少年・瀨戶內海跳島:今治城、來島海峽SA",
+          "url": "https://nicklee.tw/2565/setouchi-imabari-toyo-ito/"
+        }
+      },
+      "spot-ref:今治毛巾美術館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "小氣少年・今治毛巾美術館",
+            "url": "https://nicklee.tw/2564/imabari-towel-museum/"
+          }
+        ],
+        "snapshot": {
+          "title": "小氣少年・今治毛巾美術館",
+          "url": "https://nicklee.tw/2564/imabari-towel-museum/"
+        }
+      },
+      "spot-ref:高知城": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "KKday・高知景點深度旅遊一日遊推薦(2025)",
+            "url": "https://www.kkday.com/zh-tw/blog/176219/asia-japan-kochi-guide"
+          }
+        ],
+        "snapshot": {
+          "title": "KKday・高知景點深度旅遊一日遊推薦(2025)",
+          "url": "https://www.kkday.com/zh-tw/blog/176219/asia-japan-kochi-guide"
+        }
+      },
+      "spot-ref:龍河洞": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "企鵝出遊・四國高知縣龍河洞",
+            "url": "https://penguingogo.com/2024/12/17/%E5%9B%9B%E5%9C%8B%E9%AB%98%E7%9F%A5%E7%B8%A3%E9%BE%8D%E6%B2%B3%E6%B4%9E.html"
+          }
+        ],
+        "snapshot": {
+          "title": "企鵝出遊・四國高知縣龍河洞",
+          "url": "https://penguingogo.com/2024/12/17/四國高知縣龍河洞.html"
+        }
+      },
+      "spot-ref:麵包超人博物館(柳瀨嵩紀念館)": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "下港女子・高知麵包超人博物館參觀遊記",
+            "url": "https://ekangwoman.com/anpanman/"
+          }
+        ],
+        "snapshot": {
+          "title": "下港女子・高知麵包超人博物館參觀遊記",
+          "url": "https://ekangwoman.com/anpanman/"
+        }
+      },
+      "spot-ref:鳴門渦潮": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "樂吃購！日本・德島自由行攻略:鳴門渦潮×祖谷秘境",
+            "url": "https://shikoku.letsgojp.com/archives/540152/"
+          }
+        ],
+        "snapshot": {
+          "title": "樂吃購！日本・德島自由行攻略:鳴門渦潮×祖谷秘境",
+          "url": "https://shikoku.letsgojp.com/archives/540152/"
+        }
+      },
+      "spot-ref:屋島展望台": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "元六月的世界旅歷・屋島展望瀨戶內海(第84號靈場屋島寺)",
+            "url": "https://marstmel.pixnet.net/blog/post/346483675"
+          }
+        ],
+        "snapshot": {
+          "title": "元六月的世界旅歷・屋島展望瀨戶內海(第84號靈場屋島寺)",
+          "url": "https://marstmel.pixnet.net/blog/post/346483675"
+        }
+      },
+      "spot-ref:四國水族館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "潔妮・四國水族館巨型水槽海豚秀",
+            "url": "https://janice.life/shikokuaquarium/"
+          }
+        ],
+        "snapshot": {
+          "title": "潔妮・四國水族館巨型水槽海豚秀",
+          "url": "https://janice.life/shikokuaquarium/"
+        }
+      },
+      "food-ref:讚岐烏龍麵 上原屋本店": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "周花花・讚岐烏龍麵上原屋本店食記",
+            "url": "https://tenjo.tw/ueharayahonten/"
+          }
+        ],
+        "snapshot": {
+          "title": "周花花・讚岐烏龍麵上原屋本店食記",
+          "url": "https://tenjo.tw/ueharayahonten/"
+        }
+      },
+      "food-ref:骨付鳥 一鶴": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "Star_Chu・骨付鳥一鶴高松店",
+            "url": "https://starland.pixnet.net/blog/post/348999610"
+          }
+        ],
+        "snapshot": {
+          "title": "Star_Chu・骨付鳥一鶴高松店",
+          "url": "https://starland.pixnet.net/blog/post/348999610"
+        }
+      },
+      "food-ref:小豆島拉麵 HISHIO": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・小豆島拉麵 HISHIO",
+            "url": "https://journey.tw/hishio/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑・小豆島拉麵 HISHIO",
+          "url": "https://journey.tw/hishio/"
+        }
+      },
+      "food-ref:瀨戶の祭 迴轉壽司": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・瀨戶の祭迴轉壽司",
+            "url": "https://journey.tw/seto-matsuri-sushi/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑・瀨戶の祭迴轉壽司",
+          "url": "https://journey.tw/seto-matsuri-sushi/"
+        }
+      },
+      "food-ref:寄鳥味鳥": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・寄鳥味鳥骨付鳥",
+            "url": "https://journey.tw/yoridorimidori1986/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑・寄鳥味鳥骨付鳥",
+          "url": "https://journey.tw/yoridorimidori1986/"
         }
       }
     }

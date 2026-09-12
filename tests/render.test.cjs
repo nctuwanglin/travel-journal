@@ -49,3 +49,18 @@ test('planned restaurants without ratings do not invent stars or undefined acces
  const x=load();const html=x.food({id:'fixture',food:[{name:'餐廳',area:'札幌',note:'預定晚餐'}]});
  assert.ok(html.includes('預定晚餐'));assert.ok(!html.includes('undefined'));assert.ok(!html.includes('☆☆☆☆☆'));
 });
+
+test('food recommendation combines notes, ratings and reference in one cell for every trip',()=>{
+ const x=load();
+ for(const t of x.trips){
+  const html=x.food(t);
+  assert.equal((html.match(/<th>/g)||[]).length,3,t.id);
+  const rows=[...html.matchAll(/<tr>(<td[\s\S]*?)<\/tr>/g)];
+  assert.equal(rows.length,(t.food||[]).length,t.id);
+  rows.forEach((row,i)=>{
+   const cells=[...row[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)];
+   assert.equal(cells.length,3,t.id);
+   assert.equal(cells[2][1].includes('📖 推薦文'),!!t.food[i].ref?.url,t.food[i].name);
+  });
+ }
+});
