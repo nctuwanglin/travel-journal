@@ -968,7 +968,7 @@
           ? '<a class="btn btn-ghost" href="#/">← 集錦牆</a>'+
             (t&&t.days&&t.days.length?'<button class="btn no-print" id="travelModeBtn">手機旅行模式</button>':'')+
             (t&&t.mapArt
-              ? '<a class="btn no-print" id="mapArtBtn" href="'+esc(t.mapArt)+'" download="'+esc(t.region+"_"+t.year+"_行程圖.jpg")+'">🗺 下載行程圖</a>'
+              ? '<a class="btn no-print" id="mapArtBtn" href="'+esc(t.mapArt)+'" download="'+esc(t.region+"_"+t.year+"_行程圖."+((t.mapArt.match(/\.(png|jpe?g|webp)$/i)||[])[1]||"jpg"))+'">🗺 下載行程圖</a>'
               : '')+
             '<button class="btn btn-ink no-print" id="printBtn">⬇ 下載旅遊書</button>'
           : '<span class="eyebrow" style="opacity:.65">收藏 ・ 分享 ・ 帶著走</span>')+

@@ -386,10 +386,10 @@ window.TRIP_MAINTENANCE = {
       "aligned": false
     },
     "shikoku-2026": {
-      "version": null,
-      "updatedAt": null,
-      "prompt": null,
-      "baselineRecordedAt": "2026-09-07",
+      "version": "v2",
+      "updatedAt": "2026-09-13",
+      "prompt": "編輯這張四國旅行地圖，保留水彩紙質、可愛麵包小偷插畫、地圖和九天卡片版型。務必同步改卡片和地圖上的文字與圖示，繁體中文字清晰。標題副標改為「26’10/9–10/17・9天8夜行程」。DAY1抵達文字加入「領取香川FIT」。DAY3晚餐由象三改「車井戶鍋燒烏龍麵」，地圖象三圖示改鍋燒烏龍麵。DAY4景點改「今治城、今治毛巾美術館、JR下灘站」，午餐「白樂天」，晚餐「壽司郎 伊予松前店」；地圖刪除高島屋及摩天輪、潮里圖示，改海邊JR下灘站、白樂天燒豬玉子飯與壽司郎。DAY5景點改「桂濱水族館、高知城」，午餐「Umisachi 桂浜本店」；地圖移除四萬十川及古都，改在高知南方海邊畫桂濱水族館與Umisachi，路線松山直接前往高知桂濱，不繞四萬十。DAY7景點「鳴門渦旋、道之站 Kurukuru 鳴門、屋島展望台」，刪除午餐東大，保留早餐OMO7 Buffet、晚餐瀬戸の祭迴轉壽司、住宿高松克萊蒙特JR大飯店；地圖刪除東大拉麵改道之站Kurukuru鳴門的地瓜與休息站。租車框改「10/11 10:00 JR高松站取車／10/16 JR高松站還車」。DAY2、6、8、9其餘內容保持，所有住宿保持；DAY9飛機19:05。其餘未指定景點餐廳保留原文，避免遺漏或重複DAY。原圖高島屋、象三、潮里、四萬十川、古都、東大必須完全消失。\n\n---\n\n精準校正這張圖，保留所有九張DAY卡片文字、布局、水彩風格及已正確內容。只修改中央地圖：1 桂濱水族館、高知城、Umisachi桂浜本店前面的數字目前錯為6，全部改成5。2 中央地圖補回數字6的「龍河洞」鐘乳洞、「麵包超人博物館」博物館、「OMO7 Buffet」餐點三個圖示與文字，在高知東側空間畫清楚，不可覆蓋其他景點。3 愛媛松山旁補回數字3「松山鯛めし 秋嘉」鯛魚飯和數字3「車井戶鍋燒烏龍麵」圖示，不能把白樂天當鍋燒麵；數字4白樂天的插畫改成燒豬肉片與荷包蛋蓋飯。4 DAY3晚餐正確逐字「車井戶鍋燒烏龍麵」。5 中央地圖愛媛到高知紫色DAY5路線應由松山前往桂濱水族館和高知城，不連往鳴門。地理示意而非導航。其餘保留，標題9天8夜，所有DAY卡片不刪減。\n\n---\n\n修正圖中文字混合與誤標，請不要創作新的內容。保留原圖外圍9天卡片、標題、紙質水彩插畫。中央地圖簡化：移除所有餐廳、住宿的文字標籤及數字（例如車樂天、鍋燒烏片飯、重複瀬戶の祭、OMO7框都刪除），中央地圖僅有以下景點文字與正確日次數字，避免塞入過多字。香川：1栗林公園、1金刀比羅宮、7屋島展望台、8四國水族館；小豆島：2天使之路、2寒霞溪、2橄欖公園；愛媛：3道後溫泉、3松山城、4今治城、4今治毛巾美術館、4JR下灘站；高知：5桂濱水族館、5高知城、6龍河洞、6麵包超人博物館；徳島：7鳴門渦旋、7道之站Kurukuru鳴門。保留各區景點插畫。移除所有彩色路線與路線圖例，改成簡潔箭頭地理示意即可，避免錯誤導航。外圍卡片要逐字校正兩處：DAY3晚餐為「車井戶鍋燒烏龍麵」，DAY8晚餐為「寄鳥味鳥」。其餘DAY卡片文字不得改動！右上租車框保留10/11 10:00 JR高松站取車、10/16 JR高松站還車。9天8夜副標保留。圖上任何餐廳名稱只能出現在每日卡片，中央圖只呈現景點。\n\n---\n\n\n",
+      "baselineRecordedAt": "2026-09-13",
       "baselineSnapshot": {
         "title": "四國跨縣之旅",
         "subtitle": "香川・愛媛・高知・徳島",
@@ -469,7 +469,7 @@ window.TRIP_MAINTENANCE = {
             "items": [
               {
                 "time": "10:30",
-                "text": "抵達高松機場,前往市區"
+                "text": "抵達高松機場（10:30），領取香川 FIT，前往市區"
               },
               {
                 "time": "玩",
@@ -550,7 +550,7 @@ window.TRIP_MAINTENANCE = {
               },
               {
                 "time": "晚餐",
-                "text": "瀨戶內四季海鮮居酒屋 象三"
+                "text": "車井戶鍋燒烏龍麵（手打うどん 車井戸）"
               },
               {
                 "time": "住宿",
@@ -562,44 +562,61 @@ window.TRIP_MAINTENANCE = {
                 "type": "info",
                 "title": "交通時間軸",
                 "text": "10/11 10:00 JR 高松站取車,高松 → 松山自駕約 2.5 小時"
+              },
+              {
+                "type": "warn",
+                "title": "晚餐營業確認",
+                "text": "車井戶舊食記標示週日休息；10/11 為週日，請先向店家確認是否營業，避免撲空。"
               }
             ]
           },
           {
             "day": 4,
             "date": "10/12 (一)",
-            "theme": "🏯 愛媛・今治",
+            "theme": "🏯 愛媛・今治與下灘海景",
             "items": [
               {
                 "time": "玩",
-                "text": "今治城(海上之城)、今治毛巾美術館、伊予鐵高島屋摩天輪 くるりん"
+                "text": "今治城、今治毛巾美術館、JR 下灘站"
               },
               {
                 "time": "午餐",
-                "text": "濱之台所・潮里"
+                "text": "白樂天（白楽天 今治本店）"
               },
               {
                 "time": "晚餐",
-                "text": "伊予鐵高島屋"
+                "text": "壽司郎 伊予松前店"
               },
               {
                 "time": "住宿",
                 "text": "大和 ROYNET 飯店 松山"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "順路安排",
+                "text": "今治景點與下灘站分處松山兩側，午餐後預留跨區移動時間；下灘結束後可往松前用晚餐，再返回松山。"
+              },
+              {
+                "type": "warn",
+                "title": "下灘站拍照",
+                "text": "車站仍正常營運，請勿走入鐵軌或私人土地；想拍傍晚海景，請提早抵達並使用指定停車處。"
               }
             ]
           },
           {
             "day": 5,
             "date": "10/13 (二)",
-            "theme": "🛶 愛媛 → 高知・四萬十川",
+            "theme": "🐟 愛媛 → 高知・桂濱與高知城",
             "items": [
               {
                 "time": "玩",
-                "text": "四萬十川(沉下橋・屋形船)、高知城"
+                "text": "桂濱水族館、高知城"
               },
               {
                 "time": "午餐",
-                "text": "レストハウス古都"
+                "text": "Umisachi 桂浜本店（うみさち）"
               },
               {
                 "time": "晚餐",
@@ -613,8 +630,8 @@ window.TRIP_MAINTENANCE = {
             "tips": [
               {
                 "type": "info",
-                "title": "交通時間軸",
-                "text": "松山 → 四萬十 → 高知,當日移動距離較長,留意時間"
+                "title": "順路安排",
+                "text": "松山出發前往桂濱，水族館與 Umisachi 午餐安排同一區，再回高知市區參觀高知城；預留移動及入館時間。"
               }
             ]
           },
@@ -659,11 +676,7 @@ window.TRIP_MAINTENANCE = {
               },
               {
                 "time": "玩",
-                "text": "鳴門渦潮(觀潮船/渦之道)、屋島展望台"
-              },
-              {
-                "time": "午餐",
-                "text": "拉麵東大 徳島本店"
+                "text": "鳴門渦旋（觀潮船／渦之道）、道之站 Kurukuru 鳴門、屋島展望台"
               },
               {
                 "time": "晚餐",
@@ -679,6 +692,11 @@ window.TRIP_MAINTENANCE = {
                 "type": "warn",
                 "title": "提醒",
                 "text": "鳴門渦潮滿潮/乾潮前後 1–2 小時最壯觀,先查觀潮表"
+              },
+              {
+                "type": "info",
+                "title": "休息與採買",
+                "text": "Kurukuru 鳴門安排休息、點心與伴手禮；先依觀潮時段決定當日出發時間，並預留前往屋島的車程。"
               }
             ]
           },
@@ -687,6 +705,10 @@ window.TRIP_MAINTENANCE = {
             "date": "10/16 (五)",
             "theme": "🐟 香川・四國水族館",
             "items": [
+              {
+                "time": "還車",
+                "text": "10/16 JR 高松站還車（依租約約定時間）"
+              },
               {
                 "time": "玩",
                 "text": "四國水族館(宇多津)"
@@ -711,8 +733,8 @@ window.TRIP_MAINTENANCE = {
             "tips": [
               {
                 "type": "info",
-                "title": "交通時間軸",
-                "text": "今日(10/16)歸還租車(JR 高松站);四國水族館在宇多津,距高松約 40 分"
+                "title": "還車與水族館交通",
+                "text": "先依租約確認還車時間，再安排四國水族館；若先還車，可搭 JR 到宇多津站後步行或轉乘計程車。"
               }
             ]
           },
@@ -738,7 +760,7 @@ window.TRIP_MAINTENANCE = {
               {
                 "type": "warn",
                 "title": "提醒",
-                "text": "班機 19:05,建議提前 2 小時抵達高松機場(JR/機場巴士)"
+                "text": "班機 19:05，建議 17:05 前抵達高松機場；預留機場巴士候車、行李整理及報到時間。"
               }
             ]
           }
@@ -826,21 +848,21 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
-            "name": "伊予鐵高島屋摩天輪 くるりん",
-            "area": "松山",
+            "name": "JR 下灘站",
+            "area": "愛媛・伊予",
             "day": 4,
             "latlng": [
-              33.8392,
-              132.7664
+              33.655109,
+              132.589219
             ]
           },
           {
-            "name": "四萬十川",
-            "area": "高知・四萬十",
+            "name": "桂濱水族館",
+            "area": "高知・桂濱",
             "day": 5,
             "latlng": [
-              32.9889,
-              132.9347
+              33.497269,
+              133.573639
             ]
           },
           {
@@ -880,6 +902,15 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
+            "name": "道之站 Kurukuru 鳴門",
+            "area": "徳島・鳴門",
+            "day": 7,
+            "latlng": [
+              34.15814,
+              134.57989
+            ]
+          },
+          {
             "name": "屋島展望台",
             "area": "高松",
             "day": 7,
@@ -899,9 +930,9 @@ window.TRIP_MAINTENANCE = {
           }
         ]
       },
-      "imagePath": "img/shikoku-2026.jpg",
-      "imageSha256": "c81e7fce991e48452b181ef6ff56ad7638dabea3dc1576b16d012470d35edce3",
-      "aligned": false
+      "imagePath": "img/shikoku-2026-v2.png",
+      "imageSha256": "83fadc8b13446a1b81831d9e3afbb9e5ca1ba26053c40a9c3308319009363a20",
+      "aligned": true
     },
     "hokkaido-2027": {
       "version": "v1",
@@ -2016,6 +2047,112 @@ window.TRIP_MAINTENANCE = {
           "area": "札幌",
           "desc": "1/4 參觀札幌啤酒博物館。2026 年 7 月改制後，自由見學與導覽有不同票種；舊遊記的免費資訊不沿用。",
           "hours": "官方目前 11:00–18:00、最晚入館 17:30；12/31 全館休業，另有臨時休館。一般導覽週一原則休止；2027 年初另查公告。"
+        }
+      }
+    },
+    "shikoku-2026": {
+      "spot-ref:JR 下灘站": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・JR 下灘車站交通與海景遊記",
+            "url": "https://journey.tw/shimonada/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑・JR 下灘車站交通與海景遊記",
+          "url": "https://journey.tw/shimonada/"
+        }
+      },
+      "spot-ref:桂濱水族館": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "許傑・桂濱水族館參觀攻略",
+            "url": "https://journey.tw/katurahama/"
+          }
+        ],
+        "snapshot": {
+          "title": "許傑・桂濱水族館參觀攻略",
+          "url": "https://journey.tw/katurahama/"
+        }
+      },
+      "spot-ref:道之站 Kurukuru 鳴門": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "東北讃岐旅情・Kurukuru 鳴門遊記（日文）",
+            "url": "https://tak-yam.seesaa.net/article/503277170.html"
+          }
+        ],
+        "snapshot": {
+          "title": "東北讃岐旅情・Kurukuru 鳴門遊記（日文）",
+          "url": "https://tak-yam.seesaa.net/article/503277170.html"
+        }
+      },
+      "food-ref:鐵板燒 夢路": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "Ken&Alice玩樂誌・高松景點美食住宿推薦(含夢路鐵板燒)",
+            "url": "https://kenalice.tw/blog/post/takamatsu-tour"
+          }
+        ],
+        "snapshot": {
+          "title": "Ken&Alice玩樂誌・高松景點美食住宿推薦(含夢路鐵板燒)",
+          "url": "https://kenalice.tw/blog/post/takamatsu-tour"
+        }
+      },
+      "food-ref:車井戶鍋燒烏龍麵（手打うどん 車井戸）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "リビングえひめ・車井戸鍋燒烏龍麵（2019 日文食記）",
+            "url": "https://mrs.living.jp/ehime/town_gourmet/reporter/3685937"
+          }
+        ],
+        "snapshot": {
+          "title": "リビングえひめ・車井戸鍋燒烏龍麵（2019 日文食記）",
+          "url": "https://mrs.living.jp/ehime/town_gourmet/reporter/3685937"
+        }
+      },
+      "food-ref:白樂天（白楽天 今治本店）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "日本の味を噛みしめる・白楽天今治本店（日文食記）",
+            "url": "https://atp.jp/ehime/hakurakuten/"
+          }
+        ],
+        "snapshot": {
+          "title": "日本の味を噛みしめる・白楽天今治本店（日文食記）",
+          "url": "https://atp.jp/ehime/hakurakuten/"
+        }
+      },
+      "food-ref:壽司郎 伊予松前店": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "食べログ・壽司郎伊予松前店資訊與食評（日文）",
+            "url": "https://tabelog.com/ehime/A3801/A380103/38007885/"
+          }
+        ],
+        "snapshot": {
+          "title": "食べログ・壽司郎伊予松前店資訊與食評（日文）",
+          "url": "https://tabelog.com/ehime/A3801/A380103/38007885/"
+        }
+      },
+      "food-ref:Umisachi 桂浜本店（うみさち）": {
+        "checkedAt": "2026-09-13",
+        "sources": [
+          {
+            "title": "桂浜まるごとガイド・うみさち桂浜本店（日文）",
+            "url": "https://katsurahama.com/umi-no-terrace-katsurahama/umisachi/"
+          }
+        ],
+        "snapshot": {
+          "title": "桂浜まるごとガイド・うみさち桂浜本店（日文）",
+          "url": "https://katsurahama.com/umi-no-terrace-katsurahama/umisachi/"
         }
       }
     }
