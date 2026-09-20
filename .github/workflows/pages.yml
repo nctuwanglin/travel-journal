@@ -59,6 +59,7 @@ jobs:
           cp index.html travel-mode.js travel-mode.css trip-maintenance.js pdf-book.js pdf-book.css og-image.png .nojekyll deploy-site/
           cp data/trips.js data/maintenance.js deploy-site/data/
           cp -R img deploy-site/img
+          python3 tools/version_assets.py deploy-site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: deploy-site
