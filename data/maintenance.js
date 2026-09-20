@@ -1616,6 +1616,400 @@ window.TRIP_MAINTENANCE = {
       "imagePath": "img/hokkaido-2027-v1.png",
       "imageSha256": "6f3105ebb4f43ff475b044325028a0eafe24e9fc78740fa96a40f4810ce1d2c0",
       "aligned": true
+    },
+    "nagoya-2027": {
+      "version": "v1",
+      "updatedAt": "2026-09-20",
+      "prompt": "製作繁體中文水彩手繪旅遊行程資訊圖，橫式1536x1024。暖白紙背景，可愛插畫、清楚黑色文字，沿用日式旅遊手帳風格。標題「名古屋春日旅行地圖」，副標「2027/3/9–3/14・6天5夜・星宇航空」。中央為示意地圖（非導航地圖），北方犬山城與三光稻荷神社，中間名古屋城、名古屋車站、名古屋電視塔與綠洲21、大須觀音，西側TOYOTA產業技術紀念館，南方名古屋港水族館與更南的樂高樂園，最南中部國際機場。用城堡、紅鳥居、電視塔、玻璃飛船屋頂、積木、海豚、汽車插畫。不要把3月初畫成滿開櫻花，不畫自駕路線。周圍6張每日卡片，字體大、整齊，完整準確文字：\nDAY 1 3/9（二）\n13:55 抵達名古屋\n玩：名古屋電視塔、綠洲21\n逛：榮商圈\n晚餐：山本屋總本家\nDAY 2 3/10（三）\n玩：名古屋城、大須觀音\n逛：大須商店街\n午餐：Solo Pizza\n晚餐：矢場味噌豬排\nDAY 3 3/11（四）\n玩：樂高樂園\n晚餐：飛驒牛一頭家 馬喰一代\nDAY 4 3/12（五）\n玩：三光稻荷神社、犬山城\n逛：名古屋車站\n晚餐：鳥開總本家\nDAY 5 3/13（六）\n早餐：Tsubame Bread and Milk\n玩：名古屋港水族館\n逛：榮商圈\n晚餐：鰻魚三吃 花岡\nDAY 6 3/14（日）\n玩：TOYOTA產業技術紀念館\n午餐：麵家獅子丸\n逛：中部國際機場\n19:40 起飛返台\n底部住宿框「全程5晚：名古屋日航尚格飯店 Nikko Style Nagoya」。簡明美觀，不加入未指定餐廳或日期。\n",
+      "baselineRecordedAt": "2026-09-20",
+      "baselineSnapshot": {
+        "title": "日本名古屋春日自由行",
+        "subtitle": "名古屋・犬山",
+        "country": "日本",
+        "region": "名古屋",
+        "year": 2027,
+        "dateLabel": "3/9 – 3/14",
+        "dateStart": "2027-03-09",
+        "dateEnd": "2027-03-14",
+        "nights": 5,
+        "flight": {
+          "airline": "星宇航空 STARLUX",
+          "out": "3/9 台灣 → 名古屋中部國際機場（13:55 抵達）",
+          "back": "3/14 名古屋中部國際機場 → 台灣（19:40 起飛）",
+          "note": "航班時間依本次安排；報到與登機資訊以機票及航空公司通知為準。"
+        },
+        "stay": [
+          {
+            "name": "名古屋日航尚格飯店（Nikko Style Nagoya）",
+            "nights": "3/9–3/14，共 5 晚",
+            "note": "全程同一飯店；返程日先寄放行李，午餐後取回。"
+          }
+        ],
+        "pass": {
+          "icon": "🚆",
+          "label": "交通",
+          "name": "名鐵＋地鐵＋青波線",
+          "price": "依實際路段購票",
+          "head": [
+            "日期／路段",
+            "交通建議",
+            "提醒"
+          ],
+          "rows": [
+            [
+              "3/9、3/14 機場往返",
+              "中部國際機場 ↔ 名鐵名古屋",
+              "搭 μSKY／特別車廂需另確認特別車輛券"
+            ],
+            [
+              "市區",
+              "地鐵與步行",
+              "依搭乘次數比較單程票與一日券"
+            ],
+            [
+              "3/11 樂高樂園",
+              "名古屋站 → 青波線 → 金城埠頭站",
+              "出站後步行至樂園"
+            ],
+            [
+              "3/12 犬山",
+              "名鐵名古屋 → 犬山",
+              "依列車目的地確認是否需轉車"
+            ],
+            [
+              "3/13 水族館",
+              "地鐵名港線 → 名古屋港站",
+              "留意名城線與名港線目的地"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "3/9 (二)",
+            "theme": "名古屋｜抵達與榮夜景",
+            "items": [
+              {
+                "time": "13:55",
+                "text": "星宇航空抵達名古屋中部國際機場"
+              },
+              {
+                "time": "交通",
+                "text": "搭名鐵前往名古屋市區，至飯店寄放行李／入住"
+              },
+              {
+                "time": "玩",
+                "text": "名古屋電視塔、綠洲21"
+              },
+              {
+                "time": "逛",
+                "text": "榮商圈"
+              },
+              {
+                "time": "晚餐",
+                "text": "山本屋總本家"
+              },
+              {
+                "time": "住",
+                "text": "名古屋日航尚格飯店（Nikko Style Nagoya）"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "抵達日留彈性",
+                "text": "13:55 抵達後預留入境、領行李與搭車時間；電視塔登塔與綠洲21屋頂依當日開放安排。"
+              },
+              {
+                "type": "warn",
+                "title": "山本屋分店確認",
+                "text": "目前官方公告「本家」週二、週三休息；3/9 是週二，可先確認榮區松坂屋店等分店。原餐廳安排保留，未指定分店。"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "3/10 (三)",
+            "theme": "名古屋｜名古屋城與大須散策",
+            "items": [
+              {
+                "time": "玩",
+                "text": "名古屋城"
+              },
+              {
+                "time": "午餐",
+                "text": "Solo Pizza"
+              },
+              {
+                "time": "玩",
+                "text": "大須觀音"
+              },
+              {
+                "time": "逛",
+                "text": "大須商店街"
+              },
+              {
+                "time": "晚餐",
+                "text": "矢場味噌豬排"
+              },
+              {
+                "time": "住",
+                "text": "名古屋日航尚格飯店（Nikko Style Nagoya）"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "名古屋城參觀範圍",
+                "text": "目前官方公告天守閣閉館；本丸御殿、庭園等仍可參觀，出發前確認最新開放範圍。"
+              },
+              {
+                "type": "warn",
+                "title": "大須午餐",
+                "text": "Solo Pizza 先以大須本店作動線參考，官方現行公告週二休息；舊食記的週三店休已不同。3/10 週三仍請確認當月臨時店休。"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "3/11 (四)",
+            "theme": "名古屋｜樂高樂園一日遊",
+            "items": [
+              {
+                "time": "交通",
+                "text": "名古屋站搭青波線至金城埠頭站，再步行前往樂園"
+              },
+              {
+                "time": "玩",
+                "text": "樂高樂園 LEGOLAND Japan"
+              },
+              {
+                "time": "晚餐",
+                "text": "燒肉 飛驒牛一頭家 馬喰一代"
+              },
+              {
+                "time": "住",
+                "text": "名古屋日航尚格飯店（Nikko Style Nagoya）"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "樂園日曆與設施",
+                "text": "先確認 2027/3/11 營業日、票種及設施身高限制，再購票。夏季遊記中的玩水活動不直接套用三月。"
+              },
+              {
+                "type": "warn",
+                "title": "燒肉訂位",
+                "text": "馬喰一代有多間分店；確認用餐分店後預約，並留足離園、回名古屋市區的交通時間。"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "3/12 (五)",
+            "theme": "犬山｜神社與國寶天守",
+            "items": [
+              {
+                "time": "交通",
+                "text": "名鐵前往犬山，步行串聯神社與犬山城"
+              },
+              {
+                "time": "玩",
+                "text": "三光稻荷神社、犬山城"
+              },
+              {
+                "time": "逛",
+                "text": "名古屋車站"
+              },
+              {
+                "time": "晚餐",
+                "text": "鳥開總本家"
+              },
+              {
+                "time": "住",
+                "text": "名古屋日航尚格飯店（Nikko Style Nagoya）"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "登城與返程",
+                "text": "犬山城天守階梯較陡，穿方便行走的鞋；先完成神社與登城，再回名古屋站購物。"
+              },
+              {
+                "type": "warn",
+                "title": "晚餐分店",
+                "text": "鳥開總本家先以名古屋站周邊分店作參考，確認最後點餐時間；推薦文分店不等於已預訂店家。"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "3/13 (六)",
+            "theme": "名古屋｜水族館與榮商圈",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "Tsubame Bread and Milk"
+              },
+              {
+                "time": "玩",
+                "text": "名古屋港水族館"
+              },
+              {
+                "time": "逛",
+                "text": "榮商圈"
+              },
+              {
+                "time": "晚餐",
+                "text": "鰻魚三吃 花岡"
+              },
+              {
+                "time": "住",
+                "text": "名古屋日航尚格飯店（Nikko Style Nagoya）"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "早餐與入館",
+                "text": "週六早餐預留候位時間；想吃的三明治可能有供應時段，先確認菜單。水族館入園後先看當日活動表。"
+              },
+              {
+                "type": "warn",
+                "title": "水族館交通",
+                "text": "本日為名古屋港水族館；搭地鐵名港線往名古屋港，留意列車目的地與轉乘。晚餐回榮區，花岡先確認訂位方式。"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "3/14 (日)",
+            "theme": "名古屋 → 台灣｜產業博物館與返程",
+            "items": [
+              {
+                "time": "玩",
+                "text": "TOYOTA 產業技術紀念館"
+              },
+              {
+                "time": "午餐",
+                "text": "麵家獅子丸"
+              },
+              {
+                "time": "交通",
+                "text": "取回行李，搭名鐵前往中部國際機場"
+              },
+              {
+                "time": "逛",
+                "text": "名古屋中部國際機場"
+              },
+              {
+                "time": "19:40",
+                "text": "星宇航空由名古屋起飛返回台灣"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "博物館位置",
+                "text": "本日是名古屋市內的 TOYOTA 產業技術紀念館，請勿導航到長久手的豐田博物館；早上先參觀，午餐後取行李。"
+              },
+              {
+                "type": "warn",
+                "title": "返程時間優先",
+                "text": "麵家獅子丸預留候位時間，太晚就縮短等待；建議 16:40 左右到機場，實際報到截止依航空公司要求，購物安排在辦理報到後。"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "名古屋電視塔（中部電力 MIRAI TOWER）",
+            "area": "榮",
+            "day": 1,
+            "latlng": [
+              35.1724,
+              136.9083
+            ]
+          },
+          {
+            "name": "綠洲21",
+            "area": "榮",
+            "day": 1,
+            "latlng": [
+              35.1709,
+              136.9089
+            ]
+          },
+          {
+            "name": "名古屋城",
+            "area": "名古屋",
+            "day": 2,
+            "latlng": [
+              35.1856,
+              136.8991
+            ]
+          },
+          {
+            "name": "大須觀音",
+            "area": "大須",
+            "day": 2,
+            "latlng": [
+              35.1597,
+              136.8994
+            ]
+          },
+          {
+            "name": "樂高樂園 LEGOLAND Japan",
+            "area": "金城埠頭",
+            "day": 3,
+            "latlng": [
+              35.0505,
+              136.8433
+            ]
+          },
+          {
+            "name": "三光稻荷神社",
+            "area": "犬山",
+            "day": 4,
+            "latlng": [
+              35.3867,
+              136.9391
+            ]
+          },
+          {
+            "name": "犬山城",
+            "area": "犬山",
+            "day": 4,
+            "latlng": [
+              35.3883,
+              136.9394
+            ]
+          },
+          {
+            "name": "名古屋港水族館",
+            "area": "名古屋港",
+            "day": 5,
+            "latlng": [
+              35.0905,
+              136.8786
+            ]
+          },
+          {
+            "name": "TOYOTA 產業技術紀念館",
+            "area": "名古屋・榮生",
+            "day": 6,
+            "latlng": [
+              35.1821,
+              136.8823
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/nagoya-2027.png",
+      "imageSha256": "92d6e10dd1c39def6f0f809be4ed020d7eca1cecff65edef8cdee07e0a8ec8d3",
+      "aligned": true
     }
   },
   "checks": {
@@ -2908,6 +3302,476 @@ window.TRIP_MAINTENANCE = {
         "snapshot": {
           "title": "許傑・寄鳥味鳥骨付鳥",
           "url": "https://journey.tw/yoridorimidori1986/"
+        }
+      }
+    },
+    "nagoya-2027": {
+      "spot:名古屋電視塔（中部電力 MIRAI TOWER）": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Liz・綠洲21與名古屋電視塔夜景（介紹核對，非出遊日營業確認）",
+            "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+          }
+        ],
+        "snapshot": {
+          "name": "名古屋電視塔（中部電力 MIRAI TOWER）",
+          "area": "榮",
+          "desc": "久屋大通公園中的城市地標，可從周邊散步欣賞塔景，若登塔則另確認票券與最後入場。適合與綠洲21、榮商圈一起安排。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:名古屋電視塔（中部電力 MIRAI TOWER）": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Liz・綠洲21與名古屋電視塔夜景",
+            "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+          }
+        ],
+        "snapshot": {
+          "title": "Liz・綠洲21與名古屋電視塔夜景",
+          "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+        }
+      },
+      "spot:綠洲21": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Liz・綠洲21與名古屋電視塔夜景（介紹核對，非出遊日營業確認）",
+            "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+          }
+        ],
+        "snapshot": {
+          "name": "綠洲21",
+          "area": "榮",
+          "desc": "以玻璃屋頂「水之宇宙飛船」為特色的複合設施，入夜可欣賞燈光與附近電視塔。屋頂、商場與餐飲區各有開放時間。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:綠洲21": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Liz・綠洲21與名古屋電視塔夜景",
+            "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+          }
+        ],
+        "snapshot": {
+          "title": "Liz・綠洲21與名古屋電視塔夜景",
+          "url": "https://lizzzstyle.tw/nagoya-oasis21-night/"
+        }
+      },
+      "spot:名古屋城": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "名古屋城官方・天守閉館",
+            "url": "https://www.nagoyajo.city.nagoya.jp/guide/tenshu/"
+          }
+        ],
+        "snapshot": {
+          "name": "名古屋城",
+          "area": "名古屋",
+          "desc": "以金鯱與本丸御殿為代表景觀。查核時官方仍公告天守閣閉館，行程以本丸御殿與園區散步為主。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:名古屋城": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "小貝與小貝婆・名古屋城與市區散策",
+            "url": "https://genius0509.pixnet.net/blog/posts/12227009125"
+          }
+        ],
+        "snapshot": {
+          "title": "小貝與小貝婆・名古屋城與市區散策",
+          "url": "https://genius0509.pixnet.net/blog/posts/12227009125"
+        }
+      },
+      "spot:大須觀音": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "遊記・大須觀音與名古屋市區散策（介紹核對，非出遊日營業確認）",
+            "url": "https://vocus.cc/article/679a6b90fd89780001e7b17d"
+          }
+        ],
+        "snapshot": {
+          "name": "大須觀音",
+          "area": "大須",
+          "desc": "位於大須商店街旁的寺院，參拜後可順路探索商店街與午餐店家；商店營業時間各自不同。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:大須觀音": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "遊記・大須觀音與名古屋市區散策",
+            "url": "https://vocus.cc/article/679a6b90fd89780001e7b17d"
+          }
+        ],
+        "snapshot": {
+          "title": "遊記・大須觀音與名古屋市區散策",
+          "url": "https://vocus.cc/article/679a6b90fd89780001e7b17d"
+        }
+      },
+      "spot:樂高樂園 LEGOLAND Japan": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "樂高樂園官方・園區與營運資訊",
+            "url": "https://www.legoland.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "樂高樂園 LEGOLAND Japan",
+          "area": "金城埠頭",
+          "desc": "以樂高積木、迷你城市與遊樂設施為主題的樂園。安排整天參觀；票價、營業日與設施限制依官方日曆，不套用夏季遊記的限定活動。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:樂高樂園 LEGOLAND Japan": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "騎豬的貴婦人・2024 樂高樂園親子遊記（夏季）",
+            "url": "https://mizuya.pixnet.net/blog/post/49350756"
+          }
+        ],
+        "snapshot": {
+          "title": "騎豬的貴婦人・2024 樂高樂園親子遊記（夏季）",
+          "url": "https://mizuya.pixnet.net/blog/post/49350756"
+        }
+      },
+      "spot:三光稻荷神社": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Boncamica・犬山城與三光稻荷神社（介紹核對，非出遊日營業確認）",
+            "url": "https://boncamica.com/inuyama-castle/"
+          }
+        ],
+        "snapshot": {
+          "name": "三光稻荷神社",
+          "area": "犬山",
+          "desc": "犬山城山腳下的神社，紅色鳥居與愛心繪馬是特色，可與犬山城步行串聯。參拜與拍照時保留通道。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:三光稻荷神社": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Boncamica・犬山城與三光稻荷神社",
+            "url": "https://boncamica.com/inuyama-castle/"
+          }
+        ],
+        "snapshot": {
+          "title": "Boncamica・犬山城與三光稻荷神社",
+          "url": "https://boncamica.com/inuyama-castle/"
+        }
+      },
+      "spot:犬山城": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "犬山城官方・參觀資訊",
+            "url": "https://inuyama-castle.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "犬山城",
+          "area": "犬山",
+          "desc": "位於木曾川畔高地的國寶天守，可登高欣賞河景；天守樓梯較陡，需留意腳步。現行開放 09:00–17:00，最後入場 16:30，出遊前再確認公告。",
+          "hours": "09:00–17:00；最後入場 16:30"
+        }
+      },
+      "spot-ref:犬山城": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Boncamica・犬山城與三光稻荷神社",
+            "url": "https://boncamica.com/inuyama-castle/"
+          }
+        ],
+        "snapshot": {
+          "title": "Boncamica・犬山城與三光稻荷神社",
+          "url": "https://boncamica.com/inuyama-castle/"
+        }
+      },
+      "spot:名古屋港水族館": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "名古屋港水族館官方",
+            "url": "https://nagoyaaqua.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "名古屋港水族館",
+          "area": "名古屋港",
+          "desc": "透過南北館展示海洋生態，海豚等活動與公開訓練依當日時間表安排。進館後先確認活動場次，再規劃參觀路線。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:名古屋港水族館": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "Mimi韓・名古屋港水族館",
+            "url": "https://mimigo.tw/nagoya-aqua/"
+          }
+        ],
+        "snapshot": {
+          "title": "Mimi韓・名古屋港水族館",
+          "url": "https://mimigo.tw/nagoya-aqua/"
+        }
+      },
+      "spot:TOYOTA 產業技術紀念館": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "TOYOTA 產業技術紀念館官方",
+            "url": "https://www.tcmit.org/"
+          }
+        ],
+        "snapshot": {
+          "name": "TOYOTA 產業技術紀念館",
+          "area": "名古屋・榮生",
+          "desc": "以纖維機械與汽車技術呈現豐田產業發展，館內有機械展示與實演。與長久手市的豐田博物館不同，返程日上午安排此館。",
+          "hours": "依官方當日公告；2027 出遊前再確認"
+        }
+      },
+      "spot-ref:TOYOTA 產業技術紀念館": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "旅遊食記・豐田產業技術紀念館（PTT 作者遊記）",
+            "url": "https://www.ptt.cc/bbs/Japan_Travel/M.1563775301.A.84D.html"
+          }
+        ],
+        "snapshot": {
+          "title": "旅遊食記・豐田產業技術紀念館（PTT 作者遊記）",
+          "url": "https://www.ptt.cc/bbs/Japan_Travel/M.1563775301.A.84D.html"
+        }
+      },
+      "food:山本屋總本家": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "山本屋總本家官方・分店公告",
+            "url": "https://yamamotoya.co.jp/shoplist/"
+          }
+        ],
+        "snapshot": {
+          "name": "山本屋總本家",
+          "area": "榮／名古屋",
+          "note": "味噌煮烏龍麵。3/9 週二「本家」依現行公告休息，請確認松坂屋店等分店；不要誤認為另一品牌「山本屋本店」。"
+        }
+      },
+      "food-ref:山本屋總本家": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "我們旅途見・山本屋總本家味噌料理",
+            "url": "https://seeutnp.com/nogoya-misorecommend/"
+          }
+        ],
+        "snapshot": {
+          "title": "我們旅途見・山本屋總本家味噌料理",
+          "url": "https://seeutnp.com/nogoya-misorecommend/"
+        }
+      },
+      "food:Solo Pizza": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "SOLO PIZZA 官方・分店與店休",
+            "url": "https://solopizza.jp/shop.html"
+          }
+        ],
+        "snapshot": {
+          "name": "Solo Pizza",
+          "area": "大須（參考分店）",
+          "note": "拿坡里披薩，午餐以大須本店作動線參考。官方現行公告週二休息，舊食記的週三店休已不同；2027/3/10 營業請再查當月公告。"
+        }
+      },
+      "food-ref:Solo Pizza": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "小雨・SOLO PIZZA 大須本店（舊食記）",
+            "url": "https://rujo354.pixnet.net/blog/posts/5060748195"
+          }
+        ],
+        "snapshot": {
+          "title": "小雨・SOLO PIZZA 大須本店（舊食記）",
+          "url": "https://rujo354.pixnet.net/blog/posts/5060748195"
+        }
+      },
+      "food:矢場味噌豬排": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "食探日本・矢場味噌豬排用餐分享（介紹核對，非出遊日營業確認）",
+            "url": "https://tasting-japan.com/archives/5880"
+          }
+        ],
+        "snapshot": {
+          "name": "矢場味噌豬排",
+          "area": "名古屋",
+          "note": "名古屋味噌豬排，3/10 大須散策後安排晚餐。分店尚未指定，依當日動線確認候位與最後點餐。"
+        }
+      },
+      "food-ref:矢場味噌豬排": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "食探日本・矢場味噌豬排用餐分享",
+            "url": "https://tasting-japan.com/archives/5880"
+          }
+        ],
+        "snapshot": {
+          "title": "食探日本・矢場味噌豬排用餐分享",
+          "url": "https://tasting-japan.com/archives/5880"
+        }
+      },
+      "food:飛驒牛一頭家 馬喰一代": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "樂活的大方・馬喰一代名古屋榮店（參考分店）（介紹核對，非出遊日營業確認）",
+            "url": "https://www.bigfang.tw/blog/post/bakuroichidai-nagoyasakae"
+          }
+        ],
+        "snapshot": {
+          "name": "飛驒牛一頭家 馬喰一代",
+          "area": "名古屋",
+          "note": "安排 3/11 燒肉晚餐。推薦文為榮店，實際分店待選；先訂位並留出樂高樂園回市區的車程。"
+        }
+      },
+      "food-ref:飛驒牛一頭家 馬喰一代": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "樂活的大方・馬喰一代名古屋榮店（參考分店）",
+            "url": "https://www.bigfang.tw/blog/post/bakuroichidai-nagoyasakae"
+          }
+        ],
+        "snapshot": {
+          "title": "樂活的大方・馬喰一代名古屋榮店（參考分店）",
+          "url": "https://www.bigfang.tw/blog/post/bakuroichidai-nagoyasakae"
+        }
+      },
+      "food:鳥開總本家": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "壞波妞・丸八食堂鳥開總本家（舊食記／參考分店）（介紹核對，非出遊日營業確認）",
+            "url": "https://boniutravel.com/blog/post/4710072"
+          }
+        ],
+        "snapshot": {
+          "name": "鳥開總本家",
+          "area": "名古屋站周邊（參考）",
+          "note": "雞肉料理與親子丼，3/12 犬山返程後用餐。推薦文為丸八食堂舊食記，實際分店、菜單與營業另確認。"
+        }
+      },
+      "food-ref:鳥開總本家": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "壞波妞・丸八食堂鳥開總本家（舊食記／參考分店）",
+            "url": "https://boniutravel.com/blog/post/4710072"
+          }
+        ],
+        "snapshot": {
+          "title": "壞波妞・丸八食堂鳥開總本家（舊食記／參考分店）",
+          "url": "https://boniutravel.com/blog/post/4710072"
+        }
+      },
+      "food:Tsubame Bread and Milk": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "つばめパン官方・餐點與分店",
+            "url": "https://www.tsubamepan.jp/"
+          }
+        ],
+        "snapshot": {
+          "name": "Tsubame Bread and Milk",
+          "area": "名古屋站（參考分店）",
+          "note": "天然酵母吐司與三明治，安排 3/13 早餐。推薦文為名驛店；早餐套餐與蛋三明治供應時段可能不同，點餐前確認。"
+        }
+      },
+      "food-ref:Tsubame Bread and Milk": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "周花花・Tsubame Bread & Milk 名驛店",
+            "url": "https://tenjo.tw/tsubamepan/"
+          }
+        ],
+        "snapshot": {
+          "title": "周花花・Tsubame Bread & Milk 名驛店",
+          "url": "https://tenjo.tw/tsubamepan/"
+        }
+      },
+      "food:鰻魚三吃 花岡": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "周花花・ひつまぶし花岡食記（介紹核對，非出遊日營業確認）",
+            "url": "https://tenjo.tw/hitsumabushi-hanaoka/"
+          }
+        ],
+        "snapshot": {
+          "name": "鰻魚三吃 花岡",
+          "area": "榮",
+          "note": "安排 3/13 晚餐，可分別品嚐原味、加佐料與茶泡飯。推薦文中的花岡五膳與價格為作者當時菜單，依現場供應。"
+        }
+      },
+      "food-ref:鰻魚三吃 花岡": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "周花花・ひつまぶし花岡食記",
+            "url": "https://tenjo.tw/hitsumabushi-hanaoka/"
+          }
+        ],
+        "snapshot": {
+          "title": "周花花・ひつまぶし花岡食記",
+          "url": "https://tenjo.tw/hitsumabushi-hanaoka/"
+        }
+      },
+      "food:麵家獅子丸": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "周花花・麵家獅子丸食記（介紹核對，非出遊日營業確認）",
+            "url": "https://tenjo.tw/shishimaru/"
+          }
+        ],
+        "snapshot": {
+          "name": "麵家獅子丸",
+          "area": "名古屋站周邊",
+          "note": "泡系雞白湯拉麵，3/14 午餐以名古屋站旁本店作參考；預留排隊、取行李與前往機場時間，不把機場其他品牌當成本店。"
+        }
+      },
+      "food-ref:麵家獅子丸": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "周花花・麵家獅子丸食記",
+            "url": "https://tenjo.tw/shishimaru/"
+          }
+        ],
+        "snapshot": {
+          "title": "周花花・麵家獅子丸食記",
+          "url": "https://tenjo.tw/shishimaru/"
         }
       }
     }

@@ -25,7 +25,7 @@ const os=require('node:os');
   console.log(result.split('\n')[0]);
   await fs.mkdir(results,{recursive:true});
   const errors=[];page.on('dialog',async dialog=>{errors.push(dialog.message());await dialog.dismiss();});
-  for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013']){
+  for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013','nagoya-2027']){
    await page.goto('http://127.0.0.1:8765/#/trip/'+id);
    const before=new Set(await fs.readdir(downloads));
    let eventDownload;
