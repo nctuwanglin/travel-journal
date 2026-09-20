@@ -1618,9 +1618,9 @@ window.TRIP_MAINTENANCE = {
       "aligned": true
     },
     "nagoya-2027": {
-      "version": "v1",
+      "version": "v2",
       "updatedAt": "2026-09-20",
-      "prompt": "製作繁體中文水彩手繪旅遊行程資訊圖，橫式1536x1024。暖白紙背景，可愛插畫、清楚黑色文字，沿用日式旅遊手帳風格。標題「名古屋春日旅行地圖」，副標「2027/3/9–3/14・6天5夜・星宇航空」。中央為示意地圖（非導航地圖），北方犬山城與三光稻荷神社，中間名古屋城、名古屋車站、名古屋電視塔與綠洲21、大須觀音，西側TOYOTA產業技術紀念館，南方名古屋港水族館與更南的樂高樂園，最南中部國際機場。用城堡、紅鳥居、電視塔、玻璃飛船屋頂、積木、海豚、汽車插畫。不要把3月初畫成滿開櫻花，不畫自駕路線。周圍6張每日卡片，字體大、整齊，完整準確文字：\nDAY 1 3/9（二）\n13:55 抵達名古屋\n玩：名古屋電視塔、綠洲21\n逛：榮商圈\n晚餐：山本屋總本家\nDAY 2 3/10（三）\n玩：名古屋城、大須觀音\n逛：大須商店街\n午餐：Solo Pizza\n晚餐：矢場味噌豬排\nDAY 3 3/11（四）\n玩：樂高樂園\n晚餐：飛驒牛一頭家 馬喰一代\nDAY 4 3/12（五）\n玩：三光稻荷神社、犬山城\n逛：名古屋車站\n晚餐：鳥開總本家\nDAY 5 3/13（六）\n早餐：Tsubame Bread and Milk\n玩：名古屋港水族館\n逛：榮商圈\n晚餐：鰻魚三吃 花岡\nDAY 6 3/14（日）\n玩：TOYOTA產業技術紀念館\n午餐：麵家獅子丸\n逛：中部國際機場\n19:40 起飛返台\n底部住宿框「全程5晚：名古屋日航尚格飯店 Nikko Style Nagoya」。簡明美觀，不加入未指定餐廳或日期。\n",
+      "prompt": "以 img/nagoya-2027.png 為參考圖，維持原版型、文字與其他日期安排。僅在 DAY 5 水族館之後、榮商圈之前新增「鶴舞公園」，並在中央示意地圖大須觀音東側加入標示鶴舞公園的噴水與綠樹插畫。保持繁體中文字清晰，不畫公園櫻花滿開。\n",
       "baselineRecordedAt": "2026-09-20",
       "baselineSnapshot": {
         "title": "日本名古屋春日自由行",
@@ -1680,6 +1680,11 @@ window.TRIP_MAINTENANCE = {
               "3/13 水族館",
               "地鐵名港線 → 名古屋港站",
               "留意名城線與名港線目的地"
+            ],
+            [
+              "3/13 水族館 → 鶴舞公園",
+              "名古屋港 → 名港線至金山 → JR 中央線至鶴舞",
+              "出站步行至公園，散步後再往榮商圈"
             ]
           ]
         },
@@ -1847,7 +1852,7 @@ window.TRIP_MAINTENANCE = {
           {
             "day": 5,
             "date": "3/13 (六)",
-            "theme": "名古屋｜水族館與榮商圈",
+            "theme": "名古屋｜水族館、鶴舞公園與榮商圈",
             "items": [
               {
                 "time": "早餐",
@@ -1856,6 +1861,10 @@ window.TRIP_MAINTENANCE = {
               {
                 "time": "玩",
                 "text": "名古屋港水族館"
+              },
+              {
+                "time": "玩",
+                "text": "鶴舞公園"
               },
               {
                 "time": "逛",
@@ -1879,7 +1888,12 @@ window.TRIP_MAINTENANCE = {
               {
                 "type": "warn",
                 "title": "水族館交通",
-                "text": "本日為名古屋港水族館；搭地鐵名港線往名古屋港，留意列車目的地與轉乘。晚餐回榮區，花岡先確認訂位方式。"
+                "text": "名古屋港水族館結束後，可搭名港線至金山，轉 JR 中央線至鶴舞站，步行到鶴舞公園；散步後再往榮區逛街與用晚餐。"
+              },
+              {
+                "type": "info",
+                "title": "公園散步",
+                "text": "鶴舞公園以噴水塔、奏樂堂與庭園散步為主，建議預留約 45–60 分鐘；花況依當年天氣，不預設 3/13 已到櫻花滿開期。"
               }
             ]
           },
@@ -1997,6 +2011,15 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
+            "name": "鶴舞公園",
+            "area": "名古屋・鶴舞",
+            "day": 5,
+            "latlng": [
+              35.1553,
+              136.9195
+            ]
+          },
+          {
             "name": "TOYOTA 產業技術紀念館",
             "area": "名古屋・榮生",
             "day": 6,
@@ -2007,8 +2030,8 @@ window.TRIP_MAINTENANCE = {
           }
         ]
       },
-      "imagePath": "img/nagoya-2027.png",
-      "imageSha256": "92d6e10dd1c39def6f0f809be4ed020d7eca1cecff65edef8cdee07e0a8ec8d3",
+      "imagePath": "img/nagoya-2027-v2.png",
+      "imageSha256": "cbc823ea5ff41b43e24173aa4ddfb8f59ddff5dfd3d004d1795f51eafc134f6c",
       "aligned": true
     }
   },
@@ -3772,6 +3795,34 @@ window.TRIP_MAINTENANCE = {
         "snapshot": {
           "title": "周花花・麵家獅子丸食記",
           "url": "https://tenjo.tw/shishimaru/"
+        }
+      },
+      "spot:鶴舞公園": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "鶴舞公園官方・公園介紹與交通",
+            "url": "https://tsurumapark.info/about/"
+          }
+        ],
+        "snapshot": {
+          "name": "鶴舞公園",
+          "area": "名古屋・鶴舞",
+          "desc": "1909 年開園的名古屋市第一座公園，結合洋風庭園與日本庭園。水族館後可在噴水塔、奏樂堂周邊散步，享受市區綠地；季節花況依出遊時公告。",
+          "hours": "公園 24 小時自由入園；園內設施另依公告"
+        }
+      },
+      "spot-ref:鶴舞公園": {
+        "checkedAt": "2026-09-20",
+        "sources": [
+          {
+            "title": "名古屋市官方 note・鶴舞公園周邊散策（日文）",
+            "url": "https://nagoya-city.note.jp/n/n81d7519f5aa4"
+          }
+        ],
+        "snapshot": {
+          "title": "名古屋市官方 note・鶴舞公園周邊散策（日文）",
+          "url": "https://nagoya-city.note.jp/n/n81d7519f5aa4"
         }
       }
     }
