@@ -5134,6 +5134,7 @@ window.TRIPS = [
 
   {
     id: "seoul-2018",
+    mapArt: "img/seoul-2018-v1.png",
     title: "首爾自由行",
     subtitle: "明洞・弘大・景福宮・南怡島",
     country: "韓國",
@@ -5341,6 +5342,7 @@ window.TRIPS = [
 
   {
     id: "kyushu-2016",
+    mapArt: "img/kyushu-2016-v1.png",
     title: "九州自由行",
     subtitle: "福岡・由布院・熊本・柳川",
     country: "日本",
@@ -5544,6 +5546,7 @@ window.TRIPS = [
   },
   {
     id: "hongkong-2017",
+    mapArt: "img/hongkong-2017-v1.png",
     title: "香港自由行",
     subtitle: "尖沙嘴・中環・大嶼山・赤柱",
     country: "中國",
@@ -5722,6 +5725,7 @@ window.TRIPS = [
   },
   {
     id: "okinawa-2017",
+    mapArt: "img/okinawa-2017-v1.png",
     title: "沖繩自由行",
     subtitle: "古宇利島・美麗海水族館・青之洞窟・首里城",
     country: "日本",
@@ -5935,6 +5939,7 @@ window.TRIPS = [
   },
   {
     id: "kansai-2016",
+    mapArt: "img/kansai-2016-v1.png",
     title: "京阪神跨年行",
     subtitle: "大阪・京都・神戶・姬路",
     country: "日本",
@@ -6175,6 +6180,7 @@ window.TRIPS = [
   },
   {
     id: "kansai-2019",
+    mapArt: "img/kansai-2019-v1.png",
     title: "關西自由行",
     subtitle: "大阪・京都・奈良",
     country: "日本",
@@ -6393,6 +6399,7 @@ window.TRIPS = [
   },
   {
     id: "hokkaido-2013",
+    mapArt: "img/hokkaido-2013-v1.png",
     title: "北海道冬遊",
     subtitle: "層雲峽・登別・洞爺湖・函館・小樽・札幌",
     country: "日本",
