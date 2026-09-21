@@ -21,8 +21,8 @@ function load(){
   vm.runInContext(fs.readFileSync(path.join(root,'data/maintenance.js'),'utf8'),ctx);
   const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
   const inline=html.match(/<script>\s*([\s\S]*?)<\/script>/)[1];
-  vm.runInContext(inline.split('/* ---------- boot ---------- */')[0]+'window.review={utilCols,buildDetailMap,tripMatches,foodTable};})();',ctx);
-  return{food:ctx.window.review.foodTable,trips:ctx.window.TRIPS,render:ctx.window.review.utilCols,map(t,day){
+  vm.runInContext(inline.split('/* ---------- boot ---------- */')[0]+'window.review={utilCols,buildDetailMap,tripMatches,foodTable,footprintGroups};})();',ctx);
+  return{groups:ctx.window.review.footprintGroups,food:ctx.window.review.foodTable,trips:ctx.window.TRIPS,render:ctx.window.review.utilCols,map(t,day){
     ctx.window.review.buildDetailMap(t);
     filter({target:{closest(){return{getAttribute(){return String(day);}};}}});
     return [...visible].map(m=>m.number).sort((a,b)=>a-b);
@@ -63,4 +63,18 @@ test('food recommendation combines notes, ratings and reference in one cell for 
    assert.equal(cells[2][1].includes('📖 推薦文'),!!t.food[i].ref?.url,t.food[i].name);
   });
  }
+});
+
+test('footprints group all regional trips despite different centers and regional aliases',()=>{
+ const x=load(),groups=x.groups(x.trips);
+ const counts=Object.fromEntries(groups.map(g=>[g.region,g.trips.length]));
+ for(const [region,count] of Object.entries({'北海道':3,'沖繩':3,'東京':3,'東北':2,'九州':2,'關西':4}))assert.equal(counts[region],count,region);
+ const ids=groups.flatMap(g=>g.trips.map(t=>t.id));
+ assert.equal(ids.length,x.trips.length);
+ assert.equal(new Set(ids).size,x.trips.length);
+});
+test('footprints do not merge different regions or countries at the same coordinates',()=>{
+ const x=load();
+ const trips=[{country:'日本',region:'東京',mapCenter:[35,139]},{country:'日本',region:'名古屋',mapCenter:[35,139]},{country:'其他',region:'東京',mapCenter:[35,139]}];
+ assert.equal(x.groups(trips).length,3);
 });

@@ -504,7 +504,7 @@
           stat(trips.length,"趟旅程")+stat(countries.length,"個國家")+stat(totDays,"天在路上")+stat(totSpots,"個景點")+
         '</div>'+
         '<div class="footmap" id="foot-map" role="region" aria-label="旅遊足跡地圖"></div>'+
-        '<div class="map-cap">旅遊足跡 ・ 數字 = 同區域行程數 ・ 點標記看行程並可直接前往</div>'+
+        '<div class="map-cap">旅遊足跡 ・ 數字 = 同旅遊地區行程數（含規劃中） ・ 點標記看行程並可直接前往</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap">'+
         '<div class="filter-top">'+
@@ -927,25 +927,32 @@
     setTimeout(function(){map.invalidateSize();},120);
   }
 
-  /* 旅遊足跡地圖(hero):全部行程標在同一張地圖,0.5° 網格聚合,點開列行程連結 */
+  /* 旅遊足跡地圖(hero):依國家與主要旅遊地區合併,每趟只計算一次 */
+  function footprintGroups(trips){
+    var aliases={"東京・神奈川":"東京","東北・函館":"東北","京阪神":"關西","關西・山陽":"關西"};
+    var groups=new Map();
+    trips.forEach(function(t){
+      var region=t.country==='日本'?(aliases[t.region]||t.region):t.region;
+      var key=JSON.stringify([t.country,region]);
+      if(!groups.has(key))groups.set(key,{region:region,country:t.country,trips:[]});
+      groups.get(key).trips.push(t);
+    });
+    return Array.from(groups.values());
+  }
   function buildFootMap(){
     var node=document.getElementById("foot-map");if(!node||!window.L)return;
     var map=L.map(node,{scrollWheelZoom:false}).setView([28,124],4);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
       maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
-    var groups={};
-    TRIPS.forEach(function(t){
-      var key=(Math.round(t.mapCenter[0]*2)/2)+","+(Math.round(t.mapCenter[1]*2)/2);
-      (groups[key]=groups[key]||[]).push(t);
-    });
     var pts=[];
-    Object.keys(groups).forEach(function(k){
-      var list=groups[k].slice().sort(tripSort);
-      var c=list[0].mapCenter; pts.push(c);
+    footprintGroups(TRIPS).forEach(function(group){
+      var list=group.trips.slice().sort(tripSort);
+      var c=[0,1].map(function(axis){return list.reduce(function(sum,t){return sum+t.mapCenter[axis];},0)/list.length;});
+      pts.push(c);
       var icon=L.divIcon({className:"fmk",
-        html:'<span class="fmk-in">'+(list.length>1?list.length:"")+'</span>',
+        html:'<span class="fmk-in">'+list.length+'</span>',
         iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-10]});
-      var html='<div class="fpop">'+list.map(function(t){
+      var html='<div class="fpop"><strong>'+esc(group.country+' '+group.region)+' · '+list.length+' 趟</strong>'+list.map(function(t){
         return '<a href="#/trip/'+encodeURIComponent(t.id)+'">'+flagOf(t.country)+' '+esc(displayTitle(t))+'</a>';
       }).join("")+'</div>';
       L.marker(c,{icon:icon}).addTo(map).bindPopup(html);
