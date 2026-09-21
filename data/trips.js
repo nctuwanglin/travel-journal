@@ -1763,6 +1763,7 @@ window.TRIPS = [
 
   {
     id: "okinawa-2026",
+    mapArt: "img/okinawa-2026-v1.png",
     title: "沖繩包棟之旅",
     subtitle: "那霸・恩納・本部 ・ 西海岸自駕",
     country: "日本",
@@ -1958,6 +1959,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2026",
+    mapArt: "img/tokyo-2026-v1.png",
     title: "東京・輕井澤之旅",
     subtitle: "東京迪士尼・輕井澤・賞櫻",
     country: "日本",
@@ -3029,6 +3031,7 @@ window.TRIPS = [
 
   {
     id: "busan-2026",
+    mapArt: "img/busan-2026-v1.png",
     title: "釜山冬遊之旅",
     subtitle: "海雲台・廣安里・南浦",
     country: "韓國",
@@ -3230,6 +3233,7 @@ window.TRIPS = [
 
   {
     id: "kansai-sanyo-2025",
+    mapArt: "img/kansai-sanyo-2025-v1.png",
     title: "關西・山陽鐵道之旅",
     subtitle: "大阪・岡山・廣島・京都",
     country: "日本",
@@ -3503,6 +3507,7 @@ window.TRIPS = [
 
   {
     id: "tohoku-winter-2025",
+    mapArt: "img/tohoku-winter-2025-v1.png",
     title: "東北・函館雪之旅",
     subtitle: "仙台・青森・函館・山形",
     country: "日本",
@@ -3525,7 +3530,7 @@ window.TRIPS = [
       note: "仙台進出・青森/函館/山形周遊"
     },
     stay: [
-      { name: "東仙台大都會飯店", nights: "D1、D6–D9 ・ 共 4 晚", note: "仙台・據點飯店" },
+      { name: "東仙台大都會飯店", nights: "D1、D6–D8 ・ 共 4 晚", note: "仙台・據點飯店" },
       { name: "星野 奧入瀨溪流飯店", nights: "D2 ・ 1 晚", note: "青森・冬季冰瀑之湯" },
       { name: "星野 青森屋", nights: "D3 ・ 1 晚", note: "青森・睡魔祭主題溫泉" },
       { name: "函館 JR Inn", nights: "D4–D5 ・ 2 晚", note: "JR 函館站旁" }
@@ -3735,6 +3740,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2024",
+    mapArt: "img/tokyo-2024-v1.png",
     title: "東京・橫濱鎌倉之旅",
     subtitle: "上野・迪士尼・橫濱・鎌倉",
     country: "日本",
@@ -3964,6 +3970,7 @@ window.TRIPS = [
 
   {
     id: "kyushu-2024",
+    mapArt: "img/kyushu-2024-v1.png",
     title: "北九州環島之旅",
     subtitle: "福岡・大分・熊本・長崎",
     country: "日本",
@@ -4212,6 +4219,7 @@ window.TRIPS = [
 
   {
     id: "phuquoc-2024",
+    mapArt: "img/phuquoc-2024-v1.png",
     title: "富國島渡假之旅",
     subtitle: "Phú Quốc・大世界・珍珠樂園",
     country: "越南",
@@ -4376,6 +4384,7 @@ window.TRIPS = [
 
   {
     id: "hokkaido-2024",
+    mapArt: "img/hokkaido-2024-v1.png",
     title: "北海道夏季之旅",
     subtitle: "TOMAMU・富良野・小樽・札幌",
     country: "日本",
@@ -4606,6 +4615,7 @@ window.TRIPS = [
 
   {
     id: "okinawa-2023",
+    mapArt: "img/okinawa-2023-v1.png",
     title: "沖繩包棟團",
     subtitle: "那霸・恩納・美麗海・古宇利",
     country: "日本",
@@ -4790,6 +4800,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2022",
+    mapArt: "img/tokyo-2022-v1.png",
     title: "東京親子團",
     subtitle: "淺草・迪士尼・新宿・輕井澤",
     country: "日本",
@@ -4953,6 +4964,7 @@ window.TRIPS = [
 
   {
     id: "keihanshin-2023",
+    mapArt: "img/keihanshin-2023-v1.png",
     title: "京阪神之旅",
     subtitle: "大阪・京都・神戶・環球影城",
     country: "日本",

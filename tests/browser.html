@@ -14,7 +14,7 @@
  check(!!w.html2pdf,'PDF 輸出元件已載入');
  check([...d.querySelectorAll('#detail-map .nmk-in')].map(n=>n.textContent).join(',')==='1,2','東北 Day 2 只顯示標記 1、2');
  check(!!w.TravelBook,'PDF 分頁模組已載入');
- for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013','hokkaido-2027','nagoya-2027']){
+ for(const id of w.TRIPS.filter(t=>t.mapArt||t.id==='hokkaido-2013').map(t=>t.id)){
   if(w.location.hash!=='#/trip/'+id){await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/trip/'+id;});}
   const trip=w.TRIPS.find(t=>t.id===id),source=d.querySelector('.trip');
   const book=await w.TravelBook.buildPages(source,{title:trip.title});

@@ -18,14 +18,14 @@ const os=require('node:os');
   }
   browser=await chromium.launch({downloadsPath:downloads});const page=await browser.newPage({acceptDownloads:true});
   await page.goto('http://127.0.0.1:8765/tests/browser.html');
-  await page.waitForFunction(()=>['passed','failed'].includes(document.body.dataset.status),{},{timeout:90000});
+  await page.waitForFunction(()=>['passed','failed'].includes(document.body.dataset.status),{},{timeout:180000});
   const status=await page.locator('body').getAttribute('data-status');
   const result=await page.locator('#result').innerText();
   if(status!=='passed')throw new Error(result);
   console.log(result.split('\n')[0]);
   await fs.mkdir(results,{recursive:true});
   const errors=[];page.on('dialog',async dialog=>{errors.push(dialog.message());await dialog.dismiss();});
-  for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013','nagoya-2027']){
+  for(const id of ['tohoku-2026','shikoku-2026','hokkaido-2013','nagoya-2027','okinawa-2026','tokyo-2026','tokyo-2022']){
    await page.goto('http://127.0.0.1:8765/#/trip/'+id);
    const before=new Set(await fs.readdir(downloads));
    let eventDownload;

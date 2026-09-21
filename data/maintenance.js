@@ -2033,6 +2033,4169 @@ window.TRIP_MAINTENANCE = {
       "imagePath": "img/nagoya-2027-v2.png",
       "imageSha256": "cbc823ea5ff41b43e24173aa4ddfb8f59ddff5dfd3d004d1795f51eafc134f6c",
       "aligned": true
+    },
+    "okinawa-2026": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「沖繩包棟之旅」, subtitle「2026-06-26 – 2026-07-01・6天5夜」. All 6 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"長榮航空 EVA Air\",\"out\":\"6/26 桃園 TPE → 那霸 OKA(晚班)\",\"back\":\"7/01 那霸 OKA → 桃園 TPE(早班)\",\"note\":\"Oki Blues 中文租車自駕 6/27–7/1\"}\nStays: [{\"name\":\"OMO5 沖繩那霸\",\"nights\":\"第 1 晚\",\"note\":\"星野集團・國際通徒步圈\"},{\"name\":\"恩納 YotaMika 別墅\",\"nights\":\"後 4 晚\",\"note\":\"西海岸海景包棟・私人沙灘・可自炊\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"6/26 (五)\",\"theme\":\"🍜 抵達那霸・國際通初探\",\"items\":[{\"time\":\"晚上\",\"text\":\"長榮晚班落地那霸機場,搭單軌電車至縣廳前站,步行入住 OMO5\"},{\"time\":\"20:00–22:00\",\"text\":\"國際通夜間逛街:唐吉訶德(先下載 7% 優惠券)、ORION 啤酒雪糕、琉球小巷散步\"},{\"time\":\"21:00–22:00\",\"text\":\"晚餐:暖幕琉球居酒屋 或 一蘭拉麵(隔板座位帶小孩友善),約 ¥1,500–2,000/人\"}]},{\"day\":2,\"date\":\"6/27 (六)\",\"theme\":\"🐠 水族館・iias 豐崎・兒童王國\",\"items\":[{\"time\":\"09:00\",\"text\":\"Oki Blues 派車到 OMO5 接送取車,自駕之旅開始\"},{\"time\":\"09:45–11:45\",\"text\":\"DMM Kariyushi 水族館:CHURAMINAMO 玻璃地板俯瞰 6m 深水槽、餵水獺/企鵝\"},{\"time\":\"12:00–14:00\",\"text\":\"iias 豐崎午餐 + 採買:西松屋、3 Coins、UNIQLO、AEON 超市買自炊食材\"},{\"time\":\"14:30–17:30\",\"text\":\"沖繩兒童王國:150 種動物、小火車、迷你賽車、神奇博物館\"},{\"time\":\"17:30\",\"text\":\"沿西海岸前往恩納 YotaMika 別墅入住(約 40 分)\"}]},{\"day\":3,\"date\":\"6/28 (日)\",\"theme\":\"🦖 JUNGLIA 叢林樂園・燒肉乃我那霸\",\"items\":[{\"time\":\"08:00\",\"text\":\"從 YotaMika 別墅出發前往北部 JUNGLIA(約 60 分),提早避開開門人潮\"},{\"time\":\"09:00–17:00\",\"text\":\"JUNGLIA 叢林樂園 + SPA 水療館:60 公頃恐龍主題、恐龍追擊、高空滑索\"},{\"time\":\"12:00–13:00\",\"text\":\"午餐:JUNGLIA 園內鳥巢餐廳(需預約)或輕食攤位\"},{\"time\":\"18:30–20:00\",\"text\":\"晚餐:燒肉乃我那霸總店,Agu 島豬發源地,單點超過 70 種\"}]},{\"day\":4,\"date\":\"6/29 (一)\",\"theme\":\"🤿 青之洞窟浮潛・私人沙灘・永旺夢樂城\",\"items\":[{\"time\":\"08:00–10:00\",\"text\":\"青之洞窟浮潛(自選):真榮田岬藍光海蝕洞、熱帶魚環繞、免證照\"},{\"time\":\"09:00–12:00\",\"text\":\"不浮潛者於 YotaMika 私人沙灘戲水玩沙、拍全家福,浮潛組結束後會合\"},{\"time\":\"12:30–13:30\",\"text\":\"午餐:浜之家海鮮料理(青之洞窟旁,奶油烤魚、海膽焗龍蝦)\"},{\"time\":\"15:00–17:00\",\"text\":\"永旺夢樂城來客夢:寶可夢中心、3 Coins、超市採買晚餐食材\"},{\"time\":\"晚上\",\"text\":\"晚餐:用 AEON 食材在海景別墅自炊,最有度假感\"}]},{\"day\":5,\"date\":\"6/30 (二)\",\"theme\":\"🐳 部瀨名海中公園・名護鳳梨園\",\"items\":[{\"time\":\"09:30–11:30\",\"text\":\"部瀨名海中公園:海中展望塔 24 圓窗、鯨魚造型玻璃船(免下水也能看魚)\"},{\"time\":\"12:00–13:30\",\"text\":\"午餐:燒肉本部牧場名護店(已訂位),牧場直送和牛、牛肉炒飯每桌必點\"},{\"time\":\"14:00–16:00\",\"text\":\"名護鳳梨園:鳳梨號無人遊園車、DINO Park 恐龍區、鳳梨霜淇淋必吃\"},{\"time\":\"晚上\",\"text\":\"晚餐:別墅自炊,沖繩最後一晚\"}]},{\"day\":6,\"date\":\"7/01 (三)\",\"theme\":\"✈ 再見沖繩!\",\"items\":[{\"time\":\"08:00\",\"text\":\"Oki Blues 到別墅接車並送機場(約 70 分)\"},{\"time\":\"早上\",\"text\":\"長榮早班沖繩 → 台北,提前 2 小時抵機場,免稅店在入關後是最後採購機會\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "沖繩包棟之旅",
+        "subtitle": "那霸・恩納・本部 ・ 西海岸自駕",
+        "country": "日本",
+        "region": "沖繩",
+        "year": 2026,
+        "dateLabel": "6/26 – 7/01",
+        "dateStart": "2026-06-26",
+        "dateEnd": "2026-07-01",
+        "nights": 5,
+        "flight": {
+          "airline": "長榮航空 EVA Air",
+          "out": "6/26 桃園 TPE → 那霸 OKA(晚班)",
+          "back": "7/01 那霸 OKA → 桃園 TPE(早班)",
+          "note": "Oki Blues 中文租車自駕 6/27–7/1"
+        },
+        "stay": [
+          {
+            "name": "OMO5 沖繩那霸",
+            "nights": "第 1 晚",
+            "note": "星野集團・國際通徒步圈"
+          },
+          {
+            "name": "恩納 YotaMika 別墅",
+            "nights": "後 4 晚",
+            "note": "西海岸海景包棟・私人沙灘・可自炊"
+          }
+        ],
+        "pass": {
+          "icon": "🚗",
+          "label": "租車自駕",
+          "name": "Oki Blues 中文租車",
+          "price": "6/27 09:00 取車 → 7/1 08:00 還車",
+          "head": [
+            "項目",
+            "內容",
+            "備註"
+          ],
+          "rows": [
+            [
+              "取車",
+              "OMO5 那霸門口接送",
+              "6/27 09:00・08:45 前 Check-out"
+            ],
+            [
+              "還車",
+              "接送至那霸機場",
+              "7/1 08:00・前晚加滿油"
+            ],
+            [
+              "必備證件",
+              "國際駕照＋台灣駕照正本＋護照",
+              "缺一不可・日本靠左行駛"
+            ],
+            [
+              "導航",
+              "景點電話或 MAPCODE",
+              "ETC 高速收費・景點多免費停車"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "6/26 (五)",
+            "theme": "🍜 抵達那霸・國際通初探",
+            "items": [
+              {
+                "time": "晚上",
+                "text": "長榮晚班落地那霸機場,搭單軌電車至縣廳前站,步行入住 OMO5"
+              },
+              {
+                "time": "20:00–22:00",
+                "text": "國際通夜間逛街:唐吉訶德(先下載 7% 優惠券)、ORION 啤酒雪糕、琉球小巷散步"
+              },
+              {
+                "time": "21:00–22:00",
+                "text": "晚餐:暖幕琉球居酒屋 或 一蘭拉麵(隔板座位帶小孩友善),約 ¥1,500–2,000/人"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "那霸機場 →(單軌 13 分)縣廳前站 →(步行 6 分)OMO5 →(1 分)國際通"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "明早 09:00 Oki Blues 來接,08:45 前完成 Check-out"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "6/27 (六)",
+            "theme": "🐠 水族館・iias 豐崎・兒童王國",
+            "items": [
+              {
+                "time": "09:00",
+                "text": "Oki Blues 派車到 OMO5 接送取車,自駕之旅開始"
+              },
+              {
+                "time": "09:45–11:45",
+                "text": "DMM Kariyushi 水族館:CHURAMINAMO 玻璃地板俯瞰 6m 深水槽、餵水獺/企鵝"
+              },
+              {
+                "time": "12:00–14:00",
+                "text": "iias 豐崎午餐 + 採買:西松屋、3 Coins、UNIQLO、AEON 超市買自炊食材"
+              },
+              {
+                "time": "14:30–17:30",
+                "text": "沖繩兒童王國:150 種動物、小火車、迷你賽車、神奇博物館"
+              },
+              {
+                "time": "17:30",
+                "text": "沿西海岸前往恩納 YotaMika 別墅入住(約 40 分)"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "OMO5 →(20 分)iias/DMM →(30 分)兒童王國 →(40 分)恩納 YotaMika,全日車程約 90 分"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "國際駕照＋台灣駕照正本＋護照缺一不可;日本靠左行駛"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "6/28 (日)",
+            "theme": "🦖 JUNGLIA 叢林樂園・燒肉乃我那霸",
+            "items": [
+              {
+                "time": "08:00",
+                "text": "從 YotaMika 別墅出發前往北部 JUNGLIA(約 60 分),提早避開開門人潮"
+              },
+              {
+                "time": "09:00–17:00",
+                "text": "JUNGLIA 叢林樂園 + SPA 水療館:60 公頃恐龍主題、恐龍追擊、高空滑索"
+              },
+              {
+                "time": "12:00–13:00",
+                "text": "午餐:JUNGLIA 園內鳥巢餐廳(需預約)或輕食攤位"
+              },
+              {
+                "time": "18:30–20:00",
+                "text": "晚餐:燒肉乃我那霸總店,Agu 島豬發源地,單點超過 70 種"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "恩納 →(約 60 分)JUNGLIA →(約 30 分)燒肉乃我那霸 →(約 50 分)恩納,全日約 140 分"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "JUNGLIA 提前 Klook/KKday 購票;刺激設施身高 90–120cm 限制;燒肉熱門時段排隊 2–3hr 務必訂位"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "6/29 (一)",
+            "theme": "🤿 青之洞窟浮潛・私人沙灘・永旺夢樂城",
+            "items": [
+              {
+                "time": "08:00–10:00",
+                "text": "青之洞窟浮潛(自選):真榮田岬藍光海蝕洞、熱帶魚環繞、免證照"
+              },
+              {
+                "time": "09:00–12:00",
+                "text": "不浮潛者於 YotaMika 私人沙灘戲水玩沙、拍全家福,浮潛組結束後會合"
+              },
+              {
+                "time": "12:30–13:30",
+                "text": "午餐:浜之家海鮮料理(青之洞窟旁,奶油烤魚、海膽焗龍蝦)"
+              },
+              {
+                "time": "15:00–17:00",
+                "text": "永旺夢樂城來客夢:寶可夢中心、3 Coins、超市採買晚餐食材"
+              },
+              {
+                "time": "晚上",
+                "text": "晚餐:用 AEON 食材在海景別墅自炊,最有度假感"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "恩納 ⇄(15 分)真榮田岬／別墅沙灘 →(40 分)AEON 來客夢 →(40 分)恩納"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "浮潛多數業者規定 6 歲以上,幼童先確認年齡限制;浮潛後 24hr 內勿搭機;夏日防曬補水"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "6/30 (二)",
+            "theme": "🐳 部瀨名海中公園・名護鳳梨園",
+            "items": [
+              {
+                "time": "09:30–11:30",
+                "text": "部瀨名海中公園:海中展望塔 24 圓窗、鯨魚造型玻璃船(免下水也能看魚)"
+              },
+              {
+                "time": "12:00–13:30",
+                "text": "午餐:燒肉本部牧場名護店(已訂位),牧場直送和牛、牛肉炒飯每桌必點"
+              },
+              {
+                "time": "14:00–16:00",
+                "text": "名護鳳梨園:鳳梨號無人遊園車、DINO Park 恐龍區、鳳梨霜淇淋必吃"
+              },
+              {
+                "time": "晚上",
+                "text": "晚餐:別墅自炊,沖繩最後一晚"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "恩納 →(20 分)部瀨名 →(15 分)名護午餐 →(15 分)鳳梨園 →(40 分)恩納,全日約 90 分"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "明早 08:00 還車,今晚先把油加滿!"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "7/01 (三)",
+            "theme": "✈ 再見沖繩!",
+            "items": [
+              {
+                "time": "08:00",
+                "text": "Oki Blues 到別墅接車並送機場(約 70 分)"
+              },
+              {
+                "time": "早上",
+                "text": "長榮早班沖繩 → 台北,提前 2 小時抵機場,免稅店在入關後是最後採購機會"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "確認油箱加滿、行李取出,加油收據／國際駕照／護照帶齊"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "國際通",
+            "area": "那霸",
+            "day": 1,
+            "latlng": [
+              26.2146,
+              127.6857
+            ]
+          },
+          {
+            "name": "DMM Kariyushi 水族館",
+            "area": "豐見城",
+            "day": 2,
+            "latlng": [
+              26.1668,
+              127.6535
+            ]
+          },
+          {
+            "name": "沖繩兒童王國",
+            "area": "沖繩市",
+            "day": 2,
+            "latlng": [
+              26.3486,
+              127.8266
+            ]
+          },
+          {
+            "name": "JUNGLIA 叢林樂園",
+            "area": "本部",
+            "day": 3,
+            "latlng": [
+              26.676,
+              127.932
+            ]
+          },
+          {
+            "name": "真榮田岬 青之洞窟",
+            "area": "恩納",
+            "day": 4,
+            "latlng": [
+              26.4447,
+              127.7783
+            ]
+          },
+          {
+            "name": "部瀨名海中公園",
+            "area": "名護",
+            "day": 5,
+            "latlng": [
+              26.5363,
+              127.9648
+            ]
+          },
+          {
+            "name": "名護鳳梨園",
+            "area": "名護",
+            "day": 5,
+            "latlng": [
+              26.6258,
+              127.9669
+            ]
+          },
+          {
+            "name": "iias 豐崎",
+            "area": "豐見城",
+            "day": 2,
+            "latlng": [
+              26.166,
+              127.654
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/okinawa-2026-v1.png",
+      "imageSha256": "397d6356f636cc2160daaf6192fb2b3ae8dc3941312092d0b324f6c74617da22",
+      "aligned": true
+    },
+    "tokyo-2026": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「東京・輕井澤之旅」, subtitle「2026-04-11 – 2026-04-19・9天8夜」. All 9 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"中華航空 China Airlines\",\"out\":\"4/11 桃園 TPE → 東京(19:00 抵達)\",\"back\":\"4/19 東京 → 桃園(14:30 回台)\",\"note\":\"日暮里進出・市區 JR/地鐵 + 北陸新幹線往輕井澤\"}\nStays: [{\"name\":\"東京宿・日暮里館\",\"nights\":\"4/11–4/15 ・ 4 晚\",\"note\":\"日暮里・自由行民宿\"},{\"name\":\"星野虹夕諾雅 輕井澤\",\"nights\":\"4/15–4/17 ・ 2 晚\",\"note\":\"輕井澤頂級溫泉度假村\"},{\"name\":\"東京錦糸町樂天城市飯店\",\"nights\":\"4/17–4/19 ・ 2 晚\",\"note\":\"錦糸町・近晴空塔\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"4/11 (六)\",\"theme\":\"✈ 抵達東京\",\"items\":[{\"time\":\"19:00\",\"text\":\"抵達東京\"},{\"time\":\"晚餐\",\"text\":\"大阪燒肉 日暮里店\"},{\"time\":\"住宿\",\"text\":\"東京宿・日暮里館\"}]},{\"day\":2,\"date\":\"4/12 (日)\",\"theme\":\"🌸 東京市區・目黑川賞櫻\",\"items\":[{\"time\":\"上午\",\"text\":\"目黑川賞櫻、中目黑星巴克典藏旗艦店\"},{\"time\":\"午餐\",\"text\":\"Peter Luger Steak House(惠比壽)\"},{\"time\":\"晚餐\",\"text\":\"AFURI 阿夫利柚子鹽拉麵\"},{\"time\":\"住宿\",\"text\":\"東京宿・日暮里館\"}]},{\"day\":3,\"date\":\"4/13 (一)\",\"theme\":\"🏰 東京迪士尼樂園 (Land)\",\"items\":[{\"time\":\"全天\",\"text\":\"東京迪士尼樂園 Disneyland\"},{\"time\":\"住宿\",\"text\":\"東京宿・日暮里館\"}]},{\"day\":4,\"date\":\"4/14 (二)\",\"theme\":\"🌊 東京迪士尼海洋 (Sea)\",\"items\":[{\"time\":\"全天\",\"text\":\"東京迪士尼海洋 DisneySea\"},{\"time\":\"住宿\",\"text\":\"東京宿・日暮里館\"}]},{\"day\":5,\"date\":\"4/15 (三)\",\"theme\":\"🚄 前進輕井澤\",\"items\":[{\"time\":\"上午\",\"text\":\"搭北陸新幹線至輕井澤(約 70 分)\"},{\"time\":\"玩\",\"text\":\"雲場池、舊輕井澤銀座通\"},{\"time\":\"逛\",\"text\":\"輕井澤・王子購物廣場 Outlet\"},{\"time\":\"午餐\",\"text\":\"川上庵 蕎麥麵\"},{\"time\":\"晚餐\",\"text\":\"虹夕諾雅 度假村內晚餐\"},{\"time\":\"住宿\",\"text\":\"星野虹夕諾雅 輕井澤\"}]},{\"day\":6,\"date\":\"4/16 (四)\",\"theme\":\"⛪ 輕井澤・森林教堂\",\"items\":[{\"time\":\"早午餐\",\"text\":\"虹夕諾雅 度假村早午餐\"},{\"time\":\"玩\",\"text\":\"榆樹街小鎮(ハルニレテラス)、高原教堂、石之教堂\"},{\"time\":\"晚餐\",\"text\":\"村民食堂\"},{\"time\":\"住宿\",\"text\":\"星野虹夕諾雅 輕井澤\"}]},{\"day\":7,\"date\":\"4/17 (五)\",\"theme\":\"🛍 輕井澤 → 東京市區採買\",\"items\":[{\"time\":\"早午餐\",\"text\":\"虹夕諾雅 度假村早午餐\"},{\"time\":\"逛\",\"text\":\"阿卡將、西松屋、3COINS、UNIQLO、SUNDRUG、西友超市\"},{\"time\":\"晚餐\",\"text\":\"居酒屋\"},{\"time\":\"住宿\",\"text\":\"東京錦糸町樂天城市飯店\"}]},{\"day\":8,\"date\":\"4/18 (六)\",\"theme\":\"🗼 淺草・晴空塔\",\"items\":[{\"time\":\"玩\",\"text\":\"雷門・淺草寺、墨田水族館\"},{\"time\":\"逛\",\"text\":\"東京晴空塔 SKYTREE・Solamachi\"},{\"time\":\"午餐\",\"text\":\"淺草今半(壽喜燒)\"},{\"time\":\"晚餐\",\"text\":\"敘敘苑 燒肉\"},{\"time\":\"住宿\",\"text\":\"東京錦糸町樂天城市飯店\"}]},{\"day\":9,\"date\":\"4/19 (日)\",\"theme\":\"✈ 回台灣\",\"items\":[{\"time\":\"14:30\",\"text\":\"班機返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "東京・輕井澤之旅",
+        "subtitle": "東京迪士尼・輕井澤・賞櫻",
+        "country": "日本",
+        "region": "東京",
+        "year": 2026,
+        "dateLabel": "4/11 – 4/19",
+        "dateStart": "2026-04-11",
+        "dateEnd": "2026-04-19",
+        "nights": 8,
+        "flight": {
+          "airline": "中華航空 China Airlines",
+          "out": "4/11 桃園 TPE → 東京(19:00 抵達)",
+          "back": "4/19 東京 → 桃園(14:30 回台)",
+          "note": "日暮里進出・市區 JR/地鐵 + 北陸新幹線往輕井澤"
+        },
+        "stay": [
+          {
+            "name": "東京宿・日暮里館",
+            "nights": "4/11–4/15 ・ 4 晚",
+            "note": "日暮里・自由行民宿"
+          },
+          {
+            "name": "星野虹夕諾雅 輕井澤",
+            "nights": "4/15–4/17 ・ 2 晚",
+            "note": "輕井澤頂級溫泉度假村"
+          },
+          {
+            "name": "東京錦糸町樂天城市飯店",
+            "nights": "4/17–4/19 ・ 2 晚",
+            "note": "錦糸町・近晴空塔"
+          }
+        ],
+        "pass": {
+          "icon": "🚄",
+          "label": "交通",
+          "name": "JR + 東京メトロ + 北陸新幹線",
+          "price": "建議 Suica/PASMO",
+          "head": [
+            "路段",
+            "交通",
+            "時間"
+          ],
+          "rows": [
+            [
+              "機場 → 市區",
+              "Skyliner(成田)/ 京急(羽田)",
+              "約 40 分"
+            ],
+            [
+              "東京 ↔ 輕井澤",
+              "北陸新幹線 あさま/はくたか",
+              "約 70 分"
+            ],
+            [
+              "市區移動",
+              "JR 山手線 + 東京メトロ",
+              "Suica/PASMO 嗶卡"
+            ],
+            [
+              "迪士尼",
+              "JR 京葉線 → 舞濱站",
+              "東京站約 15 分"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "4/11 (六)",
+            "theme": "✈ 抵達東京",
+            "items": [
+              {
+                "time": "19:00",
+                "text": "抵達東京"
+              },
+              {
+                "time": "晚餐",
+                "text": "大阪燒肉 日暮里店"
+              },
+              {
+                "time": "住宿",
+                "text": "東京宿・日暮里館"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "4/12 (日)",
+            "theme": "🌸 東京市區・目黑川賞櫻",
+            "items": [
+              {
+                "time": "上午",
+                "text": "目黑川賞櫻、中目黑星巴克典藏旗艦店"
+              },
+              {
+                "time": "午餐",
+                "text": "Peter Luger Steak House(惠比壽)"
+              },
+              {
+                "time": "晚餐",
+                "text": "AFURI 阿夫利柚子鹽拉麵"
+              },
+              {
+                "time": "住宿",
+                "text": "東京宿・日暮里館"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "4/13 (一)",
+            "theme": "🏰 東京迪士尼樂園 (Land)",
+            "items": [
+              {
+                "time": "全天",
+                "text": "東京迪士尼樂園 Disneyland"
+              },
+              {
+                "time": "住宿",
+                "text": "東京宿・日暮里館"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "4/14 (二)",
+            "theme": "🌊 東京迪士尼海洋 (Sea)",
+            "items": [
+              {
+                "time": "全天",
+                "text": "東京迪士尼海洋 DisneySea"
+              },
+              {
+                "time": "住宿",
+                "text": "東京宿・日暮里館"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "4/15 (三)",
+            "theme": "🚄 前進輕井澤",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭北陸新幹線至輕井澤(約 70 分)"
+              },
+              {
+                "time": "玩",
+                "text": "雲場池、舊輕井澤銀座通"
+              },
+              {
+                "time": "逛",
+                "text": "輕井澤・王子購物廣場 Outlet"
+              },
+              {
+                "time": "午餐",
+                "text": "川上庵 蕎麥麵"
+              },
+              {
+                "time": "晚餐",
+                "text": "虹夕諾雅 度假村內晚餐"
+              },
+              {
+                "time": "住宿",
+                "text": "星野虹夕諾雅 輕井澤"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通",
+                "text": "東京站 → 北陸新幹線 あさま/はくたか → 輕井澤站(約 70 分)"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "4/16 (四)",
+            "theme": "⛪ 輕井澤・森林教堂",
+            "items": [
+              {
+                "time": "早午餐",
+                "text": "虹夕諾雅 度假村早午餐"
+              },
+              {
+                "time": "玩",
+                "text": "榆樹街小鎮(ハルニレテラス)、高原教堂、石之教堂"
+              },
+              {
+                "time": "晚餐",
+                "text": "村民食堂"
+              },
+              {
+                "time": "住宿",
+                "text": "星野虹夕諾雅 輕井澤"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "星野區內榆樹街小鎮、兩座教堂、村民食堂有免費接駁巴士串聯"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "4/17 (五)",
+            "theme": "🛍 輕井澤 → 東京市區採買",
+            "items": [
+              {
+                "time": "早午餐",
+                "text": "虹夕諾雅 度假村早午餐"
+              },
+              {
+                "time": "逛",
+                "text": "阿卡將、西松屋、3COINS、UNIQLO、SUNDRUG、西友超市"
+              },
+              {
+                "time": "晚餐",
+                "text": "居酒屋"
+              },
+              {
+                "time": "住宿",
+                "text": "東京錦糸町樂天城市飯店"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "4/18 (六)",
+            "theme": "🗼 淺草・晴空塔",
+            "items": [
+              {
+                "time": "玩",
+                "text": "雷門・淺草寺、墨田水族館"
+              },
+              {
+                "time": "逛",
+                "text": "東京晴空塔 SKYTREE・Solamachi"
+              },
+              {
+                "time": "午餐",
+                "text": "淺草今半(壽喜燒)"
+              },
+              {
+                "time": "晚餐",
+                "text": "敘敘苑 燒肉"
+              },
+              {
+                "time": "住宿",
+                "text": "東京錦糸町樂天城市飯店"
+              }
+            ]
+          },
+          {
+            "day": 9,
+            "date": "4/19 (日)",
+            "theme": "✈ 回台灣",
+            "items": [
+              {
+                "time": "14:30",
+                "text": "班機返回台灣,滿載而歸!"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "目黑川賞櫻",
+            "area": "中目黑",
+            "day": 2,
+            "latlng": [
+              35.6445,
+              139.6987
+            ]
+          },
+          {
+            "name": "中目黑星巴克典藏旗艦店",
+            "area": "中目黑",
+            "day": 2,
+            "latlng": [
+              35.647,
+              139.6985
+            ]
+          },
+          {
+            "name": "東京迪士尼樂園",
+            "area": "舞濱",
+            "day": 3,
+            "latlng": [
+              35.6329,
+              139.8804
+            ]
+          },
+          {
+            "name": "東京迪士尼海洋",
+            "area": "舞濱",
+            "day": 4,
+            "latlng": [
+              35.6267,
+              139.885
+            ]
+          },
+          {
+            "name": "雲場池",
+            "area": "輕井澤",
+            "day": 5,
+            "latlng": [
+              36.349,
+              138.626
+            ]
+          },
+          {
+            "name": "舊輕井澤銀座通",
+            "area": "輕井澤",
+            "day": 5,
+            "latlng": [
+              36.3568,
+              138.6377
+            ]
+          },
+          {
+            "name": "榆樹街小鎮 ハルニレテラス",
+            "area": "中輕井澤",
+            "day": 6,
+            "latlng": [
+              36.3856,
+              138.5972
+            ]
+          },
+          {
+            "name": "高原教堂・石之教堂",
+            "area": "中輕井澤",
+            "day": 6,
+            "latlng": [
+              36.3866,
+              138.5949
+            ]
+          },
+          {
+            "name": "雷門・淺草寺",
+            "area": "淺草",
+            "day": 8,
+            "latlng": [
+              35.7148,
+              139.7967
+            ]
+          },
+          {
+            "name": "墨田水族館・晴空塔",
+            "area": "押上・晴空塔",
+            "day": 8,
+            "latlng": [
+              35.7101,
+              139.8107
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/tokyo-2026-v1.png",
+      "imageSha256": "f9a73a5f0c295284aaedcc17d1653f88f9d9a74aae565eceb5909f9097e1e729",
+      "aligned": true
+    },
+    "busan-2026": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「釜山冬遊之旅」, subtitle「2026-01-29 – 2026-02-03・6天5夜」. All 6 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"中華航空 China Airlines\",\"out\":\"1/29 桃園 TPE → 釜山 PUS(18:50 抵達)\",\"back\":\"2/3 釜山 PUS → 桃園(11:50)\",\"note\":\"金海機場進出・海雲台為據點,地鐵周遊\"}\nStays: [{\"name\":\"L7 海雲台 by LOTTE\",\"nights\":\"全程 5 晚\",\"note\":\"海雲台・樂天集團設計飯店\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"1/29 (四)\",\"theme\":\"✈ 抵達釜山・海雲台\",\"items\":[{\"time\":\"18:50\",\"text\":\"抵達釜山金海機場,前往海雲台入住\"},{\"time\":\"晚餐\",\"text\":\"水邊最高豬肉湯飯(海雲台)\"},{\"time\":\"住宿\",\"text\":\"L7 海雲台 by LOTTE\"}]},{\"day\":2,\"date\":\"1/30 (五)\",\"theme\":\"🎢 海雲台・機張樂天世界\",\"items\":[{\"time\":\"玩\",\"text\":\"釜山樂天世界、樂天 Outlet 東釜山(機張)\"},{\"time\":\"午餐\",\"text\":\"樂天世界園內用餐\"},{\"time\":\"晚餐\",\"text\":\"the east 3 樓(機張海景)\"},{\"time\":\"住宿\",\"text\":\"L7 海雲台 by LOTTE\"}]},{\"day\":3,\"date\":\"1/31 (六)\",\"theme\":\"🚝 海雲台・廣安里\",\"items\":[{\"time\":\"玩\",\"text\":\"天空膠囊列車、海岸列車、鑽石灣遊艇、廣安里無人機表演\"},{\"time\":\"午餐\",\"text\":\"Diart Coffee(青沙浦海景・土耳其蜂蜜奶油吐司)\"},{\"time\":\"晚餐\",\"text\":\"釜山宅烤肉(廣安里炭火燒肉)\"},{\"time\":\"住宿\",\"text\":\"L7 海雲台 by LOTTE\"}]},{\"day\":4,\"date\":\"2/1 (日)\",\"theme\":\"🎨 西面・南浦\",\"items\":[{\"time\":\"玩\",\"text\":\"松島海上纜車、ARTE Museum、BIFF 廣場\"},{\"time\":\"午餐\",\"text\":\"秀英家豬肉湯飯(西面湯飯一條街)\"},{\"time\":\"晚餐\",\"text\":\"紅油短中華料理(南浦洞)\"},{\"time\":\"住宿\",\"text\":\"L7 海雲台 by LOTTE\"}]},{\"day\":5,\"date\":\"2/2 (一)\",\"theme\":\"🐠 海雲台一日\",\"items\":[{\"time\":\"玩\",\"text\":\"SEA LIFE 水族館、海雲台海灘、新世界百貨 Centum City、釜山 X the Sky\"},{\"time\":\"午餐\",\"text\":\"海雲台 31 公分海鮮刀削麵\"},{\"time\":\"晚餐\",\"text\":\"味讚王鹽烤肉(海雲台)\"},{\"time\":\"住宿\",\"text\":\"L7 海雲台 by LOTTE\"}]},{\"day\":6,\"date\":\"2/3 (二)\",\"theme\":\"✈ 回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"飯店退房,前往金海機場\"},{\"time\":\"11:50\",\"text\":\"釜山 → 台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "釜山冬遊之旅",
+        "subtitle": "海雲台・廣安里・南浦",
+        "country": "韓國",
+        "region": "釜山",
+        "year": 2026,
+        "dateLabel": "1/29 – 2/3",
+        "dateStart": "2026-01-29",
+        "dateEnd": "2026-02-03",
+        "nights": 5,
+        "flight": {
+          "airline": "中華航空 China Airlines",
+          "out": "1/29 桃園 TPE → 釜山 PUS(18:50 抵達)",
+          "back": "2/3 釜山 PUS → 桃園(11:50)",
+          "note": "金海機場進出・海雲台為據點,地鐵周遊"
+        },
+        "stay": [
+          {
+            "name": "L7 海雲台 by LOTTE",
+            "nights": "全程 5 晚",
+            "note": "海雲台・樂天集團設計飯店"
+          }
+        ],
+        "pass": {
+          "icon": "🚇",
+          "label": "交通",
+          "name": "釜山地鐵 + 巴士",
+          "price": "建議 T-money 卡",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "金海機場 → 海雲台",
+              "機場巴士 / 輕電鐵+地鐵",
+              "約 50–70 分"
+            ],
+            [
+              "海雲台 ↔ 西面/南浦",
+              "地鐵 2 號線",
+              "T-money 嗶卡"
+            ],
+            [
+              "機張(樂天世界)",
+              "東海線電鐵 → 奧西利亞站",
+              "約 30 分"
+            ],
+            [
+              "市區移動",
+              "計程車(Kakao T 叫車)",
+              "跳表合理"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "1/29 (四)",
+            "theme": "✈ 抵達釜山・海雲台",
+            "items": [
+              {
+                "time": "18:50",
+                "text": "抵達釜山金海機場,前往海雲台入住"
+              },
+              {
+                "time": "晚餐",
+                "text": "水邊最高豬肉湯飯(海雲台)"
+              },
+              {
+                "time": "住宿",
+                "text": "L7 海雲台 by LOTTE"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "金海機場 →(機場巴士 / 輕電鐵+地鐵約 50–70 分)海雲台"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "1/30 (五)",
+            "theme": "🎢 海雲台・機張樂天世界",
+            "items": [
+              {
+                "time": "玩",
+                "text": "釜山樂天世界、樂天 Outlet 東釜山(機張)"
+              },
+              {
+                "time": "午餐",
+                "text": "樂天世界園內用餐"
+              },
+              {
+                "time": "晚餐",
+                "text": "the east 3 樓(機張海景)"
+              },
+              {
+                "time": "住宿",
+                "text": "L7 海雲台 by LOTTE"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "東海線電鐵 → 奧西利亞(OSIRIA)站,步行約 10 分至樂天世界"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "1/31 (六)",
+            "theme": "🚝 海雲台・廣安里",
+            "items": [
+              {
+                "time": "玩",
+                "text": "天空膠囊列車、海岸列車、鑽石灣遊艇、廣安里無人機表演"
+              },
+              {
+                "time": "午餐",
+                "text": "Diart Coffee(青沙浦海景・土耳其蜂蜜奶油吐司)"
+              },
+              {
+                "time": "晚餐",
+                "text": "釜山宅烤肉(廣安里炭火燒肉)"
+              },
+              {
+                "time": "住宿",
+                "text": "L7 海雲台 by LOTTE"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "膠囊列車提前官網預約;廣安里無人機秀僅週六晚間(冬季約 19:00/21:00),天候不佳可能取消"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "2/1 (日)",
+            "theme": "🎨 西面・南浦",
+            "items": [
+              {
+                "time": "玩",
+                "text": "松島海上纜車、ARTE Museum、BIFF 廣場"
+              },
+              {
+                "time": "午餐",
+                "text": "秀英家豬肉湯飯(西面湯飯一條街)"
+              },
+              {
+                "time": "晚餐",
+                "text": "紅油短中華料理(南浦洞)"
+              },
+              {
+                "time": "住宿",
+                "text": "L7 海雲台 by LOTTE"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "2/2 (一)",
+            "theme": "🐠 海雲台一日",
+            "items": [
+              {
+                "time": "玩",
+                "text": "SEA LIFE 水族館、海雲台海灘、新世界百貨 Centum City、釜山 X the Sky"
+              },
+              {
+                "time": "午餐",
+                "text": "海雲台 31 公分海鮮刀削麵"
+              },
+              {
+                "time": "晚餐",
+                "text": "味讚王鹽烤肉(海雲台)"
+              },
+              {
+                "time": "住宿",
+                "text": "L7 海雲台 by LOTTE"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "2/3 (二)",
+            "theme": "✈ 回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "飯店退房,前往金海機場"
+              },
+              {
+                "time": "11:50",
+                "text": "釜山 → 台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "班機 11:50,建議提前 2 小時抵達金海機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "釜山樂天世界",
+            "area": "機張",
+            "day": 2,
+            "latlng": [
+              35.1936,
+              129.2167
+            ]
+          },
+          {
+            "name": "海雲台藍線公園(膠囊・海岸列車)",
+            "area": "海雲台",
+            "day": 1,
+            "latlng": [
+              35.1583,
+              129.1747
+            ]
+          },
+          {
+            "name": "鑽石灣遊艇",
+            "area": "海雲台",
+            "day": 3,
+            "latlng": [
+              35.1556,
+              129.1456
+            ]
+          },
+          {
+            "name": "廣安里無人機表演",
+            "area": "廣安里",
+            "day": 3,
+            "latlng": [
+              35.1532,
+              129.1186
+            ]
+          },
+          {
+            "name": "松島海上纜車",
+            "area": "松島",
+            "day": 4,
+            "latlng": [
+              35.0758,
+              129.0181
+            ]
+          },
+          {
+            "name": "ARTE Museum 釜山",
+            "area": "影島",
+            "day": 4,
+            "latlng": [
+              35.0866,
+              129.0744
+            ]
+          },
+          {
+            "name": "BIFF 廣場",
+            "area": "南浦洞",
+            "day": 4,
+            "latlng": [
+              35.0986,
+              129.0269
+            ]
+          },
+          {
+            "name": "釜山 X the Sky",
+            "area": "海雲台",
+            "day": 5,
+            "latlng": [
+              35.1592,
+              129.1739
+            ]
+          },
+          {
+            "name": "SEA LIFE 釜山水族館",
+            "area": "海雲台",
+            "day": 5,
+            "latlng": [
+              35.1597,
+              129.1606
+            ]
+          },
+          {
+            "name": "海雲台海灘",
+            "area": "海雲台",
+            "day": 5,
+            "latlng": [
+              35.1587,
+              129.1604
+            ]
+          },
+          {
+            "name": "新世界百貨 Centum City",
+            "area": "Centum City",
+            "day": 5,
+            "latlng": [
+              35.1689,
+              129.1294
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/busan-2026-v1.png",
+      "imageSha256": "f19d54957922134aae152ba6c43916f1bdc06d8073578542f06fe9ebc2332baf",
+      "aligned": true
+    },
+    "kansai-sanyo-2025": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「關西・山陽鐵道之旅」, subtitle「2025-12-06 – 2025-12-14・9天8夜」. All 9 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"國泰航空 Cathay Pacific\",\"out\":\"12/6 桃園 TPE → 大阪 KIX\",\"back\":\"12/14 大阪 KIX → 桃園\",\"note\":\"關西機場進出・大阪/岡山/京都周遊・JR Pass(Day2–6)\"}\nStays: [{\"name\":\"阪急大阪 RESPIRE 飯店\",\"nights\":\"12/6 ・ 1 晚\",\"note\":\"大阪梅田\"},{\"name\":\"岡山格蘭比亞酒店\",\"nights\":\"12/7–12/10 ・ 3 晚\",\"note\":\"JR 岡山站直結\"},{\"name\":\"京都世紀飯店\",\"nights\":\"12/10–12/12 ・ 2 晚\",\"note\":\"JR 京都站旁・含早餐\"},{\"name\":\"星野 OMO7 大阪\",\"nights\":\"12/12–12/14 ・ 2 晚\",\"note\":\"新今宮・含早餐\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"12/6 (六)\",\"theme\":\"✈ 抵達大阪・梅田\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達關西機場,前往大阪梅田入住\"},{\"time\":\"玩\",\"text\":\"梅田周邊(梅田藍天大廈空中庭園、購物)\"},{\"time\":\"晚餐\",\"text\":\"燒肉力丸 梅田\"},{\"time\":\"住宿\",\"text\":\"阪急大阪 RESPIRE 飯店\"}]},{\"day\":2,\"date\":\"12/7 (日)\",\"theme\":\"🏯 大阪 → 岡山・後樂園與岡山城\",\"items\":[{\"time\":\"上午\",\"text\":\"搭山陽新幹線 大阪 → 岡山(約 45 分)\"},{\"time\":\"玩\",\"text\":\"岡山後樂園(日本三名園)、岡山城(烏城)\"},{\"time\":\"午餐\",\"text\":\"岡山車站二樓美食街\"},{\"time\":\"晚餐\",\"text\":\"一人鍋 惠 或 燒肉 J's 苑\"},{\"time\":\"住宿\",\"text\":\"岡山格蘭比亞酒店\"}]},{\"day\":3,\"date\":\"12/8 (一)\",\"theme\":\"⛩ 岡山 ↔ 廣島・宮島與和平公園\",\"items\":[{\"time\":\"上午\",\"text\":\"搭山陽新幹線 岡山 → 廣島,轉 JR + 渡輪至宮島\"},{\"time\":\"玩\",\"text\":\"宮島嚴島神社海上鳥居、宮島纜車;廣島原爆圓頂、和平紀念資料館\"},{\"time\":\"午餐\",\"text\":\"宮島牡蠣屋 或 牡蠣之林(烤牡蠣)\"},{\"time\":\"晚餐\",\"text\":\"長田屋 廣島燒\"},{\"time\":\"住宿\",\"text\":\"岡山格蘭比亞酒店\"}]},{\"day\":4,\"date\":\"12/9 (二)\",\"theme\":\"🏘 岡山・倉敷美觀\",\"items\":[{\"time\":\"玩\",\"text\":\"倉敷美觀地區(白壁老街、倉敷川遊船)、倉敷三井 Outlet\"},{\"time\":\"午餐\",\"text\":\"梅之木味噌豬排 或 有鄰庵(幸福布丁)\"},{\"time\":\"晚餐\",\"text\":\"一人鍋 惠 或 燒肉 J's 苑\"},{\"time\":\"住宿\",\"text\":\"岡山格蘭比亞酒店\"}]},{\"day\":5,\"date\":\"12/10 (三)\",\"theme\":\"🍵 岡山 → 京都・宇治平等院\",\"items\":[{\"time\":\"上午\",\"text\":\"搭新幹線 岡山 → 京都,轉 JR 奈良線至宇治\"},{\"time\":\"玩\",\"text\":\"宇治平等院鳳凰堂、上賀茂神社、京都塔\"},{\"time\":\"午餐\",\"text\":\"中村藤吉 抹茶(宇治本店)\"},{\"time\":\"晚餐\",\"text\":\"新福菜館 拉麵\"},{\"time\":\"住宿\",\"text\":\"京都世紀飯店\"}]},{\"day\":6,\"date\":\"12/11 (四)\",\"theme\":\"🐉 京都・天橋立\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"玩\",\"text\":\"天橋立 View Land(飛龍觀吊椅纜車)、海鷗觀光船\"},{\"time\":\"午餐\",\"text\":\"野雞三仙兵衛(天橋立)\"},{\"time\":\"晚餐\",\"text\":\"京的燒肉處 弘 或 名代豬排かつくら\"},{\"time\":\"住宿\",\"text\":\"京都世紀飯店\"}]},{\"day\":7,\"date\":\"12/12 (五)\",\"theme\":\"🎨 京都 → 大阪・下鴨神社與 teamLab\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"玩\",\"text\":\"下鴨神社(糺之森)、道頓堀逛街(扭蛋之森)、大阪 teamLab 長居植物園(夜間)\"},{\"time\":\"晚餐\",\"text\":\"壽司郎 天王寺店\"},{\"time\":\"住宿\",\"text\":\"星野 OMO7 大阪\"}]},{\"day\":8,\"date\":\"12/13 (六)\",\"theme\":\"🦓 大阪・天王寺\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"玩\",\"text\":\"天王寺動物園、阿倍野 HARUKAS 300 展望台(夜景)、大國藥妝(天王寺逛街)\"},{\"time\":\"晚餐\",\"text\":\"一蘭 阿倍野店\"},{\"time\":\"住宿\",\"text\":\"星野 OMO7 大阪\"}]},{\"day\":9,\"date\":\"12/14 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"上午\",\"text\":\"飯店退房,前往關西機場返台,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "關西・山陽鐵道之旅",
+        "subtitle": "大阪・岡山・廣島・京都",
+        "country": "日本",
+        "region": "關西・山陽",
+        "year": 2025,
+        "dateLabel": "12/6 – 12/14",
+        "dateStart": "2025-12-06",
+        "dateEnd": "2025-12-14",
+        "nights": 8,
+        "flight": {
+          "airline": "國泰航空 Cathay Pacific",
+          "out": "12/6 桃園 TPE → 大阪 KIX",
+          "back": "12/14 大阪 KIX → 桃園",
+          "note": "關西機場進出・大阪/岡山/京都周遊・JR Pass(Day2–6)"
+        },
+        "stay": [
+          {
+            "name": "阪急大阪 RESPIRE 飯店",
+            "nights": "12/6 ・ 1 晚",
+            "note": "大阪梅田"
+          },
+          {
+            "name": "岡山格蘭比亞酒店",
+            "nights": "12/7–12/10 ・ 3 晚",
+            "note": "JR 岡山站直結"
+          },
+          {
+            "name": "京都世紀飯店",
+            "nights": "12/10–12/12 ・ 2 晚",
+            "note": "JR 京都站旁・含早餐"
+          },
+          {
+            "name": "星野 OMO7 大阪",
+            "nights": "12/12–12/14 ・ 2 晚",
+            "note": "新今宮・含早餐"
+          }
+        ],
+        "pass": {
+          "icon": "🚄",
+          "label": "鐵路周遊券",
+          "name": "關西&廣島地區鐵路周遊券",
+          "price": "Day2–Day6 使用",
+          "head": [
+            "路段",
+            "車種",
+            "時間"
+          ],
+          "rows": [
+            [
+              "新大阪 ↔ 岡山",
+              "山陽新幹線",
+              "約 45 分"
+            ],
+            [
+              "岡山 ↔ 廣島",
+              "山陽新幹線",
+              "約 35 分"
+            ],
+            [
+              "廣島 → 宮島口 → 宮島",
+              "JR + 宮島渡輪",
+              "約 30 分"
+            ],
+            [
+              "岡山 ↔ 京都",
+              "山陽/東海道新幹線",
+              "約 1 小時"
+            ],
+            [
+              "京都 ↔ 天橋立",
+              "JR + 京都丹後鐵道",
+              "約 2 小時"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "12/6 (六)",
+            "theme": "✈ 抵達大阪・梅田",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達關西機場,前往大阪梅田入住"
+              },
+              {
+                "time": "玩",
+                "text": "梅田周邊(梅田藍天大廈空中庭園、購物)"
+              },
+              {
+                "time": "晚餐",
+                "text": "燒肉力丸 梅田"
+              },
+              {
+                "time": "住宿",
+                "text": "阪急大阪 RESPIRE 飯店"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "12/7 (日)",
+            "theme": "🏯 大阪 → 岡山・後樂園與岡山城",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭山陽新幹線 大阪 → 岡山(約 45 分)"
+              },
+              {
+                "time": "玩",
+                "text": "岡山後樂園(日本三名園)、岡山城(烏城)"
+              },
+              {
+                "time": "午餐",
+                "text": "岡山車站二樓美食街"
+              },
+              {
+                "time": "晚餐",
+                "text": "一人鍋 惠 或 燒肉 J's 苑"
+              },
+              {
+                "time": "住宿",
+                "text": "岡山格蘭比亞酒店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "山陽新幹線 新大阪 → 岡山約 45 分;岡山站直結格蘭比亞"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "12/8 (一)",
+            "theme": "⛩ 岡山 ↔ 廣島・宮島與和平公園",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭山陽新幹線 岡山 → 廣島,轉 JR + 渡輪至宮島"
+              },
+              {
+                "time": "玩",
+                "text": "宮島嚴島神社海上鳥居、宮島纜車;廣島原爆圓頂、和平紀念資料館"
+              },
+              {
+                "time": "午餐",
+                "text": "宮島牡蠣屋 或 牡蠣之林(烤牡蠣)"
+              },
+              {
+                "time": "晚餐",
+                "text": "長田屋 廣島燒"
+              },
+              {
+                "time": "住宿",
+                "text": "岡山格蘭比亞酒店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "岡山 ↔ 廣島 山陽新幹線約 35 分;廣島 → 宮島口 → 渡輪約 30 分"
+              },
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "嚴島神社海上鳥居依潮汐:漲潮浮於海上、退潮可步行至鳥居,先查潮汐表"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "12/9 (二)",
+            "theme": "🏘 岡山・倉敷美觀",
+            "items": [
+              {
+                "time": "玩",
+                "text": "倉敷美觀地區(白壁老街、倉敷川遊船)、倉敷三井 Outlet"
+              },
+              {
+                "time": "午餐",
+                "text": "梅之木味噌豬排 或 有鄰庵(幸福布丁)"
+              },
+              {
+                "time": "晚餐",
+                "text": "一人鍋 惠 或 燒肉 J's 苑"
+              },
+              {
+                "time": "住宿",
+                "text": "岡山格蘭比亞酒店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "岡山 ↔ 倉敷 JR 約 15 分"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "12/10 (三)",
+            "theme": "🍵 岡山 → 京都・宇治平等院",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭新幹線 岡山 → 京都,轉 JR 奈良線至宇治"
+              },
+              {
+                "time": "玩",
+                "text": "宇治平等院鳳凰堂、上賀茂神社、京都塔"
+              },
+              {
+                "time": "午餐",
+                "text": "中村藤吉 抹茶(宇治本店)"
+              },
+              {
+                "time": "晚餐",
+                "text": "新福菜館 拉麵"
+              },
+              {
+                "time": "住宿",
+                "text": "京都世紀飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "平等院鳳凰堂內部需現場拿號碼牌、分梯入場,一到先領票"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "12/11 (四)",
+            "theme": "🐉 京都・天橋立",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "玩",
+                "text": "天橋立 View Land(飛龍觀吊椅纜車)、海鷗觀光船"
+              },
+              {
+                "time": "午餐",
+                "text": "野雞三仙兵衛(天橋立)"
+              },
+              {
+                "time": "晚餐",
+                "text": "京的燒肉處 弘 或 名代豬排かつくら"
+              },
+              {
+                "time": "住宿",
+                "text": "京都世紀飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "京都 ↔ 天橋立 JR + 京都丹後鐵道約 2 小時,建議安排整天"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "12/12 (五)",
+            "theme": "🎨 京都 → 大阪・下鴨神社與 teamLab",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "玩",
+                "text": "下鴨神社(糺之森)、道頓堀逛街(扭蛋之森)、大阪 teamLab 長居植物園(夜間)"
+              },
+              {
+                "time": "晚餐",
+                "text": "壽司郎 天王寺店"
+              },
+              {
+                "time": "住宿",
+                "text": "星野 OMO7 大阪"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提醒",
+                "text": "teamLab 長居植物園為夜間常設展,線上預約較保險"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "12/13 (六)",
+            "theme": "🦓 大阪・天王寺",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "玩",
+                "text": "天王寺動物園、阿倍野 HARUKAS 300 展望台(夜景)、大國藥妝(天王寺逛街)"
+              },
+              {
+                "time": "晚餐",
+                "text": "一蘭 阿倍野店"
+              },
+              {
+                "time": "住宿",
+                "text": "星野 OMO7 大阪"
+              }
+            ]
+          },
+          {
+            "day": 9,
+            "date": "12/14 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "上午",
+                "text": "飯店退房,前往關西機場返台,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2.5–3 小時抵達關西機場辦理出境"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "大阪梅田",
+            "area": "大阪",
+            "day": 1,
+            "latlng": [
+              34.7025,
+              135.4959
+            ]
+          },
+          {
+            "name": "岡山後樂園",
+            "area": "岡山",
+            "day": 2,
+            "latlng": [
+              34.6657,
+              133.9356
+            ]
+          },
+          {
+            "name": "岡山城",
+            "area": "岡山",
+            "day": 2,
+            "latlng": [
+              34.6651,
+              133.9361
+            ]
+          },
+          {
+            "name": "宮島嚴島神社",
+            "area": "宮島",
+            "day": 3,
+            "latlng": [
+              34.296,
+              132.3197
+            ]
+          },
+          {
+            "name": "廣島和平紀念公園",
+            "area": "廣島",
+            "day": 3,
+            "latlng": [
+              34.3955,
+              132.4536
+            ]
+          },
+          {
+            "name": "倉敷美觀地區",
+            "area": "倉敷",
+            "day": 4,
+            "latlng": [
+              34.5979,
+              133.7714
+            ]
+          },
+          {
+            "name": "宇治平等院",
+            "area": "宇治",
+            "day": 5,
+            "latlng": [
+              34.8893,
+              135.8076
+            ]
+          },
+          {
+            "name": "上賀茂神社",
+            "area": "京都",
+            "day": 5,
+            "latlng": [
+              35.0606,
+              135.7528
+            ]
+          },
+          {
+            "name": "京都塔",
+            "area": "京都",
+            "day": 5,
+            "latlng": [
+              34.9876,
+              135.7591
+            ]
+          },
+          {
+            "name": "天橋立 View Land",
+            "area": "天橋立",
+            "day": 6,
+            "latlng": [
+              35.5667,
+              135.1939
+            ]
+          },
+          {
+            "name": "下鴨神社",
+            "area": "京都",
+            "day": 7,
+            "latlng": [
+              35.0388,
+              135.7728
+            ]
+          },
+          {
+            "name": "道頓堀(扭蛋之森)",
+            "area": "大阪",
+            "day": 7,
+            "latlng": [
+              34.6687,
+              135.5013
+            ]
+          },
+          {
+            "name": "teamLab 長居植物園",
+            "area": "大阪・長居",
+            "day": 7,
+            "latlng": [
+              34.6135,
+              135.5187
+            ]
+          },
+          {
+            "name": "天王寺動物園",
+            "area": "天王寺",
+            "day": 8,
+            "latlng": [
+              34.6519,
+              135.5089
+            ]
+          },
+          {
+            "name": "阿倍野 HARUKAS 300",
+            "area": "天王寺",
+            "day": 8,
+            "latlng": [
+              34.6459,
+              135.5132
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/kansai-sanyo-2025-v1.png",
+      "imageSha256": "9ef0c77fd3c68fb7aafe0c023e9e6e4cf304461df8f6c0c621bcfa3ac6bf025f",
+      "aligned": true
+    },
+    "tohoku-winter-2025": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「東北・函館雪之旅」, subtitle「2025-03-01 – 2025-03-09・9天8夜」. All 9 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"長榮航空 EVA Air\",\"out\":\"3/1 桃園 TPE → 仙台 SDJ\",\"back\":\"3/9 仙台 SDJ → 桃園\",\"note\":\"仙台進出・青森/函館/山形周遊\"}\nStays: [{\"name\":\"東仙台大都會飯店\",\"nights\":\"D1、D6–D9 ・ 共 4 晚\",\"note\":\"仙台・據點飯店\"},{\"name\":\"星野 奧入瀨溪流飯店\",\"nights\":\"D2 ・ 1 晚\",\"note\":\"青森・冬季冰瀑之湯\"},{\"name\":\"星野 青森屋\",\"nights\":\"D3 ・ 1 晚\",\"note\":\"青森・睡魔祭主題溫泉\"},{\"name\":\"函館 JR Inn\",\"nights\":\"D4–D5 ・ 2 晚\",\"note\":\"JR 函館站旁\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"3/1 (六)\",\"theme\":\"✈ 抵達仙台\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達仙台機場,前往市區入住\"},{\"time\":\"住宿\",\"text\":\"東仙台大都會飯店\"}]},{\"day\":2,\"date\":\"3/2 (日)\",\"theme\":\"❄ 仙台 → 青森・奧入瀨冰瀑\",\"items\":[{\"time\":\"上午\",\"text\":\"搭東北新幹線 仙台 → 青森(約 1.5 小時)\"},{\"time\":\"玩\",\"text\":\"奧入瀨溪流冬季冰瀑、雪地健行\"},{\"time\":\"住宿\",\"text\":\"星野 奧入瀨溪流飯店(冰瀑之湯)\"}]},{\"day\":3,\"date\":\"3/3 (一)\",\"theme\":\"🏮 青森・睡魔之家\",\"items\":[{\"time\":\"玩\",\"text\":\"睡魔之家 ワ・ラッセ、廣田神社\"},{\"time\":\"住宿\",\"text\":\"星野 青森屋(睡魔祭主題溫泉)\"}]},{\"day\":4,\"date\":\"3/4 (二)\",\"theme\":\"🚄 青森 → 函館\",\"items\":[{\"time\":\"上午\",\"text\":\"搭北海道新幹線 新青森 → 新函館北斗(約 1 小時)\"},{\"time\":\"玩\",\"text\":\"函館市區散策\"},{\"time\":\"住宿\",\"text\":\"函館 JR Inn\"}]},{\"day\":5,\"date\":\"3/5 (三)\",\"theme\":\"🌃 函館・五稜郭與函館山夜景\",\"items\":[{\"time\":\"玩\",\"text\":\"函館早市、五稜郭、金森紅磚倉庫群、函館山夜景\"},{\"time\":\"住宿\",\"text\":\"函館 JR Inn\"}]},{\"day\":6,\"date\":\"3/6 (四)\",\"theme\":\"🦸 函館 → 仙台・麵包超人博物館\",\"items\":[{\"time\":\"上午\",\"text\":\"搭新幹線返仙台\"},{\"time\":\"玩\",\"text\":\"仙台麵包超人兒童博物館\"},{\"time\":\"住宿\",\"text\":\"東仙台大都會飯店\"}]},{\"day\":7,\"date\":\"3/7 (五)\",\"theme\":\"🦊 藏王狐狸村 + 松島一日遊\",\"items\":[{\"time\":\"玩\",\"text\":\"藏王狐狸村(餵狐狸/抱狐狸)、松島(遊覽船、瑞巖寺、五大堂)\"},{\"time\":\"住宿\",\"text\":\"東仙台大都會飯店\"}]},{\"day\":8,\"date\":\"3/8 (六)\",\"theme\":\"⛄ 銀山溫泉 + 藏王樹冰一日遊\",\"items\":[{\"time\":\"玩\",\"text\":\"銀山溫泉(大正浪漫雪景)、藏王樹冰(纜車賞雪怪)\"},{\"time\":\"住宿\",\"text\":\"東仙台大都會飯店\"}]},{\"day\":9,\"date\":\"3/9 (日)\",\"theme\":\"✈ 回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"仙台機場辦理登機,返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n\n後續修正：僅將底部東仙台大都會飯店住宿摘要 D1・D6–D9・共4晚 改成 D1・D6–D8・共4晚。第9天返台不住宿，其餘圖文保留。\n\n再次修正：底部東仙台大都會飯店住宿行整行替換為「3/1、3/6–3/8（4晚）」，避免第9天被誤當住宿。\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "東北・函館雪之旅",
+        "subtitle": "仙台・青森・函館・山形",
+        "country": "日本",
+        "region": "東北・函館",
+        "year": 2025,
+        "dateLabel": "3/1 – 3/9",
+        "dateStart": "2025-03-01",
+        "dateEnd": "2025-03-09",
+        "nights": 8,
+        "flight": {
+          "airline": "長榮航空 EVA Air",
+          "out": "3/1 桃園 TPE → 仙台 SDJ",
+          "back": "3/9 仙台 SDJ → 桃園",
+          "note": "仙台進出・青森/函館/山形周遊"
+        },
+        "stay": [
+          {
+            "name": "東仙台大都會飯店",
+            "nights": "D1、D6–D8 ・ 共 4 晚",
+            "note": "仙台・據點飯店"
+          },
+          {
+            "name": "星野 奧入瀨溪流飯店",
+            "nights": "D2 ・ 1 晚",
+            "note": "青森・冬季冰瀑之湯"
+          },
+          {
+            "name": "星野 青森屋",
+            "nights": "D3 ・ 1 晚",
+            "note": "青森・睡魔祭主題溫泉"
+          },
+          {
+            "name": "函館 JR Inn",
+            "nights": "D4–D5 ・ 2 晚",
+            "note": "JR 函館站旁"
+          }
+        ],
+        "pass": {
+          "icon": "🚄",
+          "label": "交通",
+          "name": "JR 東日本・南北海道鐵路周遊券",
+          "price": "建議使用",
+          "head": [
+            "路段",
+            "車種",
+            "時間"
+          ],
+          "rows": [
+            [
+              "仙台 ↔ 青森",
+              "東北新幹線 はやぶさ",
+              "約 1.5 小時"
+            ],
+            [
+              "青森 → 函館",
+              "北海道新幹線(新青森–新函館北斗)",
+              "約 1 小時"
+            ],
+            [
+              "仙台 ↔ 山形",
+              "JR 仙山線",
+              "約 1.2 小時"
+            ],
+            [
+              "藏王/松島/狐狸村",
+              "JR + 巴士/一日遊",
+              "當地接駁"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "3/1 (六)",
+            "theme": "✈ 抵達仙台",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達仙台機場,前往市區入住"
+              },
+              {
+                "time": "住宿",
+                "text": "東仙台大都會飯店"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "3/2 (日)",
+            "theme": "❄ 仙台 → 青森・奧入瀨冰瀑",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭東北新幹線 仙台 → 青森(約 1.5 小時)"
+              },
+              {
+                "time": "玩",
+                "text": "奧入瀨溪流冬季冰瀑、雪地健行"
+              },
+              {
+                "time": "住宿",
+                "text": "星野 奧入瀨溪流飯店(冰瀑之湯)"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "仙台 → 新青森 東北新幹線約 1.5 小時;奧入瀨冰瀑健行為飯店預約制"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "3/3 (一)",
+            "theme": "🏮 青森・睡魔之家",
+            "items": [
+              {
+                "time": "玩",
+                "text": "睡魔之家 ワ・ラッセ、廣田神社"
+              },
+              {
+                "time": "住宿",
+                "text": "星野 青森屋(睡魔祭主題溫泉)"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "3/4 (二)",
+            "theme": "🚄 青森 → 函館",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭北海道新幹線 新青森 → 新函館北斗(約 1 小時)"
+              },
+              {
+                "time": "玩",
+                "text": "函館市區散策"
+              },
+              {
+                "time": "住宿",
+                "text": "函館 JR Inn"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "新青森 → 新函館北斗 北海道新幹線約 1 小時,轉函館 Liner 至函館站"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "3/5 (三)",
+            "theme": "🌃 函館・五稜郭與函館山夜景",
+            "items": [
+              {
+                "time": "玩",
+                "text": "函館早市、五稜郭、金森紅磚倉庫群、函館山夜景"
+              },
+              {
+                "time": "住宿",
+                "text": "函館 JR Inn"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "函館山夜景日落後 30 分最美,先確認纜車運行與能見度"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "3/6 (四)",
+            "theme": "🦸 函館 → 仙台・麵包超人博物館",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭新幹線返仙台"
+              },
+              {
+                "time": "玩",
+                "text": "仙台麵包超人兒童博物館"
+              },
+              {
+                "time": "住宿",
+                "text": "東仙台大都會飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "麵包超人博物館位於仙台(非山形),親子同遊首選"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "3/7 (五)",
+            "theme": "🦊 藏王狐狸村 + 松島一日遊",
+            "items": [
+              {
+                "time": "玩",
+                "text": "藏王狐狸村(餵狐狸/抱狐狸)、松島(遊覽船、瑞巖寺、五大堂)"
+              },
+              {
+                "time": "住宿",
+                "text": "東仙台大都會飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "狐狸村在白石、松島在仙台東北,建議包車或一日遊串聯"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "3/8 (六)",
+            "theme": "⛄ 銀山溫泉 + 藏王樹冰一日遊",
+            "items": [
+              {
+                "time": "玩",
+                "text": "銀山溫泉(大正浪漫雪景)、藏王樹冰(纜車賞雪怪)"
+              },
+              {
+                "time": "住宿",
+                "text": "東仙台大都會飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "銀山溫泉冬季交通管制需換接駁巴士;藏王樹冰山頂極寒,纜車可線上預約"
+              }
+            ]
+          },
+          {
+            "day": 9,
+            "date": "3/9 (日)",
+            "theme": "✈ 回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "仙台機場辦理登機,返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2 小時抵達仙台機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "奧入瀨溪流",
+            "area": "青森・十和田",
+            "day": 2,
+            "latlng": [
+              40.5236,
+              140.9889
+            ]
+          },
+          {
+            "name": "睡魔之家 ワ・ラッセ",
+            "area": "青森",
+            "day": 3,
+            "latlng": [
+              40.8275,
+              140.735
+            ]
+          },
+          {
+            "name": "廣田神社",
+            "area": "青森",
+            "day": 3,
+            "latlng": [
+              40.823,
+              140.743
+            ]
+          },
+          {
+            "name": "函館早市",
+            "area": "函館",
+            "day": 5,
+            "latlng": [
+              41.7745,
+              140.7263
+            ]
+          },
+          {
+            "name": "五稜郭",
+            "area": "函館",
+            "day": 5,
+            "latlng": [
+              41.7969,
+              140.7567
+            ]
+          },
+          {
+            "name": "金森紅磚倉庫",
+            "area": "函館",
+            "day": 5,
+            "latlng": [
+              41.7657,
+              140.7148
+            ]
+          },
+          {
+            "name": "函館山夜景",
+            "area": "函館",
+            "day": 5,
+            "latlng": [
+              41.7595,
+              140.7042
+            ]
+          },
+          {
+            "name": "仙台麵包超人兒童博物館",
+            "area": "仙台",
+            "day": 6,
+            "latlng": [
+              38.2722,
+              140.9508
+            ]
+          },
+          {
+            "name": "藏王狐狸村",
+            "area": "宮城・白石",
+            "day": 7,
+            "latlng": [
+              38.0339,
+              140.5147
+            ]
+          },
+          {
+            "name": "松島",
+            "area": "宮城・松島",
+            "day": 7,
+            "latlng": [
+              38.37,
+              141.0606
+            ]
+          },
+          {
+            "name": "銀山溫泉",
+            "area": "山形",
+            "day": 8,
+            "latlng": [
+              38.575,
+              140.5333
+            ]
+          },
+          {
+            "name": "藏王樹冰",
+            "area": "山形・藏王",
+            "day": 8,
+            "latlng": [
+              38.1597,
+              140.4406
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/tohoku-winter-2025-v1.png",
+      "imageSha256": "f169e851e6b66ca720bb9bf090d3996b09130441eb83295c7dfdc18c390f8380",
+      "aligned": true
+    },
+    "tokyo-2024": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「東京・橫濱鎌倉之旅」, subtitle「2024-12-14 – 2024-12-22・9天8夜」. All 9 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"星宇航空 STARLUX\",\"out\":\"12/14 桃園 TPE → 東京 成田 NRT\",\"back\":\"12/22 東京 成田 NRT → 桃園 TPE\",\"note\":\"成田進出・上野/銀座為據點・迪士尼住 1 晚\"}\nStays: [{\"name\":\"三井花園飯店 上野\",\"nights\":\"12/14–12/17 ・ 3 晚\",\"note\":\"上野・近 JR 上野站\"},{\"name\":\"東京迪士尼玩具總動員飯店\",\"nights\":\"12/17 ・ 1 晚\",\"note\":\"迪士尼度假區內\"},{\"name\":\"銀座大和 ROYNET 飯店\",\"nights\":\"12/18–12/22 ・ 4 晚\",\"note\":\"銀座・購物便利\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"12/14 (六)\",\"theme\":\"🏮 抵達東京・淺草晴空塔\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達成田機場,前往上野入住\"},{\"time\":\"玩\",\"text\":\"淺草寺雷門、晴空塔(墨田水族館)\"},{\"time\":\"晚餐\",\"text\":\"米久本店壽喜燒 或 敘敘苑\"},{\"time\":\"住宿\",\"text\":\"三井花園飯店 上野\"}]},{\"day\":2,\"date\":\"12/15 (日)\",\"theme\":\"🐼 上野・阿美橫町\",\"items\":[{\"time\":\"玩\",\"text\":\"上野公園、上野動物園、阿美橫町\"},{\"time\":\"晚餐\",\"text\":\"上野 鴨肉鍋 或 拉麵\"},{\"time\":\"住宿\",\"text\":\"三井花園飯店 上野\"}]},{\"day\":3,\"date\":\"12/16 (一)\",\"theme\":\"⚓ 橫濱港未來\",\"items\":[{\"time\":\"玩\",\"text\":\"橫濱(紅磚倉庫、港未來、中華街)\"},{\"time\":\"住宿\",\"text\":\"三井花園飯店 上野\"}]},{\"day\":4,\"date\":\"12/17 (二)\",\"theme\":\"🌊 東京迪士尼海洋\",\"items\":[{\"time\":\"玩\",\"text\":\"東京迪士尼海洋 DisneySea\"},{\"time\":\"住宿\",\"text\":\"東京迪士尼玩具總動員飯店\"}]},{\"day\":5,\"date\":\"12/18 (三)\",\"theme\":\"🏰 東京迪士尼樂園\",\"items\":[{\"time\":\"玩\",\"text\":\"東京迪士尼樂園 Disneyland\"},{\"time\":\"住宿\",\"text\":\"銀座大和 ROYNET 飯店\"}]},{\"day\":6,\"date\":\"12/19 (四)\",\"theme\":\"🛍 銀座・澀谷\",\"items\":[{\"time\":\"玩\",\"text\":\"銀座逛街、澀谷(SHIBUYA SKY、十字路口)\"},{\"time\":\"住宿\",\"text\":\"銀座大和 ROYNET 飯店\"}]},{\"day\":7,\"date\":\"12/20 (五)\",\"theme\":\"⛩ 鎌倉・江之島\",\"items\":[{\"time\":\"玩\",\"text\":\"鎌倉大佛(高德院)、鶴岡八幡宮、江之島(江島神社、海蠟燭)\"},{\"time\":\"住宿\",\"text\":\"銀座大和 ROYNET 飯店\"}]},{\"day\":8,\"date\":\"12/21 (六)\",\"theme\":\"🎨 東京車站・麻布台 teamLab\",\"items\":[{\"time\":\"玩\",\"text\":\"東京車站(丸之內紅磚站舍、KITTE)、麻布台之丘 teamLab Borderless\"},{\"time\":\"住宿\",\"text\":\"銀座大和 ROYNET 飯店\"}]},{\"day\":9,\"date\":\"12/22 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"前往成田機場,返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "東京・橫濱鎌倉之旅",
+        "subtitle": "上野・迪士尼・橫濱・鎌倉",
+        "country": "日本",
+        "region": "東京・神奈川",
+        "year": 2024,
+        "dateLabel": "12/14 – 12/22",
+        "dateStart": "2024-12-14",
+        "dateEnd": "2024-12-22",
+        "nights": 8,
+        "flight": {
+          "airline": "星宇航空 STARLUX",
+          "out": "12/14 桃園 TPE → 東京 成田 NRT",
+          "back": "12/22 東京 成田 NRT → 桃園 TPE",
+          "note": "成田進出・上野/銀座為據點・迪士尼住 1 晚"
+        },
+        "stay": [
+          {
+            "name": "三井花園飯店 上野",
+            "nights": "12/14–12/17 ・ 3 晚",
+            "note": "上野・近 JR 上野站"
+          },
+          {
+            "name": "東京迪士尼玩具總動員飯店",
+            "nights": "12/17 ・ 1 晚",
+            "note": "迪士尼度假區內"
+          },
+          {
+            "name": "銀座大和 ROYNET 飯店",
+            "nights": "12/18–12/22 ・ 4 晚",
+            "note": "銀座・購物便利"
+          }
+        ],
+        "pass": {
+          "icon": "🚇",
+          "label": "交通",
+          "name": "JR + 東京メトロ + 江之電",
+          "price": "建議 Suica/PASMO",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "成田機場 → 上野",
+              "Skyliner / JR",
+              "約 45 分"
+            ],
+            [
+              "市區移動",
+              "JR 山手線 + 東京メトロ",
+              "Suica 嗶卡"
+            ],
+            [
+              "迪士尼",
+              "JR 京葉線 → 舞濱",
+              "東京站約 15 分"
+            ],
+            [
+              "橫濱/鎌倉/江之島",
+              "JR + 江之電",
+              "約 1 小時"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "12/14 (六)",
+            "theme": "🏮 抵達東京・淺草晴空塔",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達成田機場,前往上野入住"
+              },
+              {
+                "time": "玩",
+                "text": "淺草寺雷門、晴空塔(墨田水族館)"
+              },
+              {
+                "time": "晚餐",
+                "text": "米久本店壽喜燒 或 敘敘苑"
+              },
+              {
+                "time": "住宿",
+                "text": "三井花園飯店 上野"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "成田機場 → 上野 Skyliner 約 45 分"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "12/15 (日)",
+            "theme": "🐼 上野・阿美橫町",
+            "items": [
+              {
+                "time": "玩",
+                "text": "上野公園、上野動物園、阿美橫町"
+              },
+              {
+                "time": "晚餐",
+                "text": "上野 鴨肉鍋 或 拉麵"
+              },
+              {
+                "time": "住宿",
+                "text": "三井花園飯店 上野"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "12/16 (一)",
+            "theme": "⚓ 橫濱港未來",
+            "items": [
+              {
+                "time": "玩",
+                "text": "橫濱(紅磚倉庫、港未來、中華街)"
+              },
+              {
+                "time": "住宿",
+                "text": "三井花園飯店 上野"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "上野/澀谷 → 橫濱 港未來線直通約 1 小時"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "12/17 (二)",
+            "theme": "🌊 東京迪士尼海洋",
+            "items": [
+              {
+                "time": "玩",
+                "text": "東京迪士尼海洋 DisneySea"
+              },
+              {
+                "time": "住宿",
+                "text": "東京迪士尼玩具總動員飯店"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "12/18 (三)",
+            "theme": "🏰 東京迪士尼樂園",
+            "items": [
+              {
+                "time": "玩",
+                "text": "東京迪士尼樂園 Disneyland"
+              },
+              {
+                "time": "住宿",
+                "text": "銀座大和 ROYNET 飯店"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "12/19 (四)",
+            "theme": "🛍 銀座・澀谷",
+            "items": [
+              {
+                "time": "玩",
+                "text": "銀座逛街、澀谷(SHIBUYA SKY、十字路口)"
+              },
+              {
+                "time": "住宿",
+                "text": "銀座大和 ROYNET 飯店"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "12/20 (五)",
+            "theme": "⛩ 鎌倉・江之島",
+            "items": [
+              {
+                "time": "玩",
+                "text": "鎌倉大佛(高德院)、鶴岡八幡宮、江之島(江島神社、海蠟燭)"
+              },
+              {
+                "time": "住宿",
+                "text": "銀座大和 ROYNET 飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "JR 至鎌倉,轉江之電串聯長谷大佛、鎌倉高校前、江之島"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "12/21 (六)",
+            "theme": "🎨 東京車站・麻布台 teamLab",
+            "items": [
+              {
+                "time": "玩",
+                "text": "東京車站(丸之內紅磚站舍、KITTE)、麻布台之丘 teamLab Borderless"
+              },
+              {
+                "time": "住宿",
+                "text": "銀座大和 ROYNET 飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提醒",
+                "text": "麻布台 teamLab Borderless 需線上預約場次"
+              }
+            ]
+          },
+          {
+            "day": 9,
+            "date": "12/22 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "前往成田機場,返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2.5–3 小時抵達成田機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "淺草寺",
+            "area": "淺草",
+            "day": 1,
+            "latlng": [
+              35.7148,
+              139.7967
+            ]
+          },
+          {
+            "name": "晴空塔・墨田水族館",
+            "area": "押上・晴空塔",
+            "day": 1,
+            "latlng": [
+              35.7101,
+              139.8107
+            ]
+          },
+          {
+            "name": "上野公園・上野動物園",
+            "area": "上野",
+            "day": 2,
+            "latlng": [
+              35.7156,
+              139.7714
+            ]
+          },
+          {
+            "name": "阿美橫町",
+            "area": "上野",
+            "day": 2,
+            "latlng": [
+              35.71,
+              139.774
+            ]
+          },
+          {
+            "name": "橫濱紅磚倉庫",
+            "area": "橫濱",
+            "day": 3,
+            "latlng": [
+              35.453,
+              139.6425
+            ]
+          },
+          {
+            "name": "東京迪士尼海洋",
+            "area": "舞濱",
+            "day": 4,
+            "latlng": [
+              35.6267,
+              139.885
+            ]
+          },
+          {
+            "name": "東京迪士尼樂園",
+            "area": "舞濱",
+            "day": 5,
+            "latlng": [
+              35.6329,
+              139.8804
+            ]
+          },
+          {
+            "name": "銀座",
+            "area": "銀座",
+            "day": 5,
+            "latlng": [
+              35.6717,
+              139.765
+            ]
+          },
+          {
+            "name": "澀谷 SHIBUYA SKY",
+            "area": "澀谷",
+            "day": 6,
+            "latlng": [
+              35.6595,
+              139.7004
+            ]
+          },
+          {
+            "name": "鎌倉大佛(高德院)",
+            "area": "鎌倉",
+            "day": 7,
+            "latlng": [
+              35.3169,
+              139.5358
+            ]
+          },
+          {
+            "name": "江之島",
+            "area": "江之島",
+            "day": 7,
+            "latlng": [
+              35.2992,
+              139.4806
+            ]
+          },
+          {
+            "name": "東京車站",
+            "area": "丸之內",
+            "day": 8,
+            "latlng": [
+              35.6812,
+              139.7671
+            ]
+          },
+          {
+            "name": "麻布台之丘 teamLab Borderless",
+            "area": "麻布台",
+            "day": 8,
+            "latlng": [
+              35.6602,
+              139.74
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/tokyo-2024-v1.png",
+      "imageSha256": "18a2d26dd9c938ce93a3c92f2740d270efd54c02e4fbd20f9e953f61479f4fed",
+      "aligned": true
+    },
+    "phuquoc-2024": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「富國島渡假之旅」, subtitle「2024-10-16 – 2024-10-20・5天4夜」. All 5 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"越捷航空 VietJet Air\",\"out\":\"10/16 桃園 TPE → 富國島 PQC\",\"back\":\"10/20 富國島 PQC → 桃園 TPE\",\"note\":\"富國島渡假・北部 Vinpearl 區 + 南部 Hon Thom\"}\nStays: [{\"name\":\"星灣皇冠假日飯店 Crowne Plaza Starbay\",\"nights\":\"10/16–10/18 ・ 2 晚\",\"note\":\"富國島北部海灘\"},{\"name\":\"薩琳達渡假村 Salinda Resort\",\"nights\":\"10/18–10/20 ・ 2 晚\",\"note\":\"楊東/中部海灘\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"10/16 (三)\",\"theme\":\"🏝 抵達富國島・大世界\",\"items\":[{\"time\":\"抵達\",\"text\":\"搭越捷抵達富國島,前往飯店\"},{\"time\":\"玩\",\"text\":\"大世界不夜城(Grand World)北部・威尼斯運河貢多拉\"},{\"time\":\"住宿\",\"text\":\"星灣皇冠假日飯店\"}]},{\"day\":2,\"date\":\"10/17 (四)\",\"theme\":\"🦁 富國野生動物園\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"休閒\",\"text\":\"飯店休閒\"},{\"time\":\"玩\",\"text\":\"富國野生動物園(Vinpearl Safari)、再逛大世界不夜城\"},{\"time\":\"住宿\",\"text\":\"星灣皇冠假日飯店\"}]},{\"day\":3,\"date\":\"10/18 (五)\",\"theme\":\"🎢 珍珠樂園・陽東夜市\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"休閒\",\"text\":\"飯店休閒\"},{\"time\":\"玩\",\"text\":\"珍珠樂園(VinWonders)、海龜水族館\"},{\"time\":\"逛\",\"text\":\"陽東夜市\"},{\"time\":\"住宿\",\"text\":\"薩琳達渡假村\"}]},{\"day\":4,\"date\":\"10/19 (六)\",\"theme\":\"🚠 地中海小鎮・跨海纜車\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"休閒\",\"text\":\"飯店休閒\"},{\"time\":\"玩\",\"text\":\"地中海小鎮(日落小鎮)、世界最長跨海纜車、太陽世界遊樂園(Hon Thom)\"},{\"time\":\"住宿\",\"text\":\"薩琳達渡假村\"}]},{\"day\":5,\"date\":\"10/20 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店 Buffet\"},{\"time\":\"上午\",\"text\":\"前往機場,搭越捷返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "富國島渡假之旅",
+        "subtitle": "Phú Quốc・大世界・珍珠樂園",
+        "country": "越南",
+        "region": "富國島",
+        "year": 2024,
+        "dateLabel": "10/16 – 10/20",
+        "dateStart": "2024-10-16",
+        "dateEnd": "2024-10-20",
+        "nights": 4,
+        "flight": {
+          "airline": "越捷航空 VietJet Air",
+          "out": "10/16 桃園 TPE → 富國島 PQC",
+          "back": "10/20 富國島 PQC → 桃園 TPE",
+          "note": "富國島渡假・北部 Vinpearl 區 + 南部 Hon Thom"
+        },
+        "stay": [
+          {
+            "name": "星灣皇冠假日飯店 Crowne Plaza Starbay",
+            "nights": "10/16–10/18 ・ 2 晚",
+            "note": "富國島北部海灘"
+          },
+          {
+            "name": "薩琳達渡假村 Salinda Resort",
+            "nights": "10/18–10/20 ・ 2 晚",
+            "note": "楊東/中部海灘"
+          }
+        ],
+        "pass": {
+          "icon": "🚗",
+          "label": "交通",
+          "name": "島內計程車 / 包車 / Grab",
+          "price": "—",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "機場 → 飯店",
+              "計程車 / 接送",
+              "約 20–40 分"
+            ],
+            [
+              "北部 Vinpearl 區",
+              "包車或 Grab",
+              "大世界/Safari/VinWonders 集中"
+            ],
+            [
+              "南部 Hon Thom",
+              "包車 → 跨海纜車",
+              "纜車站在 An Thới 日落小鎮"
+            ],
+            [
+              "楊東夜市",
+              "計程車 / Grab",
+              "市區"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "10/16 (三)",
+            "theme": "🏝 抵達富國島・大世界",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "搭越捷抵達富國島,前往飯店"
+              },
+              {
+                "time": "玩",
+                "text": "大世界不夜城(Grand World)北部・威尼斯運河貢多拉"
+              },
+              {
+                "time": "住宿",
+                "text": "星灣皇冠假日飯店"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "富國島機場 → 北部飯店約 30–40 分;大世界 24h 開放,貢多拉/表演有固定時段"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "10/17 (四)",
+            "theme": "🦁 富國野生動物園",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "休閒",
+                "text": "飯店休閒"
+              },
+              {
+                "time": "玩",
+                "text": "富國野生動物園(Vinpearl Safari)、再逛大世界不夜城"
+              },
+              {
+                "time": "住宿",
+                "text": "星灣皇冠假日飯店"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "10/18 (五)",
+            "theme": "🎢 珍珠樂園・陽東夜市",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "休閒",
+                "text": "飯店休閒"
+              },
+              {
+                "time": "玩",
+                "text": "珍珠樂園(VinWonders)、海龜水族館"
+              },
+              {
+                "time": "逛",
+                "text": "陽東夜市"
+              },
+              {
+                "time": "住宿",
+                "text": "薩琳達渡假村"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "VinWonders 海龜水族館美人魚秀約 11:00、14:00;陽東夜市傍晚後熱鬧,注意隨身財物"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "10/19 (六)",
+            "theme": "🚠 地中海小鎮・跨海纜車",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "休閒",
+                "text": "飯店休閒"
+              },
+              {
+                "time": "玩",
+                "text": "地中海小鎮(日落小鎮)、世界最長跨海纜車、太陽世界遊樂園(Hon Thom)"
+              },
+              {
+                "time": "住宿",
+                "text": "薩琳達渡假村"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "跨海纜車全長近 8km、世界最長,單程約 20 分;日落小鎮夕陽與海之吻水舞秀必看"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "10/20 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店 Buffet"
+              },
+              {
+                "time": "上午",
+                "text": "前往機場,搭越捷返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2 小時抵達富國島機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "大世界不夜城(Grand World)",
+            "area": "富國島北部",
+            "day": 1,
+            "latlng": [
+              10.3338,
+              103.854
+            ]
+          },
+          {
+            "name": "富國野生動物園(Vinpearl Safari)",
+            "area": "富國島北部",
+            "day": 2,
+            "latlng": [
+              10.3489,
+              103.8606
+            ]
+          },
+          {
+            "name": "珍珠樂園 VinWonders・海龜水族館",
+            "area": "富國島北部",
+            "day": 3,
+            "latlng": [
+              10.3478,
+              103.842
+            ]
+          },
+          {
+            "name": "陽東夜市",
+            "area": "楊東鎮",
+            "day": 3,
+            "latlng": [
+              10.2136,
+              103.9606
+            ]
+          },
+          {
+            "name": "地中海小鎮(日落小鎮)",
+            "area": "富國島南部",
+            "day": 4,
+            "latlng": [
+              10.0414,
+              104.0167
+            ]
+          },
+          {
+            "name": "跨海纜車・太陽世界(Hon Thom)",
+            "area": "香島 Hon Thom",
+            "day": 4,
+            "latlng": [
+              10.03,
+              104.02
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/phuquoc-2024-v1.png",
+      "imageSha256": "01fdb20025857a338b9bfb044cd5f61a48c6f3a3f87d29d8492d9e9533317bd4",
+      "aligned": true
+    },
+    "kyushu-2024": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「北九州環島之旅」, subtitle「2024-01-27 – 2024-02-04・9天8夜」. All 9 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"1/27 桃園 TPE → 福岡 FUK\",\"back\":\"2/4 福岡 FUK → 桃園 TPE\",\"note\":\"福岡進出・九州環遊\"}\nStays: [{\"name\":\"西鐵 Hotel Croom 博多\",\"nights\":\"1/27 ・ 1 晚\",\"note\":\"博多・近 JR 博多站\"},{\"name\":\"由布院 Lamp no Yado\",\"nights\":\"1/28 ・ 1 晚\",\"note\":\"由布院溫泉旅館\"},{\"name\":\"湯峽之響 優彩(黑川/杖立溫泉)\",\"nights\":\"1/29 ・ 1 晚\",\"note\":\"溫泉露天風呂旅館\"},{\"name\":\"KOKO Hotel Premier 熊本\",\"nights\":\"1/30 ・ 1 晚\",\"note\":\"熊本市區\"},{\"name\":\"Dormy Inn Premium 長崎站前\",\"nights\":\"1/31 ・ 1 晚\",\"note\":\"長崎站前・天然溫泉\"},{\"name\":\"Hotel Nikko 豪斯登堡\",\"nights\":\"2/1 ・ 1 晚\",\"note\":\"豪斯登堡園區飯店\"},{\"name\":\"博多都飯店 Miyako Hotel Hakata\",\"nights\":\"2/2–2/4 ・ 2 晚\",\"note\":\"博多・近 JR 博多站\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"1/27 (六)\",\"theme\":\"✈ 抵達福岡・天神\",\"items\":[{\"time\":\"抵達\",\"text\":\"搭虎航抵達福岡機場,前往天神\"},{\"time\":\"玩\",\"text\":\"天神地下街、天神屋台、福岡塔\"},{\"time\":\"住宿\",\"text\":\"西鐵 Hotel Croom 博多\"}]},{\"day\":2,\"date\":\"1/28 (日)\",\"theme\":\"🦁 大分・動物公園與由布院\",\"items\":[{\"time\":\"玩\",\"text\":\"九州自然動物公園(African Safari)、由布院湯之坪街道\"},{\"time\":\"住宿\",\"text\":\"由布院 Lamp no Yado\"}]},{\"day\":3,\"date\":\"1/29 (一)\",\"theme\":\"♨ 金鱗湖・草千里・黑川溫泉\",\"items\":[{\"time\":\"玩\",\"text\":\"由布院金鱗湖、阿蘇草千里、黑川溫泉\"},{\"time\":\"住宿\",\"text\":\"湯峽之響 優彩\"}]},{\"day\":4,\"date\":\"1/30 (二)\",\"theme\":\"⛩ 宮崎・熊本\",\"items\":[{\"time\":\"玩\",\"text\":\"高千穗峽(划船看真名井瀑布)、熊本城\"},{\"time\":\"住宿\",\"text\":\"KOKO Hotel Premier 熊本\"}]},{\"day\":5,\"date\":\"1/31 (三)\",\"theme\":\"🌃 長崎・稻佐山夜景\",\"items\":[{\"time\":\"玩\",\"text\":\"長崎原爆資料館、和平公園、稻佐山夜景\"},{\"time\":\"住宿\",\"text\":\"Dormy Inn Premium 長崎站前\"}]},{\"day\":6,\"date\":\"2/1 (四)\",\"theme\":\"🎡 長崎・豪斯登堡\",\"items\":[{\"time\":\"玩\",\"text\":\"豪斯登堡(荷蘭風情主題樂園)\"},{\"time\":\"住宿\",\"text\":\"Hotel Nikko 豪斯登堡\"}]},{\"day\":7,\"date\":\"2/2 (五)\",\"theme\":\"⛵ 九十九島・太宰府\",\"items\":[{\"time\":\"玩\",\"text\":\"九十九島遊覽船、太宰府天滿宮\"},{\"time\":\"住宿\",\"text\":\"博多都飯店 Miyako Hotel Hakata\"}]},{\"day\":8,\"date\":\"2/3 (六)\",\"theme\":\"🚂 北九州・門司港\",\"items\":[{\"time\":\"玩\",\"text\":\"門司港懷舊區、九州鐵道紀念館、逛街\"},{\"time\":\"住宿\",\"text\":\"博多都飯店 Miyako Hotel Hakata\"}]},{\"day\":9,\"date\":\"2/4 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"搭虎航從福岡機場返回桃園,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "北九州環島之旅",
+        "subtitle": "福岡・大分・熊本・長崎",
+        "country": "日本",
+        "region": "九州",
+        "year": 2024,
+        "dateLabel": "1/27 – 2/4",
+        "dateStart": "2024-01-27",
+        "dateEnd": "2024-02-04",
+        "nights": 8,
+        "flight": {
+          "airline": "台灣虎航 Tigerair",
+          "out": "1/27 桃園 TPE → 福岡 FUK",
+          "back": "2/4 福岡 FUK → 桃園 TPE",
+          "note": "福岡進出・九州環遊"
+        },
+        "stay": [
+          {
+            "name": "西鐵 Hotel Croom 博多",
+            "nights": "1/27 ・ 1 晚",
+            "note": "博多・近 JR 博多站"
+          },
+          {
+            "name": "由布院 Lamp no Yado",
+            "nights": "1/28 ・ 1 晚",
+            "note": "由布院溫泉旅館"
+          },
+          {
+            "name": "湯峽之響 優彩(黑川/杖立溫泉)",
+            "nights": "1/29 ・ 1 晚",
+            "note": "溫泉露天風呂旅館"
+          },
+          {
+            "name": "KOKO Hotel Premier 熊本",
+            "nights": "1/30 ・ 1 晚",
+            "note": "熊本市區"
+          },
+          {
+            "name": "Dormy Inn Premium 長崎站前",
+            "nights": "1/31 ・ 1 晚",
+            "note": "長崎站前・天然溫泉"
+          },
+          {
+            "name": "Hotel Nikko 豪斯登堡",
+            "nights": "2/1 ・ 1 晚",
+            "note": "豪斯登堡園區飯店"
+          },
+          {
+            "name": "博多都飯店 Miyako Hotel Hakata",
+            "nights": "2/2–2/4 ・ 2 晚",
+            "note": "博多・近 JR 博多站"
+          }
+        ],
+        "pass": {
+          "icon": "🚗",
+          "label": "交通",
+          "name": "九州周遊(JR + 自駕/包車)",
+          "price": "—",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "福岡市區",
+              "地下鐵 + 西鐵",
+              "天神/博多"
+            ],
+            [
+              "由布院/黑川/阿蘇",
+              "自駕或包車一日遊",
+              "山區景點較分散"
+            ],
+            [
+              "長崎/豪斯登堡",
+              "JR 特急 海鷗號/豪斯登堡號",
+              "福岡約 2 小時"
+            ],
+            [
+              "門司港",
+              "JR 鹿兒島本線",
+              "小倉轉乘"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "1/27 (六)",
+            "theme": "✈ 抵達福岡・天神",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "搭虎航抵達福岡機場,前往天神"
+              },
+              {
+                "time": "玩",
+                "text": "天神地下街、天神屋台、福岡塔"
+              },
+              {
+                "time": "住宿",
+                "text": "西鐵 Hotel Croom 博多"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "福岡機場 → 天神 地下鐵約 11 分;入夜中洲/天神屋台吃宵夜"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "1/28 (日)",
+            "theme": "🦁 大分・動物公園與由布院",
+            "items": [
+              {
+                "time": "玩",
+                "text": "九州自然動物公園(African Safari)、由布院湯之坪街道"
+              },
+              {
+                "time": "住宿",
+                "text": "由布院 Lamp no Yado"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "1/29 (一)",
+            "theme": "♨ 金鱗湖・草千里・黑川溫泉",
+            "items": [
+              {
+                "time": "玩",
+                "text": "由布院金鱗湖、阿蘇草千里、黑川溫泉"
+              },
+              {
+                "time": "住宿",
+                "text": "湯峽之響 優彩"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "黑川溫泉『入湯手形』¥1,500 可巡泡 3 間露天湯;冬季有『湯明』點燈"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "1/30 (二)",
+            "theme": "⛩ 宮崎・熊本",
+            "items": [
+              {
+                "time": "玩",
+                "text": "高千穗峽(划船看真名井瀑布)、熊本城"
+              },
+              {
+                "time": "住宿",
+                "text": "KOKO Hotel Premier 熊本"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "高千穗峽划船旺季須提前線上預約"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "1/31 (三)",
+            "theme": "🌃 長崎・稻佐山夜景",
+            "items": [
+              {
+                "time": "玩",
+                "text": "長崎原爆資料館、和平公園、稻佐山夜景"
+              },
+              {
+                "time": "住宿",
+                "text": "Dormy Inn Premium 長崎站前"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "稻佐山夜景日落前後一小時最美,搭纜車或巴士上山"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "2/1 (四)",
+            "theme": "🎡 長崎・豪斯登堡",
+            "items": [
+              {
+                "time": "玩",
+                "text": "豪斯登堡(荷蘭風情主題樂園)"
+              },
+              {
+                "time": "住宿",
+                "text": "Hotel Nikko 豪斯登堡"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "2/2 (五)",
+            "theme": "⛵ 九十九島・太宰府",
+            "items": [
+              {
+                "time": "玩",
+                "text": "九十九島遊覽船、太宰府天滿宮"
+              },
+              {
+                "time": "住宿",
+                "text": "博多都飯店 Miyako Hotel Hakata"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "九十九島搭珍珠皇后號約 50 分;太宰府表參道必吃梅枝餅"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "2/3 (六)",
+            "theme": "🚂 北九州・門司港",
+            "items": [
+              {
+                "time": "玩",
+                "text": "門司港懷舊區、九州鐵道紀念館、逛街"
+              },
+              {
+                "time": "住宿",
+                "text": "博多都飯店 Miyako Hotel Hakata"
+              }
+            ]
+          },
+          {
+            "day": 9,
+            "date": "2/4 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "搭虎航從福岡機場返回桃園,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2 小時抵達福岡機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "天神(地下街・屋台)",
+            "area": "福岡・天神",
+            "day": 1,
+            "latlng": [
+              33.5914,
+              130.399
+            ]
+          },
+          {
+            "name": "福岡塔",
+            "area": "福岡・百道",
+            "day": 1,
+            "latlng": [
+              33.5933,
+              130.3514
+            ]
+          },
+          {
+            "name": "九州自然動物公園(African Safari)",
+            "area": "大分・宇佐",
+            "day": 2,
+            "latlng": [
+              33.4889,
+              131.33
+            ]
+          },
+          {
+            "name": "由布院 湯之坪街道",
+            "area": "大分・由布院",
+            "day": 2,
+            "latlng": [
+              33.2647,
+              131.3608
+            ]
+          },
+          {
+            "name": "金鱗湖",
+            "area": "大分・由布院",
+            "day": 3,
+            "latlng": [
+              33.2636,
+              131.3656
+            ]
+          },
+          {
+            "name": "草千里(阿蘇)",
+            "area": "熊本・阿蘇",
+            "day": 3,
+            "latlng": [
+              32.8847,
+              131.0556
+            ]
+          },
+          {
+            "name": "黑川溫泉",
+            "area": "熊本・南小國",
+            "day": 3,
+            "latlng": [
+              33.0839,
+              131.1419
+            ]
+          },
+          {
+            "name": "高千穗峽",
+            "area": "宮崎・高千穗",
+            "day": 4,
+            "latlng": [
+              32.7156,
+              131.305
+            ]
+          },
+          {
+            "name": "熊本城",
+            "area": "熊本",
+            "day": 4,
+            "latlng": [
+              32.8061,
+              130.7058
+            ]
+          },
+          {
+            "name": "長崎和平公園・原爆資料館",
+            "area": "長崎",
+            "day": 5,
+            "latlng": [
+              32.7728,
+              129.8636
+            ]
+          },
+          {
+            "name": "稻佐山夜景",
+            "area": "長崎",
+            "day": 5,
+            "latlng": [
+              32.76,
+              129.8508
+            ]
+          },
+          {
+            "name": "豪斯登堡",
+            "area": "長崎・佐世保",
+            "day": 6,
+            "latlng": [
+              33.0856,
+              129.7919
+            ]
+          },
+          {
+            "name": "九十九島",
+            "area": "長崎・佐世保",
+            "day": 7,
+            "latlng": [
+              33.17,
+              129.6594
+            ]
+          },
+          {
+            "name": "太宰府天滿宮",
+            "area": "福岡・太宰府",
+            "day": 7,
+            "latlng": [
+              33.5217,
+              130.535
+            ]
+          },
+          {
+            "name": "門司港・九州鐵道紀念館",
+            "area": "北九州・門司港",
+            "day": 8,
+            "latlng": [
+              33.9436,
+              130.9628
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/kyushu-2024-v1.png",
+      "imageSha256": "3b5796e098046ae5993d87ff95190b6243345dbdfd34194c8607d6280f81fa36",
+      "aligned": true
+    },
+    "okinawa-2023": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「沖繩包棟團」, subtitle「2023-11-15 – 2023-11-19・5天4夜」. All 5 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"11/15 桃園 TPE → 那霸 OKA\",\"back\":\"11/19 那霸 OKA → 桃園 TPE\",\"note\":\"那霸進出・OTS 自駕・恩納包棟 10 人\"}\nStays: [{\"name\":\"恩納包棟別墅(Nakadomari)\",\"nights\":\"全程 4 晚\",\"note\":\"恩納村・10 人包棟・可自炊\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"11/15 (三)\",\"theme\":\"✈ 抵達沖繩・那霸南部\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達那霸機場,OTS 取車(豬肉蛋飯糰當早午餐)\"},{\"time\":\"玩\",\"text\":\"瀨長島 Umikaji Terrace、波上宮、SAN-A 浦添西海岸 PARCO CITY\"},{\"time\":\"晚餐\",\"text\":\"燒肉 琉球の牛 恩納店\"},{\"time\":\"住宿\",\"text\":\"恩納包棟別墅\"}]},{\"day\":2,\"date\":\"11/16 (四)\",\"theme\":\"🐠 美麗海・古宇利\",\"items\":[{\"time\":\"玩\",\"text\":\"部瀨名海中公園、古宇利海洋塔、古宇利大橋觀景台、沖繩美麗海水族館、DINO 恐龍 PARK\"},{\"time\":\"午餐\",\"text\":\"古宇利蝦蝦飯\"},{\"time\":\"晚餐\",\"text\":\"百年古家 大家(阿古豬)\"},{\"time\":\"住宿\",\"text\":\"恩納包棟別墅\"}]},{\"day\":3,\"date\":\"11/17 (五)\",\"theme\":\"🕳 玉泉洞・南部購物\",\"items\":[{\"time\":\"玩\",\"text\":\"玉泉洞(沖繩世界文化王國)、ASHIBINAA Outlet\"},{\"time\":\"午餐\",\"text\":\"暖暮拉麵 糸滿店\"},{\"time\":\"晚餐\",\"text\":\"燒肉五苑\"},{\"time\":\"住宿\",\"text\":\"恩納包棟別墅\"}]},{\"day\":4,\"date\":\"11/18 (六)\",\"theme\":\"🛍 那霸市區\",\"items\":[{\"time\":\"玩\",\"text\":\"國際通、第一牧志公設市場、永旺夢樂城 沖繩來客夢\"},{\"time\":\"住宿\",\"text\":\"恩納包棟別墅\"}]},{\"day\":5,\"date\":\"11/19 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"前往那霸機場,搭虎航返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "沖繩包棟團",
+        "subtitle": "那霸・恩納・美麗海・古宇利",
+        "country": "日本",
+        "region": "沖繩",
+        "year": 2023,
+        "dateLabel": "11/15 – 11/19",
+        "dateStart": "2023-11-15",
+        "dateEnd": "2023-11-19",
+        "nights": 4,
+        "flight": {
+          "airline": "台灣虎航 Tigerair",
+          "out": "11/15 桃園 TPE → 那霸 OKA",
+          "back": "11/19 那霸 OKA → 桃園 TPE",
+          "note": "那霸進出・OTS 自駕・恩納包棟 10 人"
+        },
+        "stay": [
+          {
+            "name": "恩納包棟別墅(Nakadomari)",
+            "nights": "全程 4 晚",
+            "note": "恩納村・10 人包棟・可自炊"
+          }
+        ],
+        "pass": {
+          "icon": "🚗",
+          "label": "交通",
+          "name": "OTS 租車自駕",
+          "price": "那霸機場取還車",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "那霸機場 → OTS 豐崎",
+              "接駁取車",
+              "約 10 分"
+            ],
+            [
+              "南部(瀨長島/玉泉洞/ASHIBINAA)",
+              "自駕",
+              "景點集中南部"
+            ],
+            [
+              "北部(美麗海/古宇利/名護)",
+              "自駕",
+              "西海岸 58 號北上"
+            ],
+            [
+              "恩納包棟別墅",
+              "自駕",
+              "據點"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "11/15 (三)",
+            "theme": "✈ 抵達沖繩・那霸南部",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達那霸機場,OTS 取車(豬肉蛋飯糰當早午餐)"
+              },
+              {
+                "time": "玩",
+                "text": "瀨長島 Umikaji Terrace、波上宮、SAN-A 浦添西海岸 PARCO CITY"
+              },
+              {
+                "time": "晚餐",
+                "text": "燒肉 琉球の牛 恩納店"
+              },
+              {
+                "time": "住宿",
+                "text": "恩納包棟別墅"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "那霸機場 OTS 豐崎取車約 10 分;瀨長島看飛機與夕陽"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "11/16 (四)",
+            "theme": "🐠 美麗海・古宇利",
+            "items": [
+              {
+                "time": "玩",
+                "text": "部瀨名海中公園、古宇利海洋塔、古宇利大橋觀景台、沖繩美麗海水族館、DINO 恐龍 PARK"
+              },
+              {
+                "time": "午餐",
+                "text": "古宇利蝦蝦飯"
+              },
+              {
+                "time": "晚餐",
+                "text": "百年古家 大家(阿古豬)"
+              },
+              {
+                "time": "住宿",
+                "text": "恩納包棟別墅"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "美麗海鯨鯊餵食秀 15:00/17:00;古宇利蝦蝦飯、大家阿古豬建議預約"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "11/17 (五)",
+            "theme": "🕳 玉泉洞・南部購物",
+            "items": [
+              {
+                "time": "玩",
+                "text": "玉泉洞(沖繩世界文化王國)、ASHIBINAA Outlet"
+              },
+              {
+                "time": "午餐",
+                "text": "暖暮拉麵 糸滿店"
+              },
+              {
+                "time": "晚餐",
+                "text": "燒肉五苑"
+              },
+              {
+                "time": "住宿",
+                "text": "恩納包棟別墅"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "玉泉洞步行約 30–40 分;暖暮糸滿店、燒肉五苑有停車場"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "11/18 (六)",
+            "theme": "🛍 那霸市區",
+            "items": [
+              {
+                "time": "玩",
+                "text": "國際通、第一牧志公設市場、永旺夢樂城 沖繩來客夢"
+              },
+              {
+                "time": "住宿",
+                "text": "恩納包棟別墅"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "11/19 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "前往那霸機場,搭虎航返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2 小時抵達那霸機場(含 OTS 還車時間)"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "瀨長島 Umikaji Terrace",
+            "area": "豐見城・瀨長島",
+            "day": 1,
+            "latlng": [
+              26.1736,
+              127.6486
+            ]
+          },
+          {
+            "name": "波上宮",
+            "area": "那霸",
+            "day": 1,
+            "latlng": [
+              26.2178,
+              127.6678
+            ]
+          },
+          {
+            "name": "部瀨名海中公園",
+            "area": "名護・部瀨名",
+            "day": 2,
+            "latlng": [
+              26.5363,
+              127.9648
+            ]
+          },
+          {
+            "name": "古宇利海洋塔",
+            "area": "今歸仁・古宇利",
+            "day": 2,
+            "latlng": [
+              26.7019,
+              128.0186
+            ]
+          },
+          {
+            "name": "古宇利大橋",
+            "area": "今歸仁・古宇利",
+            "day": 2,
+            "latlng": [
+              26.6917,
+              128.0247
+            ]
+          },
+          {
+            "name": "沖繩美麗海水族館",
+            "area": "本部",
+            "day": 2,
+            "latlng": [
+              26.6943,
+              127.8779
+            ]
+          },
+          {
+            "name": "DINO 恐龍 PARK 山原亞熱帶之森",
+            "area": "名護",
+            "day": 2,
+            "latlng": [
+              26.5917,
+              127.9772
+            ]
+          },
+          {
+            "name": "玉泉洞(沖繩世界文化王國)",
+            "area": "南城",
+            "day": 3,
+            "latlng": [
+              26.1419,
+              127.7475
+            ]
+          },
+          {
+            "name": "國際通",
+            "area": "那霸",
+            "day": 4,
+            "latlng": [
+              26.2146,
+              127.6857
+            ]
+          },
+          {
+            "name": "第一牧志公設市場",
+            "area": "那霸",
+            "day": 4,
+            "latlng": [
+              26.2156,
+              127.6883
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/okinawa-2023-v1.png",
+      "imageSha256": "1c7d1489f16d98064a2c86c438651ea3b9c5c89494db8a35e500feaabfdf468e",
+      "aligned": true
+    },
+    "hokkaido-2024": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「北海道夏季之旅」, subtitle「2024-06-02 – 2024-06-09・8天7夜」. All 8 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"6/2 桃園 TPE → 新千歲 CTS\",\"back\":\"6/9 新千歲 CTS → 桃園 TPE\",\"note\":\"新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)\"}\nStays: [{\"name\":\"星野度假村 TOMAMU\",\"nights\":\"6/2–6/4 ・ 2 晚\",\"note\":\"占冠・雲海平台滑雪度假村\"},{\"name\":\"OMO7 旭川 by 星野集團\",\"nights\":\"6/4 ・ 1 晚\",\"note\":\"旭川市區\"},{\"name\":\"OMO5 小樽 by 星野集團\",\"nights\":\"6/5 ・ 1 晚\",\"note\":\"小樽運河旁\"},{\"name\":\"京急 EX Hotel 札幌\",\"nights\":\"6/6–6/9 ・ 3 晚\",\"note\":\"札幌市區\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"6/2 (日)\",\"theme\":\"✈ 抵達北海道・TOMAMU\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達新千歲機場,前往星野 TOMAMU(約 1.5 小時)\"},{\"time\":\"住宿\",\"text\":\"星野度假村 TOMAMU\"}]},{\"day\":2,\"date\":\"6/3 (一)\",\"theme\":\"☁ TOMAMU 度假村\",\"items\":[{\"time\":\"玩\",\"text\":\"星野 TOMAMU:雲海平台、微笑海灘、牧場、水之教堂\"},{\"time\":\"住宿\",\"text\":\"星野度假村 TOMAMU\"}]},{\"day\":3,\"date\":\"6/4 (二)\",\"theme\":\"💜 富良野・美瑛・旭川\",\"items\":[{\"time\":\"午餐\",\"text\":\"唯我獨尊(富良野咖哩蛋包飯)\"},{\"time\":\"玩\",\"text\":\"富田農場、四季彩之丘、白金青池\"},{\"time\":\"晚餐\",\"text\":\"成吉思汗大黑屋(烤羊肉)\"},{\"time\":\"住宿\",\"text\":\"OMO7 旭川 by 星野集團\"}]},{\"day\":4,\"date\":\"6/5 (三)\",\"theme\":\"🐧 旭山動物園・小樽\",\"items\":[{\"time\":\"玩\",\"text\":\"旭山動物園\"},{\"time\":\"午餐\",\"text\":\"旭川拉麵村\"},{\"time\":\"玩\",\"text\":\"前往小樽:天狗山、小樽車站\"},{\"time\":\"住宿\",\"text\":\"OMO5 小樽 by 星野集團\"}]},{\"day\":5,\"date\":\"6/6 (四)\",\"theme\":\"⚓ 小樽運河・札幌\",\"items\":[{\"time\":\"玩\",\"text\":\"小樽運河、出拔小路\"},{\"time\":\"晚餐\",\"text\":\"札幌螃蟹家總店、海鮮料理\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":6,\"date\":\"6/7 (五)\",\"theme\":\"🍛 札幌市區\",\"items\":[{\"time\":\"玩\",\"text\":\"二條市場、北海道神宮、藻岩山展望台\"},{\"time\":\"晚餐\",\"text\":\"湯咖哩 GARAKU\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":7,\"date\":\"6/8 (六)\",\"theme\":\"🍫 大通・白色戀人\",\"items\":[{\"time\":\"玩\",\"text\":\"大通公園、白色戀人公園、狸小路商店街\"},{\"time\":\"午餐\",\"text\":\"迴轉壽司 根室花丸(JR Tower)\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":8,\"date\":\"6/9 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"前往新千歲機場,搭星宇返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n\n核對後修正：原資料航班摘要虎航、D8文字星宇互相矛盾，圖上改為不標航空公司，寫「桃園 ↔ 新千歲」及「前往新千歲機場，返回台灣」。飛機不加品牌。旭山動物園企鵝圖改為夏季岩石水池環境，不畫雪地散步；六月初富良野花田以綠色為主、少量初花。標題移除深色漸層，保留其餘安排。\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "北海道夏季之旅",
+        "subtitle": "TOMAMU・富良野・小樽・札幌",
+        "country": "日本",
+        "region": "北海道",
+        "year": 2024,
+        "dateLabel": "6/2 – 6/9",
+        "dateStart": "2024-06-02",
+        "dateEnd": "2024-06-09",
+        "nights": 7,
+        "flight": {
+          "airline": "台灣虎航 Tigerair",
+          "out": "6/2 桃園 TPE → 新千歲 CTS",
+          "back": "6/9 新千歲 CTS → 桃園 TPE",
+          "note": "新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)"
+        },
+        "stay": [
+          {
+            "name": "星野度假村 TOMAMU",
+            "nights": "6/2–6/4 ・ 2 晚",
+            "note": "占冠・雲海平台滑雪度假村"
+          },
+          {
+            "name": "OMO7 旭川 by 星野集團",
+            "nights": "6/4 ・ 1 晚",
+            "note": "旭川市區"
+          },
+          {
+            "name": "OMO5 小樽 by 星野集團",
+            "nights": "6/5 ・ 1 晚",
+            "note": "小樽運河旁"
+          },
+          {
+            "name": "京急 EX Hotel 札幌",
+            "nights": "6/6–6/9 ・ 3 晚",
+            "note": "札幌市區"
+          }
+        ],
+        "pass": {
+          "icon": "🚗",
+          "label": "交通",
+          "name": "北海道自駕 / JR",
+          "price": "—",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "新千歲 → TOMAMU",
+              "自駕 / JR 特急",
+              "約 1.5 小時"
+            ],
+            [
+              "富良野・美瑛",
+              "自駕",
+              "花田景點分散"
+            ],
+            [
+              "旭川 → 小樽 → 札幌",
+              "自駕 / JR",
+              "道央移動"
+            ],
+            [
+              "札幌市區",
+              "地下鐵 + 市電",
+              "大通/狸小路"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "6/2 (日)",
+            "theme": "✈ 抵達北海道・TOMAMU",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達新千歲機場,前往星野 TOMAMU(約 1.5 小時)"
+              },
+              {
+                "time": "住宿",
+                "text": "星野度假村 TOMAMU"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "新千歲 → TOMAMU 自駕/JR 特急約 1.5 小時"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "6/3 (一)",
+            "theme": "☁ TOMAMU 度假村",
+            "items": [
+              {
+                "time": "玩",
+                "text": "星野 TOMAMU:雲海平台、微笑海灘、牧場、水之教堂"
+              },
+              {
+                "time": "住宿",
+                "text": "星野度假村 TOMAMU"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "雲海平台清晨限定,山上氣溫低需保暖;天候影響雲海出現率"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "6/4 (二)",
+            "theme": "💜 富良野・美瑛・旭川",
+            "items": [
+              {
+                "time": "午餐",
+                "text": "唯我獨尊(富良野咖哩蛋包飯)"
+              },
+              {
+                "time": "玩",
+                "text": "富田農場、四季彩之丘、白金青池"
+              },
+              {
+                "time": "晚餐",
+                "text": "成吉思汗大黑屋(烤羊肉)"
+              },
+              {
+                "time": "住宿",
+                "text": "OMO7 旭川 by 星野集團"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "富良野/美瑛花田景點分散,自駕較順;富良野薰衣草約 6 月下旬–8 月上旬滿開"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "6/5 (三)",
+            "theme": "🐧 旭山動物園・小樽",
+            "items": [
+              {
+                "time": "玩",
+                "text": "旭山動物園"
+              },
+              {
+                "time": "午餐",
+                "text": "旭川拉麵村"
+              },
+              {
+                "time": "玩",
+                "text": "前往小樽:天狗山、小樽車站"
+              },
+              {
+                "time": "住宿",
+                "text": "OMO5 小樽 by 星野集團"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "6/6 (四)",
+            "theme": "⚓ 小樽運河・札幌",
+            "items": [
+              {
+                "time": "玩",
+                "text": "小樽運河、出拔小路"
+              },
+              {
+                "time": "晚餐",
+                "text": "札幌螃蟹家總店、海鮮料理"
+              },
+              {
+                "time": "住宿",
+                "text": "京急 EX Hotel 札幌"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "6/7 (五)",
+            "theme": "🍛 札幌市區",
+            "items": [
+              {
+                "time": "玩",
+                "text": "二條市場、北海道神宮、藻岩山展望台"
+              },
+              {
+                "time": "晚餐",
+                "text": "湯咖哩 GARAKU"
+              },
+              {
+                "time": "住宿",
+                "text": "京急 EX Hotel 札幌"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "二條市場海鮮丼早上最新鮮;藻岩山為日本新三大夜景"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "6/8 (六)",
+            "theme": "🍫 大通・白色戀人",
+            "items": [
+              {
+                "time": "玩",
+                "text": "大通公園、白色戀人公園、狸小路商店街"
+              },
+              {
+                "time": "午餐",
+                "text": "迴轉壽司 根室花丸(JR Tower)"
+              },
+              {
+                "time": "住宿",
+                "text": "京急 EX Hotel 札幌"
+              }
+            ]
+          },
+          {
+            "day": 8,
+            "date": "6/9 (日)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "前往新千歲機場,搭星宇返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2 小時抵達新千歲機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "星野 TOMAMU 雲海平台",
+            "area": "占冠・TOMAMU",
+            "day": 1,
+            "latlng": [
+              43.0658,
+              142.6275
+            ]
+          },
+          {
+            "name": "富田農場",
+            "area": "富良野・中富良野",
+            "day": 3,
+            "latlng": [
+              43.4218,
+              142.4097
+            ]
+          },
+          {
+            "name": "四季彩之丘",
+            "area": "美瑛",
+            "day": 3,
+            "latlng": [
+              43.5775,
+              142.4569
+            ]
+          },
+          {
+            "name": "白金青池",
+            "area": "美瑛",
+            "day": 3,
+            "latlng": [
+              43.4925,
+              142.6411
+            ]
+          },
+          {
+            "name": "旭山動物園",
+            "area": "旭川",
+            "day": 4,
+            "latlng": [
+              43.7681,
+              142.4806
+            ]
+          },
+          {
+            "name": "天狗山",
+            "area": "小樽",
+            "day": 4,
+            "latlng": [
+              43.1869,
+              140.9869
+            ]
+          },
+          {
+            "name": "小樽運河",
+            "area": "小樽",
+            "day": 5,
+            "latlng": [
+              43.199,
+              140.9947
+            ]
+          },
+          {
+            "name": "二條市場",
+            "area": "札幌",
+            "day": 6,
+            "latlng": [
+              43.06,
+              141.3556
+            ]
+          },
+          {
+            "name": "北海道神宮",
+            "area": "札幌",
+            "day": 6,
+            "latlng": [
+              43.0539,
+              141.3072
+            ]
+          },
+          {
+            "name": "藻岩山展望台",
+            "area": "札幌",
+            "day": 6,
+            "latlng": [
+              43.0289,
+              141.3258
+            ]
+          },
+          {
+            "name": "大通公園",
+            "area": "札幌",
+            "day": 7,
+            "latlng": [
+              43.0608,
+              141.3469
+            ]
+          },
+          {
+            "name": "白色戀人公園",
+            "area": "札幌",
+            "day": 7,
+            "latlng": [
+              43.0908,
+              141.2778
+            ]
+          },
+          {
+            "name": "狸小路商店街",
+            "area": "札幌",
+            "day": 7,
+            "latlng": [
+              43.0567,
+              141.3536
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/hokkaido-2024-v1.png",
+      "imageSha256": "ce2fa952d314e58874d7a43130809113af5753ca03697370b738c6af3fd4b381",
+      "aligned": true
+    },
+    "keihanshin-2023": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「京阪神之旅」, subtitle「2023-02-16 – 2023-02-21・6天5夜」. All 6 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"2/16 桃園 TPE → 大阪 KIX\",\"back\":\"2/21 大阪 KIX → 桃園 TPE\",\"note\":\"關西機場進出・大阪 Vischio 為據點\"}\nStays: [{\"name\":\"大阪 Vischio 飯店 by GRANVIA(比偲奇格蘭比亞)\",\"nights\":\"全程 5 晚\",\"note\":\"大阪市區・JR 難波/新今宮一帶\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"2/16 (四)\",\"theme\":\"✈ 抵達大阪・心斎橋道頓堀\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達關西機場,前往大阪市區入住\"},{\"time\":\"逛\",\"text\":\"心斎橋、道頓堀(固力果跑跑人、章魚燒)\"},{\"time\":\"晚餐\",\"text\":\"燒肉力丸 難波道頓堀店\"},{\"time\":\"住宿\",\"text\":\"大阪 Vischio 飯店 by GRANVIA\"}]},{\"day\":2,\"date\":\"2/17 (五)\",\"theme\":\"🎢 日本環球影城\",\"items\":[{\"time\":\"玩\",\"text\":\"日本環球影城 USJ(超級任天堂世界、哈利波特)\"},{\"time\":\"住宿\",\"text\":\"大阪 Vischio 飯店 by GRANVIA\"}]},{\"day\":3,\"date\":\"2/18 (六)\",\"theme\":\"⛩ 京都・清水寺和服\",\"items\":[{\"time\":\"玩\",\"text\":\"京都車站(空中徑路/京都塔)、清水寺、二三年坂、和服體驗\"},{\"time\":\"住宿\",\"text\":\"大阪 Vischio 飯店 by GRANVIA\"}]},{\"day\":4,\"date\":\"2/19 (日)\",\"theme\":\"🎋 嵐山\",\"items\":[{\"time\":\"玩\",\"text\":\"嵐山:竹林小徑、渡月橋、天龍寺、嵐山小火車\"},{\"time\":\"住宿\",\"text\":\"大阪 Vischio 飯店 by GRANVIA\"}]},{\"day\":5,\"date\":\"2/20 (一)\",\"theme\":\"🥩 黑門市場・神戶\",\"items\":[{\"time\":\"玩\",\"text\":\"黑門市場(海鮮、河豚)\"},{\"time\":\"玩\",\"text\":\"神戶三宮、北野異人館/港區\"},{\"time\":\"晚餐\",\"text\":\"神戶牛鐵板燒(三宮)\"},{\"time\":\"住宿\",\"text\":\"大阪 Vischio 飯店 by GRANVIA\"}]},{\"day\":6,\"date\":\"2/21 (二)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"前往關西機場,搭虎航返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "京阪神之旅",
+        "subtitle": "大阪・京都・神戶・環球影城",
+        "country": "日本",
+        "region": "京阪神",
+        "year": 2023,
+        "dateLabel": "2/16 – 2/21",
+        "dateStart": "2023-02-16",
+        "dateEnd": "2023-02-21",
+        "nights": 5,
+        "flight": {
+          "airline": "台灣虎航 Tigerair",
+          "out": "2/16 桃園 TPE → 大阪 KIX",
+          "back": "2/21 大阪 KIX → 桃園 TPE",
+          "note": "關西機場進出・大阪 Vischio 為據點"
+        },
+        "stay": [
+          {
+            "name": "大阪 Vischio 飯店 by GRANVIA(比偲奇格蘭比亞)",
+            "nights": "全程 5 晚",
+            "note": "大阪市區・JR 難波/新今宮一帶"
+          }
+        ],
+        "pass": {
+          "icon": "🚇",
+          "label": "交通",
+          "name": "JR + 大阪地下鐵 + 阪急/阪神",
+          "price": "建議 ICOCA",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "關西機場 → 大阪市區",
+              "JR 關空快速 / ラピート",
+              "約 50 分"
+            ],
+            [
+              "大阪 ↔ 京都",
+              "JR 京都線 / 阪急",
+              "約 30–45 分"
+            ],
+            [
+              "京都 ↔ 嵐山",
+              "JR 嵯峨野線 / 嵐電",
+              "約 15–20 分"
+            ],
+            [
+              "大阪 ↔ 神戶三宮",
+              "JR / 阪神 / 阪急",
+              "約 30 分"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "2/16 (四)",
+            "theme": "✈ 抵達大阪・心斎橋道頓堀",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達關西機場,前往大阪市區入住"
+              },
+              {
+                "time": "逛",
+                "text": "心斎橋、道頓堀(固力果跑跑人、章魚燒)"
+              },
+              {
+                "time": "晚餐",
+                "text": "燒肉力丸 難波道頓堀店"
+              },
+              {
+                "time": "住宿",
+                "text": "大阪 Vischio 飯店 by GRANVIA"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "關西機場 → 大阪市區 JR 關空快速約 50 分"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "2/17 (五)",
+            "theme": "🎢 日本環球影城",
+            "items": [
+              {
+                "time": "玩",
+                "text": "日本環球影城 USJ(超級任天堂世界、哈利波特)"
+              },
+              {
+                "time": "住宿",
+                "text": "大阪 Vischio 飯店 by GRANVIA"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "USJ 超級任天堂世界需整理券或快速通關;善用 App 看排隊時間"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "2/18 (六)",
+            "theme": "⛩ 京都・清水寺和服",
+            "items": [
+              {
+                "time": "玩",
+                "text": "京都車站(空中徑路/京都塔)、清水寺、二三年坂、和服體驗"
+              },
+              {
+                "time": "住宿",
+                "text": "大阪 Vischio 飯店 by GRANVIA"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "清水寺和服建議線上預約、挑早場;京都車站空中徑路免費看夜景"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "2/19 (日)",
+            "theme": "🎋 嵐山",
+            "items": [
+              {
+                "time": "玩",
+                "text": "嵐山:竹林小徑、渡月橋、天龍寺、嵐山小火車"
+              },
+              {
+                "time": "住宿",
+                "text": "大阪 Vischio 飯店 by GRANVIA"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "2/20 (一)",
+            "theme": "🥩 黑門市場・神戶",
+            "items": [
+              {
+                "time": "玩",
+                "text": "黑門市場(海鮮、河豚)"
+              },
+              {
+                "time": "玩",
+                "text": "神戶三宮、北野異人館/港區"
+              },
+              {
+                "time": "晚餐",
+                "text": "神戶牛鐵板燒(三宮)"
+              },
+              {
+                "time": "住宿",
+                "text": "大阪 Vischio 飯店 by GRANVIA"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "黑門市場早上最熱鬧;大阪 ↔ 神戶三宮 JR 約 30 分,神戶牛建議訂位"
+              }
+            ]
+          },
+          {
+            "day": 6,
+            "date": "2/21 (二)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "上午",
+                "text": "前往關西機場,搭虎航返回台灣,滿載而歸!"
+              }
+            ],
+            "tips": [
+              {
+                "type": "warn",
+                "title": "提醒",
+                "text": "建議提前 2.5–3 小時抵達關西機場"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "心斎橋・道頓堀",
+            "area": "道頓堀",
+            "day": 1,
+            "latlng": [
+              34.6687,
+              135.5013
+            ]
+          },
+          {
+            "name": "日本環球影城 USJ",
+            "area": "此花・USJ",
+            "day": 2,
+            "latlng": [
+              34.6654,
+              135.4323
+            ]
+          },
+          {
+            "name": "京都車站",
+            "area": "京都",
+            "day": 3,
+            "latlng": [
+              34.9858,
+              135.7588
+            ]
+          },
+          {
+            "name": "清水寺",
+            "area": "京都",
+            "day": 3,
+            "latlng": [
+              34.9949,
+              135.785
+            ]
+          },
+          {
+            "name": "嵐山",
+            "area": "京都・嵐山",
+            "day": 4,
+            "latlng": [
+              35.0094,
+              135.6737
+            ]
+          },
+          {
+            "name": "黑門市場",
+            "area": "大阪・日本橋",
+            "day": 5,
+            "latlng": [
+              34.6657,
+              135.5061
+            ]
+          },
+          {
+            "name": "神戶三宮",
+            "area": "神戶",
+            "day": 5,
+            "latlng": [
+              34.6938,
+              135.1956
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/keihanshin-2023-v1.png",
+      "imageSha256": "e5404c3ac8d02857fa0ecf8e6de27132556b6def1a53528df8bd83ee293761dc",
+      "aligned": true
+    },
+    "tokyo-2022": {
+      "version": "v1",
+      "updatedAt": "2026-09-22",
+      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「東京親子團」, subtitle「2022-12-23 – 2022-12-27・5天4夜」. All 5 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 2-column or 3-column balanced grid of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"12/23 桃園 TPE → 東京\",\"back\":\"12/27 東京 → 桃園 TPE\",\"note\":\"淺草進出・Richmond 淺草為據點\"}\nStays: [{\"name\":\"Richmond Hotel Premier 淺草 International\",\"nights\":\"全程 4 晚\",\"note\":\"淺草・近雷門/晴空塔\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"12/23 (五)\",\"theme\":\"🏮 抵達東京・淺草晴空塔\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達東京,前往淺草 Richmond 入住\"},{\"time\":\"玩\",\"text\":\"淺草雷門・淺草寺、晴空塔、阿卡將(錦糸町・嬰幼兒用品)\"},{\"time\":\"晚餐\",\"text\":\"壽喜燒\"},{\"time\":\"住宿\",\"text\":\"Richmond Hotel Premier 淺草 International\"}]},{\"day\":2,\"date\":\"12/24 (六)\",\"theme\":\"🏰 東京迪士尼樂園\",\"items\":[{\"time\":\"玩\",\"text\":\"東京迪士尼樂園 Disneyland(聖誕季)\"},{\"time\":\"宵夜\",\"text\":\"居酒屋串燒\"},{\"time\":\"住宿\",\"text\":\"Richmond Hotel Premier 淺草 International\"}]},{\"day\":3,\"date\":\"12/25 (日)\",\"theme\":\"🌃 新宿・六本木\",\"items\":[{\"time\":\"玩\",\"text\":\"新宿(都廳展望台/歌舞伎町)、六本木之丘 Tokyo City View 夜景\"},{\"time\":\"午餐\",\"text\":\"六歌仙 燒肉(新宿)\"},{\"time\":\"晚餐\",\"text\":\"AFURI 阿夫利拉麵\"},{\"time\":\"住宿\",\"text\":\"Richmond Hotel Premier 淺草 International\"}]},{\"day\":4,\"date\":\"12/26 (一)\",\"theme\":\"🛍 輕井澤一日遊\",\"items\":[{\"time\":\"玩\",\"text\":\"輕井澤:王子購物廣場 Outlet、雲場池/舊輕井澤銀座通\"},{\"time\":\"晚餐\",\"text\":\"晚餐未定\"},{\"time\":\"住宿\",\"text\":\"Richmond Hotel Premier 淺草 International\"}]},{\"day\":5,\"date\":\"12/27 (二)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"早餐\",\"text\":\"飯店早餐\"},{\"time\":\"玩\",\"text\":\"淺草附近隨意逛逛\"},{\"time\":\"上午\",\"text\":\"前往機場,搭虎航返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n\n改以精簡版行程重新生成：東京親子團；2022/12/23–12/27・5天4夜。暖白水彩旅遊手帳，橫式1536x1024，五天卡片與東京／舞濱／輕井澤示意路線。\nD1 12/23（五）：抵達東京；淺草雷門、淺草寺、晴空塔、阿卡將（錦糸町）；晚餐壽喜燒。\nD2 12/24（六）：東京迪士尼樂園 Disneyland；宵夜居酒屋串燒。\nD3 12/25（日）：新宿、六本木之丘 Tokyo City View；午餐六歌仙燒肉；晚餐 AFURI 阿夫利拉麵。\nD4 12/26（一）：輕井澤一日遊；王子購物廣場 Outlet；雲場池／舊輕井澤銀座通；晚餐未定。\nD5 12/27（二）：飯店早餐；淺草附近散步；前往機場，搭虎航返回台灣。\n全程4晚：Richmond Hotel Premier 淺草 International。插畫為雷門、晴空塔、城堡、東京夜景、冬季輕井澤森林與列車。冬季氣氛、清楚大字。不得加入未列出的景點餐廳。\n",
+      "baselineRecordedAt": "2026-09-22",
+      "baselineSnapshot": {
+        "title": "東京親子團",
+        "subtitle": "淺草・迪士尼・新宿・輕井澤",
+        "country": "日本",
+        "region": "東京",
+        "year": 2022,
+        "dateLabel": "12/23 – 12/27",
+        "dateStart": "2022-12-23",
+        "dateEnd": "2022-12-27",
+        "nights": 4,
+        "flight": {
+          "airline": "台灣虎航 Tigerair",
+          "out": "12/23 桃園 TPE → 東京",
+          "back": "12/27 東京 → 桃園 TPE",
+          "note": "淺草進出・Richmond 淺草為據點"
+        },
+        "stay": [
+          {
+            "name": "Richmond Hotel Premier 淺草 International",
+            "nights": "全程 4 晚",
+            "note": "淺草・近雷門/晴空塔"
+          }
+        ],
+        "pass": {
+          "icon": "🚇",
+          "label": "交通",
+          "name": "JR + 東京メトロ + 北陸新幹線",
+          "price": "建議 Suica/PASMO",
+          "head": [
+            "路段",
+            "交通",
+            "備註"
+          ],
+          "rows": [
+            [
+              "機場 → 淺草",
+              "Skyliner(成田)/ 京急(羽田)",
+              "約 40–60 分"
+            ],
+            [
+              "市區移動",
+              "JR + 東京メトロ",
+              "淺草/新宿/六本木"
+            ],
+            [
+              "迪士尼",
+              "東武/JR → 舞濱",
+              "舞濱站"
+            ],
+            [
+              "東京 ↔ 輕井澤",
+              "北陸新幹線 あさま",
+              "約 70 分"
+            ]
+          ]
+        },
+        "days": [
+          {
+            "day": 1,
+            "date": "12/23 (五)",
+            "theme": "🏮 抵達東京・淺草晴空塔",
+            "items": [
+              {
+                "time": "抵達",
+                "text": "抵達東京,前往淺草 Richmond 入住"
+              },
+              {
+                "time": "玩",
+                "text": "淺草雷門・淺草寺、晴空塔、阿卡將(錦糸町・嬰幼兒用品)"
+              },
+              {
+                "time": "晚餐",
+                "text": "壽喜燒"
+              },
+              {
+                "time": "住宿",
+                "text": "Richmond Hotel Premier 淺草 International"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "交通時間軸",
+                "text": "成田/羽田 → 淺草約 40–60 分;阿卡將在錦糸町 ARCAKIT 5F"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "date": "12/24 (六)",
+            "theme": "🏰 東京迪士尼樂園",
+            "items": [
+              {
+                "time": "玩",
+                "text": "東京迪士尼樂園 Disneyland(聖誕季)"
+              },
+              {
+                "time": "宵夜",
+                "text": "居酒屋串燒"
+              },
+              {
+                "time": "住宿",
+                "text": "Richmond Hotel Premier 淺草 International"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "date": "12/25 (日)",
+            "theme": "🌃 新宿・六本木",
+            "items": [
+              {
+                "time": "玩",
+                "text": "新宿(都廳展望台/歌舞伎町)、六本木之丘 Tokyo City View 夜景"
+              },
+              {
+                "time": "午餐",
+                "text": "六歌仙 燒肉(新宿)"
+              },
+              {
+                "time": "晚餐",
+                "text": "AFURI 阿夫利拉麵"
+              },
+              {
+                "time": "住宿",
+                "text": "Richmond Hotel Premier 淺草 International"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "六本木 Tokyo City View 看日落後夜景最美;六歌仙建議先訂位"
+              }
+            ]
+          },
+          {
+            "day": 4,
+            "date": "12/26 (一)",
+            "theme": "🛍 輕井澤一日遊",
+            "items": [
+              {
+                "time": "玩",
+                "text": "輕井澤:王子購物廣場 Outlet、雲場池/舊輕井澤銀座通"
+              },
+              {
+                "time": "晚餐",
+                "text": "晚餐未定"
+              },
+              {
+                "time": "住宿",
+                "text": "Richmond Hotel Premier 淺草 International"
+              }
+            ],
+            "tips": [
+              {
+                "type": "info",
+                "title": "提示",
+                "text": "東京 ↔ 輕井澤北陸新幹線約 70 分;12 月輕井澤可能下雪,保暖防滑"
+              }
+            ]
+          },
+          {
+            "day": 5,
+            "date": "12/27 (二)",
+            "theme": "✈ 返回台灣",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "飯店早餐"
+              },
+              {
+                "time": "玩",
+                "text": "淺草附近隨意逛逛"
+              },
+              {
+                "time": "上午",
+                "text": "前往機場,搭虎航返回台灣,滿載而歸!"
+              }
+            ]
+          }
+        ],
+        "spots": [
+          {
+            "name": "淺草雷門・淺草寺",
+            "area": "淺草",
+            "day": 1,
+            "latlng": [
+              35.7148,
+              139.7967
+            ]
+          },
+          {
+            "name": "晴空塔・墨田水族館",
+            "area": "押上・晴空塔",
+            "day": 1,
+            "latlng": [
+              35.7101,
+              139.8107
+            ]
+          },
+          {
+            "name": "阿卡將本舖(錦糸町)",
+            "area": "錦糸町",
+            "day": 1,
+            "latlng": [
+              35.6967,
+              139.8142
+            ]
+          },
+          {
+            "name": "東京迪士尼樂園",
+            "area": "舞濱",
+            "day": 2,
+            "latlng": [
+              35.6329,
+              139.8804
+            ]
+          },
+          {
+            "name": "新宿",
+            "area": "新宿",
+            "day": 3,
+            "latlng": [
+              35.6896,
+              139.7006
+            ]
+          },
+          {
+            "name": "六本木之丘 Tokyo City View",
+            "area": "六本木",
+            "day": 3,
+            "latlng": [
+              35.6605,
+              139.7292
+            ]
+          },
+          {
+            "name": "輕井澤(王子 Outlet・雲場池)",
+            "area": "輕井澤",
+            "day": 4,
+            "latlng": [
+              36.3415,
+              138.6357
+            ]
+          }
+        ]
+      },
+      "imagePath": "img/tokyo-2022-v1.png",
+      "imageSha256": "39ca71128088d5dee6a45669404e258584469a1d7d81a3702a49528acb64daf7",
+      "aligned": true
     }
   },
   "checks": {
