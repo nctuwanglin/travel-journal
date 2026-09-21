@@ -504,7 +504,7 @@
           stat(trips.length,"趟旅程")+stat(countries.length,"個國家")+stat(totDays,"天在路上")+stat(totSpots,"個景點")+
         '</div>'+
         '<div class="footmap" id="foot-map" role="region" aria-label="旅遊足跡地圖"></div>'+
-        '<div class="map-cap">旅遊足跡 ・ 數字 = 同旅遊地區行程數（含規劃中） ・ 點標記看行程並可直接前往</div>'+
+        '<div class="map-cap">旅遊足跡 ・ 數字 = 各地區行程數（含規劃中） ・ 跨區行程各區計一次 ・ 點標記看行程並可直接前往</div>'+
       '</div></header>'+
       '<div class="filter"><div class="wrap">'+
         '<div class="filter-top">'+
@@ -927,15 +927,19 @@
     setTimeout(function(){map.invalidateSize();},120);
   }
 
-  /* 旅遊足跡地圖(hero):依國家與主要旅遊地區合併,每趟只計算一次 */
+  /* 旅遊足跡地圖(hero):跨區行程在各造訪地區分別計一次 */
   function footprintGroups(trips){
-    var aliases={"東京・神奈川":"東京","東北・函館":"東北","京阪神":"關西","關西・山陽":"關西"};
+    var regions={"東京・神奈川":["東京"],"東北・函館":["東北","北海道"],"京阪神":["關西"],"關西・山陽":["關西","中國地方"],"名古屋":["中部"]};
+    // 地區代表點避免跨區行程共用中心點，使兩個標記重疊。
+    var centers={"北海道":[43.1,142.2],"東北":[39.2,140.85],"東京":[35.68,139.76],"關西":[34.85,135.45],"中國地方":[34.5,132.8],"中部":[35.5,137.2],"九州":[32.7,130.7],"沖繩":[26.4,127.85],"四國":[33.85,133.5]};
     var groups=new Map();
     trips.forEach(function(t){
-      var region=t.country==='日本'?(aliases[t.region]||t.region):t.region;
-      var key=JSON.stringify([t.country,region]);
-      if(!groups.has(key))groups.set(key,{region:region,country:t.country,trips:[]});
-      groups.get(key).trips.push(t);
+      var destinations=t.country==='日本'?(regions[t.region]||[t.region]):[t.region];
+      Array.from(new Set(destinations)).forEach(function(region){
+        var key=JSON.stringify([t.country,region]);
+        if(!groups.has(key))groups.set(key,{region:region,country:t.country,trips:[],center:t.country==='日本'?centers[region]:null});
+        groups.get(key).trips.push(t);
+      });
     });
     return Array.from(groups.values());
   }
@@ -947,7 +951,7 @@
     var pts=[];
     footprintGroups(TRIPS).forEach(function(group){
       var list=group.trips.slice().sort(tripSort);
-      var c=[0,1].map(function(axis){return list.reduce(function(sum,t){return sum+t.mapCenter[axis];},0)/list.length;});
+      var c=group.center||[0,1].map(function(axis){return list.reduce(function(sum,t){return sum+t.mapCenter[axis];},0)/list.length;});
       pts.push(c);
       var icon=L.divIcon({className:"fmk",
         html:'<span class="fmk-in">'+list.length+'</span>',
