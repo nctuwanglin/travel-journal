@@ -4384,7 +4384,7 @@ window.TRIPS = [
 
   {
     id: "hokkaido-2024",
-    mapArt: "img/hokkaido-2024-v1.png",
+    mapArt: "img/hokkaido-2024-v2.png",
     title: "北海道夏季之旅",
     subtitle: "TOMAMU・富良野・小樽・札幌",
     country: "日本",
@@ -4497,7 +4497,7 @@ window.TRIPS = [
       {
         day: 8, date: "6/9 (日)", theme: "✈ 返回台灣",
         items: [
-          { time: "上午", text: "前往新千歲機場,搭星宇返回台灣,滿載而歸!" }
+          { time: "上午", text: "前往新千歲機場,搭虎航返回台灣,滿載而歸!" }
         ],
         tips: [
           { type: "warn", title: "提醒", text: "建議提前 2 小時抵達新千歲機場" }

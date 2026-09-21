@@ -5290,9 +5290,9 @@ window.TRIP_MAINTENANCE = {
       "aligned": true
     },
     "hokkaido-2024": {
-      "version": "v1",
+      "version": "v2",
       "updatedAt": "2026-09-22",
-      "prompt": "Use case: infographic-diagram. Create a polished Traditional Chinese watercolor travel itinerary map, landscape 1536x1024 or larger with same proportions. Warm ivory paper, hand-drawn landmark miniatures, restrained pastel accents, crisp legible Traditional Chinese. This is an overview for a travel dashboard, not a navigation map. Title:「北海道夏季之旅」, subtitle「2024-06-02 – 2024-06-09・8天7夜」. All 8 days must each have a clearly numbered DAY panel with exact date, dominant attraction labels and meals/hotel when space permits. Use 3-column grid with enough rows of daily panels and a slim schematic route connecting geographic regions; decorative miniatures never overlap text. Preserve every day's main attractions in correct order; concise text, omit long practical tips, operating hours, prices and estimated travel duration. Do not add attractions, meals, flights or dates not supplied. No stock watermarks, no invented slogans. Landscape must reflect trip season but not promise full flower bloom. Text and source itinerary below; preserve optional choices with 或/自選, not mandatory. Illustrations match named attractions and country. Day numbers unique, no skipped or duplicated days. Lodging may be grouped in bottom strip.\nFlight reference: {\"airline\":\"台灣虎航 Tigerair\",\"out\":\"6/2 桃園 TPE → 新千歲 CTS\",\"back\":\"6/9 新千歲 CTS → 桃園 TPE\",\"note\":\"新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)\"}\nStays: [{\"name\":\"星野度假村 TOMAMU\",\"nights\":\"6/2–6/4 ・ 2 晚\",\"note\":\"占冠・雲海平台滑雪度假村\"},{\"name\":\"OMO7 旭川 by 星野集團\",\"nights\":\"6/4 ・ 1 晚\",\"note\":\"旭川市區\"},{\"name\":\"OMO5 小樽 by 星野集團\",\"nights\":\"6/5 ・ 1 晚\",\"note\":\"小樽運河旁\"},{\"name\":\"京急 EX Hotel 札幌\",\"nights\":\"6/6–6/9 ・ 3 晚\",\"note\":\"札幌市區\"}]\nDaily itinerary: [{\"day\":1,\"date\":\"6/2 (日)\",\"theme\":\"✈ 抵達北海道・TOMAMU\",\"items\":[{\"time\":\"抵達\",\"text\":\"抵達新千歲機場,前往星野 TOMAMU(約 1.5 小時)\"},{\"time\":\"住宿\",\"text\":\"星野度假村 TOMAMU\"}]},{\"day\":2,\"date\":\"6/3 (一)\",\"theme\":\"☁ TOMAMU 度假村\",\"items\":[{\"time\":\"玩\",\"text\":\"星野 TOMAMU:雲海平台、微笑海灘、牧場、水之教堂\"},{\"time\":\"住宿\",\"text\":\"星野度假村 TOMAMU\"}]},{\"day\":3,\"date\":\"6/4 (二)\",\"theme\":\"💜 富良野・美瑛・旭川\",\"items\":[{\"time\":\"午餐\",\"text\":\"唯我獨尊(富良野咖哩蛋包飯)\"},{\"time\":\"玩\",\"text\":\"富田農場、四季彩之丘、白金青池\"},{\"time\":\"晚餐\",\"text\":\"成吉思汗大黑屋(烤羊肉)\"},{\"time\":\"住宿\",\"text\":\"OMO7 旭川 by 星野集團\"}]},{\"day\":4,\"date\":\"6/5 (三)\",\"theme\":\"🐧 旭山動物園・小樽\",\"items\":[{\"time\":\"玩\",\"text\":\"旭山動物園\"},{\"time\":\"午餐\",\"text\":\"旭川拉麵村\"},{\"time\":\"玩\",\"text\":\"前往小樽:天狗山、小樽車站\"},{\"time\":\"住宿\",\"text\":\"OMO5 小樽 by 星野集團\"}]},{\"day\":5,\"date\":\"6/6 (四)\",\"theme\":\"⚓ 小樽運河・札幌\",\"items\":[{\"time\":\"玩\",\"text\":\"小樽運河、出拔小路\"},{\"time\":\"晚餐\",\"text\":\"札幌螃蟹家總店、海鮮料理\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":6,\"date\":\"6/7 (五)\",\"theme\":\"🍛 札幌市區\",\"items\":[{\"time\":\"玩\",\"text\":\"二條市場、北海道神宮、藻岩山展望台\"},{\"time\":\"晚餐\",\"text\":\"湯咖哩 GARAKU\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":7,\"date\":\"6/8 (六)\",\"theme\":\"🍫 大通・白色戀人\",\"items\":[{\"time\":\"玩\",\"text\":\"大通公園、白色戀人公園、狸小路商店街\"},{\"time\":\"午餐\",\"text\":\"迴轉壽司 根室花丸(JR Tower)\"},{\"time\":\"住宿\",\"text\":\"京急 EX Hotel 札幌\"}]},{\"day\":8,\"date\":\"6/9 (日)\",\"theme\":\"✈ 返回台灣\",\"items\":[{\"time\":\"上午\",\"text\":\"前往新千歲機場,搭星宇返回台灣,滿載而歸!\"}]}]\nImportant: This image illustrates the saved historical itinerary; no new travel advice or factual updates. Do not use tips from other trips. Keep all text high-contrast and large.\n\n核對後修正：原資料航班摘要虎航、D8文字星宇互相矛盾，圖上改為不標航空公司，寫「桃園 ↔ 新千歲」及「前往新千歲機場，返回台灣」。飛機不加品牌。旭山動物園企鵝圖改為夏季岩石水池環境，不畫雪地散步；六月初富良野花田以綠色為主、少量初花。標題移除深色漸層，保留其餘安排。\n",
+      "prompt": "以 hokkaido-2024-v1.png 為基底，僅修改兩處文字：頂部航班標題改為「台灣虎航 Tigerair（來回）」；DAY 8 6/9（日）的文字改為「前往新千歲機場，搭虎航返回台灣」。使用者確認來回均為虎航，其餘日期、行程、住宿、插畫、版型維持不變。\n",
       "baselineRecordedAt": "2026-09-22",
       "baselineSnapshot": {
         "title": "北海道夏季之旅",
@@ -5534,7 +5534,7 @@ window.TRIP_MAINTENANCE = {
             "items": [
               {
                 "time": "上午",
-                "text": "前往新千歲機場,搭星宇返回台灣,滿載而歸!"
+                "text": "前往新千歲機場,搭虎航返回台灣,滿載而歸!"
               }
             ],
             "tips": [
@@ -5666,8 +5666,8 @@ window.TRIP_MAINTENANCE = {
           }
         ]
       },
-      "imagePath": "img/hokkaido-2024-v1.png",
-      "imageSha256": "ce2fa952d314e58874d7a43130809113af5753ca03697370b738c6af3fd4b381",
+      "imagePath": "img/hokkaido-2024-v2.png",
+      "imageSha256": "0b9df92884be4ccb90b5d97dafe93e77b431d3c0ff4a168d7d314ed282356c72",
       "aligned": true
     },
     "keihanshin-2023": {
