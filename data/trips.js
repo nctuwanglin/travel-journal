@@ -27,7 +27,7 @@ window.TRIPS = [
     136.9
   ],
   "mapZoom": 10,
-  "mapArt": "img/nagoya-2027-v2.png",
+  "mapArt": "img/nagoya-2027-v3.png",
   "flight": {
     "airline": "星宇航空 STARLUX",
     "out": "3/9 台灣 → 名古屋中部國際機場（13:55 抵達）",
@@ -1539,7 +1539,7 @@ window.TRIPS = [
       ]
     }
   ],
-  "mapArt": "img/hokkaido-2027-v1.png",
+  "mapArt": "img/hokkaido-2027-v2.png",
   "weather": [
     "一月以防風保暖為主：羽絨外套、保暖內層，搭配帽子、圍巾與手套。",
     "穿防滑冬靴，元町坡道、湖畔與結冰路段放慢腳步。",
@@ -1562,7 +1562,7 @@ window.TRIPS = [
     themes: ["新幹線", "祕境峽谷", "親子", "美食"],
     mapCenter: [39.2, 140.85],
     mapZoom: 7,
-    mapArt: "img/tohoku-2026.jpg",
+    mapArt: "img/tohoku-2026-v1.png",
 
     flight: {
       airline: "星宇航空 STARLUX",
@@ -1763,7 +1763,7 @@ window.TRIPS = [
 
   {
     id: "okinawa-2026",
-    mapArt: "img/okinawa-2026-v1.png",
+    mapArt: "img/okinawa-2026-v2.png",
     title: "沖繩包棟之旅",
     subtitle: "那霸・恩納・本部 ・ 西海岸自駕",
     country: "日本",
@@ -1959,7 +1959,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2026",
-    mapArt: "img/tokyo-2026-v1.png",
+    mapArt: "img/tokyo-2026-v2.png",
     title: "東京・輕井澤之旅",
     subtitle: "東京迪士尼・輕井澤・賞櫻",
     country: "日本",
@@ -2199,7 +2199,7 @@ window.TRIPS = [
       133.5
     ],
     "mapZoom": 8,
-    "mapArt": "img/shikoku-2026-v3.png",
+    "mapArt": "img/shikoku-2026-v4.png",
     "flight": {
       "airline": "中華航空 China Airlines",
       "out": "10/9 桃園 TPE → 高松 TAK(10:30 抵達)",
@@ -3031,7 +3031,7 @@ window.TRIPS = [
 
   {
     id: "busan-2026",
-    mapArt: "img/busan-2026-v1.png",
+    mapArt: "img/busan-2026-v2.png",
     title: "釜山冬遊之旅",
     subtitle: "海雲台・廣安里・南浦",
     country: "韓國",
@@ -3233,7 +3233,7 @@ window.TRIPS = [
 
   {
     id: "kansai-sanyo-2025",
-    mapArt: "img/kansai-sanyo-2025-v1.png",
+    mapArt: "img/kansai-sanyo-2025-v2.png",
     title: "關西・山陽鐵道之旅",
     subtitle: "大阪・岡山・廣島・京都",
     country: "日本",
@@ -3507,7 +3507,7 @@ window.TRIPS = [
 
   {
     id: "tohoku-winter-2025",
-    mapArt: "img/tohoku-winter-2025-v1.png",
+    mapArt: "img/tohoku-winter-2025-v2.png",
     title: "東北・函館雪之旅",
     subtitle: "仙台・青森・函館・山形",
     country: "日本",
@@ -3740,7 +3740,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2024",
-    mapArt: "img/tokyo-2024-v1.png",
+    mapArt: "img/tokyo-2024-v2.png",
     title: "東京・橫濱鎌倉之旅",
     subtitle: "上野・迪士尼・橫濱・鎌倉",
     country: "日本",
@@ -3970,7 +3970,7 @@ window.TRIPS = [
 
   {
     id: "kyushu-2024",
-    mapArt: "img/kyushu-2024-v1.png",
+    mapArt: "img/kyushu-2024-v2.png",
     title: "北九州環島之旅",
     subtitle: "福岡・大分・熊本・長崎",
     country: "日本",
@@ -4219,7 +4219,7 @@ window.TRIPS = [
 
   {
     id: "phuquoc-2024",
-    mapArt: "img/phuquoc-2024-v1.png",
+    mapArt: "img/phuquoc-2024-v2.png",
     title: "富國島渡假之旅",
     subtitle: "Phú Quốc・大世界・珍珠樂園",
     country: "越南",
@@ -4384,7 +4384,7 @@ window.TRIPS = [
 
   {
     id: "hokkaido-2024",
-    mapArt: "img/hokkaido-2024-v2.png",
+    mapArt: "img/hokkaido-2024-v3.png",
     title: "北海道夏季之旅",
     subtitle: "TOMAMU・富良野・小樽・札幌",
     country: "日本",
@@ -4615,7 +4615,7 @@ window.TRIPS = [
 
   {
     id: "okinawa-2023",
-    mapArt: "img/okinawa-2023-v1.png",
+    mapArt: "img/okinawa-2023-v2.png",
     title: "沖繩包棟團",
     subtitle: "那霸・恩納・美麗海・古宇利",
     country: "日本",
@@ -4800,7 +4800,7 @@ window.TRIPS = [
 
   {
     id: "tokyo-2022",
-    mapArt: "img/tokyo-2022-v1.png",
+    mapArt: "img/tokyo-2022-v2.png",
     title: "東京親子團",
     subtitle: "淺草・迪士尼・新宿・輕井澤",
     country: "日本",
@@ -4964,7 +4964,7 @@ window.TRIPS = [
 
   {
     id: "keihanshin-2023",
-    mapArt: "img/keihanshin-2023-v1.png",
+    mapArt: "img/keihanshin-2023-v2.png",
     title: "京阪神之旅",
     subtitle: "大阪・京都・神戶・環球影城",
     country: "日本",
@@ -5134,7 +5134,7 @@ window.TRIPS = [
 
   {
     id: "seoul-2018",
-    mapArt: "img/seoul-2018-v1.png",
+    mapArt: "img/seoul-2018-v2.png",
     title: "首爾自由行",
     subtitle: "明洞・弘大・景福宮・南怡島",
     country: "韓國",
@@ -5342,7 +5342,7 @@ window.TRIPS = [
 
   {
     id: "kyushu-2016",
-    mapArt: "img/kyushu-2016-v1.png",
+    mapArt: "img/kyushu-2016-v2.png",
     title: "九州自由行",
     subtitle: "福岡・由布院・熊本・柳川",
     country: "日本",
@@ -5546,7 +5546,7 @@ window.TRIPS = [
   },
   {
     id: "hongkong-2017",
-    mapArt: "img/hongkong-2017-v1.png",
+    mapArt: "img/hongkong-2017-v2.png",
     title: "香港自由行",
     subtitle: "尖沙嘴・中環・大嶼山・赤柱",
     country: "中國",
@@ -5725,7 +5725,7 @@ window.TRIPS = [
   },
   {
     id: "okinawa-2017",
-    mapArt: "img/okinawa-2017-v1.png",
+    mapArt: "img/okinawa-2017-v2.png",
     title: "沖繩自由行",
     subtitle: "古宇利島・美麗海水族館・青之洞窟・首里城",
     country: "日本",
@@ -5939,7 +5939,7 @@ window.TRIPS = [
   },
   {
     id: "kansai-2016",
-    mapArt: "img/kansai-2016-v1.png",
+    mapArt: "img/kansai-2016-v2.png",
     title: "京阪神跨年行",
     subtitle: "大阪・京都・神戶・姬路",
     country: "日本",
@@ -6180,7 +6180,7 @@ window.TRIPS = [
   },
   {
     id: "kansai-2019",
-    mapArt: "img/kansai-2019-v1.png",
+    mapArt: "img/kansai-2019-v2.png",
     title: "關西自由行",
     subtitle: "大阪・京都・奈良",
     country: "日本",
@@ -6399,7 +6399,7 @@ window.TRIPS = [
   },
   {
     id: "hokkaido-2013",
-    mapArt: "img/hokkaido-2013-v1.png",
+    mapArt: "img/hokkaido-2013-v2.png",
     title: "北海道冬遊",
     subtitle: "層雲峽・登別・洞爺湖・函館・小樽・札幌",
     country: "日本",
