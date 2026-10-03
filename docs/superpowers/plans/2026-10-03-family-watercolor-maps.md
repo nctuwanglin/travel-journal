@@ -37,5 +37,13 @@
 - [x] Write batch manifest including prompts, final image paths and review notes.
 - [x] Run `python3 tools/version_assets.py`, `python3 -B validate_trips.py`, Python and Node test suites, and `git diff --check`.
 - [x] Compare trip JSON with HEAD excluding mapArt to prove no itinerary changes.
-- [ ] Commit/push, wait for existing browser/PDF CI and Pages deployment.
-- [ ] Verify live data references and representative actual downloaded PDF pages.
+- [x] Commit/push, wait for existing browser/PDF CI and Pages deployment.
+- [x] Verify live data references and representative actual downloaded PDF pages.
+
+## Completion evidence
+
+- Image/data commit: `6cf5bc8`; GitHub Actions run `37100248709` passed validation and Pages deployment.
+- Local validation: 23 trips, 257 spots, 0 errors/warnings; 30 Python and 22 Node tests passed.
+- Independent integration review found no actionable defects.
+- Live `data/trips.js` and `index.html` match local files byte-for-byte.
+- Nine complete PDF downloads produced by CI; every page visually checked in Shikoku (18 pages), Kansai 2016 (13), and Nagoya (15). New maps are intact and layouts show no clipping.
