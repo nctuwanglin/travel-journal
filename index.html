@@ -406,6 +406,7 @@
   .maintenance-summary{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
 </style>
 <link rel="stylesheet" href="pdf-book.css?v=113055d0b7c5d0f3">
+<link rel="stylesheet" href="achievements.css?v=6be9e2b997ce74ad">
 <link rel="stylesheet" href="travel-mode.css?v=8c2ff7b61fee8783">
 </head>
 <body>
@@ -415,6 +416,9 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.2/dist/html2pdf.bundle.min.js"
         integrity="sha384-aBc0BOllaGWrQx51DYt978St/L7B+21jzNGc4N/jnGD0NxGwj8S/ftRgW0AkXIak" crossorigin="anonymous"></script>
+<script src="data/achievement-catalog.js?v=1eac506d4c7d5f34"></script>
+<script src="data/achievement-visits.js?v=8273c0c285cdec17"></script>
+<script src="achievements.js?v=87f0e201729ecd97"></script>
 <script src="data/trips.js?v=132e059bf943d06c"></script>
 <script src="data/maintenance.js?v=da415aaf51de9859"></script>
 <script src="trip-maintenance.js?v=f8dd4aa463e906b7"></script>
@@ -506,6 +510,7 @@
         '<div class="footmap" id="foot-map" role="region" aria-label="旅遊足跡地圖"></div>'+
         '<div class="map-cap">旅遊足跡 ・ 數字 = 各地區行程數（含規劃中） ・ 跨區行程各區計一次 ・ 點標記看行程並可直接前往</div>'+
       '</div></header>'+
+      window.JapanAchievements.render(TRIPS,window.ACHIEVEMENT_CATALOG,window.ACHIEVEMENT_VISITS)+
       '<div class="filter"><div class="wrap">'+
         '<div class="filter-top">'+
           '<input id="fq" class="fsearch" type="search" aria-label="搜尋行程、景點、美食" placeholder="搜尋行程、景點、美食…" value="'+esc(fQuery)+'">'+
@@ -918,13 +923,13 @@
           if(!sel||String(s.day)===sel){mk.addTo(map);vis.push(s.latlng);}
           else map.removeLayer(mk);
         });
-        if(vis.length>1){try{map.fitBounds(vis,{padding:[40,40]});}catch(e2){}}
-        else if(vis.length===1)map.setView(vis[0],Math.max(t.mapZoom+1,9));
+        if(vis.length>1){try{map.fitBounds(vis,{padding:[40,40],animate:false});}catch(e2){}}
+        else if(vis.length===1)map.setView(vis[0],Math.max(t.mapZoom+1,9),{animate:false});
       });
     }
-    if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40]});}catch(e){}}
+    if(pts.length>1){try{map.fitBounds(pts,{padding:[40,40],animate:false});}catch(e){}}
     addMap(map,"page");
-    setTimeout(function(){map.invalidateSize();},120);
+    setTimeout(function(){if(liveMaps.some(function(e){return e.m===map;}))map.invalidateSize();},120);
   }
 
   /* 旅遊足跡地圖(hero):跨區行程在各造訪地區分別計一次 */
@@ -961,9 +966,9 @@
       }).join("")+'</div>';
       L.marker(c,{icon:icon}).addTo(map).bindPopup(html);
     });
-    if(pts.length>1){try{map.fitBounds(pts,{padding:[36,36]});}catch(e){}}
+    if(pts.length>1){try{map.fitBounds(pts,{padding:[36,36],animate:false});}catch(e){}}
     addMap(map,"page");
-    setTimeout(function(){map.invalidateSize();},120);
+    setTimeout(function(){if(liveMaps.some(function(e){return e.m===map;}))map.invalidateSize();},120);
   }
 
   /* ---------- shared chrome ---------- */

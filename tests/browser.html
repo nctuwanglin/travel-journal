@@ -118,6 +118,34 @@
  tileFixture.innerHTML='<section class="cover">文字行程</section><section class="section"><div class="sec-head">路線地圖</div><div class="detailmap"><img src="data:image/png;base64,broken"></div></section>';
  d.body.appendChild(tileFixture);
  try{const book=await w.TravelBook.buildPages(tileFixture,{title:'Map tile failure'});check(book.pages.length===1,'未輸出的地圖圖磚載入失敗不阻擋 PDF');book.dispose();}finally{tileFixture.remove();}
+ // Japan achievement cards: native disclosure, mobile width, evidence navigation.
+ await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/';});
+ check(d.querySelectorAll('.achievement-card').length===3,'首頁顯示三個日本成就面板');
+ for(const width of [320,390,1200]){
+  frame.style.width=width+'px';
+  await new Promise(r=>w.requestAnimationFrame(()=>w.requestAnimationFrame(r)));
+  for(const summary of d.querySelectorAll('.achievement-details>summary'))summary.click();
+  check(d.documentElement.scrollWidth<=width,'成就清單在 '+width+'px 不溢出');
+  check(d.querySelectorAll('.achievement-prefectures .achievement-item').length===47,'47 都道府縣清單完整');
+  check(d.querySelectorAll('.achievement-castles .achievement-item').length===100,'100 名城清單完整');
+  check(d.querySelectorAll('.achievement-hotels .achievement-item').length===w.ACHIEVEMENT_CATALOG.hotels.length,'星野飯店清單完整');
+  for(const summary of d.querySelectorAll('.achievement-details>summary'))summary.click();
+ }
+ const evidenceLink=d.querySelector('.achievement-evidence a'),destination=evidenceLink.getAttribute('href');
+ d.querySelector('.achievement-details>summary').click();
+ await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});evidenceLink.click();});
+ check(w.location.hash===destination&&!!d.querySelector('.trip'),'成就可前往對應行程');
+ const mapErrors=[];
+ const catchMapError=e=>mapErrors.push(e.message);
+ w.addEventListener('error',catchMapError);
+ try{
+  for(const id of ['hokkaido-2027','tokyo-2022','kansai-2016','nagoya-2027']){
+   await visit(id);
+   await new Promise(r=>w.setTimeout(r,40));
+  }
+  await new Promise(r=>w.setTimeout(r,400));
+  check(mapErrors.length===0,'快速切換行程不更新已銷毀的地圖');
+ }finally{w.removeEventListener('error',catchMapError);}
  document.body.dataset.status='passed';output.textContent='PASS '+checks+' checks\n'+logs.join('\n');
 })().catch(e=>{document.body.dataset.status='failed';document.querySelector('#result').textContent+='\nFAIL '+e.stack;});
 </script>

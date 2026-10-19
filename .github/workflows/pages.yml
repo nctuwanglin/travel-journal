@@ -56,8 +56,8 @@ jobs:
       - name: Prepare public website files
         run: |
           mkdir -p deploy-site/data
-          cp index.html travel-mode.js travel-mode.css trip-maintenance.js pdf-book.js pdf-book.css og-image.png .nojekyll deploy-site/
-          cp data/trips.js data/maintenance.js deploy-site/data/
+          cp achievements.js achievements.css index.html travel-mode.js travel-mode.css trip-maintenance.js pdf-book.js pdf-book.css og-image.png .nojekyll deploy-site/
+          cp data/achievement-catalog.js data/achievement-visits.js data/trips.js data/maintenance.js deploy-site/data/
           cp -R img deploy-site/img
           python3 tools/version_assets.py deploy-site
       - uses: actions/upload-pages-artifact@v3
