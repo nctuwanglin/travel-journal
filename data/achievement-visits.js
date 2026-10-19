@@ -326,10 +326,12 @@ window.ACHIEVEMENT_VISITS = [
         "id": "omo5otaru",
         "kind": "stay",
         "text": "OMO5 小樽 by 星野集團"
+      },
+      {
+        "id": "tomamu-tower",
+        "kind": "stay",
+        "text": "星野度假村 TOMAMU The Tower"
       }
-    ],
-    "uncertain": [
-      "TOMAMU：尚未記錄入住 The Tower 或 RISONARE，暫不計入飯店達成數。"
     ]
   },
   {

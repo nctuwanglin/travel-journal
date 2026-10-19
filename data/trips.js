@@ -1557,7 +1557,7 @@ window.TRIPS = [
     dateStart: "2026-08-21",
     dateEnd: "2026-08-26",
     nights: 5,
-    status: "即將出發",
+    status: "旅遊回憶",
     tagline: "新幹線 E5+E6 連結奇景・田澤湖深藍・角館武家屋敷",
     themes: ["新幹線", "祕境峽谷", "親子", "美食"],
     mapCenter: [39.2, 140.85],
@@ -1773,7 +1773,7 @@ window.TRIPS = [
     dateStart: "2026-06-26",
     dateEnd: "2026-07-01",
     nights: 5,
-    status: "即將出發",
+    status: "旅遊回憶",
     tagline: "JUNGLIA 叢林樂園・青之洞窟浮潛・YotaMika 海景別墅自炊",
     themes: ["自駕", "親子", "主題樂園", "海島"],
     mapCenter: [26.45, 127.85],
@@ -2186,7 +2186,7 @@ window.TRIPS = [
     "dateStart": "2026-10-09",
     "dateEnd": "2026-10-17",
     "nights": 8,
-    "status": "即將出發",
+    "status": "旅遊回憶",
     "tagline": "讚岐烏龍麵・道後溫泉・小豆島天使之路・四國跨縣自駕",
     "themes": [
       "自駕",
@@ -4407,7 +4407,7 @@ window.TRIPS = [
       note: "新千歲進出・道央環遊(TOMAMU/旭川/小樽/札幌)"
     },
     stay: [
-      { name: "星野度假村 TOMAMU", nights: "6/2–6/4 ・ 2 晚", note: "占冠・雲海平台滑雪度假村" },
+      { name: "星野度假村 TOMAMU The Tower", nights: "6/2–6/4 ・ 2 晚", note: "占冠・雲海平台滑雪度假村" },
       { name: "OMO7 旭川 by 星野集團", nights: "6/4 ・ 1 晚", note: "旭川市區" },
       { name: "OMO5 小樽 by 星野集團", nights: "6/5 ・ 1 晚", note: "小樽運河旁" },
       { name: "京急 EX Hotel 札幌", nights: "6/6–6/9 ・ 3 晚", note: "札幌市區" }
@@ -4430,7 +4430,7 @@ window.TRIPS = [
         day: 1, date: "6/2 (日)", theme: "✈ 抵達北海道・TOMAMU",
         items: [
           { time: "抵達", text: "抵達新千歲機場,前往星野 TOMAMU(約 1.5 小時)" },
-          { time: "住宿", text: "星野度假村 TOMAMU" }
+          { time: "住宿", text: "星野度假村 TOMAMU The Tower" }
         ],
         tips: [
           { type: "info", title: "交通時間軸", text: "新千歲 → TOMAMU 自駕/JR 特急約 1.5 小時" }
@@ -4440,7 +4440,7 @@ window.TRIPS = [
         day: 2, date: "6/3 (一)", theme: "☁ TOMAMU 度假村",
         items: [
           { time: "玩", text: "星野 TOMAMU:雲海平台、微笑海灘、牧場、水之教堂" },
-          { time: "住宿", text: "星野度假村 TOMAMU" }
+          { time: "住宿", text: "星野度假村 TOMAMU The Tower" }
         ],
         tips: [
           { type: "warn", title: "提醒", text: "雲海平台清晨限定,山上氣溫低需保暖;天候影響雲海出現率" }

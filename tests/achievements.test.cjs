@@ -50,18 +50,32 @@ test('published dataset has complete unique catalogs and valid itinerary evidenc
  const vm=require('node:vm'),path=require('node:path'),ctx={window:{}};
  for(const f of ['data/trips.js','data/achievement-catalog.js','data/achievement-visits.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,'..',f),'utf8'),ctx);
  const {TRIPS:trips,ACHIEVEMENT_CATALOG:c,ACHIEVEMENT_VISITS:records}=ctx.window;
- assert.equal(c.prefectures.length,47);assert.equal(c.castles.length,100);
+ assert.equal(c.prefectures.length,47);assert.equal(c.castles.length,200);
+ assert.deepEqual(Array.from(c.castles,x=>Number(x.id)).sort((a,b)=>a-b),Array.from({length:200},(_,i)=>i+1));
+ assert.equal(c.castles.filter(x=>x.series==='日本100名城').length,100);
+ assert.equal(c.castles.filter(x=>x.series==='續日本100名城').length,100);
  for(const type of ['prefectures','castles','hotels'])assert.equal(new Set(c[type].map(x=>x.id)).size,c[type].length);
  assert.equal(new Set(records.map(r=>r.tripId)).size,records.length);
  for(const r of records)for(const type of ['prefectures','castles','hotels'])for(const e of r[type])assert.ok(c[type].some(x=>x.id===e.id),r.tripId+' '+e.id);
  const result=api.summarize(trips,c,records,'2026-10-19');
  assert.ok(result.issues.every(x=>!x.reason.includes('資料已變更')&&!x.reason.includes('尚未建立')));
- assert.equal(result.prefectures.completed,20);assert.equal(result.castles.completed,7);assert.equal(result.hotels.completed,6);
+ assert.equal(result.prefectures.completed,27);assert.equal(result.castles.completed,10);assert.equal(result.hotels.completed,9);
  assert.equal(result.castles.items.find(x=>x.id==='53').state,'completed','二條城 from daily itinerary');
  assert.equal(result.prefectures.items.find(x=>x.id==='12').state,'completed','Disneyland is in Chiba');
  assert.equal(result.prefectures.items.find(x=>x.id==='41').state,'unvisited','passing through Saga is not a visit');
- assert.equal(result.hotels.items.find(x=>x.id==='tomamu-tower').state,'unvisited','ambiguous TOMAMU must not select Tower');
+ assert.equal(result.hotels.items.find(x=>x.id==='tomamu-tower').state,'completed','confirmed TOMAMU Tower stay');
  assert.equal(result.hotels.items.find(x=>x.id==='risonaretomamu').state,'unvisited');
- assert.equal(result.hotels.items.find(x=>x.id==='omo7kochi').state,'pending');
+ assert.equal(result.hotels.items.find(x=>x.id==='omo7kochi').state,'completed');
+ assert.equal(result.issues.length,0);
+ assert.equal(result.castles.items.find(x=>x.id==='181').state,'unvisited','Kokura district does not establish a Kokura Castle visit');
  assert.ok(!c.hotels.some(x=>/guam|guguan|bali|asuka/.test(x.id)),'overseas/unopened excluded');
+});
+
+test('completed places are visible outside disclosure while unfinished places stay in full list',()=>{
+ const html=api.render([trip('a')],catalog,[record('a')],'2026-10-19');
+ const visible=html.split('<details')[0];
+ assert.ok(visible.includes('achievement-completed'));
+ assert.ok(visible.includes('千葉縣'));
+ assert.ok(!visible.includes('東京都'));
+ assert.ok(visible.includes('#/trip/a'));
 });

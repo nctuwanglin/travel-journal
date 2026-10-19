@@ -95,7 +95,8 @@
   check(modal.querySelectorAll('.travel-spot').length===trip.spots.filter(s=>s.day===trip.days[last].day).length,trip.id+' 導航僅含當日景點');
   check(modal.querySelector('[data-next]').disabled,trip.id+' 最後一天不超出範圍');
   modal.querySelector('[data-close]').click();
-  await new Promise(r=>w.setTimeout(r,25));
+  // Native dialog close events are asynchronous; wait for actual cleanup, not a fixed 25ms.
+  for(let attempt=0;attempt<100&&d.querySelector('.travel-mode');attempt++)await new Promise(r=>w.setTimeout(r,20));
   check(!d.querySelector('.travel-mode')&&d.body.style.overflow!=='hidden',trip.id+' 關閉後可正常捲動');
  }
  await visit('hokkaido-2027');
@@ -121,13 +122,15 @@
  // Japan achievement cards: native disclosure, mobile width, evidence navigation.
  await new Promise(resolve=>{w.addEventListener('hashchange',resolve,{once:true});w.location.hash='#/';});
  check(d.querySelectorAll('.achievement-card').length===3,'首頁顯示三個日本成就面板');
+ check(d.querySelectorAll('.achievement-completed li').length===46,'27縣、10城、9飯店的已完成項目不需展開即可看到');
+ check([...d.querySelectorAll('.achievement-completed')].every(x=>!x.closest('details')),'已完成清單位於摺疊區之外');
  for(const width of [320,390,1200]){
   frame.style.width=width+'px';
   await new Promise(r=>w.requestAnimationFrame(()=>w.requestAnimationFrame(r)));
   for(const summary of d.querySelectorAll('.achievement-details>summary'))summary.click();
   check(d.documentElement.scrollWidth<=width,'成就清單在 '+width+'px 不溢出');
   check(d.querySelectorAll('.achievement-prefectures .achievement-item').length===47,'47 都道府縣清單完整');
-  check(d.querySelectorAll('.achievement-castles .achievement-item').length===100,'100 名城清單完整');
+  check(d.querySelectorAll('.achievement-castles .achievement-item').length===200,'原版與續百名城 200 城清單完整');
   check(d.querySelectorAll('.achievement-hotels .achievement-item').length===w.ACHIEVEMENT_CATALOG.hotels.length,'星野飯店清單完整');
   for(const summary of d.querySelectorAll('.achievement-details>summary'))summary.click();
  }
