@@ -59,8 +59,8 @@ test('published dataset has complete unique catalogs and valid itinerary evidenc
  for(const r of records)for(const type of ['prefectures','castles','hotels'])for(const e of r[type])assert.ok(c[type].some(x=>x.id===e.id),r.tripId+' '+e.id);
  const result=api.summarize(trips,c,records,'2026-10-19');
  assert.ok(result.issues.every(x=>!x.reason.includes('資料已變更')&&!x.reason.includes('尚未建立')));
- assert.equal(result.prefectures.completed,27);assert.equal(result.castles.completed,10);assert.equal(result.hotels.completed,9);
- assert.equal(result.castles.items.find(x=>x.id==='53').state,'completed','二條城 from daily itinerary');
+ assert.equal(result.prefectures.completed,27);assert.equal(result.castles.completed,9);assert.equal(result.hotels.completed,9);
+ assert.equal(result.castles.items.find(x=>x.id==='53').state,'unvisited','user confirmed Nijō Castle was not visited');
  assert.equal(result.prefectures.items.find(x=>x.id==='12').state,'completed','Disneyland is in Chiba');
  assert.equal(result.prefectures.items.find(x=>x.id==='41').state,'unvisited','passing through Saga is not a visit');
  assert.equal(result.hotels.items.find(x=>x.id==='tomamu-tower').state,'completed','confirmed TOMAMU Tower stay');

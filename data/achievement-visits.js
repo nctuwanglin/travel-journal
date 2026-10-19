@@ -457,11 +457,6 @@ window.ACHIEVEMENT_VISITS = [
     ],
     "castles": [
       {
-        "id": "53",
-        "kind": "day",
-        "text": "二條城・京都御所"
-      },
-      {
         "id": "54",
         "kind": "spot",
         "text": "大阪城・西之丸庭園"
