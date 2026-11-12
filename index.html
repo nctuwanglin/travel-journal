@@ -417,10 +417,10 @@
 <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.2/dist/html2pdf.bundle.min.js"
         integrity="sha384-aBc0BOllaGWrQx51DYt978St/L7B+21jzNGc4N/jnGD0NxGwj8S/ftRgW0AkXIak" crossorigin="anonymous"></script>
 <script src="data/achievement-catalog.js?v=781bf8c33d4434c5"></script>
-<script src="data/achievement-visits.js?v=a68f5d0b887bb593"></script>
+<script src="data/achievement-visits.js?v=67655c3fb8f75c59"></script>
 <script src="achievements.js?v=285e563f28a1bc24"></script>
-<script src="data/trips.js?v=6ccb7a34b94790a8"></script>
-<script src="data/maintenance.js?v=f1e71ed6c7c79951"></script>
+<script src="data/trips.js?v=dc6eb03dae771614"></script>
+<script src="data/maintenance.js?v=55444add2d283ad2"></script>
 <script src="trip-maintenance.js?v=f8dd4aa463e906b7"></script>
 <script src="travel-mode.js?v=e1a7b70783642b50"></script>
 <script src="pdf-book.js?v=4dc843bcb971e6f8"></script>
@@ -934,7 +934,7 @@
 
   /* 旅遊足跡地圖(hero):跨區行程在各造訪地區分別計一次 */
   function footprintGroups(trips){
-    var regions={"東京・神奈川":["東京"],"東北・函館":["東北","北海道"],"京阪神":["關西"],"關西・山陽":["關西","中國地方"],"名古屋":["中部"]};
+    var regions={"九州・中國地方":["九州","中國地方"],"東京・神奈川":["東京"],"東北・函館":["東北","北海道"],"京阪神":["關西"],"關西・山陽":["關西","中國地方"],"名古屋":["中部"]};
     // 地區代表點避免跨區行程共用中心點，使兩個標記重疊。
     var centers={"北海道":[43.1,142.2],"東北":[39.2,140.85],"東京":[35.68,139.76],"關西":[34.85,135.45],"中國地方":[34.5,132.8],"中部":[35.5,137.2],"九州":[32.7,130.7],"沖繩":[26.4,127.85],"四國":[33.85,133.5]};
     var groups=new Map();

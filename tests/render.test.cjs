@@ -68,9 +68,9 @@ test('food recommendation combines notes, ratings and reference in one cell for 
 test('footprints group all regional trips despite different centers and regional aliases',()=>{
  const x=load(),groups=x.groups(x.trips);
  const counts=Object.fromEntries(groups.map(g=>[g.region,g.trips.length]));
- for(const [region,count] of Object.entries({'北海道':4,'沖繩':3,'東京':3,'東北':2,'九州':2,'關西':4,'中國地方':1,'中部':1}))assert.equal(counts[region],count,region);
+ for(const [region,count] of Object.entries({'北海道':4,'沖繩':3,'東京':3,'東北':2,'九州':3,'關西':4,'中國地方':2,'中部':1}))assert.equal(counts[region],count,region);
  const ids=groups.flatMap(g=>g.trips.map(t=>t.id));
- assert.equal(ids.length,x.trips.length+2);
+ assert.equal(ids.length,x.trips.length+3);
  for(const g of groups)assert.equal(new Set(g.trips.map(t=>t.id)).size,g.trips.length);
  assert.equal(new Set(ids).size,x.trips.length);
 });
@@ -86,6 +86,7 @@ test('cross-region trips appear once in each visited region with distinct map ma
  assert.deepEqual(memberships('tohoku-winter-2025'),['北海道','東北'].sort());
  assert.deepEqual(memberships('kansai-sanyo-2025'),['中國地方','關西'].sort());
  assert.deepEqual(memberships('nagoya-2027'),['中部']);
+ assert.deepEqual(memberships('kyushu-chugoku-2027'),['九州','中國地方'].sort());
  const west=x.groups([x.trips.find(t=>t.id==='kansai-sanyo-2025')]);
  assert.notDeepEqual(Array.from(west[0].center),Array.from(west[1].center));
 });

@@ -1,5 +1,39 @@
 // Explicit itinerary evidence; never infer a prefecture from an airport or broad region.
 window.ACHIEVEMENT_VISITS = [
+{
+  "tripId": "kyushu-chugoku-2027",
+  "prefectures": [
+    {
+      "id": "40",
+      "kind": "spot",
+      "text": "小倉城"
+    },
+    {
+      "id": "35",
+      "kind": "spot",
+      "text": "秋芳洞"
+    },
+    {
+      "id": "44",
+      "kind": "spot",
+      "text": "別府地獄溫泉"
+    }
+  ],
+  "castles": [
+    {
+      "id": "181",
+      "kind": "spot",
+      "text": "小倉城"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "risonareshimonoseki",
+      "kind": "stay",
+      "text": "RISONARE 星野下關"
+    }
+  ]
+},
   {
     "tripId": "nagoya-2027",
     "prefectures": [

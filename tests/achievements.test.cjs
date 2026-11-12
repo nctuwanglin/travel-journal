@@ -67,7 +67,8 @@ test('published dataset has complete unique catalogs and valid itinerary evidenc
  assert.equal(result.hotels.items.find(x=>x.id==='risonaretomamu').state,'unvisited');
  assert.equal(result.hotels.items.find(x=>x.id==='omo7kochi').state,'completed');
  assert.equal(result.issues.length,0);
- assert.equal(result.castles.items.find(x=>x.id==='181').state,'unvisited','Kokura district does not establish a Kokura Castle visit');
+ assert.equal(result.hotels.items.find(x=>x.id==='risonareshimonoseki').state,'planned','new 2027 hotel stays do not increase completed achievements');
+ assert.equal(result.castles.items.find(x=>x.id==='181').state,'planned','2027 itinerary explicitly plans Kokura Castle; not yet completed');
  assert.ok(!c.hotels.some(x=>/guam|guguan|bali|asuka/.test(x.id)),'overseas/unopened excluded');
 });
 

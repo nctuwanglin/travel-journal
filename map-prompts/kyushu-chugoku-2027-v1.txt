@@ -1,0 +1,15 @@
+Generate a NEW travel map poster, using the provided image ONLY as approved watercolor style, panel layout, landmark miniatures and family character reference. Replace ALL trip content. Japanese watercolor hand-painted travel map, landscape 1536x1024 or larger, Traditional Chinese readable text. Title「九州・中國地方夏日旅行地圖」, subtitle「2027/7/31–8/8・9天8夜」. Central geographic map with NORTH UP and accurate relative locations: Fukuoka west, Kokura/Mojiko northeast of Fukuoka; Shimonoseki across Kanmon strait north of Mojiko; Akiyoshido farther north inland Yamaguchi; Beppu southeast on Kyushu east coast, African Safari northwest of Beppu. Show sea strait correctly, dashed route Fukuoka→Kokura→Mojiko→Shimonoseki→Akiyoshido→Shimonoseki→African Safari→Beppu→Fukuoka. Detailed landmark miniatures for castle, port, cave, safari animals, steaming ponds, Gundam and aquarium. Label map 行程路線示意. SUMMER greenery, no snow or cherry blossoms. Same family of FIVE once at bottom center: slender dad black round glasses, slender mother, larger girl mustard yellow, little boy blue, baby girl pink held by mom. No printed ages, roles or family count.
+Nine complete day panels, Days1–5 down left, Days6–9 down right; clear type over light paper. Include all following compact text:
+DAY1 7/31(六) 福岡｜20:00 華航抵達福岡；宵夜 ShinShin；住 天神（飯店待定）。
+DAY2 8/1(日) 福岡｜麵包超人博物館、teamLab、福岡巨蛋看球（日期需調整）；午餐 とり田水炊鍋；晚餐 藥院燒肉；住 天神。
+DAY3 8/2(一) 北九州・下關｜租車、小倉城、門司港懷舊區、九州鐵道紀念館；午餐 Princess Phi Phi 燒咖哩；晚餐 RISONARE Buffet；住 RISONARE 星野下關。
+DAY4 8/3(二) 山口｜秋芳洞、飯店設施；早餐 RISONARE Buffet；晚餐 すし遊館 唐戸店；住 RISONARE 星野下關。
+DAY5 8/4(三) 別府｜九州自然動物園；早餐 RISONARE Buffet；晚餐及住宿 別府杉乃井飯店。
+DAY6 8/5(四) 別府｜別府地獄溫泉、飯店設施；早餐、晚餐及住宿 別府杉乃井飯店。
+DAY7 8/6(五) 福岡｜還車、KidZania、LaLaport鋼彈、LaLaport購物；早餐 杉乃井飯店；午餐 炸豬排知青；晚餐 肉屋肉一博多站；住 博多站（飯店待定）。
+DAY8 8/7(六) 福岡｜海洋世界海之中道、海之中道海濱公園、天神地下街；午餐 Reilly（分店待確認）；晚餐 一蘭拉麵；住 博多站。
+DAY9 8/8(日) 返台｜博多站周邊；中餐 パンとエスプレッソと博多；18:30 華航福岡起飛返台。
+Small footer 租車8/2–8/6・天神2晚→下關2晚→別府2晚→博多2晚. Simple white aircraft labeled 華航 China Airlines, NO EVA text. Do not invent booked hotels, flight numbers, admission prices or game opponent/time. Keep exactly nine days, all dates correct. Do not put baseball at other dates. Cute scenic thumbnails and food vignettes; prioritize readable complete day text.
+
+Follow-up edit (built-in imagegen):
+Edit only the central map in this image. There are two labels 下關. Keep the UPPER 下關 marker near the curved Akiyoshido route as the single correct Shimonoseki. Remove the LOWER duplicate 下關 label, white label background and its blue circular marker (immediately above the 門司港 label and left of the orange waterfront building). In that lower duplicate area draw a small bridge across the strait connecting upper Shimonoseki land to Mojiko land; connect the dashed route to the existing 門司港 marker. Do not add a new label. Preserve all nine day panels and every word, title, dates, family of five with slim parents and glasses dad, watercolor style, route map and all other illustrations. No other changes.
