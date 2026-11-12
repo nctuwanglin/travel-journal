@@ -1,0 +1,5 @@
+Edit this existing approved watercolor travel map. Preserve the central geographic route map exactly, title, dates, airline, 9 day layout, family of five with slim parents and father wearing glasses, watercolor style, footer hotels, and DAY1,3,4,5,6,9 panels. Change ONLY DAY2, DAY7, DAY8 text and matching panel thumbnails as follows.
+DAY2 8/1(日) 福岡: 麵包超人博物館、KidZania、LaLaport鋼彈；逛 天神地下街；午餐 博多水炊鍋とり田；晚餐 炸豬排知青；住 天神。 Illustrations here: Anpanman museum, Gundam/LaLaport, pork cutlet and mizutaki. REMOVE teamLab, stadium baseball, 藥院燒肉 and all 日期需調整 wording from this panel.
+DAY7 8/6(五) 福岡: 還車、teamLab、福岡巨蛋看棒球；早餐 別府杉乃井飯店；晚餐 肉屋肉一博多站；住 博多站（飯店待定）。 Illustrations here: teamLab lights and baseball stadium, grilled beef. REMOVE KidZania, LaLaport, Gundam, 知青 and lunch from this panel; no invented lunch.
+DAY8 8/7(六) 福岡: 海洋世界海之中道、海之中道海濱公園；午餐 海洋世界館內 Reilly；晚餐 一蘭拉麵；住 博多站。 Keep aquarium/park thumbnails; REMOVE 天神地下街 and 分店待確認.
+All three panels remain readable Traditional Chinese, no extra stops, no duplicate dates. Everywhere else unchanged.

@@ -5,7 +5,7 @@
 window.TRIPS = [
 {
   "id": "kyushu-chugoku-2027",
-  "mapArt": "img/kyushu-chugoku-2027-v1.png",
+  "mapArt": "img/kyushu-chugoku-2027-v2.png",
   "title": "日本九州・中國地方夏日親子遊",
   "subtitle": "福岡・北九州・下關・秋芳洞・別府",
   "country": "日本",
@@ -25,7 +25,7 @@ window.TRIPS = [
   ],
   "mapCenter": [
     33.65,
-    131.0
+    131
   ],
   "mapZoom": 8,
   "flight": {
@@ -86,7 +86,7 @@ window.TRIPS = [
     {
       "day": 2,
       "date": "8/1 (日)",
-      "theme": "福岡｜麵包超人・teamLab・巨蛋",
+      "theme": "福岡｜麵包超人・KidZania・鋼彈",
       "items": [
         {
           "time": "玩",
@@ -98,15 +98,15 @@ window.TRIPS = [
         },
         {
           "time": "玩",
-          "text": "teamLab Forest 福岡"
-        },
-        {
-          "time": "玩",
-          "text": "福岡巨蛋看棒球（原定安排，賽程需調整）"
+          "text": "KidZania 福岡、LaLaport 鋼彈"
         },
         {
           "time": "晚餐",
-          "text": "藥院燒肉"
+          "text": "炸豬排 知青"
+        },
+        {
+          "time": "逛",
+          "text": "天神地下街"
         },
         {
           "time": "住",
@@ -115,14 +115,14 @@ window.TRIPS = [
       ],
       "tips": [
         {
-          "type": "warn",
-          "title": "棒球賽程衝突",
-          "text": "NPB 已公布 2027/8/1 為日本火腿主場對軟銀；原定福岡巨蛋看球需調整。8/6–8/8 為軟銀主場系列，日期待選，尚未改動其他安排。"
+          "type": "info",
+          "title": "兩個親子設施日",
+          "text": "麵包超人博物館與 KidZania 分處不同區域，先配合職業體驗場次安排午餐與交通，天神購物依體力彈性調整。"
         },
         {
           "type": "info",
-          "title": "親子動線",
-          "text": "博物館與 teamLab 分處不同區域，保留午餐、移動與午睡時間；光影展先確認推車、抱嬰與各作品限制。"
+          "title": "幼兒同行",
+          "text": "KidZania 先確認各活動年齡限制、陪同規定及幼兒休息區；晚餐知青安排在 LaLaport，預留候位時間。"
         }
       ]
     },
@@ -279,7 +279,7 @@ window.TRIPS = [
     {
       "day": 7,
       "date": "8/6 (五)",
-      "theme": "別府・福岡｜還車與職業體驗",
+      "theme": "別府・福岡｜還車・teamLab・棒球",
       "items": [
         {
           "time": "早餐",
@@ -291,19 +291,11 @@ window.TRIPS = [
         },
         {
           "time": "玩",
-          "text": "KidZania 福岡"
-        },
-        {
-          "time": "午餐",
-          "text": "炸豬排 知青"
+          "text": "teamLab Forest 福岡"
         },
         {
           "time": "玩",
-          "text": "LaLaport 鋼彈"
-        },
-        {
-          "time": "逛",
-          "text": "LaLaport 福岡"
+          "text": "福岡巨蛋看棒球"
         },
         {
           "time": "晚餐",
@@ -317,20 +309,20 @@ window.TRIPS = [
       "tips": [
         {
           "type": "warn",
-          "title": "還車與入場時段",
-          "text": "別府回福岡、加油還車及寄放行李都需時間；KidZania 場次先配合抵達時間，午餐與體驗順序依訂票調整。"
+          "title": "還車與看球時間",
+          "text": "別府回福岡、加油還車與寄放行李需留緩衝；依球賽開打時間安排 teamLab 和晚餐，購票與餐廳訂位另確認。"
         },
         {
           "type": "info",
-          "title": "幼兒同行",
-          "text": "先確認各活動年齡限制、陪同規定與幼兒休息區；不要把所有孩子都預設可參加同一活動。"
+          "title": "光影展與巨蛋",
+          "text": "teamLab 與巨蛋相鄰，留足進場安檢與散場時間；光影展先確認推車、抱嬰及各作品限制。"
         }
       ]
     },
     {
       "day": 8,
       "date": "8/7 (六)",
-      "theme": "福岡｜海之中道與天神",
+      "theme": "福岡｜海之中道雙園",
       "items": [
         {
           "time": "玩",
@@ -338,15 +330,11 @@ window.TRIPS = [
         },
         {
           "time": "午餐",
-          "text": "Reilly"
+          "text": "海洋世界海之中道 Reilly"
         },
         {
           "time": "玩",
           "text": "海之中道海濱公園"
-        },
-        {
-          "time": "逛",
-          "text": "天神地下街"
         },
         {
           "time": "晚餐",
@@ -360,13 +348,13 @@ window.TRIPS = [
       "tips": [
         {
           "type": "info",
-          "title": "雙園與午餐動線",
-          "text": "水族館及公園分開安排，先看表演場次；Reilly 分店待確認，再決定午餐與移動順序。"
+          "title": "館內午餐與雙園",
+          "text": "Reilly 位於海洋世界館內 1 樓；先看表演場次，再安排午餐與海濱公園，避免離館後折返。"
         },
         {
           "type": "info",
           "title": "夏日戶外",
-          "text": "備水、帽子與替換衣物；公園依天氣與孩子體力縮短，回天神保留交通時間。"
+          "text": "備水、帽子與替換衣物；公園依天氣與孩子體力縮短，晚餐分店再配合返回市區動線。"
         }
       ]
     },
@@ -415,13 +403,18 @@ window.TRIPS = [
       ],
       [
         "8/1 福岡市區",
-        "地鐵／巴士與步行",
-        "博物館 → teamLab／巨蛋需跨區移動"
+        "麵包超人博物館 → LaLaport → 天神",
+        "依 KidZania 場次安排跨區交通與晚餐"
       ],
       [
         "8/2–8/6",
         "租車：福岡 → 北九州 → 下關 → 秋芳洞 → 別府 → 福岡",
         "公司、取還車地點、時間與費用待補"
+      ],
+      [
+        "8/6 福岡市區",
+        "還車後前往 teamLab／福岡巨蛋",
+        "預留還車、寄物、入場與散場時間"
       ],
       [
         "8/7 海之中道",
@@ -447,33 +440,48 @@ window.TRIPS = [
       }
     },
     {
-      "name": "teamLab Forest 福岡",
+      "name": "KidZania 福岡",
       "day": 2,
-      "area": "百道",
+      "area": "福岡・LaLaport",
       "latlng": [
-        33.5948,
-        130.3625
+        33.5638,
+        130.441
       ],
-      "desc": "BOSS E・ZO FUKUOKA 的互動光影空間，與巨蛋相鄰；先查適用票種與入場限制。",
+      "desc": "兒童職業體驗設施，先確認入場時段、活動年齡與陪同規定。",
       "hours": "2027 出遊前依當日公告確認",
       "ref": {
-        "title": "依娃・teamLab 福岡親子體驗",
-        "url": "https://evalife.tw/teamlab-forest-fukuoka/"
+        "title": "KidZania 福岡・官方活動與預約",
+        "url": "https://www.kidzania.jp/fukuoka/"
       }
     },
     {
-      "name": "福岡巨蛋（棒球日期需調整）",
+      "name": "LaLaport 鋼彈",
       "day": 2,
-      "area": "百道",
+      "area": "福岡・LaLaport",
       "latlng": [
-        33.5953,
-        130.3622
+        33.5644,
+        130.441
       ],
-      "desc": "保留原定看球地點；8/1 軟銀為客場，需另選主場日期，尚未訂票。",
+      "desc": "商場前實物大鋼彈地標，8/1 與 KidZania 及知青晚餐一起安排；演出時間另確認。",
       "hours": "2027 出遊前依當日公告確認",
       "ref": {
-        "title": "NPB・2027 年 8 月官方賽程",
-        "url": "https://www.npb.or.jp/games/2027/schedule_08_detail.html"
+        "title": "三井 LaLaport 福岡・官方資訊",
+        "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
+      }
+    },
+    {
+      "name": "天神地下街",
+      "day": 2,
+      "area": "福岡・天神",
+      "latlng": [
+        33.5895,
+        130.3997
+      ],
+      "desc": "8/1 親子設施與 LaLaport 晚餐後安排購物，依孩子體力彈性縮短。",
+      "hours": "2027 出遊前依當日公告確認",
+      "ref": {
+        "title": "天神地下街・官方商店資訊",
+        "url": "https://www.tenchika.com/"
       }
     },
     {
@@ -567,33 +575,33 @@ window.TRIPS = [
       }
     },
     {
-      "name": "KidZania 福岡",
+      "name": "teamLab Forest 福岡",
       "day": 7,
-      "area": "福岡・LaLaport",
+      "area": "百道",
       "latlng": [
-        33.5638,
-        130.441
+        33.5948,
+        130.3625
       ],
-      "desc": "兒童職業體驗設施，先確認入場時段、活動年齡與陪同規定。",
+      "desc": "BOSS E・ZO FUKUOKA 的互動光影空間，與巨蛋相鄰；先查適用票種與入場限制。",
       "hours": "2027 出遊前依當日公告確認",
       "ref": {
-        "title": "KidZania 福岡・官方活動與預約",
-        "url": "https://www.kidzania.jp/fukuoka/"
+        "title": "依娃・teamLab 福岡親子體驗",
+        "url": "https://evalife.tw/teamlab-forest-fukuoka/"
       }
     },
     {
-      "name": "LaLaport 鋼彈",
+      "name": "福岡巨蛋",
       "day": 7,
-      "area": "福岡・LaLaport",
+      "area": "百道",
       "latlng": [
-        33.5644,
-        130.441
+        33.5953,
+        130.3622
       ],
-      "desc": "商場前實物大鋼彈地標，與職業體驗和購物安排同一天；演出時間另確認。",
+      "desc": "8/6 安排棒球觀賽，與鄰近 teamLab 串聯；球賽開打時間、座位及購票依官方公告確認。",
       "hours": "2027 出遊前依當日公告確認",
       "ref": {
-        "title": "三井 LaLaport 福岡・官方資訊",
-        "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
+        "title": "NPB・2027 年 8 月官方賽程",
+        "url": "https://www.npb.or.jp/games/2027/schedule_08_detail.html"
       }
     },
     {
@@ -624,21 +632,6 @@ window.TRIPS = [
       "ref": {
         "title": "海之中道海濱公園・官方設施資訊",
         "url": "https://uminaka-park.jp/"
-      }
-    },
-    {
-      "name": "天神地下街",
-      "day": 8,
-      "area": "福岡・天神",
-      "latlng": [
-        33.5895,
-        130.3997
-      ],
-      "desc": "海之中道返回市區後購物，依體力彈性縮短停留。",
-      "hours": "2027 出遊前依當日公告確認",
-      "ref": {
-        "title": "天神地下街・官方商店資訊",
-        "url": "https://www.tenchika.com/"
       }
     },
     {
@@ -674,15 +667,6 @@ window.TRIPS = [
       "ref": {
         "title": "モノタレクリップ・博多本店水炊鍋食記",
         "url": "https://ryu365.com/hakata-toriden-mizutaki-review/"
-      }
-    },
-    {
-      "name": "藥院燒肉",
-      "area": "福岡・藥院",
-      "note": "8/1 晚餐；與 8/6 博多店分開訂位。",
-      "ref": {
-        "title": "JUN・藥院燒肉 Nikuichi 食記",
-        "url": "https://hedonistjun.com/yakuin-nikuichi/"
       }
     },
     {
@@ -724,7 +708,7 @@ window.TRIPS = [
     {
       "name": "炸豬排 知青",
       "area": "福岡・LaLaport",
-      "note": "8/6 午餐，與 KidZania 入場時段配合，避免離場用餐影響體驗。",
+      "note": "8/1 晚餐，位於 LaLaport；配合 KidZania 體驗結束時間並預留候位。",
       "ref": {
         "title": "Nash・LaLaport 炸豬排知青",
         "url": "https://nash.tw/katsuchiao/"
@@ -733,16 +717,20 @@ window.TRIPS = [
     {
       "name": "肉屋肉一 博多站",
       "area": "福岡・博多",
-      "note": "8/6 晚餐；保留博多分店安排，不與藥院店混用訂位。",
+      "note": "8/6 晚餐，安排博多分店；先確認球賽開打與散場時間再訂位。",
       "ref": {
         "title": "Pluswei・藥院與博多肉一比較",
         "url": "https://plusweiplus.com/nikuichi/"
       }
     },
     {
-      "name": "Reilly",
-      "area": "分店待確認",
-      "note": "8/7 午餐，保留原安排；確認分店後再補地址與推薦文。"
+      "name": "海洋世界海之中道 Reilly",
+      "area": "福岡・海洋世界館內 1 樓",
+      "note": "8/7 午餐，館內 1 樓 restaurant Reilly；先配合表演與當日供餐時段安排，座位依現場狀況。",
+      "ref": {
+        "title": "海洋世界・Reilly 官方餐廳資訊",
+        "url": "https://marine-world.jp/facility-info/shop-and-restaurants/"
+      }
     },
     {
       "name": "一蘭拉麵",
@@ -782,7 +770,7 @@ window.TRIPS = [
     {
       "title": "🎟️ 門票與訂位",
       "items": [
-        "8/1 巨蛋看球與已公布賽程衝突，待調整日期。",
+        "8/6 福岡巨蛋看棒球，依官方開打時間購票並安排晚餐。",
         "teamLab、KidZania 與叢林巴士先確認當日場次與兒童限制。",
         "飯店餐飲、泳池與其他設施以訂房方案為準。"
       ]
