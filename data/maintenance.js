@@ -8611,10 +8611,10 @@ window.TRIP_MAINTENANCE = {
       "aligned": true
     },
     "kyushu-chugoku-2027": {
-      "version": "v2",
-      "updatedAt": "2026-11-13",
-      "prompt": "Edit this existing approved watercolor travel map. Preserve the central geographic route map exactly, title, dates, airline, 9 day layout, family of five with slim parents and father wearing glasses, watercolor style, footer hotels, and DAY1,3,4,5,6,9 panels. Change ONLY DAY2, DAY7, DAY8 text and matching panel thumbnails as follows.\nDAY2 8/1(日) 福岡: 麵包超人博物館、KidZania、LaLaport鋼彈；逛 天神地下街；午餐 博多水炊鍋とり田；晚餐 炸豬排知青；住 天神。 Illustrations here: Anpanman museum, Gundam/LaLaport, pork cutlet and mizutaki. REMOVE teamLab, stadium baseball, 藥院燒肉 and all 日期需調整 wording from this panel.\nDAY7 8/6(五) 福岡: 還車、teamLab、福岡巨蛋看棒球；早餐 別府杉乃井飯店；晚餐 肉屋肉一博多站；住 博多站（飯店待定）。 Illustrations here: teamLab lights and baseball stadium, grilled beef. REMOVE KidZania, LaLaport, Gundam, 知青 and lunch from this panel; no invented lunch.\nDAY8 8/7(六) 福岡: 海洋世界海之中道、海之中道海濱公園；午餐 海洋世界館內 Reilly；晚餐 一蘭拉麵；住 博多站。 Keep aquarium/park thumbnails; REMOVE 天神地下街 and 分店待確認.\nAll three panels remain readable Traditional Chinese, no extra stops, no duplicate dates. Everywhere else unchanged.\n",
-      "baselineRecordedAt": "2026-11-13",
+      "version": "v3",
+      "updatedAt": "2026-11-14",
+      "prompt": "Edit supplied travel map, preserve Japanese watercolor style, central geographic map/landmark miniatures, landscape size, same slender parents (dad black glasses) and three children family of five, title 九州・中國地方夏日旅行地圖, dates 2027/7/31–8/8・9天8夜, 華航 China Airlines plane. REPLACE ALL nine side-panel itinerary text AND their thumbnails to match the NEW schedule below. Left panels Day1–5, right Day6–9, clear Traditional Chinese, no truncation. Do not retain old dates/stays/meals. Central geographical route stays Fukuoka→Kokura→Mojiko→Shimonoseki→Akiyoshido→Shimonoseki→African Safari→Beppu→Fukuoka. Keep exactly one Shimonoseki marker, accurate strait/bridge, label 行程路線示意.\nDAY1 7/31(六) 福岡：20:00 華航抵達福岡；宵夜 ShinShin；住 博多（飯店待定）。\nDAY2 8/1(日) 北九州・下關：租車、小倉城、門司港懷舊區、九州鐵道紀念館；午餐 Princess Phi Phi 燒咖哩；晚餐 RISONARE Buffet；住 RISONARE 星野下關。\nDAY3 8/2(一) 山口：秋芳洞、飯店設施；早餐 RISONARE Buffet；晚餐 すし遊館 唐戸店；住 RISONARE 星野下關。\nDAY4 8/3(二) 別府：九州自然動物園；早餐 RISONARE Buffet；晚餐及住宿 別府杉乃井飯店。\nDAY5 8/4(三) 別府：別府地獄溫泉、飯店設施；早餐、晚餐及住宿 別府杉乃井飯店。\nDAY6 8/5(四) 福岡：還車、海洋世界海之中道、海之中道海濱公園；早餐 杉乃井飯店；晚餐 藥院燒肉；住 天神索拉利亞西鐵酒店。\nDAY7 8/6(五) 福岡：KidZania、LaLaport（鋼彈、扭蛋）；逛 天神區域；早餐 The Full Full 明太子麵包；午餐 炸豬排知青；晚餐 博多牛腸鍋大山；住 天神索拉利亞西鐵酒店。\nDAY8 8/7(六) 福岡：麵包超人博物館、teamLab、福岡巨蛋看棒球；午餐 とり田水炊鍋；晚餐 中洲屋台、一蘭拉麵；住 天神索拉利亞西鐵酒店。\nDAY9 8/8(日) 返台：午餐 西新初喜博多店；逛 博多站附近；18:30 華航福岡起飛返台。\nFooter 租車8/1–8/5・博多1晚→下關2晚→別府2晚→天神3晚.\nRemove all Reilly, 肉屋肉一, パンとエスプレッソ, old rent dates and 天神2晚/博多2晚. No invented lunches on Day6 or extra activities. Ensure matching thumbnails: Day2 castle/port/train/curry, Day3 cave/sushi, Day4 safari, Day5 hot spring, Day6 aquarium/park/yakiniku, Day7 Gundam/capsule toys/bread/pork/motsunabe, Day8 Anpanman/lights/stadium/ramen/yatai. All 9 days fully present.\n",
+      "baselineRecordedAt": "2026-11-14",
       "baselineSnapshot": {
         "title": "日本九州・中國地方夏日親子遊",
         "subtitle": "福岡・北九州・下關・秋芳洞・別府",
@@ -8633,24 +8633,24 @@ window.TRIP_MAINTENANCE = {
         },
         "stay": [
           {
-            "name": "天神（飯店待定）",
-            "nights": "7/31–8/2，共 2 晚",
-            "note": "先保留住宿區域，待選定飯店。"
+            "name": "博多（飯店待定）",
+            "nights": "7/31–8/1，共 1 晚",
+            "note": "首晚住宿區域為博多，飯店待選。"
           },
           {
             "name": "RISONARE 星野下關",
-            "nights": "8/2–8/4，共 2 晚",
-            "note": "安排飯店早餐與 8/2 晚餐，實際餐飲依訂房方案。"
+            "nights": "8/1–8/3，共 2 晚",
+            "note": "8/1 晚餐、8/2 與 8/3 早餐依訂房方案。"
           },
           {
             "name": "別府杉乃井飯店",
-            "nights": "8/4–8/6，共 2 晚",
+            "nights": "8/3–8/5，共 2 晚",
             "note": "館別與餐廳依訂房方案確認。"
           },
           {
-            "name": "博多站（飯店待定）",
-            "nights": "8/6–8/8，共 2 晚",
-            "note": "先保留住宿區域，方便返程取行李。"
+            "name": "天神索拉利亞西鐵酒店",
+            "nights": "8/5–8/8，共 3 晚",
+            "note": "天神地區連住三晚，返程日先確認行李寄放與前往博多的動線。"
           }
         ],
         "pass": {
@@ -8662,28 +8662,28 @@ window.TRIP_MAINTENANCE = {
           "rows": [
             [
               "7/31、8/8",
-              "福岡機場國際線 ↔ 天神／博多",
-              "按抵達時間選機場巴士、計程車或接駁轉地鐵，先核對末班"
+              "福岡機場國際線 ↔ 博多／天神",
+              "抵達日入住博多，返程由天神退房後到博多午餐購物"
             ],
             [
-              "8/1 福岡市區",
-              "麵包超人博物館 → LaLaport → 天神",
-              "依 KidZania 場次安排跨區交通與晚餐"
-            ],
-            [
-              "8/2–8/6",
+              "8/1–8/5",
               "租車：福岡 → 北九州 → 下關 → 秋芳洞 → 別府 → 福岡",
-              "公司、取還車地點、時間與費用待補"
+              "公司、取還車地點、時刻與費用待補"
             ],
             [
-              "8/6 福岡市區",
-              "還車後前往 teamLab／福岡巨蛋",
-              "預留還車、寄物、入場與散場時間"
+              "8/5 海之中道",
+              "別府回福岡還車後前往海之中道",
+              "先核對還車、寄物與雙園營業時間"
             ],
             [
-              "8/7 海之中道",
-              "JR 經香椎轉乘香椎線至海之中道站",
-              "表演與返程依當日日程安排"
+              "8/6 LaLaport",
+              "市區往返 LaLaport，接天神散策",
+              "配合 KidZania 場次與早餐分店"
+            ],
+            [
+              "8/7 福岡市區",
+              "麵包超人博物館 → teamLab／巨蛋 → 中洲",
+              "依開打時間安排跨區交通與晚餐"
             ]
           ]
         },
@@ -8691,7 +8691,7 @@ window.TRIP_MAINTENANCE = {
           {
             "day": 1,
             "date": "7/31 (六)",
-            "theme": "福岡｜抵達與天神宵夜",
+            "theme": "福岡｜抵達與博多宵夜",
             "items": [
               {
                 "time": "20:00",
@@ -8703,7 +8703,7 @@ window.TRIP_MAINTENANCE = {
               },
               {
                 "time": "住",
-                "text": "天神（飯店待定）"
+                "text": "博多（飯店待定）"
               }
             ],
             "tips": [
@@ -8717,49 +8717,6 @@ window.TRIP_MAINTENANCE = {
           {
             "day": 2,
             "date": "8/1 (日)",
-            "theme": "福岡｜麵包超人・KidZania・鋼彈",
-            "items": [
-              {
-                "time": "玩",
-                "text": "福岡麵包超人兒童博物館"
-              },
-              {
-                "time": "午餐",
-                "text": "博多水炊鍋 とり田"
-              },
-              {
-                "time": "玩",
-                "text": "KidZania 福岡、LaLaport 鋼彈"
-              },
-              {
-                "time": "晚餐",
-                "text": "炸豬排 知青"
-              },
-              {
-                "time": "逛",
-                "text": "天神地下街"
-              },
-              {
-                "time": "住",
-                "text": "天神（飯店待定）"
-              }
-            ],
-            "tips": [
-              {
-                "type": "info",
-                "title": "兩個親子設施日",
-                "text": "麵包超人博物館與 KidZania 分處不同區域，先配合職業體驗場次安排午餐與交通，天神購物依體力彈性調整。"
-              },
-              {
-                "type": "info",
-                "title": "幼兒同行",
-                "text": "KidZania 先確認各活動年齡限制、陪同規定及幼兒休息區；晚餐知青安排在 LaLaport，預留候位時間。"
-              }
-            ]
-          },
-          {
-            "day": 3,
-            "date": "8/2 (一)",
             "theme": "福岡・北九州・下關｜租車出發",
             "items": [
               {
@@ -8801,8 +8758,8 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
-            "day": 4,
-            "date": "8/3 (二)",
+            "day": 3,
+            "date": "8/2 (一)",
             "theme": "山口｜秋芳洞與海峽飯店",
             "items": [
               {
@@ -8835,8 +8792,8 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
-            "day": 5,
-            "date": "8/4 (三)",
+            "day": 4,
+            "date": "8/3 (二)",
             "theme": "下關・大分｜動物園與別府",
             "items": [
               {
@@ -8869,8 +8826,8 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
-            "day": 6,
-            "date": "8/5 (四)",
+            "day": 5,
+            "date": "8/4 (三)",
             "theme": "別府｜地獄巡禮與飯店時光",
             "items": [
               {
@@ -8908,9 +8865,9 @@ window.TRIP_MAINTENANCE = {
             ]
           },
           {
-            "day": 7,
-            "date": "8/6 (五)",
-            "theme": "別府・福岡｜還車・teamLab・棒球",
+            "day": 6,
+            "date": "8/5 (四)",
+            "theme": "別府・福岡｜還車與海之中道",
             "items": [
               {
                 "time": "早餐",
@@ -8922,70 +8879,113 @@ window.TRIP_MAINTENANCE = {
               },
               {
                 "time": "玩",
-                "text": "teamLab Forest 福岡"
-              },
-              {
-                "time": "玩",
-                "text": "福岡巨蛋看棒球"
+                "text": "海洋世界海之中道、海之中道海濱公園"
               },
               {
                 "time": "晚餐",
-                "text": "肉屋肉一 博多站"
+                "text": "藥院燒肉"
               },
               {
                 "time": "住",
-                "text": "博多站（飯店待定）"
+                "text": "天神索拉利亞西鐵酒店"
               }
             ],
             "tips": [
               {
-                "type": "warn",
-                "title": "還車與看球時間",
-                "text": "別府回福岡、加油還車與寄放行李需留緩衝；依球賽開打時間安排 teamLab 和晚餐，購票與餐廳訂位另確認。"
+                "title": "長途移動與雙園",
+                "text": "早餐後從別府出發，預留加油還車與前往海之中道時間；依抵達時刻選表演和公園範圍，不必趕完全部設施。",
+                "type": "warn"
               },
               {
-                "type": "info",
-                "title": "光影展與巨蛋",
-                "text": "teamLab 與巨蛋相鄰，留足進場安檢與散場時間；光影展先確認推車、抱嬰及各作品限制。"
+                "title": "還車後交通",
+                "text": "確認還車據點後再決定寄物與搭車動線；海之中道回天神也需交通時間，晚餐訂位保留緩衝。",
+                "type": "info"
+              }
+            ]
+          },
+          {
+            "day": 7,
+            "date": "8/6 (五)",
+            "theme": "福岡｜KidZania・鋼彈・天神",
+            "items": [
+              {
+                "time": "早餐",
+                "text": "The Full Full 明太子麵包"
+              },
+              {
+                "time": "玩",
+                "text": "KidZania 福岡"
+              },
+              {
+                "time": "午餐",
+                "text": "炸豬排 知青"
+              },
+              {
+                "time": "玩",
+                "text": "LaLaport（鋼彈、扭蛋）"
+              },
+              {
+                "time": "逛",
+                "text": "天神區域"
+              },
+              {
+                "time": "晚餐",
+                "text": "博多牛腸鍋 大山"
+              },
+              {
+                "time": "住",
+                "text": "天神索拉利亞西鐵酒店"
+              }
+            ],
+            "tips": [
+              {
+                "title": "早餐與入場時段",
+                "text": "The Full Full 先確認分店與開門時間，配合 KidZania 入場場次安排；午餐知青與體驗順序依票種調整。",
+                "type": "info"
+              },
+              {
+                "title": "幼兒同行",
+                "text": "先確認職業體驗年齡、陪同規定及幼兒休息區；LaLaport 購物與天神散策保留休息時間。",
+                "type": "info"
               }
             ]
           },
           {
             "day": 8,
             "date": "8/7 (六)",
-            "theme": "福岡｜海之中道雙園",
+            "theme": "福岡｜麵包超人・teamLab・棒球",
             "items": [
               {
                 "time": "玩",
-                "text": "海洋世界海之中道"
+                "text": "福岡麵包超人兒童博物館"
               },
               {
                 "time": "午餐",
-                "text": "海洋世界海之中道 Reilly"
+                "text": "博多水炊鍋 とり田"
               },
               {
                 "time": "玩",
-                "text": "海之中道海濱公園"
+                "text": "teamLab Forest 福岡、福岡巨蛋看棒球"
               },
               {
                 "time": "晚餐",
-                "text": "一蘭拉麵"
+                "text": "中洲屋台、一蘭拉麵"
               },
               {
                 "time": "住",
-                "text": "博多站（飯店待定）"
+                "text": "天神索拉利亞西鐵酒店"
               }
             ],
             "tips": [
               {
-                "type": "info",
-                "title": "館內午餐與雙園",
-                "text": "Reilly 位於海洋世界館內 1 樓；先看表演場次，再安排午餐與海濱公園，避免離館後折返。"
+                "title": "三個活動的銜接",
+                "text": "先依球賽開打時間安排博物館、午餐與 teamLab，預留跨區移動、入場及散場；場次與門票另確認。",
+                "type": "warn"
               },
               {
-                "type": "info",
-                "title": "夏日戶外",
-                "text": "備水、帽子與替換衣物；公園依天氣與孩子體力縮短，晚餐分店再配合返回市區動線。"
+                "title": "晚間屋台",
+                "text": "屋台座位與推車空間有限，依孩子體力、候位和天氣彈性安排；一蘭另確認分店與最後點餐。",
+                "type": "info"
               }
             ]
           },
@@ -8995,12 +8995,12 @@ window.TRIP_MAINTENANCE = {
             "theme": "福岡｜博多散策與返台",
             "items": [
               {
-                "time": "逛",
-                "text": "博多站周邊"
+                "time": "午餐",
+                "text": "西新初喜 博多店"
               },
               {
-                "time": "中餐",
-                "text": "パンとエスプレッソと博多"
+                "time": "逛",
+                "text": "博多站附近"
               },
               {
                 "time": "交通",
@@ -9013,54 +9013,18 @@ window.TRIP_MAINTENANCE = {
             ],
             "tips": [
               {
-                "type": "info",
-                "title": "返程日",
-                "text": "退房後寄放行李，午餐預留候位；依航空公司建議提早到國際線報到，不以國內線到站時間代替。"
+                "title": "天神退房與博多午餐",
+                "text": "先決定行李寄放在飯店或博多站，避免購物後繞路；午餐預約與機場報到之間保留交通緩衝。",
+                "type": "info"
               }
             ]
           }
         ],
         "spots": [
           {
-            "name": "福岡麵包超人兒童博物館",
-            "area": "博多",
-            "day": 2,
-            "latlng": [
-              33.5946,
-              130.4064
-            ]
-          },
-          {
-            "name": "KidZania 福岡",
-            "area": "福岡・LaLaport",
-            "day": 2,
-            "latlng": [
-              33.5638,
-              130.441
-            ]
-          },
-          {
-            "name": "LaLaport 鋼彈",
-            "area": "福岡・LaLaport",
-            "day": 2,
-            "latlng": [
-              33.5644,
-              130.441
-            ]
-          },
-          {
-            "name": "天神地下街",
-            "area": "福岡・天神",
-            "day": 2,
-            "latlng": [
-              33.5895,
-              130.3997
-            ]
-          },
-          {
             "name": "小倉城",
             "area": "北九州・小倉",
-            "day": 3,
+            "day": 2,
             "latlng": [
               33.8846,
               130.8747
@@ -9069,7 +9033,7 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "門司港懷舊區",
             "area": "北九州・門司港",
-            "day": 3,
+            "day": 2,
             "latlng": [
               33.945,
               130.9625
@@ -9078,7 +9042,7 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "九州鐵道紀念館",
             "area": "北九州・門司港",
-            "day": 3,
+            "day": 2,
             "latlng": [
               33.942,
               130.9645
@@ -9087,7 +9051,7 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "秋芳洞",
             "area": "山口・美禰",
-            "day": 4,
+            "day": 3,
             "latlng": [
               34.2249,
               131.3033
@@ -9096,7 +9060,7 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "九州自然動物園 African Safari",
             "area": "大分・宇佐",
-            "day": 5,
+            "day": 4,
             "latlng": [
               33.423,
               131.401
@@ -9105,34 +9069,16 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "別府地獄溫泉",
             "area": "大分・別府",
-            "day": 6,
+            "day": 5,
             "latlng": [
               33.3159,
               131.4697
             ]
           },
           {
-            "name": "teamLab Forest 福岡",
-            "area": "百道",
-            "day": 7,
-            "latlng": [
-              33.5948,
-              130.3625
-            ]
-          },
-          {
-            "name": "福岡巨蛋",
-            "area": "百道",
-            "day": 7,
-            "latlng": [
-              33.5953,
-              130.3622
-            ]
-          },
-          {
             "name": "海洋世界海之中道",
             "area": "福岡・海之中道",
-            "day": 8,
+            "day": 6,
             "latlng": [
               33.6607,
               130.3629
@@ -9141,10 +9087,64 @@ window.TRIP_MAINTENANCE = {
           {
             "name": "海之中道海濱公園",
             "area": "福岡・海之中道",
-            "day": 8,
+            "day": 6,
             "latlng": [
               33.665,
               130.362
+            ]
+          },
+          {
+            "name": "KidZania 福岡",
+            "area": "福岡・LaLaport",
+            "day": 7,
+            "latlng": [
+              33.5638,
+              130.441
+            ]
+          },
+          {
+            "name": "LaLaport（鋼彈、扭蛋）",
+            "area": "福岡・LaLaport",
+            "day": 7,
+            "latlng": [
+              33.5644,
+              130.441
+            ]
+          },
+          {
+            "name": "天神區域",
+            "area": "福岡・天神",
+            "day": 7,
+            "latlng": [
+              33.5895,
+              130.3997
+            ]
+          },
+          {
+            "name": "福岡麵包超人兒童博物館",
+            "area": "博多",
+            "day": 8,
+            "latlng": [
+              33.5946,
+              130.4064
+            ]
+          },
+          {
+            "name": "teamLab Forest 福岡",
+            "area": "百道",
+            "day": 8,
+            "latlng": [
+              33.5948,
+              130.3625
+            ]
+          },
+          {
+            "name": "福岡巨蛋",
+            "area": "百道",
+            "day": 8,
+            "latlng": [
+              33.5953,
+              130.3622
             ]
           },
           {
@@ -9158,8 +9158,8 @@ window.TRIP_MAINTENANCE = {
           }
         ]
       },
-      "imagePath": "img/kyushu-chugoku-2027-v2.png",
-      "imageSha256": "be21cc7aac5cacd2b49b673540674cb7e7d8c4fb467009e1c12a31cdf35fcb46",
+      "imagePath": "img/kyushu-chugoku-2027-v3.png",
+      "imageSha256": "1c32c1a692e3cb93cf3cb5d969e6d60339ece136985deaf9d83de3a24f3e2017",
       "aligned": true
     }
   },
@@ -11072,19 +11072,6 @@ window.TRIP_MAINTENANCE = {
           "url": "https://www.kidzania.jp/fukuoka/"
         }
       },
-      "spot-ref:LaLaport 鋼彈": {
-        "checkedAt": "2026-11-13",
-        "sources": [
-          {
-            "title": "三井 LaLaport 福岡・官方資訊",
-            "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
-          }
-        ],
-        "snapshot": {
-          "title": "三井 LaLaport 福岡・官方資訊",
-          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
-        }
-      },
       "spot-ref:海洋世界海之中道": {
         "checkedAt": "2026-11-13",
         "sources": [
@@ -11109,19 +11096,6 @@ window.TRIP_MAINTENANCE = {
         "snapshot": {
           "title": "海之中道海濱公園・官方設施資訊",
           "url": "https://uminaka-park.jp/"
-        }
-      },
-      "spot-ref:天神地下街": {
-        "checkedAt": "2026-11-13",
-        "sources": [
-          {
-            "title": "天神地下街・官方商店資訊",
-            "url": "https://www.tenchika.com/"
-          }
-        ],
-        "snapshot": {
-          "title": "天神地下街・官方商店資訊",
-          "url": "https://www.tenchika.com/"
         }
       },
       "spot-ref:博多站周邊": {
@@ -11228,19 +11202,6 @@ window.TRIP_MAINTENANCE = {
           "url": "https://nash.tw/katsuchiao/"
         }
       },
-      "food-ref:肉屋肉一 博多站": {
-        "checkedAt": "2026-11-13",
-        "sources": [
-          {
-            "title": "Pluswei・藥院與博多肉一比較",
-            "url": "https://plusweiplus.com/nikuichi/"
-          }
-        ],
-        "snapshot": {
-          "title": "Pluswei・藥院與博多肉一比較",
-          "url": "https://plusweiplus.com/nikuichi/"
-        }
-      },
       "food-ref:一蘭拉麵": {
         "checkedAt": "2026-11-13",
         "sources": [
@@ -11252,19 +11213,6 @@ window.TRIP_MAINTENANCE = {
         "snapshot": {
           "title": "樂活的大方・一蘭本社總本店",
           "url": "https://www.bigfang.tw/blog/post/ichiran-mainstore"
-        }
-      },
-      "food-ref:パンとエスプレッソと博多": {
-        "checkedAt": "2026-11-13",
-        "sources": [
-          {
-            "title": "福岡美味巡り・博多っと食記",
-            "url": "https://miborin.com/bread-espresso/"
-          }
-        ],
-        "snapshot": {
-          "title": "福岡美味巡り・博多っと食記",
-          "url": "https://miborin.com/bread-espresso/"
         }
       },
       "spot-ref:福岡巨蛋": {
@@ -11280,17 +11228,82 @@ window.TRIP_MAINTENANCE = {
           "url": "https://www.npb.or.jp/games/2027/schedule_08_detail.html"
         }
       },
-      "food-ref:海洋世界海之中道 Reilly": {
-        "checkedAt": "2026-11-13",
+      "spot-ref:LaLaport（鋼彈、扭蛋）": {
+        "checkedAt": "2026-11-14",
         "sources": [
           {
-            "title": "海洋世界・Reilly 官方餐廳資訊",
-            "url": "https://marine-world.jp/facility-info/shop-and-restaurants/"
+            "title": "三井 LaLaport 福岡・官方資訊",
+            "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
           }
         ],
         "snapshot": {
-          "title": "海洋世界・Reilly 官方餐廳資訊",
-          "url": "https://marine-world.jp/facility-info/shop-and-restaurants/"
+          "title": "三井 LaLaport 福岡・官方資訊",
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/"
+        }
+      },
+      "spot-ref:天神區域": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "title": "天神地下街・天神商圈參考",
+            "url": "https://www.tenchika.com/"
+          }
+        ],
+        "snapshot": {
+          "title": "天神地下街・天神商圈參考",
+          "url": "https://www.tenchika.com/"
+        }
+      },
+      "food-ref:藥院燒肉": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "title": "JUN・藥院燒肉 Nikuichi 食記",
+            "url": "https://hedonistjun.com/yakuin-nikuichi/"
+          }
+        ],
+        "snapshot": {
+          "title": "JUN・藥院燒肉 Nikuichi 食記",
+          "url": "https://hedonistjun.com/yakuin-nikuichi/"
+        }
+      },
+      "food-ref:The Full Full 明太子麵包": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "title": "周花花・Full Full 明太子麵包（參考分店）",
+            "url": "https://tenjo.tw/fullfull/"
+          }
+        ],
+        "snapshot": {
+          "title": "周花花・Full Full 明太子麵包（參考分店）",
+          "url": "https://tenjo.tw/fullfull/"
+        }
+      },
+      "food-ref:博多牛腸鍋 大山": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "title": "おおやま・官方分店與預約",
+            "url": "https://www.motu-ooyama.com/"
+          }
+        ],
+        "snapshot": {
+          "title": "おおやま・官方分店與預約",
+          "url": "https://www.motu-ooyama.com/"
+        }
+      },
+      "food-ref:西新初喜 博多店": {
+        "checkedAt": "2026-11-14",
+        "sources": [
+          {
+            "title": "JR 博多 City・西新初喜官方店鋪資訊",
+            "url": "https://www.jrhakatacity.com/floor/detail/?cd=000229"
+          }
+        ],
+        "snapshot": {
+          "title": "JR 博多 City・西新初喜官方店鋪資訊",
+          "url": "https://www.jrhakatacity.com/floor/detail/?cd=000229"
         }
       }
     }
